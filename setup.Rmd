@@ -60,7 +60,7 @@ layout: true
   
 <div class="my-footer">
 <span>
-<a href="https://introds.org" target="_blank">introds.org</a>
+<a href="https://apumath250.netlify.app" target="_blank">apumath250.netlify.app</a>
 </span>
 </div> 
 
