@@ -1,0 +1,20 @@
+---
+title: "Prepare: Week 06"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## For October 4
+
+There are no prepare activities this week. Exam 1 is due by class-time on Tuesday.
+
+
+
+

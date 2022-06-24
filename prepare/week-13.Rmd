@@ -1,0 +1,31 @@
+---
+title: "Prepare: Week 13"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## For November 29
+
+**Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
+
+### Required
+
+`r emo::ji("movie_camera")` Watch 
+  
+- [Slides]()
+
+`r emo::ji("memo")` Complete Prep Quiz 13 on Canvas
+
+## Optional 
+
+
+
+
+
