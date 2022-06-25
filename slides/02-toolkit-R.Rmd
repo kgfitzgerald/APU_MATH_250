@@ -154,7 +154,7 @@ knitr::include_graphics("img/rstudio-logo.png")
 
 - **Packages** are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup>
 
-- As of August 2020, there are over 18,000 R packages available on **CRAN** (the Comprehensive R Archive Network)<sup>2</sup>
+- As of August 2022, there are over 18,000 R packages available on **CRAN** (the Comprehensive R Archive Network)<sup>2</sup>
 
 - We're going to work with a small (but important) subset of these!
 
