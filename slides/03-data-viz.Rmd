@@ -293,22 +293,22 @@ ggplot(quartet, aes(x = x, y = y)) +
 
 ---
 
-## Age at first kiss
+<!-- ## Age at first kiss -->
 
-.question[ 
-Do you see anything out of the ordinary?
-]
+<!-- .question[  -->
+<!-- Do you see anything out of the ordinary? -->
+<!-- ] -->
 
-```{r echo = FALSE, warning = FALSE}
-ggplot(student_survey, aes(x = first_kiss)) +
-  geom_histogram(binwidth = 1) +
-  labs(
-    title = "How old were you when you had your first kiss?", 
-    x = "Age (years)", y = NULL
-    )
-```
+<!-- ```{r echo = FALSE, warning = FALSE} -->
+<!-- ggplot(student_survey, aes(x = first_kiss)) + -->
+<!--   geom_histogram(binwidth = 1) + -->
+<!--   labs( -->
+<!--     title = "How old were you when you had your first kiss?",  -->
+<!--     x = "Age (years)", y = NULL -->
+<!--     ) -->
+<!-- ``` -->
 
----
+<!-- --- -->
 
 ## Facebook visits
 

@@ -256,3 +256,19 @@ The file will export to the downloads file on your computer. To submit on Canvas
 + In the pop-up window, navigate to your Downloads folder and select "lab-01.html"
 + Click "Submit Assignment"
 
+# Grading (50 pts)
+
+<br>
+
+| Component | Points |
+|:----------|:-------|
+| Ex 1      | 8      |
+| Ex 2      | 8    |
+| Ex 3      | 8    |
+| Ex 4      | 8     |
+| Ex 5      | 8      |
+| Workflow & formatting   | 10      |
+
+**Grading notes**:
+
+-   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output). 
