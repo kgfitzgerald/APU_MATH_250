@@ -17,19 +17,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required 
 
-`r emo::ji("movie_camera")` Watch [Data and visualization](https://www.youtube.com/watch?v=FddF4b_GuTI) 
+`r emo::ji("movie_camera")` Watch [Data and visualization](https://youtu.be/R1UGnork_Gs) 
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/03-data-viz.html)
 
-`r emo::ji("movie_camera")` Watch [Visualizing data with ggplot2](https://www.youtube.com/watch?v=s2NF2J36ljE)  
+`r emo::ji("movie_camera")` Watch [Visualizing data with ggplot2](https://youtu.be/u8pIsAhvYsY)  
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/04-ggplot2.html)
 
-`r emo::ji("movie_camera")` Watch [Visualizing numeric data](https://youtu.be/waBabVTI8ec)  
+`r emo::ji("movie_camera")` Watch [Visualizing numeric data](https://youtu.be/c0i50_M-PUQ)  
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/05-viz-num.html)
 
-`r emo::ji("movie_camera")` Watch [Visualizing categorical data](https://youtu.be/21h3rEO8k2E)  
+`r emo::ji("movie_camera")` Watch [Visualizing categorical data](https://youtu.be/ZMECwyhjctU)  
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/06-viz-cat.html)
 

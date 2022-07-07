@@ -1,5 +1,5 @@
 ---
-title: "HW 02 - Airbnb listings in Edinburgh"
+title: "HW 01 - Airbnb listings in Edinburgh"
 output: 
   tufte::tufte_html:
     css: ./hw.css

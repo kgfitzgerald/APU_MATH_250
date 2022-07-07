@@ -221,17 +221,6 @@ operator    | definition                   || operator     | definition
 
 ---
 
-.your-turn[
-### Your turn!
-
-Time to actually play around with the Hotels dataset!
-
-- Go to RStudio Cloud and start `AE 04 - Hotels + Data wrangling`.
-- Open the R Markdown document and complete Exercises 1 - 4.
-]
-
----
-
 class: middle
 
 # `distinct` and `count`
@@ -338,14 +327,6 @@ hotels %>%
 
 ---
 
-.your-turn[
-### Your turn!
-
-- Go back to RStudio Cloud and continue `AE 04 - Hotels + Data wrangling`.
-- Open the R Markdown document and complete Exercises 5 and 6.
-]
-
----
 
 class: middle
 
@@ -504,13 +485,3 @@ hotels %>%
     )
 ```
 
----
-
-.your-turn[
-### Your turn!
-
-Time to actually play around with the Hotels dataset!
-
-- Go to RStudio Cloud and start `AE 04 - Hotels + Data wrangling`.
-- Open the R Markdown document and complete Exercises 7 and 8.
-]

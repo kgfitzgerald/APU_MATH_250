@@ -37,4 +37,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 `r emo::ji("book")` Read [R for Data Science (R4DS): Chapter 5 - Data transformation](https://r4ds.had.co.nz/transform.html)
 
+## For Thursday, September 15
 
+### Required
+
+`r emo::ji("book")` Read the Buzzfeed article titled [*These Nobel Prize Winners Show Why Immigration Is So Important For American Science*](https://www.buzzfeednews.com/article/peteraldhous/immigration-and-science)*.* We will replicate this analysis in-class on Thursday so it's crucial that you're familiar with it ahead of time.
