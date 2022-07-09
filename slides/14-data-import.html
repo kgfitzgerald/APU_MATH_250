@@ -351,38 +351,6 @@ read_csv("data/df-na.csv", col_types = list(col_double(),
 
 ---
 
-.question[
-Wondering where you remember these from?
-]
-
-
-```r
-read_csv("data/df-na.csv")
-```
-
-```
-## Rows: 9 Columns: 3
-## ── Column specification ─────────────────────────────────────────
-## Delimiter: ","
-## chr (3): x, y, z
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-```
-
-```
-## # A tibble: 9 × 3
-##   x     y              z     
-##   &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt; 
-## 1 1     a              hi    
-## 2 &lt;NA&gt;  b              hello 
-## 3 3     Not applicable 9999  
-## 4 4     d              ola   
-...
-```
-
----
-
 class:middle
 
 # Case study: Favourite foods

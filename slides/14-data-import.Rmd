@@ -244,16 +244,6 @@ read_csv("data/df-na.csv", col_types = list(col_double(),
 
 ---
 
-.question[
-Wondering where you remember these from?
-]
-
-```{r message=TRUE, output.lines=7}
-read_csv("data/df-na.csv")
-```
-
----
-
 class:middle
 
 # Case study: Favourite foods
