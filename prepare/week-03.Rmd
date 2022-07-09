@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/08-grammar-wrangle.html)
 
-`r emo::ji("movie_camera")` Watch [Working with a single data frame](https://youtu.be/0229Uq2hkJo)
+`r emo::ji("movie_camera")` Watch [Working with a single data frame](https://youtu.be/EjBTGdiVxvA)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/09-single-df.html)
 
