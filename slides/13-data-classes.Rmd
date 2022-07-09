@@ -211,18 +211,6 @@ knitr::include_graphics("img/forcats-part-of-tidyverse.png")
 - The **forcats** package provides a suite of useful tools that solve common problems with factors
 ]
 
----
-
-.small[
-.your-turn[
-### .hand[Your turn!]
-
-- [RStudio Cloud](http://rstd.io/dsbox-cloud) > `AE 05 - Hotels + Data types` > `hotels-forcats.Rmd` > knit
-- Recreate the x-axis of the following plot. 
-- **Stertch goal:** Recreate the y-axis.
-]
-]
-
 ```{r echo=FALSE, out.width="90%", fig.asp=0.4}
 hotels <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv")
 hotels %>%
