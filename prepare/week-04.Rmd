@@ -17,13 +17,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required 
 
-`r emo::ji("movie_camera")` Watch [Working with multiple data frames](https://youtu.be/VdV5ABsaf5Y)
+`r emo::ji("movie_camera")` Watch [Working with multiple data frames](https://youtu.be/IK_uxavp7k8)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/10-multi-df.html)
 
-`r emo::ji("movie_camera")` Watch [Tidying data](https://youtu.be/x3KM5uxaFdI)
+`r emo::ji("movie_camera")` Watch [Tidying data](https://youtu.be/e4aCwwLgAfo)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/11-tidying.html)
+
+`r emo::ji("movie_camera")` Watch [Data types](https://youtu.be/ewLpVe5J9uI)
+
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/12-data-types.html)
 
 <!-- `r emo::ji("movie_camera")` Watch [Visualizing Spatial Data](https://warpwire.duke.edu/w/Yw4GAA/). -->
 
