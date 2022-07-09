@@ -104,24 +104,6 @@ read_csv("data/df.csv")
 
 ---
 
-.your-turn[
-### .hand[Your turn!]
-
-- RStudio Cloud > `AE 06 - Nobels and sales + Data import` > open `nobels-csv.Rmd` and knit.
-- Read in the `nobels.csv` file from the `data-raw/` folder.
-- Split into two (STEM and non-STEM): 
-  - Create a new data frame, `nobel_stem`, that filters for the STEM fields 
-(Physics, Medicine, Chemistry, and Economics).
-  - Create another data frame, `nobel_nonstem`, that filters for the remaining 
-fields.  
-- Write out the two data frames to `nobel-stem.csv` and `nobel-nonstem.csv`, 
-respectively, to `data/`.
-
-**Hint:** Use the `%in%` operator when `filter()`ing.
-]
-
----
-
 class: middle
 
 # Variable names
