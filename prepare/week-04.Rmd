@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/11-tidying.html)
 
-`r emo::ji("movie_camera")` Watch [Data types](https://youtu.be/ewLpVe5J9uI)
+`r emo::ji("movie_camera")` Watch [Data types](https://youtu.be/WQYKkfj1bOg)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/12-data-types.html)
 

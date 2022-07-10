@@ -10,11 +10,40 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+**Note, due to the Exam, this week's schedule is slightly different**
 
-## For October 4
+## For Tuesday, October 4
 
-There are no prepare activities this week. Exam 1 is due by class-time on Tuesday.
+By class-time on Tuesday, you should
 
++ Complete and submit Exam 1. Turn in both your .Rmd and .html files to Canvas
++ Sign up for a project group on Canvas. 
+
+## For Thursday, October 6
+
+`r emo::ji("movie_camera")` Watch [Scientific studies and confounding](https://youtu.be/WnMzTBrZDcc)
+
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/17-studies-confounding.html)
+
+`r emo::ji("movie_camera")` Watch [Simpson's paradox](https://www.youtube.com/watch?v=sdas62v0iJU)
+
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/18-simpsons-paradox.html)
+
+`r emo::ji("movie_camera")` Watch [The language of models](https://youtu.be/MWkkvDopBKc)
+
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/23-language-of-models.html)
+
+<!-- `r emo::ji("movie_camera")` Watch [Doing data science](https://youtu.be/b9lSW0kyqBg) -->
+
+<!-- - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/19-doing-data-science.html) -->
+
+`r emo::ji("memo")` Complete Prep Quiz 06 on Canvas
+
+### Optional
+
+`r emo::ji("book")` [Read IMS:: Chapter 2 - Study design](https://openintro-ims.netlify.app/data-design.html)
+
+`r emo::ji("book")` [Read R4DS:: Chapter 7 - Exploratory Data Analysis](https://r4ds.had.co.nz/exploratory-data-analysis.html)
 
 
 
