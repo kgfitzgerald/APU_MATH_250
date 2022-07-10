@@ -97,6 +97,7 @@ ucbadmit %>%
 ```{r gender-admit, fig.show = "hide"}
 ggplot(ucbadmit, aes(y = gender, fill = admit)) +
   geom_bar(position = "fill") + 
+  scale_fill_viridis_d() +
   labs(title = "Admit by gender",
        y = NULL, x = NULL)
 ```
@@ -144,6 +145,7 @@ ggplot(ucbadmit, aes(y = gender, fill = admit)) +
   geom_bar(position = "fill") +
   facet_wrap(. ~ dept) +
   scale_x_continuous(labels = label_percent()) +
+  scale_fill_viridis_d() +
   labs(title = "Admissions by gender and department",
        x = NULL, y = NULL, fill = NULL) +
   theme(legend.position = "bottom")
@@ -260,6 +262,7 @@ df
 ggplot(data = df) +
   geom_point(aes(x = x, y = y, color = z), size = 5) +
   geom_smooth(aes(x = x, y = x), method = "lm", color = "darkgray") +
+  scale_color_viridis_d() +
   theme_minimal()
 ```
 ]
@@ -279,6 +282,7 @@ ggplot(data = df) +
   geom_point(aes(x = x, y = y, color = z), size = 5) +
   geom_smooth(aes(x = x, y = x), method = "lm", color = "darkgray") +
   geom_smooth(aes(x = x, y = y, color = z), method = "lm") +
+  scale_color_viridis_d() +
   theme_minimal()
 ```
 ]

@@ -171,6 +171,7 @@ ucbadmit %&gt;%
 ```r
 ggplot(ucbadmit, aes(y = gender, fill = admit)) +
   geom_bar(position = "fill") + 
+  scale_fill_viridis_d() +
   labs(title = "Admit by gender",
        y = NULL, x = NULL)
 ```
@@ -243,6 +244,7 @@ ggplot(ucbadmit, aes(y = gender, fill = admit)) +
   geom_bar(position = "fill") +
   facet_wrap(. ~ dept) +
   scale_x_continuous(labels = label_percent()) +
+  scale_fill_viridis_d() +
   labs(title = "Admissions by gender and department",
        x = NULL, y = NULL, fill = NULL) +
   theme(legend.position = "bottom")
