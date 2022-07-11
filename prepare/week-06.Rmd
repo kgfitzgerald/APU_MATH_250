@@ -21,15 +21,15 @@ By class-time on Tuesday, you should
 
 ## For Thursday, October 6
 
-`r emo::ji("movie_camera")` Watch [Scientific studies and confounding](https://youtu.be/WnMzTBrZDcc)
+`r emo::ji("movie_camera")` Watch [Scientific studies and confounding](https://youtu.be/4_tellSmARQ)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/17-studies-confounding.html)
 
-`r emo::ji("movie_camera")` Watch [Simpson's paradox](https://www.youtube.com/watch?v=sdas62v0iJU)
+`r emo::ji("movie_camera")` Watch [Simpson's paradox](https://youtu.be/bgIn65yX66g)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/18-simpsons-paradox.html)
 
-`r emo::ji("movie_camera")` Watch [The language of models](https://youtu.be/MWkkvDopBKc)
+`r emo::ji("movie_camera")` Watch [The language of models](https://youtu.be/bQrR8HFKKhI)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/23-language-of-models.html)
 

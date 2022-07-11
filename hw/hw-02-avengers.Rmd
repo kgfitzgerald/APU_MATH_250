@@ -1,0 +1,106 @@
+---
+title: "HW 02 - Avengers"
+output: 
+  tufte::tufte_html:
+    css: ./hw.css
+    tufte_variant: "envisioned"
+    highlight: pygments
+link-citations: yes
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  out.width = "80%",
+  fig.asp = 0.618,
+  fig.width = 6
+)
+```
+
+# Goals
+
+In this homework, you will...
+
+- Use data wrangling to extract meaning from data
+- continue developing a workflow for reproducible data analysis.
+
+# Getting started
+
+[INSERT INSTRUCTIONS HERE]
+
+# Packages 
+
+We just need the **tidyverse** for this lab. 
+
+```{r load-packages, message = FALSE}
+library(tidyverse)
+```
+
+# Data 
+
+## The Greatest Crossover Event in the History of MATH 250
+
+This data was originally collected for [a FiveThirtyEight article](https://fivethirtyeight.com/features/avengers-death-comics-age-of-ultron/).  The version of the `avengers` data we will work with here can be uploaded from the `avengers.csv` file. 
+
+```{r}
+avengers <- read_csv("data/avengers.csv")
+```
+
+This dataset includes information about characters across the entire Marvel Cinematic Universe (MCU), so some of the names will be familiar if you are a fan of the films or comics. Don't worry if you aren't a Marvel fan; no background knowledge is needed to successfully complete this assignment! 
+
+We will focus on the following variables in this assignment: 
+ 
+Header | Definition
+---|---------
+`name` | The full name or alias of the character
+`appearances` | The number of comic books that character appeared in as of April 30 
+`current` | Is the member currently active on an avengers affiliated team?
+`gender` | The recorded gender of the character
+`probationary` | Sometimes the character was given probationary status as an Avenger, this is the date that happened
+`full_reserve` | The month and year the character was introduced as a full or reserve member of the Avengers
+`year` | The year the character was introduced as a full or reserve member of the Avengers
+`years_since_joining` | 2015 minus the year
+`death1` | Yes if the Avenger died, No if not. 
+`return1` | Yes if the Avenger returned from their first death, No if  they did not, blank if not applicable
+
+See FiveThirtyEight's [GitHub repo](https://github.com/fivethirtyeight/data/tree/master/avengers) for the full codebook.
+
+1. You are interested in creating a data frame with the most "classic" Avengers. Use `filter` to make a new data frame that only includes Avengers that were 1) created in 1970 or earlier and 2) were not given probationary status. Assign the new data frame as `classic_avengers`. Confirm that once you have filtered, you are left with a data frame with 27 observations. 
+
+2. *Who are the newest classic Avengers?* Using a single pipeline: Create a new variable called `years_served` that represents the number of years served **as of 2021.**. (Hint: you can use either the `year` variable or `years_since_joining` variables to do this.) Then, arrange the dataset in ascending order of `years_served`. Lastly, select the `name` and `years_served` and display the first three rows.
+    - Report the names of the three newest classic Avengers and how long they have served in your narrative. 
+
+3. *Has the percentage of female Avengers changed over time?* To explore this question, find the percentage of female Avengers in the `classic_avengers` dataset and compare it to the percentage of females among **all** Avengers.  What do you conclude based on these results? 
+
+4. Sort the full `avengers` dataset in descending order of `appearances` and display only the columns `name`, `appearances`, `death1`, and `return1` for the top five observations.
+    - What do you observe about these Avengers in terms of deaths and returns?
+
+5. Use the full `avengers` dataset to examine the mean and median number of appearances for Avengers who have died at least once compared to those who have **not** died at least once. 
+    - What do you learn about Marvel movies from your results? 
+    - What do the mean and median tell you about the distribution of appearances for these two groups? 
+
+
+6. *Who's more popular - the new or classic Avengers?* Calculate the mean number of appearances for each introduction year (`year`). Then create a scatterplot of the mean appearances by introduction year. Do **not** include observations with the introduction year 1900, as "1900" indicates the value of `full_reserve` is missing. 
+    - What are 2 - 3 observations you have about the mean appearances based on introduction year? 
+
+# Submission
+
+To submit, you need to export your .html document from RStudio Cloud and then upload it to the HW 02 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. 
+
+# Grading (50 pts)
+
+<br>
+
+| Component | Points |
+|:----------|:-------|
+| Ex 1      | 6      |
+| Ex 2      | 8    |
+| Ex 3      | 6    |
+| Ex 4      | 7     |
+| Ex 5      | 7      |
+| Ex 6      | 8      |
+| Workflow & formatting   | 8      |
+
+**Grading notes**:
+
+-   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output). 

@@ -27,28 +27,11 @@ Using data provided by Airbnb, we can explore how Airbnb availability and prices
 
 # Getting started
 
-```{marginfigure}
-**IMPORTANT:** If there is no GitHub repo created for you for this assignment, it means I didn't have your GitHub username as of when I assigned the homework. Please let me know your GitHub username asap, and I can create your repo.
-```
-
-Go to the course GitHub organization and locate your homework repo, which should be named `hw-02-airbnb-edi-YOUR_GITHUB_USERNAME`.
-Grab the URL of the repo, and clone it in RStudio.
-First, open the R Markdown document `hw-02.Rmd` and Knit it.
-Make sure it compiles without errors.
-The output will be in the file markdown `.md` file with the same name.
-
-## Warm up
-
-Before we introduce the data, let's warm up with some simple exercises.
-
--   Update the YAML, changing the author name to your name, and **knit** the document.
--   Commit your changes with a meaningful commit message.
--   Push your changes to GitHub.
--   Go to your repo on GitHub and confirm that your changes are visible in your Rmd **and** md files. If anything is missing, commit and push again.
+[INSERT INSTRUCTIONS HERE]
 
 ## Packages
 
-We'll use the **tidyverse** package for much of the data wrangling and visualisation and the data lives in the **dsbox** package.
+We'll use the **tidyverse** package for much of the data wrangling and visualisation, and the data lives in the **dsbox** package.
 These packages are already installed for you.
 You can load them by running the following in your Console:
 
@@ -82,7 +65,6 @@ You can also find this information [here](https://rstudio-education.github.io/ds
 1.  How many observations (rows) does the dataset have? Instead of hard coding the number in your answer, use inline code.
 2.  Run `View(edibnb)` in your Console to view the data in the data viewer. What does each row in the dataset represent?
 
-🧶 ✅ ⬆️ *Knit,* *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 Each column represents a variable.
 We can get a list of the variables in the data frame using the `names()` function.
@@ -112,9 +94,27 @@ Let's de-construct this code:
 -   In the next layer we represent the data with **geom**etric shapes, in this case with a histogram. You should decide what makes a reasonable bin width for the histogram by trying out a few options.
 -   In the final layer we facet the data by neighbourhood.
 
-🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
-
 4.  Use a single pipeline to identity the neighbourhoods with the top five median listing prices. Then, in another pipeline filter the data for these five neighbourhoods and make ridge plots of the distributions of listing prices in these five neighbourhoods. In a third pipeline calculate the minimum, mean, median, standard deviation, IQR, and maximum listing price in each of these neighbourhoods. Use the visualisation and the summary statistics to describe the distribution of listing prices in the neighbourhoods. (Your answer will include three pipelines, one of which ends in a visualisation, and a narrative.)
+
 5.  Create a visualization that will help you compare the distribution of review scores (`review_scores_rating`) across neighbourhoods. You get to decide what type of visualisation to create and there is more than one correct answer! In your answer, include a brief interpretation of how Airbnb guests rate properties in general and how the neighbourhoods compare to each other in terms of their ratings.
 
-🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards and review the md document on GitHub to make sure you're happy with the final state of your work.*
+# Submission
+
+To submit, you need to export your .html document from RStudio Cloud and then upload it to the HW 01 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. 
+
+# Grading (50 pts)
+
+<br>
+
+| Component | Points |
+|:----------|:-------|
+| Ex 1      | 5      |
+| Ex 2      | 5    |
+| Ex 3      | 10    |
+| Ex 4      | 10     |
+| Ex 5      | 10      |
+| Workflow & formatting   | 10      |
+
+**Grading notes**:
+
+-   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output). 
