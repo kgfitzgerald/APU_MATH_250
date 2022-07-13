@@ -1,6 +1,6 @@
 ---
 title: "Week 04"
-subtitle: "Data wrangling pt. 2 & Spatial data"
+subtitle: "Data wrangling II"
 output: 
   prettydoc::html_pretty:
     theme: hpstr
