@@ -1,6 +1,6 @@
 ---
-title: "Prepare: Week 13"
-subtitle: "Special Topics: Shiny Apps"
+title: "Prepare: Week 14"
+subtitle: "Special Topics: Text Analysis"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For November 29
+## For December 6
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
   
 - [Slides]()
 
-`r emo::ji("memo")` Complete Prep Quiz 13 on Canvas
+`r emo::ji("memo")` Complete Prep Quiz 14 on Canvas
 
 ## Optional 
 

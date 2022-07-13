@@ -1,6 +1,6 @@
 ---
 title: "Week 07"
-subtitle: "Scientific Practice & Data Science Workflow"
+subtitle: "Data Ethics"
 output: 
   prettydoc::html_pretty:
     theme: hpstr
@@ -19,9 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Questions?
 
 
-### Application Exercise
+### Faith Integration Discussion
 
-- The remainder of class will be spent on AE-07. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
-- To turn it in, you should upload your .html file to Canvas.
+- There is no AE this week
+- The remainder of class will be spent on a Faith Integration Discussion

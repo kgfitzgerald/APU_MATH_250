@@ -1,6 +1,6 @@
 ---
 title: "Week 12"
-subtitle: "Uncertainty Quantification & Bootstrapping"
+subtitle: "Inference"
 output: 
   prettydoc::html_pretty:
     theme: hpstr
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Application Exercise
 
-- The remainder of class will be spent on AE-02. 
+- The remainder of class will be spent on AE-10. 
 - You can access it from your RStudio Cloud account. 
 - It is due by class-time on Thursday. 
 - To turn it in, you should upload your .html file to Canvas.

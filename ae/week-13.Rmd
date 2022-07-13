@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Application Exercise
 
-- The remainder of class will be spent on AE-13. 
+- The remainder of class will be spent on AE-11. 
 - You can access it from your RStudio Cloud account. 
 - It is due by class-time on Thursday. 
 - To turn it in, you should upload your .html file to Canvas.

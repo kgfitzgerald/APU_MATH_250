@@ -1,5 +1,6 @@
 ---
 title: "Prepare: Week 09"
+subtitle: "Logistic Regression"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -17,26 +18,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [Fitting and interpreting models](https://youtu.be/69U92Q3pwnA)
+`r emo::ji("movie_camera")` Watch [Logistic regression](https://www.youtube.com/watch?v=AidXFYSYfJg)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/24-fitting-interpreting-models.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/28-logistic-reg.html)
 
-`r emo::ji("movie_camera")` Watch [Modeling nonlinear relationships](https://www.youtube.com/watch?v=j4MZ6ZdHnHg)
+`r emo::ji("movie_camera")` Watch [Prediction overfitting](https://youtu.be/Qd4lu_Lmwi0)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/25-modeling-nonlinear-relationships.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/29-prediction-overfitting.html)
 
-`r emo::ji("movie_camera")` Watch [Models with multiple predictors](https://youtu.be/mjkNabD4oi4)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/26-model-multiple-predictors.html)
-
-`r emo::ji("movie_camera")` Watch [More models with multiple predictors](https://youtu.be/nJAYRnLPb10)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/27-more-model-multiple-predictors.html)
-  
 `r emo::ji("memo")` Complete Prep Quiz 09 on Canvas
 
 ### Optional 
 
-`r emo::ji("book")` Read [IMS: Chapter 7 - Linear regression with a single predictor](https://openintro-ims.netlify.app/model-slr.html) 
+`r emo::ji("book")` Read [IMS Chapter 9 - Logistic regression](https://openintro-ims.netlify.app/model-logistic.html) 
 
-`r emo::ji("book")` Read [IMS Chapter 8 - Linear regression with multiple predictors](https://openintro-ims.netlify.app/model-mlr.html)
+`r emo::ji("book")` Read [tidymodels:: Build a model](https://www.tidymodels.org/start/models/)

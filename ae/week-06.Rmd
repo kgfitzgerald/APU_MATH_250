@@ -1,6 +1,6 @@
 ---
 title: "Week 06"
-subtitle: "Review / Exam 1"
+subtitle: "Project Work Session"
 output: 
   prettydoc::html_pretty:
     theme: hpstr
@@ -13,15 +13,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-- A1
-- A2
+- Since Exam 1 is due Tuesday, the prep assignments are not due until Thursday this week
+- We will spend Tuesday's class as a project work session
 
 ### Questions?
 
 
-### Application Exercise
+### Project Work Session
 
-- The remainder of class will be spent on AE-06. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
-- To turn it in, you should upload your .html file to Canvas.
+- See [Doing Data Science slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/19-doing-data-science.html#1) for getting started on your [project proposal](https://apumath250.netlify.app/project/#project-proposal)

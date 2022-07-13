@@ -1,5 +1,6 @@
 ---
 title: "Prepare: Week 06"
+subtitle: "Scientific Practice & Data Science Workflow"
 output: 
   prettydoc::html_pretty:
     theme: cayman
