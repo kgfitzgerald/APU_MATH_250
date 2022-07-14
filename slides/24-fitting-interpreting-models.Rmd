@@ -152,6 +152,23 @@ Source: XKCD, [Cell phones](https://xkcd.com/925/)
 
 ---
 
+# $R^2$ 
+
++ The strength of the fit of a linear model is most commonly evaluated using $R^2$ .
++ $R^2$  is calculated as the square of the correlation coefficient.
++ It tells us what percent of variability in the response variable is explained by the model.
++ The remainder of the variability is explained by variables not included in the model or by inherent randomness in the data.
+
+```{r}
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(Height_in ~ Width_in, data = pp) %>% 
+  glance()
+```
+
+
+---
+
 class: middle
 
 # Parameter estimation

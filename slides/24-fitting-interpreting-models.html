@@ -199,6 +199,33 @@ Source: XKCD, [Cell phones](https://xkcd.com/925/)
 
 ---
 
+# `\(R^2\)` 
+
++ The strength of the fit of a linear model is most commonly evaluated using `\(R^2\)` .
++ `\(R^2\)`  is calculated as the square of the correlation coefficient.
++ It tells us what percent of variability in the response variable is explained by the model.
++ The remainder of the variability is explained by variables not included in the model or by inherent randomness in the data.
+
+
+```r
+linear_reg() %&gt;%
+  set_engine("lm") %&gt;%
+  fit(Height_in ~ Width_in, data = pp) %&gt;% 
+  glance()
+```
+
+```
+## # A tibble: 1 × 12
+##   r.squared adj.r.squared sigma statistic p.value    df  logLik
+##       &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+## 1     0.683         0.683  8.30     6749.       0     1 -11083.
+## # … with 5 more variables: AIC &lt;dbl&gt;, BIC &lt;dbl&gt;, deviance &lt;dbl&gt;,
+## #   df.residual &lt;int&gt;, nobs &lt;int&gt;
+```
+
+
+---
+
 class: middle
 
 # Parameter estimation

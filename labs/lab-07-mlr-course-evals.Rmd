@@ -1,0 +1,103 @@
+---
+title: "Lab 07 - Grading the professor, Pt. 2"
+subtitle: "Modelling with multiple predictors"
+date: "due Tuesday, October 11 at 11:59p "
+output: 
+  tufte::tufte_html:
+    css: "lab.css"
+    tufte_variant: "envisioned"
+    highlight: pygments
+    toc: true
+    toc_depth: 1
+link-citations: yes
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+In this lab we revisit the professor evaluations data we modelled in the previous AE.
+Last time, we modeled evaluation scores using a single predictor at a time.
+This time we will use multiple predictors to model evaluation scores.
+
+For context, review the previous AE's introduction before continuing on to the exercises.
+
+# Learning goals
+
+-   Fitting a linear regression with multiple predictors
+-   Interpreting regression output in context of the data
+-   Comparing models
+
+# Getting started
+
+[INSERT INSTRUCTIONS HERE]
+
+## Packages
+
+We'll use the **tidyverse** package for much of the data wrangling and visualisation, the **tidymodels** package for modeling and inference, and the data lives in the **openintro** package.
+
+```{r}
+library(tidyverse) 
+library(tidymodels)
+library(openintro)
+```
+
+## Data
+
+The data can be found in the **openintro** package, and it's called `evals`.
+Since the dataset is distributed with the package, we don't need to load it separately; it becomes available to us when we load the package.
+You can find out more about the dataset by inspecting its documentation, which you can access by running `?evals` in the Console or using the Help menu in RStudio to search for `evals`.
+You can also find this information [here](https://www.openintro.org/data/index.php?data=evals).
+
+# Exercises
+
+## Simple linear regression
+
+1.  Fit a linear model (one you have fit before): `score_bty_fit`, predicting average professor evaluation `score` based on average beauty rating (`bty_avg`) only. Write the linear model, and note the $R^2$ and the adjusted $R^2$.
+
+## Multiple linear regression
+
+2.  Fit a new linear model: `score_bty_gen_fit`, predicting average professor evaluation `score` based on average beauty rating (`bty_avg`) and `gender`.
+    Write the linear model, and note the $R^2$ and adjusted $R^2$.
+
+3.  Interpret the slopes and intercept of `score_bty_gen_fit` in context of the data.
+
+4.  What percent of the variability in `score` is explained by the model `score_bty_gen_fit`?
+
+5.  What is the equation of the line corresponding to *just* male professors?
+
+6.  For two professors who received the same beauty rating, which gender tends to have the higher course evaluation score?
+
+7.  How does the relationship between beauty and evaluation score vary between male and female professors?
+
+8.  How do the adjusted $R^2$ values of `score_bty_gen_fit` and `score_bty_fit` compare?
+    What does this tell us about how useful `gender` is in explaining the variability in evaluation scores when we already have information on the beauty score of the professor.
+
+9. Compare the slopes of `bty_avg` under the two models (`score_bty_fit` and `score_bty_gen_fit`).
+    Has the addition of `gender` to the model changed the parameter estimate (slope) for `bty_avg`?
+
+10. Create a new model called `score_bty_rank_fit` with `gender` removed and `rank` added in.
+    Write the equation of the linear model and interpret the slopes and intercept in context of the data.
+
+# Grading (50pts)
+
+| Component | Points |
+|:----------|:-------|
+| Ex 1      | 4      |
+| Ex 2      | 4    |
+| Ex 3      | 4   |
+| Ex 4      | 4   |
+| Ex 5      | 4      |
+| Ex 6      | 4    |
+| Ex 7      | 4   |
+| Ex 8      | 4   |
+| Ex 9      | 4   |
+| Ex 10  | 4 |
+| Workflow & formatting   | 10      |
+
+**Grading notes**:
+
+-   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output).

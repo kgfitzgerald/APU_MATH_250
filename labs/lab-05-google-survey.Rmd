@@ -97,9 +97,15 @@ survey %>%
 
 The `grepl()` function searches for a given string (e.g. "Mac laptop") in a given object (`laptop`). It returns the value `TRUE` if the string is present, and `FALSE` if it is not. Combined with the `if_else()` statement, this results in the new variable having the value "Yes" if the string is found and "No" if it is not. 
 
-7. Use a `pivot_longer` to pivot the columns `Mac:PC`. Consider using `names_to = "laptop_type"` and `values_to = "laptop_access"` to name the new pivoted columns. Then, recreate the following visualization.
+7. Use a `pivot_longer` to pivot the columns `Mac:PC`. Consider using `names_to = "laptop_type"` and `values_to = "laptop_access"` to name the new pivoted columns. Then, recreate the following visualization. See the animation below to remind you how the `pivot_()` functions work. 
 
 ![](img/laptop.png)
+
+```{r echo = FALSE}
+knitr::include_graphics("img/tidyr-longer-wider.gif")
+```
+
+
 
 8. What is the distribution of race/ethnicity in MATH 130? Create an appropriate visualization to explore this variable. Make decisions about how to clean up the levels and combine as necessary. 
 
@@ -107,9 +113,11 @@ The `grepl()` function searches for a given string (e.g. "Mac laptop") in a give
 
 1. Create a new variable called `semester` that uses the time variable to designate whether each student was in MATH 130 in Fall 2021 or Spring 2022. *Hint: the function `year()` applied to a date will extract just the year.*. Use this new variable to investigate whether students in the Fall or Spring semester were more anxious about MATH 130 on average.  
 
-1. Attempt to recreate this visualization as closely as possible. *Hint: you will first need to use a `pivot_longer` and then use a `case_when()` to recode the levels of the new variable to be the full statements seen on the y-axis)
+1. Attempt to recreate this visualization as closely as possible. *Hint: you will first need to use a `pivot_longer` and then use a `case_when()` to recode the levels of the new variable to be the full statements seen on the y-axis)*. 
 
 ![](img/likert_three.png)
+
+
 
 1. Create a visualization similar to Exercise 6 to explore what proportion of students in MATH 130 are commuters, athletes, caretakers, etc. 
 

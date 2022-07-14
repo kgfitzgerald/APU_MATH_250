@@ -1,0 +1,132 @@
+---
+title: "Lab 06: Smokers"
+subtitle: "due Tuesday, October 11 at 11:59p "
+output: 
+  tufte::tufte_html:
+    css: "lab.css"
+    tufte_variant: "envisioned"
+    highlight: pygments
+    toc: true
+    toc_depth: 1
+link-citations: yes
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(warning = FALSE, 
+                      message = FALSE, 
+                      eval = FALSE)
+```
+
+```{r fig.margin = TRUE, eval = TRUE, echo = FALSE}
+knitr::include_graphics("img/whickham.png")
+```
+
+A study conducted in Whickham, England recorded participants' age, smoking status at baseline, and then 20 years later recorded their health outcome.
+In this lab we analyze the relationships between these variables, first two at a time, and then controlling for the third.
+
+# Learning Goals 
+
+In this lab you will...
+
+- Calculate marginal, joint, and conditional probabilities in a reproducible way 
+- Visualize categorical variables
+- Use visualizations and probabilities to describe the association between two categorical variables. 
+
+# Getting started 
+
+[INSTRUCTION HERE]
+
+# Packages 
+
+We'll use the **tidyverse** package for much of the data wrangling and visualisation and the data lives in the **mosaicData** package.
+These packages are already installed for you.
+You can load them by running the following in your Console:
+
+```{r eval = TRUE, message = FALSE}
+library(tidyverse) 
+library(mosaicData) 
+```
+
+```{r eval = TRUE, message = FALSE, echo = FALSE}
+library(kableExtra)
+```
+
+## Data
+
+The dataset we'll use is called Whickham from the **mosaicData** package.
+You can find out more about the dataset by inspecting their documentation, which you can access by running `?Whickham` in the Console or using the Help menu in RStudio to search for `Whickham`.
+
+# Exercises
+
+1.  What type of study do you think these data come from: observational or experiment?
+    Why?
+
+2.  How many observations are in this dataset?
+    What does each observation represent?
+
+3.  How many variables are in this dataset?
+    What type of variable is each?
+
+4. Display each variable using an appropriate visualization. Comment on the distribution of each. 
+
+5.  What would you expect the relationship between smoking status and health outcome to be?
+
+6.  Create a visualization depicting the relationship between smoking status and health outcome. Briefly describe the relationship, and evaluate whether this meets your expectations. Additionally, calculate the relevant conditional probabilities to help your narrative. 
+
+7.  Create a new variable called `age_cat` using the following scheme:
+
+-   `age <= 44 ~ "18-44"`
+-   `age > 44 & age <= 64 ~ "45-64"`
+-   `age > 64 ~ "65+"`
+
+8.  Re-create the visualization depicting the relationship between smoking status and health outcome, faceted by `age_cat`.  
+
+9. Extend the contingency table from earlier by breaking it down by age category
+
+10. Compare the visualization and table from Exercises 8 & 9 to what you previously observed in Exercise 6. What changed, and what might explain the change? Use the table you calculated in Exercise 9 to support your narrative.
+
+11. Wrangle your contingency table in Exercise 9 to display the data in the following manner. *Hint: this will involve pivoting the data and filtering/selecting to only keep relevant rows and columns. 
+```{r, echo = FALSE, message = FALSE, warning = FALSE, eval = TRUE}
+table <- read_csv("data/smoker_by_age.csv")
+table
+```
+
+# Stretch Exercises
+
+12. Read about making nicely formatted html tables using the `kableExtra` package [here](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html), and use the `kable()` function to re-produce the following formatted table. *Hint: use an `add_header_above()` layer in your pipe after `kable()`*
+
+Proportion Alive by Smoker Status and Age Category
+```{r, eval = TRUE, echo = FALSE}
+table %>% 
+  kable() %>% 
+  add_header_above(c(" ", "Age Category" = 3))
+```
+
+13. Try out some other `kable()` features on the other tables in this report.
+
+# Grading (50pts)
+
+| Component | Points |
+|:----------|:-------|
+| Ex 1      | 2      |
+| Ex 2      | 2    |
+| Ex 3      | 4   |
+| Ex 4      | 4   |
+| Ex 5      | 4      |
+| Ex 6      | 6    |
+| Ex 7      | 4   |
+| Ex 8      | 4   |
+| Ex 9      | 4   |
+| Ex 10  | 4 |
+| Ex 11  | 6 |
+| Workflow & formatting   | 6      |
+| Ex 12 (BONUS) | 2 |
+| Ex 13 (BONUS) | 2 |
+
+
+**Grading notes**:
+
+-   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output). 
