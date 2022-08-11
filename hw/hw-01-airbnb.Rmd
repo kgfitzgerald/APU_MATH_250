@@ -27,7 +27,12 @@ Using data provided by Airbnb, we can explore how Airbnb availability and prices
 
 # Getting started
 
-[INSERT INSTRUCTIONS HERE]
+This homework assignment will be completed *individually*. To get started,
+
++ Login to your RStudio Cloud account
++ Access the `MATH_250_individual` workspace 
++ Launch the `Week 02` project
++ Open `hw-01.Rmd`
 
 ## Packages
 

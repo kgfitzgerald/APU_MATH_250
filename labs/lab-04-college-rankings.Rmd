@@ -23,9 +23,16 @@ In this lab, you will...
 
 # Getting started
 
-[INSERT INSTRUCTIONS HERE]
+This lab will be completed collaboratively in your randomly assigned Labs 03 - 04 groups (see Canvas). Choose a *different* group leader this week (e.g. not the same person that was randomly assigned as the leader in Canvas last week).
 
-All plots should follow the best visualization practices discussed in lecture, including an informative title, labeled axes, and careful consideration ofaesthetic choices.
++ Login to your RStudio Cloud account
++ Navigate to the `MATH_250 Labs 03 - 04 G#` workspace 
++ Launch the MATH_250 Labs 03 - 04` project
++ Open `lab-04.Rmd`
+
+Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise.
+
+All plots should follow the best visualization practices discussed in lecture, including an informative title, labeled axes, and careful consideration of aesthetic choices.
 
 All code should follow the tidyverse style guidelines.
 

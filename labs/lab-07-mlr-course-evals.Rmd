@@ -33,7 +33,17 @@ For context, review the previous AE's introduction before continuing on to the e
 
 # Getting started
 
-[INSERT INSTRUCTIONS HERE]
+This lab will be completed collaboratively in your randomly assigned Labs 07 - 08 groups (see Canvas). The person randomly assigned to be the Group Leader in Canvas is responsible for submitting the assignment. 
+
++ Access the `MATH_250 Labs 07 - 08 G#` workspace via the link in the email invite you received. 
++ Launch the MATH_250 Labs 07 - 08` project
++ Open `lab-07.Rmd`
+
+Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise.
+
+All plots should follow the best visualization practices discussed in lecture, including an informative title, labeled axes, and careful consideration ofaesthetic choices.
+
+All code should follow the tidyverse style guidelines.
 
 ## Packages
 
