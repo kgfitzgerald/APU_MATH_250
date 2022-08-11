@@ -34,7 +34,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/27-more-model-multiple-predictors.html)
   
-`r emo::ji("memo")` Complete Prep Quiz 09 on Canvas
+`r emo::ji("memo")` Complete Prep Quiz 08 on Canvas
 
 ### Optional 
 
