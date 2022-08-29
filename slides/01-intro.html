@@ -16,8 +16,12 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Welcome to MATH 250!
+]
+.author[
 ### Dr. Katie Fitzgerald
+]
 
 ---
 
@@ -36,6 +40,8 @@ layout: true
 ---
 
 
+
+---
 
 class: middle, center
 
@@ -61,15 +67,19 @@ class: middle, center
 A - None. Pre-req: one stats class
 
 &lt;br&gt;
+--
 
 **Q - Is this a statistics course?**
 A - While statistics `\(\neq\)` data science, they are very closely related and have tremendous overlap. Hence, this course will help you utilize and further your statistical thinking. However this course is not your typical intro or mathematical statistics course.
 
 &lt;br&gt;
+--
 
 **Q - What computing language / software will we use?**
 A - R
-
+--
+&lt;br&gt;
+&lt;br&gt;
 **Q - Why not language/software X?**
 A - We can discuss that over ☕
 
@@ -198,12 +208,12 @@ class: middle, center
 
 - Attend Office Hours 
   - Tuesdays 10am-12pm
-  - Thursdays 1-2:20pm
+  - Wednesdays 1-2:20pm
   - By appointment
 
 --
 
-- Use **Campuswire** for general questions about course content and/or assignments, since other students may benefit from the response. And it's easier to type code and math, compared to email.
+- Use **Campuswire** for any questions about course content and/or assignments, since other students may benefit from the response. And it's easier to type code and math, compared to email.
 
 --
 
@@ -213,23 +223,47 @@ class: middle, center
 
 ## Course community &amp; Learning environment
 
-- What do you need [from me, from yourself, from your peers] for this semester to be successful? 
+*What do you need [from me, from yourself, from your peers] for this semester to be successful?*
 
 --
 
-- Have you participated in flipped learning before? 
+Traditional vs. flipped learning
+
+- Traditional classroom: first engagement with the material comes via a lecture in class, deeper engagement (e.g. homework) comes outside of class
+- Flipped learning: first engagement with the material comes in "individual space", and "group space" is used for deeper engagment with the material, when instructor is still there to guide
 
 --
+
+If you have participated in flipped learning before, what was your experience? In what ways did it require a shift in your approach to class/learning? 
+
+If you have NOT participated in flipped learning, what is your first impression of the idea? In what ways might it require a shift in your approach to class/learning?
+
+---
+
+## Course community &amp; Learning environment
+
+*What do you need [from me, from yourself, from your peers] for this semester to be successful?*
 
 - What makes group dynamics enriching? What hinders learning?
 
---
+- Collaborative norm-setting 
 
-- What late policies have you found most (in)effective?
 
---
+---
 
-- What attendance policies have you found most (in)effective?
+## Class Norms
+
++ Everyone has expertise
++ Be present
++ Participate to the best of your ability
++ Share talk time
++ Critique ideas, not people
++ Engage new perspectives with curiosity, not judgement
++ Exhibit intellectual humility
++ Embrace discomfort
++ Normalize time to think
++ Others??
+
 
 ---
 
@@ -388,6 +422,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
