@@ -367,15 +367,15 @@ knitr::include_graphics("img/unvotes/unvotes-14.jpeg")
 
 - Create an RStudio Cloud Account
 
-- Application Exercise (AE) 01
+- Application Exercise (AE) 01a (under Week 01)
 
 ---
 
 ## For Thursday
 
-- Finish AE 01
-- Watch "Meet the Toolkit" lecture + complete quiz
-- Respond to welcome prompt on Campuswire
+- Complete AE 01 
+- Watch "Meet the Toolkit" lecture + complete prep quiz on Canvas
+- Enroll in Campuswire course and respond to welcome prompt
 
 
 
