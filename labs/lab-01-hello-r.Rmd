@@ -70,9 +70,13 @@ The data frame we will be working with today is called `datasaurus_dozen` and it
 Actually, this single data frame contains 13 datasets, designed to show us why data visualisation is important and how summary statistics alone can be misleading.
 The different datasets are marked by the `dataset` variable.
 
-To find out more about the dataset, type the following in your Console: `?datasaurus_dozen`.
+To find out more about the dataset, type the following in your Console: 
+
+`?datasaurus_dozen`
+
+
 A question mark before the name of an object will always bring up its help file.
-This command must be ran in the Console.
+This command must be run in the Console.
 
 # Exercises
 
@@ -131,7 +135,7 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
 ```
 
 If this seems like a lot, it is.
-And you will learn about the philosophy of building data visualizations in layer in detail next week.
+And you will learn about the philosophy of building data visualizations in layers in detail next week.
 For now, follow along with the code that is provided.
 
 For the second part of these exercises, we need to calculate a summary statistic: the correlation coefficient.
@@ -199,7 +203,7 @@ Note that these values get saved in the YAML.
 
 
 
-You can also use different figure sizes for differen figures.
+You can also use different figure sizes for different figures.
 To do so click on the gear icon within the chunk where you want to make a change.
 Changing the figure sizes added new options to these chunks: `fig.width` and `fig.height`.
 You can change them by defining different values directly in your R Markdown document as well.
