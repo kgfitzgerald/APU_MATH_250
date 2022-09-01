@@ -19,6 +19,12 @@ knitr::opts_chunk$set(echo = TRUE)
     + How can I be praying for you? 
 - Prepare activities due by classtime Tuesday (76mins, across 4 mini-lectures)
 - Lab 01 due Tuesday, 11:59pm
+- Attend StatFest (and earn Statistics Experience points!)
+
+```{r, echo = FALSE}
+knitr::include_graphics("./img/statfest.png")
+```
+
 
 ### Questions?
 
