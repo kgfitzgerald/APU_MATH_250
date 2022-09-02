@@ -26,10 +26,8 @@ In this lab, you will...
 
 In this lab, you will code collaboratively in your randomly assigned Labs 01 - 02 groups (see Canvas) and will submit a single lab report for your team. The person randomly assigned to be the Group Leader in Canvas is responsible for submitting the assignment. 
 
-You should have received an email invite to an RStudio Cloud workspace `MATH_250 Labs 01-02 G#` corresponding to your group number. 
-
-+ Click on the link in the email to access the workspace. 
-+ Click on `MATH_250_Labs_01_02` to launch the project
++ In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Lab 02 G#` workspace. 
++ In the workspace, click on `MATH_250_Lab_02` to launch the project
 + Open `lab-02.Rmd` by clicking on the file name in the Files pane (bottom right quadrant)
 
 Each group member has `moderator` access to the workspace, which enables you to collaboratively edit documents which reflect others' changes simultaneously (like Google Docs). This means any changes you make to your files affect the whole team! 
@@ -74,26 +72,24 @@ All plots should follow the best visualization practices discussed in lecture. P
 
 Remember that continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. You should provide adequate comments to your code and narrative text interpreting your results.  
 
-```{marginfigure}
-For more details and code examples for histograms [ggplot2 reference page](https://ggplot2.tidyverse.org/reference/geom_histogram.html).
-```
+1. Provide a brief description of the data collection process - who collected the data, when was it collected, who was surveyed, and anything else you find relevant/interesting. 
 
-1. How many rows are in the `anes` dataset? How many columns? Please include code and output to support your response. 
+2. How many rows are in the `anes` dataset? How many columns? Please include code and output to support your response. 
 
-2. Create a bar chart showing the `ideology` of the respondents, with the count on the y-axis. 
+3. Create a bar chart showing the `ideology` of the respondents, with the count on the y-axis. 
   - Please remember to include labels. 
   - What is the most common ideology? 
   - Do respondents tend to be moderate or more ideologically extreme?
 
-3. Now, let’s examine whether ideologies are different based upon where people live. Please make a filled bar plot, showing one bar for each `ideology`, with the percentage of respondents on the y-axis going from 0-1, and the fill determined by `urbanrural`. 
+4. Now, let’s examine whether ideologies are different based upon where people live. Please make a filled bar plot, showing one bar for each `ideology`, with the percentage of respondents on the y-axis going from 0-1, and the fill determined by `urbanrural`. 
   - You are encouraged but not required to use `viridis` colors. 
   - Please remember to include labels. 
   - Where do people of different ideologies tend to live? 
   - Does the percentage of non-responses (i.e., people who said NA) vary much by ideology?
   
-4. How do people view scientists? Please make a histogram with the feeling thermometer on the x-axis and the number of respondents on the y-axis. Then, please comment on features of the histogram such as skewness and peaks.
+5. How do people view scientists? Please make a histogram with the feeling thermometer on the x-axis and the number of respondents on the y-axis. Then, please comment on features of the histogram such as skewness and peaks.
 
-5. Does the ideology of those who have gone hunting or fishing in the past year differ from those who haven’t? Please make side-by-side boxplots of these two groups.
+6. Does the ideology of those who have gone hunting or fishing in the past year differ from those who haven’t? Please make side-by-side boxplots of these two groups.
   - You should start your code with:
 
 ```{r, eval = FALSE}
@@ -107,17 +103,15 @@ anes %>%
 You can read more about ridge plots [here](https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html).
 ```
 
-6. Explore the same question as in Exercise 5, this time using `geom_density_ridge()` to construct a ridge plot as an alternative to side-by-side box plots. 
+7. Explore the same question as in Exercise 6, this time using `geom_density_ridge()` to construct a ridge plot as an alternative to side-by-side box plots.  
 
+8. Describe what you observe in both plots from Exercises 6 & 7 and what you learn from one plot that you do not see in the other or that adds additional context to the other.
 
-
-7. Describe what you observe in both plots from Exercises 5 & 6 and what you learn from one plot that you do not see in the other or that adds additional context to the other.
-
-8. Is there a relationship between a respondent’s education level and how they view scientists? Please make a scatterplot of these two variables with education on the x-axis and view of scientists on the y-axis. 
-  - Include a line of best fit using a `geom_smooth()` layer with the option method = "lm". 
+9. Is there a relationship between a respondent’s education level and how they view scientists? Please make a scatterplot of these two variables with education on the x-axis and view of scientists on the y-axis. 
+  - Include a line of best fit using a `geom_smooth()` layer with the option `method = "lm"`. 
   - Do you think this is an especially useful visualization? Why or why not?
   
-9. Again make a scatterplot to explore the relationship between education and views of scientists, but this time facet by whether the person hunted or fished in the past year. 
+10. Again make a scatterplot to explore the relationship between education and views of scientists, but this time facet by whether the person hunted or fished in the past year. 
 There are a lot of data points in this dataset, so for this exercise, begin by first taking a sample, using the code below: 
 
 ```{marginfigure}
@@ -133,9 +127,12 @@ anes2 <- anes %>%
 - Then, please add a `geom_smooth()` layer with `method = "lm"` for each season and add the argument `se = FALSE` to omit the bands surrounding the line. 
 - Describe what you observe.
 
+11. What is an additional question you could investigate using this data? State the question, provide a visualization that investigates it, and comment on what your visualization shows. 
+12. Write a brief paragraph summarizing what you found in this lab, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions. 
+
 # Submission
 
-To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 02 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. 
+To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 02 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. Recall only one group member needs to submit the assignment.
 
 # Grading (50 pts)
 
@@ -143,15 +140,18 @@ To submit, you need to export your .html document from RStudio Cloud and then up
 
 | Component | Points |
 |:----------|:-------|
-| Ex 1      | 4      |
-| Ex 2      | 6    |
+| Ex 1      | 2      |
+| Ex 2      | 2    |
 | Ex 3      | 4    |
-| Ex 4      | 6     |
+| Ex 4      | 4     |
 | Ex 5      | 4      |
 | Ex 6      | 4    |
 | Ex 7      | 4    |
-| Ex 8      | 6    |
-| Ex 9      | 6    |
+| Ex 8      | 4    |
+| Ex 9      | 4    |
+| Ex 10      | 4    |
+| Ex 11     | 4    |
+| Ex 12     | 4    |
 | Workflow & formatting   | 6      |
 
 **Grading notes**:

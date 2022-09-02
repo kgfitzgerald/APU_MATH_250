@@ -25,7 +25,7 @@ In this lab, you will...
 
 This lab will be completed collaboratively in your randomly assigned Labs 05 - 06 groups (see Canvas). The person randomly assigned to be the Group Leader in Canvas is responsible for submitting the assignment. 
 
-+ Access the `MATH_250 Labs 05 - 06 G#` workspace via the link in the email invite you received. 
++ In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Labs 05-06 G#` workspace. 
 + Launch the MATH_250 Labs 05 - 06` project
 + Open `lab-05.Rmd`
 
