@@ -128,6 +128,7 @@ anes2 <- anes %>%
 - Describe what you observe.
 
 11. What is an additional question you could investigate using this data? State the question, provide a visualization that investigates it, and comment on what your visualization shows. 
+
 12. Write a brief paragraph summarizing what you found in this lab, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions. 
 
 # Submission

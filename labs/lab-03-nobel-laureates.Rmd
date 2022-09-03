@@ -38,19 +38,10 @@ Prior to completing the lab, you should have read the Buzzfeed article titled [*
 This lab will be completed collaboratively in your randomly assigned Labs 03 - 04 groups (see Canvas). The person randomly assigned to be the Group Leader in Canvas is responsible for submitting the assignment. 
 
 + In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Labs 03-04 G#` workspace. 
-+ Launch the MATH_250 Labs 03 - 04` project
++ Launch the `MATH_250 Labs 03 - 04` project
 + Open `lab-03.Rmd`
 
 Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise. 
-
-## Warm up
-
-Before we introduce the data, let's warm up with some simple exercises.
-
--   Update the YAML, changing the author name to your name, and **knit** the document.
--   Commit your changes with a meaningful commit message.
--   Push your changes to GitHub.
--   Go to your repo on GitHub and confirm that your changes are visible in your Rmd **and** md files. If anything is missing, commit and push again.
 
 ## Packages
 
@@ -95,7 +86,7 @@ The variable descriptions are as follows:
 -   `motivation`: Motivation for recognition
 
 In a few cases the name of the city/country changed after laureate was given (e.g. in 1975 Bosnia and Herzegovina was called the Socialist Federative Republic of Yugoslavia).
-In these cases the variables below reflect a different name than their counterparts without the suffix \`\_original\`.
+In these cases the variables below reflect a different name than their counterparts without the suffix `_original`.
 
 -   `born_country_original`: Original country where laureate was born
 -   `born_city_original`: Original city where laureate was born
@@ -108,7 +99,7 @@ In these cases the variables below reflect a different name than their counterpa
 
 Take turns answering the exercises.
 Make sure each team member has contributed by the time you submit your work.
-You don't have to switch at each exercise, you can find your a cadence that works for your team and stick to it.
+You don't have to switch at each exercise, you can find a cadence that works for your team and stick to it.
 
 ## Get to know your data
 
@@ -155,7 +146,7 @@ nobel_living <- nobel_living %>%
   mutate(country_us = if_else(country == "USA", "USA", "Other"))
 ```
 
-Next, we will limit our analysis to only the following categories: Physics, Medicine, Chemistry, and Economics.
+Next, we will limit our analysis to only the following categories: Physics, Medicine, Chemistry, and Economics. For the remainder of the analyses, we will consider this subset of laureates only. 
 
 ```{r}
 nobel_living_science <- nobel_living %>%
@@ -195,7 +186,12 @@ This means you'll need to define this data frame in your R Markdown document, ev
 Note that your bar plot won't exactly match the one from the Buzzfeed article. This is likely because the data has been updated since the article was published.
 ```
 
-6.  In a single pipeline, filter for laureates who won their prize in the US, but were born outside of the US, and then create a frequency table (with the `count()` function) for their birth country (`born_country`) and arrange the resulting data frame in descending order of number of observations for each country. Which country is the most common?
+6.  In a single pipeline, filter for laureates who won their prize in the US, but were born outside of the US, and then create a frequency table (with the `count()` function) for their birth country (`born_country`) and arrange the resulting data frame in descending order of number of observations for each country. Also create a bar plot that displays these frequencies. Which country is the most common?
+
+```{marginfigure}
+Hint: using `x = fct_rev(fct_infreq(variable_name))` inside `aes()` will sort the bars from longest to shortest (most frequent to least frequent categories).
+```
+
 
 Now go back through your write up to make sure you've answered all questions and all of your R chunks are properly labelled.
 

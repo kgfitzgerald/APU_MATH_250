@@ -563,26 +563,12 @@ Group Leader in Canvas is responsible for submitting the assignment.</p>
 <li>In Canvas, navigate to <a href="https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links">“RStudio
 Cloud Links”</a> and click the link to join your group specific
 <code>MATH_250 Labs 03-04 G#</code> workspace.</li>
-<li>Launch the MATH_250 Labs 03 - 04` project</li>
+<li>Launch the <code>MATH_250 Labs 03 - 04</code> project</li>
 <li>Open <code>lab-03.Rmd</code></li>
 </ul>
 <p>Remember that you are editing simultaneously and any changes you make
 in your files affect your whole group. Make sure to take turns so that
 each group member is “in the driver seat” for at least one exercise.</p>
-<div id="warm-up" class="section level2">
-<h2>Warm up</h2>
-<p>Before we introduce the data, let’s warm up with some simple
-exercises.</p>
-<ul>
-<li>Update the YAML, changing the author name to your name, and
-<strong>knit</strong> the document.</li>
-<li>Commit your changes with a meaningful commit message.</li>
-<li>Push your changes to GitHub.</li>
-<li>Go to your repo on GitHub and confirm that your changes are visible
-in your Rmd <strong>and</strong> md files. If anything is missing,
-commit and push again.</li>
-</ul>
-</div>
 <div id="packages" class="section level2">
 <h2>Packages</h2>
 <p>We’ll use the <strong>tidyverse</strong> package for much of the data
@@ -628,7 +614,7 @@ with</li>
 was given (e.g. in 1975 Bosnia and Herzegovina was called the Socialist
 Federative Republic of Yugoslavia). In these cases the variables below
 reflect a different name than their counterparts without the suffix
-`_original`.</p>
+<code>_original</code>.</p>
 <ul>
 <li><code>born_country_original</code>: Original country where laureate
 was born</li>
@@ -649,8 +635,8 @@ at the time of winning the award</li>
 <h1>Exercises</h1>
 <p>Take turns answering the exercises. Make sure each team member has
 contributed by the time you submit your work. You don’t have to switch
-at each exercise, you can find your a cadence that works for your team
-and stick to it.</p>
+at each exercise, you can find a cadence that works for your team and
+stick to it.</p>
 <div id="get-to-know-your-data" class="section level2">
 <h2>Get to know your data</h2>
 <ol style="list-style-type: decimal">
@@ -696,7 +682,8 @@ show you one example of an if statement in R.</span></span></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>nobel_living <span class="ot">&lt;-</span> nobel_living <span class="sc">%&gt;%</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country_us =</span> <span class="fu">if_else</span>(country <span class="sc">==</span> <span class="st">&quot;USA&quot;</span>, <span class="st">&quot;USA&quot;</span>, <span class="st">&quot;Other&quot;</span>))</span></code></pre></div>
 <p>Next, we will limit our analysis to only the following categories:
-Physics, Medicine, Chemistry, and Economics.</p>
+Physics, Medicine, Chemistry, and Economics. For the remainder of the
+analyses, we will consider this subset of laureates only.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nobel_living_science <span class="ot">&lt;-</span> nobel_living <span class="sc">%&gt;%</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(category <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Physics&quot;</span>, <span class="st">&quot;Medicine&quot;</span>, <span class="st">&quot;Chemistry&quot;</span>, <span class="st">&quot;Economics&quot;</span>))</span></code></pre></div>
 <p>For the next exercise work with the <code>nobel_living_science</code>
@@ -752,9 +739,14 @@ published.</span></span></p>
 the US, but were born outside of the US, and then create a frequency
 table (with the <code>count()</code> function) for their birth country
 (<code>born_country</code>) and arrange the resulting data frame in
-descending order of number of observations for each country. Which
-country is the most common?</li>
+descending order of number of observations for each country. Also create
+a bar plot that displays these frequencies. Which country is the most
+common?</li>
 </ol>
+<p><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote"><span style="display: block;">Hint: using <code>x =
+fct_rev(fct_infreq(variable_name))</code> inside <code>aes()</code> will
+sort the bars from longest to shortest (most frequent to least frequent
+categories).</span></span></p>
 <p>Now go back through your write up to make sure you’ve answered all
 questions and all of your R chunks are properly labelled.</p>
 </div>
