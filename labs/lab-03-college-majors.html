@@ -519,6 +519,9 @@ text-align: center;
 <li><a href="#getting-started" id="toc-getting-started">Getting
 started</a></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
+<li><a href="#submission" id="toc-submission">Submission</a></li>
+<li><a href="#grading-50-pts" id="toc-grading-50-pts">Grading (50
+pts)</a></li>
 </ul>
 </div>
 
@@ -565,14 +568,18 @@ each group member is “in the driver seat” for at least one exercise.</p>
 <div id="packages" class="section level2">
 <h2>Packages</h2>
 <p>We’ll use the <strong>tidyverse</strong> package for much of the data
-wrangling and visualisation, the <strong>scales</strong> package for
-better formatting of labels on visualisations, and the data lives in the
+wrangling and visualization, the <strong>scales</strong> package for
+better formatting of labels on visualizations, the <code>ggridges</code>
+package for creating ridge plots, the <code>kableExtra</code> package
+for formatting tables, and the data lives in the
 <strong>fivethirtyeight</strong> package.</p>
 <p>These packages are already installed for you. You can load them by
 running the following in your Console:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fivethirtyeight)</span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fivethirtyeight)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code></pre></div>
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>
@@ -601,8 +608,8 @@ categories?</li>
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
 <ol style="list-style-type: decimal">
-<li><p>How many rows and observations are in this data? What does each
-row represent?</p></li>
+<li><p>How many observations and variables are in this data? What does
+each row represent?</p></li>
 <li><p>Which major category is the least popular in this sample?
 Meaning, which major category has the fewest number of total graduates?
 Use the partial code below, filling it in with the appropriate function
@@ -645,9 +652,11 @@ percentages.</li>
 <div id="which-majors-have-the-highest-percentage-of-women" class="section level2">
 <h2>Which majors have the highest percentage of women?</h2>
 <ol start="5" style="list-style-type: decimal">
-<li>Using what you’ve learned so far, put together a pipeline of code
-that produces a nicely formatted table to investigate this question.
-Comment on what your results show.</li>
+<li><p>Using what you’ve learned so far, put together a pipeline of code
+that produces a nicely formatted table to investigate the above
+question. Comment on what your results show.</p></li>
+<li><p>Include a similar table for the majors that have the lowest
+percentage of women.</p></li>
 </ol>
 </div>
 <div id="how-do-the-distributions-of-median-income-compare-across-major-categories" class="section level2">
@@ -662,7 +671,7 @@ be found. (Source: <a href="https://en.wikipedia.org/wiki/Percentile">Wikipedia<
 <code>p25th</code>, <code>median</code>, and <code>p75th</code>. These
 correspond to the 25th, 50th, and 75th percentiles of the income
 distribution of sampled individuals for a given major.</p>
-<ol start="6" style="list-style-type: decimal">
+<ol start="7" style="list-style-type: decimal">
 <li>Why do we often choose the median, rather than the mean, to describe
 the typical income of a group of people?</li>
 </ol>
@@ -673,7 +682,7 @@ answer this question: First, we need to group the data by
 distributions of median income within these groups. This decision will
 depend on the shapes of these distributions. So first, we need to
 visualize the data.</p>
-<ol start="7" style="list-style-type: decimal">
+<ol start="8" style="list-style-type: decimal">
 <li>Start simple and take a look at the distribution of median incomes
 for all majors, without considering the major categories. Choose a
 reasonable binwidth and justify your choice. You might ask yourself:
@@ -684,7 +693,7 @@ visualization reveals.</li>
 <p>We can also calculate summary statistics for this distribution using
 the <code>summary</code> function:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(college_recent_grads<span class="sc">$</span>median)</span></code></pre></div>
-<ol start="8" style="list-style-type: decimal">
+<ol start="9" style="list-style-type: decimal">
 <li><p>Based on the shape of the histogram you created in the previous
 exercise, determine which summary statistic is most useful for
 describing the distribution.</p></li>
@@ -698,7 +707,7 @@ statistic to use to quantify the typical median income.</p>
 <p><label for="tufte-mn-5" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-5" class="margin-toggle"><span class="marginnote"><span style="display: block;">Hint: This will require
 a <code>group_by()</code> and a
 <code>summarize()</code></span></span></p>
-<ol start="10" style="list-style-type: decimal">
+<ol start="11" style="list-style-type: decimal">
 <li>Which major category has the highest typical (you’ll need to decide
 what this means) median income?</li>
 </ol>
@@ -778,7 +787,7 @@ logical operators that are commonly used are</p>
 <p>We can use the logical operators to also <code>filter</code> our data
 for STEM majors whose median earnings is less than median for all
 majors’ median earnings, which we found to be $36,000 earlier.</p>
-<ol start="11" style="list-style-type: decimal">
+<ol start="12" style="list-style-type: decimal">
 <li>Which STEM majors have median salaries equal to or less than the
 median for all majors’ median earnings? Your output should only show the
 major name and median, 25th percentile, and 75th percentile earning for
@@ -788,7 +797,7 @@ median earning is on top.</li>
 </div>
 <div id="what-types-of-majors-do-women-tend-to-major-in" class="section level2">
 <h2>What types of majors do women tend to major in?</h2>
-<ol start="12" style="list-style-type: decimal">
+<ol start="13" style="list-style-type: decimal">
 <li>Create a scatterplot of median income vs. proportion of women in
 that major, coloured by whether the major is in a STEM field or not.
 Describe the association between these three variables.</li>
@@ -796,7 +805,7 @@ Describe the association between these three variables.</li>
 </div>
 <div id="further-exploration" class="section level2">
 <h2>Further exploration</h2>
-<ol start="13" style="list-style-type: decimal">
+<ol start="14" style="list-style-type: decimal">
 <li><p>What is an additional question you could investigate using this
 data? State the question, provide a visualization that investigates it,
 and comment on what your visualization shows.</p></li>
@@ -805,6 +814,100 @@ what limitations might exist to the data/analyses, and what additional
 data you would like to have to explore further questions.</p></li>
 </ol>
 </div>
+</div>
+<div id="submission" class="section level1">
+<h1>Submission</h1>
+<p>To submit, you need to export your .html document from RStudio Cloud
+and then upload it to the Lab 03 assignment on Canvas. Refer back to <a href="https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html">Lab
+01</a> for detailed instructions on how to export and submit your
+assignment. Recall only one group member needs to submit the
+assignment.</p>
+</div>
+<div id="grading-50-pts" class="section level1">
+<h1>Grading (50 pts)</h1>
+<p><br></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Component</th>
+<th align="left">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Ex 1</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">Ex 2</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Ex 3</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">Ex 4</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Ex 5</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">Ex 6</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Ex 7</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">Ex 8</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Ex 9</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">Ex 10</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Ex 11</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">Ex 12</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Ex 13</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">Ex 14</td>
+<td align="left">3</td>
+</tr>
+<tr class="odd">
+<td align="left">Ex 15</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left">Workflow &amp; formatting</td>
+<td align="left">5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Grading notes</strong>:</p>
+<ul>
+<li>The “Workflow &amp; formatting” grade is to assess the reproducible
+workflow. This includes having readable code (e.g. adequate use of
+spacing and line breaks), labeled code chunks, informative headers and
+sub-headers, and an overall organized and uncluttered report
+(e.g. suppress messages &amp; warnings, no extraneous output).</li>
+</ul>
 </div>
 
 

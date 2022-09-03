@@ -48,7 +48,7 @@ Remember that you are editing simultaneously and any changes you make in your fi
 
 ## Packages
 
-We'll use the **tidyverse** package for much of the data wrangling and visualisation, the **scales** package for better formatting of labels on visualisations, and the data lives in the **fivethirtyeight** package.
+We'll use the **tidyverse** package for much of the data wrangling and visualization, the **scales** package for better formatting of labels on visualizations, the `ggridges` package for creating ridge plots, the `kableExtra` package for formatting tables, and the data lives in the **fivethirtyeight** package.
 
 These packages are already installed for you.
 You can load them by running the following in your Console:
@@ -57,6 +57,8 @@ You can load them by running the following in your Console:
 library(tidyverse)
 library(scales)
 library(fivethirtyeight)
+library(ggridges)
+library(kableExtra)
 ```
 
 ## Data
@@ -77,7 +79,7 @@ In the next section we aim to answer these questions.
 
 # Exercises
 
-1. How many rows and observations are in this data? What does each row represent?
+1. How many observations and variables are in this data? What does each row represent?
 
 2.  Which major category is the least popular in this sample? Meaning, which major category has the fewest number of total graduates? Use the partial code below, filling it in with the appropriate function and relevant variable. Also note that we are looking for the least popular major, so make sure to arrange in the correct direction.
 
@@ -108,7 +110,9 @@ Hint: read the `?percent()` documentation to see how the `accuracy` argument wor
 
 ## Which majors have the highest percentage of women? 
 
-5. Using what you've learned so far, put together a pipeline of code that produces a nicely formatted table to investigate this question. Comment on what your results show.
+5. Using what you've learned so far, put together a pipeline of code that produces a nicely formatted table to investigate the above question. Comment on what your results show.
+
+6. Include a similar table for the majors that have the lowest percentage of women. 
 
 ## How do the distributions of median income compare across major categories?
 
@@ -119,12 +123,12 @@ A percentile is a measure used in statistics indicating the value below which a 
 There are three income variables reported in this data frame: `p25th`, `median`, and `p75th`.
 These correspond to the 25th, 50th, and 75th percentiles of the income distribution of sampled individuals for a given major.
 
-6.  Why do we often choose the median, rather than the mean, to describe the typical income of a group of people?
+7.  Why do we often choose the median, rather than the mean, to describe the typical income of a group of people?
 
 The question we want to answer is "How do the distributions of median income compare across major categories?" We need to do a few things to answer this question: First, we need to group the data by `major_category`. Then, we need a way to summarize the distributions of median income within these groups. This decision will depend on the shapes of these distributions.
 So first, we need to visualize the data.
 
-7. Start simple and take a look at the distribution of median incomes for all majors, without considering the major categories. Choose a reasonable binwidth and justify your choice. You might ask yourself: "What would be a meaningful difference in median incomes?" \$1 is obviously too little, \$10000 might be too high. Describe what the visualization reveals. 
+8. Start simple and take a look at the distribution of median incomes for all majors, without considering the major categories. Choose a reasonable binwidth and justify your choice. You might ask yourself: "What would be a meaningful difference in median incomes?" \$1 is obviously too little, \$10000 might be too high. Describe what the visualization reveals. 
 
 We can also calculate summary statistics for this distribution using the `summary` function:
 
@@ -132,9 +136,9 @@ We can also calculate summary statistics for this distribution using the `summar
 summary(college_recent_grads$median)
 ```
 
-8.  Based on the shape of the histogram you created in the previous exercise, determine which summary statistic is most useful for describing the distribution.
+9.  Based on the shape of the histogram you created in the previous exercise, determine which summary statistic is most useful for describing the distribution.
 
-9.  Plot the distribution of `median` income by `major_category` using a ridge plot. Comment on what the visualization reveals.
+10.  Plot the distribution of `median` income by `major_category` using a ridge plot. Comment on what the visualization reveals.
 
 Now that we've seen the shapes of the distributions of median incomes for each major category, we should have a better idea for which summary statistic to use to quantify the typical median income.
 
@@ -142,7 +146,7 @@ Now that we've seen the shapes of the distributions of median incomes for each m
 Hint: This will require a `group_by()` and a `summarize()`
 ```
 
-10.  Which major category has the highest typical (you'll need to decide what this means) median income? 
+11.  Which major category has the highest typical (you'll need to decide what this means) median income? 
 
 ## All STEM fields aren't the same
 
@@ -185,14 +189,45 @@ Other logical operators that are commonly used are
 
 We can use the logical operators to also `filter` our data for STEM majors whose median earnings is less than median for all majors' median earnings, which we found to be \$36,000 earlier.
 
-11.  Which STEM majors have median salaries equal to or less than the median for all majors' median earnings? Your output should only show the major name and median, 25th percentile, and 75th percentile earning for that major and should be sorted such that the major with the highest median earning is on top.
+12.  Which STEM majors have median salaries equal to or less than the median for all majors' median earnings? Your output should only show the major name and median, 25th percentile, and 75th percentile earning for that major and should be sorted such that the major with the highest median earning is on top.
 
 ## What types of majors do women tend to major in?
 
-12.  Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not. Describe the association between these three variables.
+13.  Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not. Describe the association between these three variables.
 
 ## Further exploration
 
-13. What is an additional question you could investigate using this data? State the question, provide a visualization that investigates it, and comment on what your visualization shows. 
+14. What is an additional question you could investigate using this data? State the question, provide a visualization that investigates it, and comment on what your visualization shows. 
 
-14. Write a brief paragraph summarizing what you found in this lab, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions. 
+15. Write a brief paragraph summarizing what you found in this lab, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions. 
+
+# Submission
+
+To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 03 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. Recall only one group member needs to submit the assignment.
+
+# Grading (50 pts)
+
+<br>
+
+| Component | Points |
+|:----------|:-------|
+| Ex 1      | 3      |
+| Ex 2      | 3    |
+| Ex 3      | 3    |
+| Ex 4      | 3     |
+| Ex 5      | 3      |
+| Ex 6      | 3    |
+| Ex 7      | 3   |
+| Ex 8      | 3   |
+| Ex 9      | 3    |
+| Ex 10      | 3    |
+| Ex 11     | 3    |
+| Ex 12     | 3    |
+| Ex 13     | 3    |
+| Ex 14     | 3    |
+| Ex 15     | 3    |
+| Workflow & formatting   | 5      |
+
+**Grading notes**:
+
+-   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output). 
