@@ -27,7 +27,7 @@ Using data provided by Airbnb, we can explore how Airbnb availability and prices
 
 # Getting started
 
-This homework assignment will be completed *individually*. To get started,
+This homework assignment will be completed *individually*. You are still allowed to work together, but you are encouraged to attempt all of it on your own first before seeking outside help. This will help you gauge your current level of understanding and hone your trouble-shooting skills. To get started,
 
 + Login to your RStudio Cloud account
 + Access the `MATH_250_individual` workspace 
@@ -36,7 +36,7 @@ This homework assignment will be completed *individually*. To get started,
 
 ## Packages
 
-We'll use the **tidyverse** package for much of the data wrangling and visualisation, and the data lives in the **dsbox** package.
+We'll use the **tidyverse** package for much of the data wrangling and visualization, and the data lives in the **dsbox** package.
 These packages are already installed for you.
 You can load them by running the following in your Console:
 
@@ -52,7 +52,7 @@ Since the dataset is distributed with the package, we don't need to load it sepa
 
 You can view the dataset as a spreadsheet using the `View()` function.
 Note that you should not put this function in your R Markdown document, but instead type it directly in the Console, as it pops open a new window (and the concept of popping open a window in a static document doesn't really make sense...).
-When you run this in the console, you'll see the following **data viewer** window pop up.
+When you run this in the console, you'll see the **data viewer** window pop up.
 
 ```{r view-data}
 View(edibnb)
@@ -86,20 +86,7 @@ You can find descriptions of each of the variables in the help file for the data
 
 3.  Create a faceted histogram where each facet represents a neighbourhood and displays the distribution of Airbnb prices in that neighbourhood. Think critically about whether it makes more sense to stack the facets on top of each other in a column, lay them out in a row, or wrap them around. Along with your visualisation, include your reasoning for the layout you chose for your facets.
 
-```{r}
-ggplot(data = ___, mapping = aes(x = ___)) +
-  geom_histogram(binwidth = ___) +
-  facet_wrap(~___)
-```
-
-Let's de-construct this code:
-
--   `ggplot()` is the function we are using to build our plot, in layers.
--   In the first layer we always define the data frame as the first argument. Then, we define the mappings between the variables in the dataset and the **aes**thetics of the plot (e.g. x and y coordinates, colours, etc.).
--   In the next layer we represent the data with **geom**etric shapes, in this case with a histogram. You should decide what makes a reasonable bin width for the histogram by trying out a few options.
--   In the final layer we facet the data by neighbourhood.
-
-4.  Use a single pipeline to identity the neighbourhoods with the top five median listing prices. Then, in another pipeline filter the data for these five neighbourhoods and make ridge plots of the distributions of listing prices in these five neighbourhoods. In a third pipeline calculate the minimum, mean, median, standard deviation, IQR, and maximum listing price in each of these neighbourhoods. Use the visualisation and the summary statistics to describe the distribution of listing prices in the neighbourhoods. (Your answer will include three pipelines, one of which ends in a visualisation, and a narrative.)
+4.  Use a single pipeline to identity the neighbourhoods with the top five median listing prices. Then, in another pipeline filter the data for these five neighbourhoods and make ridge plots of the distributions of listing prices in these five neighbourhoods. In a third pipeline calculate the minimum, mean, median, max, IQR, and standard deviation of listing price in each of these neighbourhoods. Use the visualization and the summary statistics to describe the distribution of listing prices in the neighbourhoods. (Your answer will include three pipelines - one of which ends in a visualization - and a narrative.)
 
 5.  Create a visualization that will help you compare the distribution of review scores (`review_scores_rating`) across neighbourhoods. You get to decide what type of visualisation to create and there is more than one correct answer! In your answer, include a brief interpretation of how Airbnb guests rate properties in general and how the neighbourhoods compare to each other in terms of their ratings.
 
