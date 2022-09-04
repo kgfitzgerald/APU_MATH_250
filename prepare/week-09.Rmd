@@ -18,11 +18,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [Logistic regression](https://www.youtube.com/watch?v=AidXFYSYfJg)
+`r emo::ji("movie_camera")` Watch [Logistic regression]()
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/28-logistic-reg.html)
 
-`r emo::ji("movie_camera")` Watch [Prediction overfitting](https://youtu.be/Qd4lu_Lmwi0)
+`r emo::ji("movie_camera")` Watch [Prediction overfitting]()
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/29-prediction-overfitting.html)
 
