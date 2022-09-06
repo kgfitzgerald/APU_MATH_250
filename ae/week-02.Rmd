@@ -157,7 +157,17 @@ plot_grid(p1, p2, nrow = 1)
     + `size`
     + transparency (`alpha`)
     
+*Having seen the notes on the ggplot function, I think it generally makes sense, I am just wondering: how do I know when to keep my plot basic (with the ggplot and the geom_x command) and when to add on extra commands?*
 
++ We'll practice a lot more with visualizations this week! At minimum: your labels should be informative and readable. Feel free to get as fancy as you want, but readability is the primary goal! 
+
+*Will the quiz always be as technical as it was this week?*
+
++ The prep quiz from Week 1 is pretty typical. Main goal is to help you keep track of the new R functions/terminology introduced each week. Quizzes are open note, open internet. 
+
+*I'm not sure if this would be necessarily helpful, but I think it would be nice if the series of videos were combined into one video. Opening up a bunch of new tabs can get a little overwhelming.*
+
++ Thanks for the feedback. Plan to keep them as separate videos for this semester (mostly for logistical purposes on my end), but if others feel similarly, let me know and I can make the change for the future! 
 
 ### Application Exercise
 
