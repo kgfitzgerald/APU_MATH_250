@@ -11,13 +11,62 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+```
+
+
 ### Announcements
 
-- A1
-- A2
+- Notecard due at end of class. Answer one (or more):
+    + What was most confusing/unclear?
+    + What questions are you wondering about?
+    + How can I be praying for you? 
+- AE 03 (in-class today) due Thursday by class time (4:20pm)
+- First 2 [Statistics Experience points](https://kgfitzgerald.github.io/APU_MATH_250/hw/se-01.html) due next Thursday, September 22
+- HW 01 due next Thursday, September 22
+    + Encouraged to attempt all exercises on your own, before seeking external help
+    + Will help you gauge your current level of understanding and hone your trouble-shooting skills ahead of Exam 1
 
 ### Questions?
 
+*What's the difference between the `fill` and `color` aesthetics in `ggplot`?*
+
++ For histograms / things with bars, `color` = outside, `fill` = inside.
+```{r}
+ggplot(midwest, aes(x = popdensity)) +
+  geom_histogram(bins = 10, color = "blue")
+
+ggplot(midwest, aes(x = popdensity)) +
+  geom_histogram(bins = 10, color = "blue", fill = "red")
+```
+
++ For points, use `color`
+```{r}
+ggplot(midwest, aes(x = area, y = poptotal, 
+                    color = state)) +
+  geom_point()
+```
+
+Note how the above examples set `color` inside or outside `aes()` in the global `ggplot()` layer.
+
++ Put inside `aes()` if you want to map a variable in the data to the color/fill
++ Put outside `aes()`, usually in the `geom_` layer, if you want to set `color/fill` to a specific color for the whole plot
++ Later layers will override earlier layers
+
+```{r}
+ggplot(midwest, aes(x = area, y = poptotal, 
+                    color = state)) +
+  geom_point(color = "pink")
+```
+
+*What does data wrangling mean? It seems from the videos that we are employing certain commands in r in order to focus on specific aspects of data, but is that the essence of "wrangling" data? Or does it just mean making it more manageable for analysis?*
+
++ Yes to both :) wrangle = manipulate data into a form so that your question can be answered / task can be accomplished
+
+*How do I suppress warnings and messages*?
+
++ Add `message = FALSE, warning = FALSE` inside the curly brackets of a code chunk. 
 
 ### Application Exercise
 
