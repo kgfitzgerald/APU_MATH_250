@@ -25,6 +25,17 @@ library(tidyverse)
 - HW 01 due next Thursday, September 22
     + Encouraged to attempt all exercises on your own, before seeking external help
     + Will help you gauge your current level of understanding and hone your trouble-shooting skills ahead of Exam 1
+- Come eat FREE Korean BBQ on Friday :) [RSVP by TODAY](https://docs.google.com/forms/d/e/1FAIpQLSfzw03iPz-aeh-TWGPApRBD980MfawKOK6h87lYEj8TlZlgfA/viewform)
+
+```{r, echo = FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("./img/MPS_BBQ.png")
+```
+
+- StatFest this weekend 
+
+```{r, echo = FALSE}
+knitr::include_graphics("./img/statfest.png")
+```
 
 ### Questions?
 
