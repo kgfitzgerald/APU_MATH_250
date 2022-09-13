@@ -18,10 +18,8 @@ library(tidyverse)
 
 ### Announcements
 
-- Notecard due at end of class. Answer one (or more):
-    + What was most confusing/unclear?
-    + What questions are you wondering about?
-    + How can I be praying for you? 
+- Lab 02 was made OPTIONAL. Solutions video available here: [https://youtu.be/p8J6iq8zveQ](https://youtu.be/p8J6iq8zveQ)
+- [(Virtual) Notecard](https://forms.gle/hQ7Bh9nLsXmybmVC7) due at end of class
 - AE 03 (in-class today) due Thursday by class time (4:20pm)
 - First 2 [Statistics Experience points](https://kgfitzgerald.github.io/APU_MATH_250/hw/se-01.html) due next Thursday, September 22
 - HW 01 due next Thursday, September 22
@@ -66,7 +64,7 @@ ggplot(midwest, aes(x = area, y = poptotal,
 
 *How do I suppress warnings and messages*?
 
-+ Add `message = FALSE, warning = FALSE` inside the curly brackets of a code chunk. 
++ Add `, message = FALSE, warning = FALSE` inside the curly brackets of a code chunk. 
 
 ### Application Exercise
 
