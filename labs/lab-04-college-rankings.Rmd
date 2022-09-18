@@ -23,7 +23,7 @@ In this lab, you will...
 
 # Getting started
 
-This lab will be completed collaboratively in your randomly assigned Labs 03 - 04 groups (see Canvas). Choose a *different* group leader this week (e.g. not the same person that was randomly assigned as the leader in Canvas last week).
+This lab will be completed collaboratively in your randomly assigned Labs 03 - 04 groups (see Canvas). 
 
 + Login to your RStudio Cloud account
 + Navigate to the `MATH_250 Labs 03 - 04 G#` workspace 
@@ -34,7 +34,7 @@ Remember that you are editing simultaneously and any changes you make in your fi
 
 All plots should follow the best visualization practices discussed in lecture, including an informative title, labeled axes, and careful consideration of aesthetic choices.
 
-All code should follow the tidyverse style guidelines.
+All code should follow the [tidyverse style guidelines](https://style.tidyverse.org/pipes.html).
 
 # Packages
 
@@ -43,6 +43,8 @@ We will use the **tidyverse** package for this assignment. If you wish to use th
 ```{r load-package, message = FALSE, warning = FALSE}
 library(tidyverse)
 library(viridis)
+library(kableExtra)
+library(scales)
 ```
 
 # Data 
@@ -86,47 +88,79 @@ The Trump and Biden votes variables come from the CQ Voting and Elections Collec
 
 1. Let’s start by creating an analysis data set that includes information from all three data sets.
 
-    - First, join the `slacs` data set to the `natunivs` data set. The goal is to combine these data sets in such as a way so that the new data set has the same number of rows and unique columns as each of the individual data sets. Call this new data set `full_data`. 
-    - Next, use a join to add the columns from the `presvote_pop` data set to `full_data`.
+- First, join the `slacs` data set to the `natunivs` data set. The goal is to combine these data sets in such as a way so that the new data set has the total number of rows and unique columns as each of the individual data sets. Call this new data set `full_data`. 
+- Next, use a join to add the columns from the `presvote_pop` data set to `full_data`.
 
 **The final full_data data frame should have 107 observations and 8 variables.**
 
 We will use `full_data` for the remainder of the assignment. (Please note that there are more than 100 observations total due to ties at 50.)
   
-2. Which states have the most schools in the `full_data` data set? Please find the number of schools by state. Then, order these states from greatest to least and return the 5 states with the most schools on the list. Please report these 5 states.
+2. *Which states have the most top-ranked schools?* Produce a nicely formatted table that reports the top 5 states with the most schools in the `full_data`.
 
 3. Which states do not have a school in the `full_data` data set? Use the `presvote_pop` data set and an appropriate join to help answer this question. Return a data set with two variables, state abbreviations and state population, in order from greatest population to least. Show all code and output, and print the state abbrevations and populations. What is the state with the largest population that does not have a school in the `full_data` data set?
 
-4. Please recreate the below plot. Please use a `dplyr` command to create the variable noting which presidential candidate won the state in 2020. After recreating the plot, please discuss what patterns you observe.
+4. Recreate the below plot. Use a `dplyr` command to create the variable noting which presidential candidate won the state in 2020. After recreating the plot, discuss what patterns you observe.
 
 ```{r photo, echo = FALSE,  eval = TRUE}
 knitr::include_graphics("img/college-rankings.png")
 ```
 
-5. Is there a relationship between the population of a state and the number of schools it has in the `full_data` data set. To answer this question, first use the code from exercise 2 to create a data set called counts with the counts of the number of schools by state for the 31 states with at least one school in the `full_data` data set.
+5. *Is there a relationship between the population of a state and the number of schools it has in the `full_data` data set?* To answer this question, first use the code from exercise 2 to create a data set called counts with the counts of the number of schools by state for the 31 states with at least one school in the `full_data` data set.
 
-    - Then, use a join to add `counts` to the `full_data` data set and make a scatter plot with a state’s 2020 population as the x-axis variable and the number of schools as the y-axis variable. Add a line of best fit using the `method = "lm"` option. Please include an informative title and axis labels.
-    - Finally, please describe what you observe. Is there a positive or negative relationship? Do most points fall near the line?
+```{marginfigure}
+Tip: Convert your x-axis scale to millions using the following layer: `scale_x_continuous(labels = label_number(suffix = " M", scale = 1e-6))`. This requires the `scales` package.
+```
 
-6. Let’s now focus on California schools in the `full_data` data set. For these schools, create a new variable that indicates the change in ranking in 2022 compared to 2021, where a positive value indicates an increased ranking (e.g., if a school went from 21 to 20, you would want this variable to have a value of 1.) Finally, return a tibble that shows the name of the CA schools and the new variable you created. Please discuss what you observe.
+- Then, use a join to add `counts` to the `full_data` data set and make a scatter plot with a state’s 2020 population as the x-axis variable and the number of schools as the y-axis variable. Add a line of best fit using the `method = "lm"` option. Include an informative title and axis labels.
+- Finally, describe what you observe. Is there a positive or negative relationship? Do most points fall near the line?
+
+6. Let’s now focus on California schools in the `full_data` data set. For these schools, create a new variable that indicates the change in ranking in 2022 compared to 2021, where a positive value indicates an increased ranking (e.g., if a school went from 21 to 20, you would want this variable to have a value of 1.) Finally, produce a table that shows the name of the CA schools and the new variable you created. Discuss what you observe.
 
 7. Do the politics and populations of states where national universities are located differ from those where national liberal arts colleges are located?
 
-    - Using the `full_data` data set, please create a new variable for the percentage of the vote Joe Biden received in a state in 2020. (Note: You can ignore third party vote here since it is not in the data set.)
-    - Then, please calculate the mean Biden vote percentage and mean population of each group of schools and discuss what you find.
+- Using the `full_data` data set, create a new variable for the percentage of the vote Joe Biden received in a state in 2020. (Note: You can ignore third party vote here since it is not in the data set.)
+- Then, calculate the mean Biden vote percentage and mean population of each group of schools and discuss what you find.
+
+## Further exploration
+
+8. What is an additional question you could investigate using this data? State the question, provide a visualization and/or table that investigates it, and comment on what your output shows. 
+
+9. Write a brief paragraph summarizing what you found in this lab, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions. 
+
+# Submission
+
+Before submitting, open up your .html in a full window and inspect the following:
+
++ Check your code for neatness - add spaces and line breaks where appropriate to improve readability
+
++ Check any visualizations for informative and clean labels and titles
+
++ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
+
++ Check that you've interpreted output as appropriate
+
++ Make sure extraneous warnings and messages are suppressed (e.g. set warning = FALSE, message = FALSE)
+
++ Check that Exercises are clearly labeled and your text responses are visually distinguished
+
++ Check for overall neatness & organization of the report (e.g. headers, subheaders, use of bullets, font changes)
+
+To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 04 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. Recall only one group member needs to submit the assignment.
 
 # Grading
 
 | Component | Points |
 |:----------|:-------|
-| Ex 1      | 6      |
-| Ex 2      | 6    |
-| Ex 3      | 8   |
-| Ex 4      | 6   |
-| Ex 5      | 8      |
-| Ex 6      | 4    |
-| Ex 7      | 6   |
-| Workflow & formatting   | 6      |
+| Ex 1      | 5      |
+| Ex 2      | 5      |
+| Ex 3      | 5      |
+| Ex 4      | 5      |
+| Ex 5      | 5      |
+| Ex 6      | 5      |
+| Ex 7      | 5      |
+| Ex 8      | 5      |
+| Ex 9      | 5      |
+| Workflow & formatting   | 5      |
 
 **Grading notes**:
 

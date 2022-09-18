@@ -127,6 +127,26 @@ knitr::include_graphics("img/tidyr-longer-wider.gif")
 
 1. Create a visualization similar to Exercise 6 to explore what proportion of students in MATH 130 are commuters, athletes, caretakers, etc. 
 
+# Submission
+
+Before submitting, open up your .html in a full window and inspect the following:
+
++ Check your code for neatness - add spaces and line breaks where appropriate to improve readability
+
++ Check any visualizations for informative and clean labels and titles
+
++ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
+
++ Check that you've interpreted output as appropriate
+
++ Make sure extraneous warnings and messages are suppressed (e.g. set warning = FALSE, message = FALSE)
+
++ Check that Exercises are clearly labeled and your text responses are visually distinguished
+
++ Check for overall neatness & organization of the report (e.g. headers, subheaders, use of bullets, font changes)
+
+To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 05 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. Recall only one group member needs to submit the assignment.
+
 # Grading
 
 | Component | Points |

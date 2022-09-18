@@ -13,11 +13,140 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-- A1
-- A2
+- AE 04 (in-class today) due Thursday by class time (4:20pm)
+- DUE Thursday:
+    + First 2 [Statistics Experience points](https://kgfitzgerald.github.io/APU_MATH_250/hw/se-01.html)
+    + HW 01
+- Looking ahead:
+    + Due NEXT Thursday: HW 02
+    + Exam 1 (only exam) assigned next Thursday, due one week later
+    + By October 4 (2 weeks from now), choose your groups for the final project. Do NOT have to have project idea by then. 
 
-### Questions?
+### Tidyverse style guidelines
 
+[Tidyverse style guidelines](https://style.tidyverse.org/pipes.html) for line breaks, white space, etc.
+
+1. Have space before `%>%` and a linebreak after 
+
+```{r, eval = FALSE}
+# Good
+iris %>%
+  group_by(Species) %>%
+  summarize_if(is.numeric, mean) %>%
+  ungroup() %>%
+  gather(measure, value, -Species) %>%
+  arrange(value)
+
+# Bad
+iris %>% group_by(Species) %>% summarize_all(mean) %>%
+ungroup %>% gather(measure, value, -Species) %>%
+arrange(value)
+```
+
+2. `ggplot()` layers each go on their own line, space before `+`, all but first layer indented.
+
+```{r, eval = FALSE}
+# Good
+ggplot(aes(x = Sepal.Width, y = Sepal.Length, color = Species)) +
+  geom_point() +
+  labs(
+    x = "Sepal width, in cm",
+    y = "Sepal length, in cm",
+    title = "Sepal length vs. width of irises"
+  ) 
+
+# Bad
+ggplot(aes(x = Sepal.Width, y = Sepal.Length, color = Species))+
+  geom_point() + labs(x = "Sepal width, in cm", y = "Sepal length, in cm", title = "Sepal length vs. width of irises") 
+```
+
+3. If arguments to a function don't fit on one line, put each argument on its own line
+
+```{r, eval = FALSE}
+iris %>%
+  group_by(Species) %>%
+  summarise(
+    Sepal.Length = mean(Sepal.Length),
+    Sepal.Width = mean(Sepal.Width),
+    Species = n_distinct(Species)
+  )
+
+iris %>%
+  group_by(Species) %>%
+  summarise(Sepal.Length = mean(Sepal.Length),
+            Sepal.Width = mean(Sepal.Width),
+            Species = n_distinct(Species))
+```
+
+4. Spaces on each side of all operators (e.g. `+, =, &, <-,`) and after commas
+
+```{r, eval = FALSE}
+# Good
+iris %>% 
+  mutate(ratio = Sepal.Length/Sepal.Width) %>% 
+  ggplot(aes(x = Sepal.Width, y = Sepal.Length)) +
+  geom_point()
+
+# Bad
+iris%>% 
+  mutate(ratio=Sepal.Length/Sepal.Width) %>% 
+  ggplot(aes(x=Sepal.Width,y = Sepal.Length)) +
+  geom_point()
+```
+
+
+
+
+### Questions
+
+*Is there a way to debug code in RStudio? I'm not too familiar with it so whenever I get an error, I just go about the trial-and-error method until it works, but this can be a long and exhausting process.*
+
++ Google your errors :) stackoverflow.com typically has a lot of great help
++ use the `?` command with the name of the function to pull up the help documentation. E.g. `?mean` will pull up the documentation for the function `mean()`
++ Common things to look out for: spelling, capitalization, misplaced or missing commas/parentheses/quotations
++ Run all code chunks above (button next to play button) then run current code chunk
++ Check your Environment to make sure you have the objects you think you have, that you're spelling them correctly, and that they have the dimensions you're expecting
++ Run `View()` in your console to actually view/inspect your data. Can temporarily add this on to the end of a pipe so you can see your results more clearly. 
+
+### Reminder of Class Norms
+
++ Everyone has expertise
++ Be present
++ Participate to the best of your ability
++ Share talk time
++ Critique ideas, not people
++ Engage new perspectives with curiosity, not judgement
++ Exhibit intellectual humility
++ Embrace discomfort
++ Normalize time to think
+
+#### What hinders group dynamics
+
++ Rely on others too much
++ Lack of preparation
++ Over/under participation
++ Lack of communication
++ Lack of confidence
++ Lack of patience
++ Lack of focus
+
+#### What makes enriching group dynamics
+
++ Get to know classmates
++ Communication & Clarity
++ Problem solving with different approaches
++ Preparation, sleep
++ Accountability
++ Checking in
++ Defining roles / delegation
++ Clear instruction
++ Self-awareness
+
+#### Recommendations
+
++ Don't leave class on Thursdays without discussing a plan for how/when Lab will be finished. Note: it should NOT fall on one person to do this. 
++ Check in regularly that each group member is understanding each exercise / part of the code - don't move on until everyone is on the same page. 
+    + Normalize question asking
 
 ### Application Exercise
 

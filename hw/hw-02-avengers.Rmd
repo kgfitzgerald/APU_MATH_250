@@ -61,7 +61,7 @@ Header | Definition
 `appearances` | The number of comic books that character appeared in as of April 30 
 `current` | Is the member currently active on an avengers affiliated team?
 `gender` | The recorded gender of the character
-`probationary` | Sometimes the character was given probationary status as an Avenger, this is the date that happened
+`probationary_introl` | Sometimes the character was given probationary status as an Avenger, this is the date that happened
 `full_reserve` | The month and year the character was introduced as a full or reserve member of the Avengers
 `year` | The year the character was introduced as a full or reserve member of the Avengers
 `years_since_joining` | 2015 minus the year
@@ -72,8 +72,8 @@ See FiveThirtyEight's [GitHub repo](https://github.com/fivethirtyeight/data/tree
 
 1. You are interested in creating a data frame with the most "classic" Avengers. Use `filter` to make a new data frame that only includes Avengers that were 1) created in 1970 or earlier and 2) were not given probationary status. Assign the new data frame as `classic_avengers`. Confirm that once you have filtered, you are left with a data frame with 27 observations. 
 
-2. *Who are the newest classic Avengers?* Using a single pipeline: Create a new variable called `years_served` that represents the number of years served **as of 2021.**. (Hint: you can use either the `year` variable or `years_since_joining` variables to do this.) Then, arrange the dataset in ascending order of `years_served`. Lastly, select the `name` and `years_served` and display the first three rows.
-    - Report the names of the three newest classic Avengers and how long they have served in your narrative. 
+2. *Who are the newest classic Avengers?* Using a single pipeline: Create a new variable called `years_served` that represents the number of years served **as of 2022.**. (Hint: you can use either the `year` variable or `years_since_joining` variables to do this.) Then, arrange the dataset in ascending order of `years_served`. Lastly, select the `name` and `years_served` and display the first three rows.
+    - Report the names of the three newest classic Avengers and how long they have served in your narrative text (in addition to the table). While not strictly necessary, you are encouraged to try using inline code to populate the names and years in a sentence instead of typing them manually. 
 
 3. *Has the percentage of female Avengers changed over time?* To explore this question, find the percentage of female Avengers in the `classic_avengers` dataset and compare it to the percentage of females among **all** Avengers.  What do you conclude based on these results? 
 
@@ -89,6 +89,22 @@ See FiveThirtyEight's [GitHub repo](https://github.com/fivethirtyeight/data/tree
     - What are 2 - 3 observations you have about the mean appearances based on introduction year? 
 
 # Submission
+
+Before submitting, open up your .html in a full window and inspect the following:
+
++ Check your code for neatness - add spaces and line breaks where appropriate to improve readability
+
++ Check any visualizations for informative and clean labels and titles
+
++ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
+
++ Check that you've interpreted output as appropriate
+
++ Make sure extraneous warnings and messages are suppressed (e.g. set warning = FALSE, message = FALSE)
+
++ Check that Exercises are clearly labeled and your text responses are visually distinguished
+
++ Check for overall neatness & organization of the report (e.g. headers, subheaders, use of bullets, font changes)
 
 To submit, you need to export your .html document from RStudio Cloud and then upload it to the HW 02 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. 
 
