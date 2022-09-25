@@ -746,8 +746,7 @@ Goals</a></li>
 started</a></li>
 <li><a href="#packages" id="toc-packages">Packages</a></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
-<li><a href="#stretch-exercises" id="toc-stretch-exercises">Stretch
-Exercises</a></li>
+<li><a href="#bonus---stretch-exercises" id="toc-bonus---stretch-exercises">BONUS - Stretch Exercises</a></li>
 <li><a href="#submission" id="toc-submission">Submission</a></li>
 <li><a href="#grading-50pts" id="toc-grading-50pts">Grading
 (50pts)</a></li>
@@ -778,9 +777,7 @@ between two categorical variables.</li>
 <div id="getting-started" class="section level1">
 <h1>Getting started</h1>
 <p>This lab will be completed collaboratively in your randomly assigned
-Labs 05 - 06 groups (see Canvas). Choose a <em>different</em> group
-leader this week (e.g. not the same person that was randomly assigned as
-the leader in Canvas last week).</p>
+Labs 05 - 06 groups (see Canvas).</p>
 <ul>
 <li>Login to your RStudio Cloud account</li>
 <li>Navigate to the <code>MATH_250 Labs 05 - 06 G#</code> workspace</li>
@@ -858,14 +855,15 @@ filtering/selecting to only keep relevant rows and columns.</p></li>
 ## 1 No       0.965   0.735 0.145
 ## 2 Yes      0.947   0.676 0.12</code></pre>
 </div>
-<div id="stretch-exercises" class="section level1">
-<h1>Stretch Exercises</h1>
+<div id="bonus---stretch-exercises" class="section level1">
+<h1>BONUS - Stretch Exercises</h1>
 <ol start="12" style="list-style-type: decimal">
 <li>Read about making nicely formatted html tables using the
 <code>kableExtra</code> package <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html">here</a>,
-and use the <code>kable()</code> function to re-produce the following
-formatted table. <em>Hint: use an <code>add_header_above()</code> layer
-in your pipe after <code>kable()</code></em></li>
+and use the <code>kbl()</code> function to re-produce the following
+formatted table. <em>Hint: use a <code>kable_classic()</code> and an
+<code>add_header_above()</code> layer in your pipe after
+<code>kbl()</code></em></li>
 </ol>
 Proportion Alive by Smoker Status and Age Category
 <table>
@@ -926,7 +924,7 @@ Yes
 </tbody>
 </table>
 <ol start="13" style="list-style-type: decimal">
-<li>Try out some other <code>kable()</code> features on the other tables
+<li>Try out some other <code>kbl()</code> features on the other tables
 in this report.</li>
 </ol>
 </div>

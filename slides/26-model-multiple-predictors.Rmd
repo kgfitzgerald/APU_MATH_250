@@ -171,7 +171,7 @@ p_main /
 
 ## In pursuit of Occam's razor
 
-- Occam's Razor states that among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected.
+- Occam's Razor states that among competing hypotheses that predict equally well, the simplest one should be selected.
 
 --
 - Model selection follows this principle.

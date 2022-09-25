@@ -81,15 +81,6 @@ ht_wt_fit_aug
 
 ---
 
-## More on `augment()`
-
-```{r}
-glimpse(ht_wt_fit_aug)
-```
-
-
----
-
 ## Looking for...
 
 - Residuals distributed randomly around 0
@@ -108,7 +99,7 @@ ggplot(df, mapping = aes(x = fake_predicted, y = fake_resid)) +
 
 ---
 
-## Not looking for...
+## Don't want...
 
 .large[
 **Fan shapes**
@@ -136,7 +127,7 @@ ggplot(df, mapping = aes(x = fake_predicted, y = fake_resid)) +
 
 ---
 
-## Not looking for...
+## Don't want...
 
 .large[
 **Groups of patterns**
@@ -159,7 +150,7 @@ ggplot(df, mapping = aes(x = fake_predicted, y = fake_resid)) +
 
 ---
 
-## Not looking for...
+## Don't want...
 
 .large[
 **Residuals correlated with predicted values**
@@ -179,7 +170,7 @@ ggplot(df, mapping = aes(x = fake_predicted, y = fake_resid)) +
 
 ---
 
-## Not looking for...
+## Don't want...
 
 .large[
 **Any patterns!**
@@ -240,7 +231,7 @@ ggplot(data = pp, aes(x = Width_in, y = price)) +
 
 ## Focus on paintings with `Width_in < 100`
 
-That is, paintings with width < 2.54 m
+That is, paintings with width < 8.3ft
 
 ```{r}
 pp_wt_lt_100 <- pp %>% 

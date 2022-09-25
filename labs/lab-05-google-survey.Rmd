@@ -23,9 +23,9 @@ In this lab, you will...
 
 # Getting started
 
-This lab will be completed collaboratively in your randomly assigned Labs 05 - 06 groups (see Canvas). The person randomly assigned to be the Group Leader in Canvas is responsible for submitting the assignment. 
+This lab will be completed collaboratively in your randomly assigned Labs 05 - 06 groups (see Canvas). 
 
-+ In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Labs 05-06 G#` workspace. 
++ In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Labs 03-04 G#` workspace. 
 + Launch the MATH_250 Labs 05 - 06` project
 + Open `lab-05.Rmd`
 
@@ -42,6 +42,7 @@ We will use the **tidyverse** package for this assignment. If you wish to use th
 ```{r load-package, message = FALSE, warning = FALSE}
 library(tidyverse)
 library(viridis)
+library(lubridate)
 ```
 
 # Data 
@@ -71,7 +72,7 @@ new_names <- c("variable_1", "variable_2", ...)
 + Then use the code `names(survey) <- new_names` to covert the existing column names to the new names. 
 + Inspect your data to ensure that `survey` now has the desired variable names
 
-2. Use the function `mdy_hms()` inside a `mutate()` function to convert the timestamp variable to a date. Then create a histogram of this new variable. What does this reveal about the data?
+2. Using the `glimpse()` function will reveal that many of the variables are stored as characters, including the Timestamp variable. Use the function `mdy_hms()` inside a `mutate()` function to convert the timestamp variable to a date. Then create a histogram of this new variable. What does this reveal about the data?
 
 2. Reproduce the following visualization. Note, you will need to re-order the levels of your year variable.
 
@@ -83,9 +84,10 @@ new_names <- c("variable_1", "variable_2", ...)
 
 4. Reproduce the following visualization. Note, you will need to re-order the levels of your year variable.
 
-*Hint: Set `y = 1` inside your `aes()` function. And add a `theme` layer where `axis.text.y` and `axis.text.y` are set equal to `element_blank()`*
+*Hint: Set `y = 1` inside your `aes()` function. And add a `theme` layer where `axis.text.y` and `axis.ticks.y` are set equal to `element_blank()`*
 
 ![](img/stats_relevant_career.png)
+
 5. What majors are represented in MATH 130? Create a visualization to explore this variable. Make decisions about how to clean up the levels and combine as necessary. A `case_when()` inside a mutate may be useful. Comment on your decisions. 
 
 6. What is the distribution of gender in MATH 130? Create an appropriate visualization. Make decisions about how to clean up the levels and combine as necessary. A `case_when()` inside a mutate may be useful. Comment on the pros and cons of making this a multiple choice vs open-ended question in a survey. 
@@ -95,7 +97,7 @@ Select all that apply questions in a survey pose some difficult wrangling tasks.
 The following code creates three new variables to indicate if a student has access to each type. Note you will need to adapt this code if you named your variable something other than `laptop.`
 
 ```{r, eval = FALSE}
-survey %>% 
+survey <- survey %>% 
   mutate(Mac = if_else(grepl("Mac laptop", laptop), "Yes", "No"),
          iPad = if_else(grepl("iPad", laptop), "Yes", "No"),
          PC = if_else(grepl("PC/Windows laptop", laptop), "Yes", "No"))
@@ -111,21 +113,13 @@ The `grepl()` function searches for a given string (e.g. "Mac laptop") in a give
 knitr::include_graphics("img/tidyr-longer-wider.gif")
 ```
 
-
-
-8. What is the distribution of race/ethnicity in MATH 130? Create an appropriate visualization to explore this variable. Make decisions about how to clean up the levels and combine as necessary. 
-
-# Stretch exercises (optional)
+# BONUS 
 
 1. Create a new variable called `semester` that uses the time variable to designate whether each student was in MATH 130 in Fall 2021 or Spring 2022. *Hint: the function `year()` applied to a date will extract just the year.*. Use this new variable to investigate whether students in the Fall or Spring semester were more anxious about MATH 130 on average.  
 
 1. Attempt to recreate this visualization as closely as possible. *Hint: you will first need to use a `pivot_longer` and then use a `case_when()` to recode the levels of the new variable to be the full statements seen on the y-axis)*. 
 
 ![](img/likert_three.png)
-
-
-
-1. Create a visualization similar to Exercise 6 to explore what proportion of students in MATH 130 are commuters, athletes, caretakers, etc. 
 
 # Submission
 
@@ -162,7 +156,6 @@ To submit, you need to export your .html document from RStudio Cloud and then up
 | Workflow & formatting   | 10      |
 | Ex 9 (BONUS) | 2 |
 | Ex 10 (BONUS) | 2 |
-| Ex 11 (BONUS) | 2 |
 
 **Grading notes**:
 

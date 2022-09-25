@@ -37,7 +37,7 @@ In this lab you will...
 
 # Getting started 
 
-This lab will be completed collaboratively in your randomly assigned Labs 05 - 06 groups (see Canvas). Choose a *different* group leader this week (e.g. not the same person that was randomly assigned as the leader in Canvas last week).
+This lab will be completed collaboratively in your randomly assigned Labs 05 - 06 groups (see Canvas). 
 
 + Login to your RStudio Cloud account
 + Navigate to the `MATH_250 Labs 05 - 06 G#` workspace 
@@ -105,9 +105,9 @@ table <- read_csv("data/smoker_by_age.csv")
 table
 ```
 
-# Stretch Exercises
+# BONUS - Stretch Exercises
 
-12. Read about making nicely formatted html tables using the `kableExtra` package [here](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html), and use the `kable()` function to re-produce the following formatted table. *Hint: use an `add_header_above()` layer in your pipe after `kable()`*
+12. Read about making nicely formatted html tables using the `kableExtra` package [here](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html), and use the `kbl()` function to re-produce the following formatted table. *Hint: use a `kable_classic()` and an `add_header_above()` layer in your pipe after `kbl()`*
 
 Proportion Alive by Smoker Status and Age Category
 ```{r, eval = TRUE, echo = FALSE}
@@ -116,7 +116,7 @@ table %>%
   add_header_above(c(" ", "Age Category" = 3))
 ```
 
-13. Try out some other `kable()` features on the other tables in this report.
+13. Try out some other `kbl()` features on the other tables in this report.
 
 # Submission
 
