@@ -11,12 +11,107 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, include = FALSE}
+library(tidyverse)
+```
+
+
 ### Announcements
 
-- A1
-- A2
++ Notecard due at end of class
++ Lab 04 due date extended to Thursday (11:59pm)
++ HW 02 due Thursday (11:59pm)
++ AE-05 in class today, due Thursday (4:20pm)
++ Exam 1 made available this Thursday (5:45pm)
+    + Vote: due next Tuesday or Thursday?
+    + Considerations:
+        + will have prep material to watch for next Thursday
+        + 362 students get take-home exam next Tuesday
++ Sign up for project groups in Canvas by Tuesday
+
 
 ### Questions?
+
++ Getting an error when I try to use `kbl() %>% kable_minimal()`
+
+```{r, eval = FALSE}
+#only run this one time
+install.packages("kableExtra")
+#include this in each .Rmd you intend to use the kbl() functions
+library(kableExtra)
+```
+
++ I'm not sure when to use, for example, `avengers %>% ` and when to use `avengers <- avengers %>% ` and what the differences are.
+    + Let's say `avengers` has 50 rows and 3 columns, originally. What will be the dimensions of the following? 
+
+```{r, eval = FALSE}
+#OPTION 1
+avengers %>% 
+  mutate(new_variable = x + y) %>% 
+  summarize(mean = mean(new_variable))
+
+ggplot(avengers, aes(x = new_variable)) +
+  geom_histogram()
+
+#OPTION 2
+avengers <- avengers %>% 
+  mutate(new_variable = x + y) %>% 
+  summarize(mean = mean(new_variable))
+
+ggplot(avengers, aes(x = new_variable)) +
+  geom_histogram()
+
+#OPTION 3
+avengers <- avengers %>% 
+  mutate(new_variable = x + y) 
+
+avengers %>% 
+  summarize(mean = mean(new_variable))
+
+ggplot(avengers, aes(x = new_variable)) +
+  geom_histogram()
+```
+
++ TIP: run one section of pipe at a time (by highlighting code you want to run)
+
++ TIP: placing your cursor on a line and hitting "Command + Enter" will run just that line (and any pipes/layers attached to it)
+
++ When we are importing data into r do we need to have the data stored somewhere else on our own laptops?
+    + It needs to be stored in the same folder (or subfolder) as your .Rmd.     
+    + For RStudio Cloud, I place the relevant data files in your projects
+    + For your project, you will need to upload relevant data files to your project folders
+
++ When do you put certain aesthetics in the `ggplot()` vs the `geom_...()`?
+
+    + `ggplot()` controls global aesthetics 
+    + `geom_()` controls aesthetics for just that geom layer
+
+```{r, warning=FALSE}
+ggplot(midwest, aes(x = percollege, 
+                    y = percbelowpoverty, 
+                    color = state)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+
+ggplot(midwest, aes(x = percollege, 
+                    y = percbelowpoverty)) +
+  geom_point(aes(color = state)) +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
++ Different types of join functions still confuses me
+
+
++ Can we group ourselves, with people we're more comfortable with? Maybe the groups we'll be in for project? 
+
++ Suggestion for peers: "maybe just try to slow down and work through the questions efficiently instead of just trying to go straight into coding without thinking beforehand. I think if we have just one person typing in the code while we all can still be looking at it, commenting, and making suggestions would make the process smoother."
+
++ Class is at end of day, bring chargers
+
++ "I had a very positive lab experience this week. I feel that group dynamics will continue to improve and group time will become more productive when group members ensure they are coming to class entirely prepared and somewhat knowledgeable of the week's material. It's also helpful to define roles in the groups to make the time more productive."
+
++ I would have appreciated more class time to ask about the homework
+
 
 
 ### Application Exercise
