@@ -1,7 +1,7 @@
 ---
 title: "Exam 01"
 subtitle: "Women's Soccer"
-date: "due Thursday, October 6, 11:59pm"
+date: "due Thursday, October 6, 4:20pm"
 output: 
   tufte::tufte_html:
     css: "hw.css"
@@ -15,6 +15,14 @@ editor_options:
     wrap: sentence
 ---
 
+# Exam ground rules
+
++ This is an INDIVIDUAL EXAM. You may NOT work together or consult other people on this exam.
++ You are ENCOURAGED to use your notes, lecture slides/videos, previous assignments, and the internet
+    + You may utilize already existing resources on the internet, but you may NOT post to any online forums to ask for help on the exam.  
+    + If you find code online, cite it, and annotate the code to demonstrate understanding. 
++ Failure to adhere to any of the above policies will be considered a violation of academic integrity and will be handled according to university policy.
+
 # Goals
 
 This Exam will assess the following skills:
@@ -23,6 +31,8 @@ This Exam will assess the following skills:
 + Data visualization
 + Clarity of code and written communication 
 + Ability to use data to investigate questions
+
+
 
 # Getting started
 
@@ -33,17 +43,18 @@ This Exam will assess the following skills:
 
 # Packages
 
-We will use the **tidyverse**, **ggridges**, and **nwslR** packages for this analysis. You may also choose to use **kableExtra** for formatting tables.
+We will use the **tidyverse**, **ggridges**, and **nwslR** packages for this analysis. You should also use **kableExtra** for formatting tables.
 
 ```{r load-package, eval = FALSE}
 library(nwslR)
 library(tidyverse)
 library(ggridges)
+library(kableExtra)
 ```
 
 # Data: The Portland Thorns FC
 
-For this exam, you will be working with data from the [Portland Thorns FC ](https://www.nwslsoccer.com/team/portland-thorns-fc/stats), a National Women's Soccer League (NWSL) Team in Portland, OR. In 2021, the Thorns won the NWSL Challenge Cup, the Women's International Champions Cup, and the NWSL Shield. Data for this exam was sourced from the [nwslR package](https://github.com/adror1/nwslR). 
+For this exam, you will be working with data about the [Portland Thorns FC ](https://www.nwslsoccer.com/team/portland-thorns-fc/stats), a National Women's Soccer League (NWSL) Team in Portland, OR. In 2021, the Thorns won the NWSL Challenge Cup, the Women's International Champions Cup, and the NWSL Shield. Data for this exam was sourced from the [nwslR package](https://github.com/adror1/nwslR). 
 
 The package comes with 7 different datasets, but you will be working primarily with the `game` dataset, which includes the results of all NWSL games played from 2015 - 2019 (not just Portland Thorns games). The variables in the `game` dataset are as follows:
 
@@ -68,7 +79,7 @@ While not required to use the other 6 datasets from the `nwslR` package, you mig
 
 # Exercises 
 
-All plots should follow the best visualization practices discussed in lecture, including an informative title, labeled axes, and careful consideration of aesthetic choices. Your encouraged (but not required) to use the viridis color palette. 
+All plots should follow the best visualization practices discussed in lecture, including an informative title, labeled axes, and careful consideration of aesthetic choices. You're encouraged (but not required) to use the viridis color palette. 
 
 All code should follow the tidyverse style guidelines.
 
@@ -78,18 +89,28 @@ Before beginning the analysis, you will need to conduct some data wrangling to l
 
 2. Create a new dataset called `portland` that contains only the games the Portland Thorns played in. Confirm that there are 118 in this dataset before continuing. 
 
-3. Create three new variables, `POR_points` (the number of points Portland scored), `OPP_points` (the number of points the opponent scored), and `result` (a categorical variable for whether the result was a `Win`, `Loss`, or `Tie` for Portland). *Hint: `if_else()` and `case_when()` will be helpful*. 
+3. Create three new variables, `POR_points` (the number of points Portland scored), `OPP_points` (the number of points the opponent scored), and `result` (a categorical variable for whether the result was a `Win`, `Loss`, or `Tie` for Portland). *Hint: the code below provides the scaffolding, you just need to fill in each blank appropriately.*
+
+```{r, eval = FALSE}
+___ <- ___ %>% 
+  ___(POR_points = if_else(home_team == "POR", home_pts, away_pts),
+      OPP_points = if_else(___ ___ ___, ___, ___),
+      result = case_when(POR_points  >  OPP_points ~ "Win",
+                         POR_points ___ OPP_points ~ "Loss",
+                         POR_points ___ OPP_points ~ "Tie"))
+```
+
 
 4. Create a bar chart to visualize the distribution of the `result` of the games. Include a clear title and axis labels. What outcome occurred most frequently?
 
-5. Create an appropriate visualization to examine how the Thorns performed in each individual season (in terms of wins, losses, and ties). Include a clear title and axis labels. What are 2 - 3 observations you have from the plot?
+5. Create an appropriate visualization to examine how the Thorns performed in each individual season (in terms of wins, losses, and ties). Include a clear title and axis labels. Describe 2-3 things you observe from the visualization 
 
 6. *Does Portland have a home field advantage?* To explore this question, 
 
     - Create a new variable indicating whether Portland was the "home" or "away" team for each game. 
     - Create side-by-side box plots of the number of points scored by the Thorns based on whether or not they were the home team.  
     - Then create a ridge plot using `geom_density_ridges()`.
-    - What are 2-3 observations you have from the visualizations? 
+    - Describe 2-3 things you observe from the visualization 
 
 7. Continuing to investigate home-field advantage, produce a nicely formatted summary table that presents the proportion of games won, grouped by whether it was a home or away game.
 
@@ -106,12 +127,11 @@ portland <- portland %>%
 8. Create a scatterplot of the points Portland scored versus game number. However, use `geom_jitter()` instead of `geom_point()`. The function `geom_jitter()` adds some random noise to the points so they don't overlap each other.
     - Based on this plot, does there appear to be a general change in number of points scored over the course of the season? Briefly explain your response. 
 
-9. Adapt your previous visualization to explore the relationship between points scored vs. game number, broken down by season. It's up to you to choose how best to visualize this - there is more than one appropriate answer. However, you should use `as.factor(season)` in the ggplot code, so `season` is treated as a categorical variable. 
+9. Adapt your previous visualization to explore the relationship between points scored vs. game number, broken down by season. It's up to you to choose how best to visualize this - there is more than one appropriate answer. However, you should use `factor(season)` inside the ggplot `aes()` code, so `season` is treated as a categorical variable.
     - Does there seem to be a difference in the pattern by season? Briefly explain your response. 
 
 10. What is one additional question you could investigate using this data? This could be the `portland` data, the full `games` data, and/or the other data in the `nwslR` package. Provide a visualization and/or summary table that investigates your question. Interpret your results. 
 
-# Submission 
 
 # Submission
 
@@ -131,7 +151,7 @@ Before submitting, open up your .html in a full window and inspect the following
 
 + Check for overall neatness & organization of the report (e.g. headers, subheaders, use of bullets, font changes)
 
-To submit, you need to export your .html document from RStudio Cloud and then upload it to the Exam 1 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. Recall only one group member needs to submit the assignment.
+To submit, you need to export your .html document from RStudio Cloud and then upload it to the Exam 1 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. 
 
 # Grading (50 pts)
 
@@ -139,13 +159,15 @@ To submit, you need to export your .html document from RStudio Cloud and then up
 
 | Component | Points |
 |:----------|:-------|
-| Ex 1      | 2      |
-| Ex 2      | 6    |
-| Ex 3      | 6   |
+| Ex 1      | 4      |
+| Ex 2      | 4    |
+| Ex 3      | 4   |
 | Ex 4      | 4   |
-| Ex 5      | 6      |
-| Ex 6      | 8    |
-| Ex 7      | 6   |
-| Ex 8      | 6    |
-| Workflow & formatting   | 6      |
+| Ex 5      | 4      |
+| Ex 6      | 4    |
+| Ex 7      | 4   |
+| Ex 8      | 4    |
+| Ex 9      | 4 |
+| Ex 10     | 4 |
+| Workflow & formatting   | 10      |
 

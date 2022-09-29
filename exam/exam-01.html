@@ -499,11 +499,13 @@ padding-left: 1em;
 
 <h1 class="title toc-ignore">Exam 01</h1>
 <h3 class="subtitle">Women’s Soccer</h3>
-<h4 class="date">due Thursday, October 6, 11:59pm</h4>
+<h4 class="date">due Thursday, October 6, 4:20pm</h4>
 
 
 <div id="TOC">
 <ul>
+<li><a href="#exam-ground-rules" id="toc-exam-ground-rules">Exam ground
+rules</a></li>
 <li><a href="#goals" id="toc-goals">Goals</a></li>
 <li><a href="#getting-started" id="toc-getting-started">Getting
 started</a></li>
@@ -512,12 +514,30 @@ started</a></li>
 FC</a></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 <li><a href="#submission" id="toc-submission">Submission</a></li>
-<li><a href="#submission-1" id="toc-submission-1">Submission</a></li>
 <li><a href="#grading-50-pts" id="toc-grading-50-pts">Grading (50
 pts)</a></li>
 </ul>
 </div>
 
+<div id="exam-ground-rules" class="section level1">
+<h1>Exam ground rules</h1>
+<ul>
+<li>This is an INDIVIDUAL EXAM. You may NOT work together or consult
+other people on this exam.</li>
+<li>You are ENCOURAGED to use your notes, lecture slides/videos,
+previous assignments, and the internet
+<ul>
+<li>You may utilize already existing resources on the internet, but you
+may NOT post to any online forums to ask for help on the exam.<br />
+</li>
+<li>If you find code online, cite it, and annotate the code to
+demonstrate understanding.</li>
+</ul></li>
+<li>Failure to adhere to any of the above policies will be considered a
+violation of academic integrity and will be handled according to
+university policy.</li>
+</ul>
+</div>
 <div id="goals" class="section level1">
 <h1>Goals</h1>
 <p>This Exam will assess the following skills:</p>
@@ -541,15 +561,16 @@ pts)</a></li>
 <h1>Packages</h1>
 <p>We will use the <strong>tidyverse</strong>,
 <strong>ggridges</strong>, and <strong>nwslR</strong> packages for this
-analysis. You may also choose to use <strong>kableExtra</strong> for
-formatting tables.</p>
+analysis. You should also use <strong>kableExtra</strong> for formatting
+tables.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nwslR)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code></pre></div>
 </div>
 <div id="data-the-portland-thorns-fc" class="section level1">
 <h1>Data: The Portland Thorns FC</h1>
-<p>For this exam, you will be working with data from the <a href="https://www.nwslsoccer.com/team/portland-thorns-fc/stats">Portland
+<p>For this exam, you will be working with data about the <a href="https://www.nwslsoccer.com/team/portland-thorns-fc/stats">Portland
 Thorns FC</a>, a National Women’s Soccer League (NWSL) Team in Portland,
 OR. In 2021, the Thorns won the NWSL Challenge Cup, the Women’s
 International Champions Cup, and the NWSL Shield. Data for this exam was
@@ -589,7 +610,7 @@ team names and locations, not just their ids.</p>
 <h1>Exercises</h1>
 <p>All plots should follow the best visualization practices discussed in
 lecture, including an informative title, labeled axes, and careful
-consideration of aesthetic choices. Your encouraged (but not required)
+consideration of aesthetic choices. You’re encouraged (but not required)
 to use the viridis color palette.</p>
 <p>All code should follow the tidyverse style guidelines.</p>
 <ol style="list-style-type: decimal">
@@ -606,16 +627,24 @@ in this dataset before continuing.</p></li>
 of points Portland scored), <code>OPP_points</code> (the number of
 points the opponent scored), and <code>result</code> (a categorical
 variable for whether the result was a <code>Win</code>,
-<code>Loss</code>, or <code>Tie</code> for Portland). <em>Hint:
-<code>if_else()</code> and <code>case_when()</code> will be
-helpful</em>.</p></li>
+<code>Loss</code>, or <code>Tie</code> for Portland). <em>Hint: the code
+below provides the scaffolding, you just need to fill in each blank
+appropriately.</em></p></li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>___ <span class="ot">&lt;-</span> ___ <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">___</span>(<span class="at">POR_points =</span> <span class="fu">if_else</span>(home_team <span class="sc">==</span> <span class="st">&quot;POR&quot;</span>, home_pts, away_pts),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">OPP_points =</span> <span class="fu">if_else</span>(___ ___ ___, ___, ___),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">result =</span> <span class="fu">case_when</span>(POR_points  <span class="sc">&gt;</span>  OPP_points <span class="sc">~</span> <span class="st">&quot;Win&quot;</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Loss&quot;</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Tie&quot;</span>))</span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
 <li><p>Create a bar chart to visualize the distribution of the
 <code>result</code> of the games. Include a clear title and axis labels.
 What outcome occurred most frequently?</p></li>
 <li><p>Create an appropriate visualization to examine how the Thorns
 performed in each individual season (in terms of wins, losses, and
-ties). Include a clear title and axis labels. What are 2 - 3
-observations you have from the plot?</p></li>
+ties). Include a clear title and axis labels. Describe 2-3 things you
+observe from the visualization</p></li>
 <li><p><em>Does Portland have a home field advantage?</em> To explore
 this question,</p>
 <ul>
@@ -626,7 +655,7 @@ Thorns based on whether or not they were the home team.<br />
 </li>
 <li>Then create a ridge plot using
 <code>geom_density_ridges()</code>.</li>
-<li>What are 2-3 observations you have from the visualizations?</li>
+<li>Describe 2-3 things you observe from the visualization</li>
 </ul></li>
 <li><p>Continuing to investigate home-field advantage, produce a nicely
 formatted summary table that presents the proportion of games won,
@@ -638,11 +667,11 @@ fatigue, or do they increase over a season as the team gets into a
 groove? To explore this question, let’s first create a new variable
 called <code>game_number</code> that indicates the order of the game
 within a season (e.g., 1st, 2nd, 3rd, etc).</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>portland <span class="ot">&lt;-</span> portland <span class="sc">%&gt;%</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(season) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(game_date) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">game_number =</span> <span class="fu">row_number</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>portland <span class="ot">&lt;-</span> portland <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(season) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(game_date) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">game_number =</span> <span class="fu">row_number</span>()) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code></pre></div>
 <ol start="8" style="list-style-type: decimal">
 <li>Create a scatterplot of the points Portland scored versus game
 number. However, use <code>geom_jitter()</code> instead of
@@ -656,9 +685,9 @@ your response.</li>
 <li>Adapt your previous visualization to explore the relationship
 between points scored vs. game number, broken down by season. It’s up to
 you to choose how best to visualize this - there is more than one
-appropriate answer. However, you should use
-<code>as.factor(season)</code> in the ggplot code, so
-<code>season</code> is treated as a categorical variable.
+appropriate answer. However, you should use <code>factor(season)</code>
+inside the ggplot <code>aes()</code> code, so <code>season</code> is
+treated as a categorical variable.
 <ul>
 <li>Does there seem to be a difference in the pattern by season? Briefly
 explain your response.</li>
@@ -671,9 +700,6 @@ your question. Interpret your results.</li>
 </ol>
 </div>
 <div id="submission" class="section level1">
-<h1>Submission</h1>
-</div>
-<div id="submission-1" class="section level1">
 <h1>Submission</h1>
 <p>Before submitting, open up your .html in a full window and inspect
 the following:</p>
@@ -695,7 +721,6 @@ are visually distinguished</p></li>
 <p>To submit, you need to export your .html document from RStudio Cloud
 and then upload it to the Exam 1 assignment on Canvas. Refer back to <a href="https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html">Lab
 01</a> for detailed instructions on how to export and submit your
-assignment. Recall only one group member needs to submit the
 assignment.</p>
 </div>
 <div id="grading-50-pts" class="section level1">
@@ -711,15 +736,15 @@ assignment.</p>
 <tbody>
 <tr class="odd">
 <td align="left">Ex 1</td>
-<td align="left">2</td>
+<td align="left">4</td>
 </tr>
 <tr class="even">
 <td align="left">Ex 2</td>
-<td align="left">6</td>
+<td align="left">4</td>
 </tr>
 <tr class="odd">
 <td align="left">Ex 3</td>
-<td align="left">6</td>
+<td align="left">4</td>
 </tr>
 <tr class="even">
 <td align="left">Ex 4</td>
@@ -727,23 +752,31 @@ assignment.</p>
 </tr>
 <tr class="odd">
 <td align="left">Ex 5</td>
-<td align="left">6</td>
+<td align="left">4</td>
 </tr>
 <tr class="even">
 <td align="left">Ex 6</td>
-<td align="left">8</td>
+<td align="left">4</td>
 </tr>
 <tr class="odd">
 <td align="left">Ex 7</td>
-<td align="left">6</td>
+<td align="left">4</td>
 </tr>
 <tr class="even">
 <td align="left">Ex 8</td>
-<td align="left">6</td>
+<td align="left">4</td>
+</tr>
+<tr class="odd">
+<td align="left">Ex 9</td>
+<td align="left">4</td>
+</tr>
+<tr class="even">
+<td align="left">Ex 10</td>
+<td align="left">4</td>
 </tr>
 <tr class="odd">
 <td align="left">Workflow &amp; formatting</td>
-<td align="left">6</td>
+<td align="left">10</td>
 </tr>
 </tbody>
 </table>

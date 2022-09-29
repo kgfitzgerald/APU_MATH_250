@@ -16,7 +16,33 @@ library(tidyverse)
 ```
 
 
-### Announcements
+### Thursday Announcements
+
++ Notecard due at end of class
++ Lab 04 & HW 02 due tonight (11:59pm)
++ Exam 1 released at end of class (remind me!), due by **classtime on Thursday, Oct 6 - 4:20pm**
++ Sign up for project groups by Tuesday - no other prep work for Tuesday
++ This week's Lab 05 not due until next Saturday (after Exam)
+
+### Exam ground rules
+
++ This is an INDIVIDUAL EXAM. You may NOT work together or consult other people on this exam.
++ You are ENCOURAGED to use your notes, lecture slides/videos, previous assignments, and the internet
+    + You may utilize already existing resources on the internet, but you may NOT post to any online forums to ask for help on the exam.  
+    + If you find code online, cite it, and annotate the code to demonstrate understanding. 
++ Failure to adhere to any of the above policies will be considered a violation of academic integrity and will be handled according to university policy.
+
+### Reminders / Tips
+
++ Make sure you've answered all parts of the question!
++ Make sure to clean up visualizations - add titles, clean axis labels, all text should be readable
++ Use `kbl()` for clean formatting of tables
++ Google your errors
++ Search "how to ____ in tidyverse r"
++ stackoverflow forum is usually particularly helpful
++ Check out textbooks linked in prep material (esp. R for Data Science)
+
+### Tuesday Announcements
 
 + Notecard due at end of class
 + Lab 04 due date extended to Thursday (11:59pm)
