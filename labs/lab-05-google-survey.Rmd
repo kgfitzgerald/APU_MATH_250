@@ -82,7 +82,7 @@ new_names <- c("variable_1", "variable_2", ...)
 
 3. "On a scale from 1 to 10, how anxious are you about taking MATH 130 - Intro to Statistics?" Create an appropriate visualization or summary table to explore this variable.
 
-4. Reproduce the following visualization. Note, you will need to re-order the levels of your year variable.
+4. Reproduce the following visualization. Note, you may need to re-order the levels of your variable.
 
 *Hint: Set `y = 1` inside your `aes()` function. And add a `theme` layer where `axis.text.y` and `axis.ticks.y` are set equal to `element_blank()`*
 
