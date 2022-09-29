@@ -105,12 +105,11 @@ ___ <- ___ %>%
 
 5. Create an appropriate visualization to examine how the Thorns performed in each individual season (in terms of wins, losses, and ties). Include a clear title and axis labels. Describe 2-3 things you observe from the visualization 
 
-6. *Does Portland have a home field advantage?* To explore this question, 
-
-    - Create a new variable indicating whether Portland was the "home" or "away" team for each game. 
-    - Create side-by-side box plots of the number of points scored by the Thorns based on whether or not they were the home team.  
-    - Then create a ridge plot using `geom_density_ridges()`.
-    - Describe 2-3 things you observe from the visualization 
+6. *Does Portland have a home field advantage?* To explore this question:
+- Create a new variable indicating whether Portland was the "home" or "away" team for each game. 
+- Create side-by-side box plots of the number of points scored by the Thorns based on whether or not they were the home team.  
+- Then create a ridge plot using `geom_density_ridges()`.
+- Describe 2-3 things you observe from the visualization 
 
 7. Continuing to investigate home-field advantage, produce a nicely formatted summary table that presents the proportion of games won, grouped by whether it was a home or away game.
 
@@ -125,10 +124,10 @@ portland <- portland %>%
 ```
 
 8. Create a scatterplot of the points Portland scored versus game number. However, use `geom_jitter()` instead of `geom_point()`. The function `geom_jitter()` adds some random noise to the points so they don't overlap each other.
-    - Based on this plot, does there appear to be a general change in number of points scored over the course of the season? Briefly explain your response. 
+- Based on this plot, does there appear to be a general change in number of points scored over the course of the season? Briefly explain your response. 
 
 9. Adapt your previous visualization to explore the relationship between points scored vs. game number, broken down by season. It's up to you to choose how best to visualize this - there is more than one appropriate answer. However, you should use `factor(season)` inside the ggplot `aes()` code, so `season` is treated as a categorical variable.
-    - Does there seem to be a difference in the pattern by season? Briefly explain your response. 
+- Does there seem to be a difference in the pattern by season? Briefly explain your response. 
 
 10. What is one additional question you could investigate using this data? This could be the `portland` data, the full `games` data, and/or the other data in the `nwslR` package. Provide a visualization and/or summary table that investigates your question. Interpret your results. 
 

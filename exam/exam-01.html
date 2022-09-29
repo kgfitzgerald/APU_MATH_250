@@ -646,7 +646,8 @@ performed in each individual season (in terms of wins, losses, and
 ties). Include a clear title and axis labels. Describe 2-3 things you
 observe from the visualization</p></li>
 <li><p><em>Does Portland have a home field advantage?</em> To explore
-this question,</p>
+this question:</p></li>
+</ol>
 <ul>
 <li>Create a new variable indicating whether Portland was the “home” or
 “away” team for each game.</li>
@@ -656,10 +657,11 @@ Thorns based on whether or not they were the home team.<br />
 <li>Then create a ridge plot using
 <code>geom_density_ridges()</code>.</li>
 <li>Describe 2-3 things you observe from the visualization</li>
-</ul></li>
-<li><p>Continuing to investigate home-field advantage, produce a nicely
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>Continuing to investigate home-field advantage, produce a nicely
 formatted summary table that presents the proportion of games won,
-grouped by whether it was a home or away game.</p></li>
+grouped by whether it was a home or away game.</li>
 </ol>
 <p><em>Do the number of points scored in a game change over the course
 of a season?</em> For example, do the points decrease, perhaps due to
@@ -676,22 +678,26 @@ within a season (e.g., 1st, 2nd, 3rd, etc).</p>
 <li>Create a scatterplot of the points Portland scored versus game
 number. However, use <code>geom_jitter()</code> instead of
 <code>geom_point()</code>. The function <code>geom_jitter()</code> adds
-some random noise to the points so they don’t overlap each other.
+some random noise to the points so they don’t overlap each other.</li>
+</ol>
 <ul>
 <li>Based on this plot, does there appear to be a general change in
 number of points scored over the course of the season? Briefly explain
 your response.</li>
-</ul></li>
+</ul>
+<ol start="9" style="list-style-type: decimal">
 <li>Adapt your previous visualization to explore the relationship
 between points scored vs. game number, broken down by season. It’s up to
 you to choose how best to visualize this - there is more than one
 appropriate answer. However, you should use <code>factor(season)</code>
 inside the ggplot <code>aes()</code> code, so <code>season</code> is
-treated as a categorical variable.
+treated as a categorical variable.</li>
+</ol>
 <ul>
 <li>Does there seem to be a difference in the pattern by season? Briefly
 explain your response.</li>
-</ul></li>
+</ul>
+<ol start="10" style="list-style-type: decimal">
 <li>What is one additional question you could investigate using this
 data? This could be the <code>portland</code> data, the full
 <code>games</code> data, and/or the other data in the <code>nwslR</code>
