@@ -74,23 +74,24 @@ new_names <- c("variable_1", "variable_2", ...)
 
 2. Using the `glimpse()` function will reveal that many of the variables are stored as characters, including the Timestamp variable. Use the function `mdy_hms()` inside a `mutate()` function to convert the timestamp variable to a date. Then create a histogram of this new variable. What does this reveal about the data?
 
-2. Reproduce the following visualization. Note, you will need to re-order the levels of your year variable.
+3. Reproduce the following visualization. Note, you will need to re-order the levels of your year variable.
 
 *Hint: `theme_light()` and the color `navyblue` were used*
 
 ![](img/year.png)
 
-3. "On a scale from 1 to 10, how anxious are you about taking MATH 130 - Intro to Statistics?" Create an appropriate visualization or summary table to explore this variable.
+4. What is the distribution of gender in MATH 130? Create an appropriate visualization. Make decisions about how to clean up the levels and combine as necessary. A `case_when()` inside a mutate may be useful. Comment on the pros and cons of making this a multiple choice vs open-ended question in a survey. 
 
-4. Reproduce the following visualization. Note, you may need to re-order the levels of your variable.
+5. "On a scale from 1 to 10, how anxious are you about taking MATH 130 - Intro to Statistics?" Create an appropriate visualization or summary table to explore this variable.
+
+6. Reproduce the following visualization. Note, you may need to re-order the levels of your variable.
 
 *Hint: Set `y = 1` inside your `aes()` function. And add a `theme` layer where `axis.text.y` and `axis.ticks.y` are set equal to `element_blank()`*
 
 ![](img/stats_relevant_career.png)
 
-5. What majors are represented in MATH 130? Create a visualization to explore this variable. Make decisions about how to clean up the levels and combine as necessary. A `case_when()` inside a mutate may be useful. Comment on your decisions. 
+7. What majors are represented in MATH 130? Create a visualization to explore this variable. Make decisions about how to clean up the levels and combine as necessary. A `case_when()` inside a mutate may be useful. Comment on your decisions. 
 
-6. What is the distribution of gender in MATH 130? Create an appropriate visualization. Make decisions about how to clean up the levels and combine as necessary. A `case_when()` inside a mutate may be useful. Comment on the pros and cons of making this a multiple choice vs open-ended question in a survey. 
 
 Select all that apply questions in a survey pose some difficult wrangling tasks. Consider the laptop variable. Suppose we want to explore what percentage of students have each of the three types: Mac laptop, iPad, or PC/Windows laptop.
 
@@ -105,7 +106,7 @@ survey <- survey %>%
 
 The `grepl()` function searches for a given string (e.g. "Mac laptop") in a given object (`laptop`). It returns the value `TRUE` if the string is present, and `FALSE` if it is not. Combined with the `if_else()` statement, this results in the new variable having the value "Yes" if the string is found and "No" if it is not. 
 
-7. Use a `pivot_longer` to pivot the columns `Mac:PC`. Consider using `names_to = "laptop_type"` and `values_to = "laptop_access"` to name the new pivoted columns. Then, recreate the following visualization. See the animation below to remind you how the `pivot_()` functions work. 
+8. Use a `pivot_longer` to pivot the columns `Mac:PC`. Consider using `names_to = "laptop_type"` and `values_to = "laptop_access"` to name the new pivoted columns. Then, recreate the following visualization. See the animation below to remind you how the `pivot_()` functions work. 
 
 ![](img/laptop.png)
 
