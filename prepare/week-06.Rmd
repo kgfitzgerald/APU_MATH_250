@@ -17,10 +17,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 By class-time on Tuesday, you should
 
-+ Complete and submit Exam 1. Turn in both your .Rmd and .html files to Canvas
 + Sign up for a project group on Canvas. 
 
 ## For Thursday, October 6
+
+By class-time on Thursday, you should
+
++ Complete and submit Exam 1. Turn in your .html files to Canvas
++ Complete the following prep exercises:
+
 
 `r emo::ji("movie_camera")` Watch [Scientific studies and confounding](https://youtu.be/4_tellSmARQ)
 
