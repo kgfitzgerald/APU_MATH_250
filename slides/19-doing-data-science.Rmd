@@ -310,3 +310,4 @@ squirrels %>%
 + Locate a dataset
 + Determine a research question that could be answered with that data
 + Settle on three substantially different datasets, and start working on [project proposal](https://apumath250.netlify.app/project/#project-proposal)
++ Proposal due NEXT Wednesday, 11:59pm
