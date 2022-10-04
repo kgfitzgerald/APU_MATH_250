@@ -24,8 +24,10 @@ By class-time on Tuesday, you should
 By class-time on Thursday, you should
 
 + Complete and submit Exam 1. Turn in your .html files to Canvas
-+ Complete the following prep exercises:
 
+## For Saturday, October 8
+
++ Complete the following prep exercises:
 
 `r emo::ji("movie_camera")` Watch [Scientific studies and confounding](https://youtu.be/4_tellSmARQ)
 

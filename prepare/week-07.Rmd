@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For October 11
+## For Tuesday, October 11
 
 ### Required 
 
@@ -40,10 +40,5 @@ knitr::opts_chunk$set(echo = TRUE)
 
 `r emo::ji("movie_camera")` [Kristian Lum - What’s An Algorithm Got To Do With It](https://youtu.be/5zxDwA99soA)
 
-
-
-
-
-
-`r emo::ji("memo")` **Note:** There is no prep quiz this week.
+`r emo::ji("memo")` **Note:** Prep quiz this week is a discussion post about the above videos.
 

@@ -13,11 +13,41 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-- Since Exam 1 is due Tuesday, the prep assignments are not due until Thursday this week
-- We will spend Tuesday's class as a project work session
++ Exam 1 due by classtime on Thursday (4:20pm)
+- Today: Brief lecture, project work session
+- Thursday: work session. Encouraged (not required) to come work on:
+    + Lab 05 (due Saturday)
+    + Lab 06 (OPTIONAL - practice pivoting, computing conditional probabilities, formatting tables)
+    + Anything you got wrong/didn't understand on past assignments
+    + Past bonus/stretch exercises
+    + HW 03 (assigned next week)
+    + Project Proposal 
+- Saturday: 
+    + Lab 05 due
+    + Prep Quiz 06 due (extended)
+- NEXT Tuesday:
+    + Data Ethics videos
+    + Discussion post of 2+ questions, things you're wondering about (instead of usual prep quiz)
 
-### Questions?
+### Questions / Feedback
 
+Concerns:
+
+  + Group members not following through on their work
+  + Lack of communication about finishing up the assignment
+
+Things I can do:
+
+  + Add accountability for group members - survey to fill out each week
+  + Prompt everyone with 5 minutes left to make a plan for how lab will be completed
+  + Go over exercises intermittently throughout the class 
+
+Things you can do:
+
+  + Communicate before leaving class about the plan for finishing assignment, including specific times you plan to meet/check-in/have work done by. 
+  + Follow through on your assigned role / what you say you're going to do ("otherwise I am going to have to do your job and I will be very sad")
+  + Communicate with me if issues arise where you are unable to complete your work on time - labs & homework can be turned in up to 3 days late, 5% deduction for each 24-hour period
+  
 
 ### Project Work Session
 

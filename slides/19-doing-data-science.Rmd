@@ -300,3 +300,13 @@ squirrels %>%
 - Pay attention to: Organization, presentation, flow
 - Don't forget about: Code style, coding best practices, meaningful commits
 - Be open to: Suggestions, feedback, taking (calculated) risks
+
+---
+
+## In your groups...
+
++ Brainstorm topic(s) of common interest
++ Browse [data sources](https://apumath250.netlify.app/project/#data-sources) on course website
++ Locate a dataset
++ Determine a research question that could be answered with that data
++ Settle on three substantially different datasets, and start working on [project proposal](https://apumath250.netlify.app/project/#project-proposal)
