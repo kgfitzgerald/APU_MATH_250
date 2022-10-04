@@ -48,6 +48,8 @@ Things you can do:
   + Follow through on your assigned role / what you say you're going to do ("otherwise I am going to have to do your job and I will be very sad")
   + Communicate with me if issues arise where you are unable to complete your work on time - labs & homework can be turned in up to 3 days late, 5% deduction for each 24-hour period
   
+[RStudio Reminders / Tips](https://rstudio.cloud/spaces/268257/content/4657938)
+  
 
 ### Project Work Session
 
