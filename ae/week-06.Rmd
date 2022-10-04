@@ -38,7 +38,7 @@ Concerns:
 
 Things I can do:
 
-  + Add accountability for group members - survey to fill out each week
+  + Add accountability for group members - [survey](https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_1ZgcGyd7yfH095c) to fill out each week
   + Prompt everyone with 5 minutes left to make a plan for how lab will be completed
   + Go over exercises intermittently throughout the class 
 
