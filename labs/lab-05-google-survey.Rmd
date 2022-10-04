@@ -124,7 +124,9 @@ knitr::include_graphics("img/tidyr-longer-wider.gif")
 
 # Submission
 
-Before submitting, open up your .html in a full window and inspect the following:
+Each group member should fill out this [group feedback form](https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_1ZgcGyd7yfH095c) by the deadline.
+
+Before submitting your assignment on Canvas, open up your .html in a full window and inspect the following:
 
 + Check your code for neatness - add spaces and line breaks where appropriate to improve readability
 

@@ -94,6 +94,8 @@ You can also find this information [here](https://www.openintro.org/data/index.p
 
 # Submission
 
+Each group member should fill out this [group feedback form](https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_1ZgcGyd7yfH095c) by the deadline.
+
 Before submitting, open up your .html in a full window and inspect the following:
 
 + Check your code for neatness - add spaces and line breaks where appropriate to improve readability
