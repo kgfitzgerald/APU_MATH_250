@@ -13,13 +13,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-- A1
-- A2
+![](img/APU_Volleyball_MPS.png)
+
+RSVP: <https://forms.gle/pj8SvRnM4T773b88A>
 
 ### Questions?
 
-
 ### Faith Integration Discussion
 
-- There is no AE this week
-- The remainder of class will be spent on a Faith Integration Discussion
+-   There is no AE this week
+-   The remainder of class will be spent on a Faith Integration Discussion

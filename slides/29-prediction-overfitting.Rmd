@@ -22,7 +22,7 @@ library(tidymodels)
 library(openintro)
 library(patchwork)
 library(skimr)
-set.seed(1234)
+#set.seed(1234)
 options(
   warnPartialMatchArgs = FALSE,
   warnPartialMatchAttr = FALSE, 
@@ -276,7 +276,7 @@ x <- train_data %>%
   select(where(is.numeric)) %>%
   skim_without_charts()
 
-print(x, include_summary = FALSE)
+print(x, include_summary = FALSE, n = 22)
 ```
 ]
 
@@ -284,7 +284,7 @@ print(x, include_summary = FALSE)
 
 ## Fit a model to the training dataset
 
-```{r}
+```{r, warning = FALSE}
 email_fit <- logistic_reg() %>%
   set_engine("glm") %>%
   fit(spam ~ . - from - sent_email - viagra, data = train_data, family = "binomial") #<<
@@ -321,7 +321,7 @@ email_pred
 ## A closer look at predictions
 
 .pull-left-wide[
-```{r highlight.output=c(6, 10)}
+```{r highlight.output=c(5, 10, 13)}
 email_pred %>%
   arrange(desc(.pred_1)) %>%
   print(n = 10)

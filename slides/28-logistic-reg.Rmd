@@ -55,7 +55,7 @@ Would you expect longer or shorter emails to be spam?
 --
 
 .pull-left[
-```{r echo=FALSE, out.width="100%"}
+```{r echo=FALSE, out.width="100%", message = FALSE, warning = FALSE}
 email %>%
   ggplot(aes(x = num_char, y = spam, fill = spam, color = spam)) +
   geom_density_ridges2(alpha = 0.5) +
@@ -85,7 +85,7 @@ Would you expect emails that have subjects starting with "Re:", "RE:", "re:", or
 
 --
 
-```{r echo=FALSE}
+```{r echo=FALSE, message = FALSE, warning = FALSE}
 email %>%
   ggplot(aes(x = re_subj, fill = spam)) +
   geom_bar(position = "fill") +
@@ -113,7 +113,7 @@ email %>%
 
 This isn't something we can reasonably fit a linear model to -- we need something different!
 
-```{r echo=FALSE, out.width="70%"}
+```{r echo=FALSE, out.width="70%", message = FALSE, warning = FALSE}
 means <- email %>%
   group_by(spam) %>%
   summarise(mean_num_char = mean(num_char)) %>%
@@ -137,7 +137,7 @@ ggplot(email, aes(x = num_char, y = spam, color = spam)) +
 --
 - Each Bernoulli trial can have a separate probability of success
 
-$$ y_i ∼ Bern(p) $$
+$$ y_i ∼ Bern(p_i) $$
 
 --
 - We can then use the predictor variables to model that probability of success, $p_i$
@@ -195,7 +195,7 @@ $$logit(p) = \log\left(\frac{p}{1-p}\right)$$
 
 ## Logit function, visualised
 
-```{r echo=FALSE}
+```{r echo=FALSE, message = FALSE, warning = FALSE}
 d <- tibble(p = seq(0.001, 0.999, length.out = 1000)) %>%
   mutate(logit_p = log(p/(1-p)))
 
@@ -289,7 +289,7 @@ What is the probability that an email with 15000 characters is spam? What about 
 --
 
 .pull-left[
-```{r spam-predict-viz, echo=FALSE, out.width = "100%", fig.asp=0.5}
+```{r spam-predict-viz, echo=FALSE, message = FALSE, warning = FALSE, out.width = "100%", fig.asp=0.5}
 newdata <- tibble(
   num_char = c(2, 15, 40),
   color    = c("#A7D5E8", "#e9d968", "#8fada7"),
