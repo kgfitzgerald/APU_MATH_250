@@ -18,9 +18,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [Modeling nonlinear relationships](https://youtu.be/ODDMLnhbNE8)
+`r emo::ji("movie_camera")` Watch [More models with multiple predictors](https://youtu.be/6ndAIYUk6UU)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/25-modeling-nonlinear-relationships.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/27-more-model-multiple-predictors.html)
 
 `r emo::ji("movie_camera")` Watch [Logistic regression](https://youtu.be/JBOfSS8gHVM)
 
