@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Annotated Exam corrections due Saturday - will work on these some today
 
-    -   [https://kgfitzgerald.github.io/APU_MATH_250/ae/week-07-exam-corrections.html](https://kgfitzgerald.github.io/APU_MATH_250/ae/week-07.html)
+    -   <https://kgfitzgerald.github.io/APU_MATH_250/ae/week-07-exam-corrections.html>
 
 -   HW 03 assigned today, due next Thursday
 
