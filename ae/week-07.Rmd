@@ -11,7 +11,47 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Announcements
+### Thursday Announcements
+
+-   Annotated Exam corrections due Saturday - will work on these some today
+
+    -   [https://kgfitzgerald.github.io/APU_MATH_250/ae/week-07-exam-corrections.html](https://kgfitzgerald.github.io/APU_MATH_250/ae/week-07.html)
+
+-   HW 03 assigned today, due next Thursday
+
+-   Project timeline:
+
+    -   Will meet with each group today to finalize dataset / research question
+
+    -   Data cleaning / preliminary EDA due Oct 27
+
+        -   Clean variable names
+
+        -   Convert to appropriate data types (factors, dates, etc)
+
+        -   Re-order factor levels as needed
+
+        -   Investigate and handle missing data
+
+        -   Visualize each variable (or \~10 prominent variables), note any issues or notable features
+
+        -   Describe your analysis plan for answering your research question
+
+            -   What types of visualizations or summary tables will you create?
+
+            -   What types of models or inference procedures will you run, if any?
+
+-   Sign up for advising appointments!
+
+    -   Junior and Senior MPS majors (or minors)
+
+    -   To make an appointment, go to this [calendar link](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUNFd3FSS2lGUjZufGRlZmF1bHR8MThkNjJlMGFlOTdmZjQ2YzM1MWFhZjcwMTI2Mzg0MmQ) and select a time for the advisor of your choice. Appointments are available October 17 to October 28.
+
+-   RSVP for volleyball game: <https://forms.gle/pj8SvRnM4T773b88A>
+
+![](img/APU_Volleyball_MPS.png)
+
+### Tuesday Announcements
 
 ![](img/APU_Volleyball_MPS.png)
 
