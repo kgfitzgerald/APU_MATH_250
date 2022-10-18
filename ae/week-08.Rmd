@@ -17,6 +17,8 @@ knitr::opts_chunk$set(echo = TRUE)
 - AE 06 in-class today, due Thursday
 - Project data cleaning / EDA due next Thursday
 - Sign up for advising appointment
+- Help out MPS Recruitment Task force by writing tweet-like testimonials :) 
+    + Bonus points on your AE 
 - Volleyball game after class today!
 
 ### Questions?
