@@ -13,8 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-- A1
-- A2
+- HW 03 due Thursday
+- AE 06 in-class today, due Thursday
+- Project data cleaning / EDA due next Thursday
+- Sign up for advising appointment
+- Volleyball game after class today!
 
 ### Questions?
 
