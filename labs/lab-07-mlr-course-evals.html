@@ -512,7 +512,7 @@ text-align: center;
 
 <h1 class="title toc-ignore">Lab 07 - Grading the professor, Pt. 2</h1>
 <h3 class="subtitle">Modelling with multiple predictors</h3>
-<h4 class="date">due Tuesday, October 11 at 11:59p</h4>
+<h4 class="date">due Thursday, October 27 at 11:59pm</h4>
 
 
 <div id="TOC">
@@ -596,33 +596,70 @@ only. Write the linear model, and note the <span class="math inline">\(R^2\)</sp
 <div id="multiple-linear-regression" class="section level2">
 <h2>Multiple linear regression</h2>
 <ol start="2" style="list-style-type: decimal">
-<li><p>Fit a new linear model: <code>score_bty_gen_fit</code>,
-predicting average professor evaluation <code>score</code> based on
-average beauty rating (<code>bty_avg</code>) and <code>gender</code>.
-Write the linear model, and note the <span class="math inline">\(R^2\)</span> and adjusted <span class="math inline">\(R^2\)</span>.</p></li>
+<li>Fit a new linear model: <code>score_bty_gen_fit</code>, predicting
+average professor evaluation <code>score</code> based on average beauty
+rating (<code>bty_avg</code>) and <code>gender</code>. Write the linear
+model, and note the <span class="math inline">\(R^2\)</span> and
+adjusted <span class="math inline">\(R^2\)</span>.</li>
+</ol>
+<p>The following code plots the above regression model. Include this
+plot in your report.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create augmented dataset</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>score_bty_gen_fit_aug <span class="ot">&lt;-</span> <span class="fu">augment</span>(score_bty_gen_fit<span class="sc">$</span>fit)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#plot data + regression line</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(score_bty_gen_fit_aug, <span class="fu">aes</span>(<span class="at">y =</span> score, <span class="at">x =</span> bty_avg, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">color =</span> gender)) <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> .fitted), <span class="at">size =</span> <span class="fl">1.5</span>)</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
 <li><p>Interpret the slopes and intercept of
 <code>score_bty_gen_fit</code> in context of the data.</p></li>
 <li><p>What percent of the variability in <code>score</code> is
-explained by the model <code>score_bty_gen_fit</code>?</p></li>
+explained by the model <code>score_bty_gen_fit</code>? <em>Use inline
+code to include your answer in a sentence. Convert to a percentage and
+then round to 1 decimal place.</em></p></li>
 <li><p>What is the equation of the line corresponding to <em>just</em>
-male professors?</p></li>
+male professors? What is it for female professors?</p></li>
 <li><p>For two professors who received the same beauty rating, which
 gender tends to have the higher course evaluation score?</p></li>
-<li><p>How does the relationship between beauty and evaluation score
-vary between male and female professors?</p></li>
 <li><p>How do the adjusted <span class="math inline">\(R^2\)</span>
 values of <code>score_bty_gen_fit</code> and <code>score_bty_fit</code>
 compare? What does this tell us about how useful <code>gender</code> is
 in explaining the variability in evaluation scores when we already have
-information on the beauty score of the professor.</p></li>
+information on the beauty score of the professor. <em>Use inline code to
+include the numbers in your sentence(s).</em></p></li>
 <li><p>Compare the slopes of <code>bty_avg</code> under the two models
 (<code>score_bty_fit</code> and <code>score_bty_gen_fit</code>). Has the
 addition of <code>gender</code> to the model changed the parameter
-estimate (slope) for <code>bty_avg</code>?</p></li>
+estimate (slope) for <code>bty_avg</code>? Discuss what this might
+indicate. <em>Use inline code to include the numbers in your
+sentence(s).</em></p></li>
 <li><p>Create a new model called <code>score_bty_rank_fit</code> with
-<code>gender</code> removed and <code>rank</code> added in. Write the
-equation of the linear model and interpret the slopes and intercept in
-context of the data.</p></li>
+<code>gender</code> removed and <code>rank</code> added in, and provide
+a visualization of the data with the relevant regression line(s). Write
+the equation of the linear model, interpret the slopes and intercept in
+context of the data. <em>Use inline code to include the numbers in your
+sentence(s).</em></p></li>
+</ol>
+</div>
+<div id="interaction-models" class="section level2">
+<h2>Interaction models</h2>
+<p>How does the relationship between beauty and evaluation score vary
+between male and female professors?</p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>To answer the above question, do the following:</p>
+<ul>
+<li>Fit an interaction model (with an interaction between
+<code>bty_avg</code> and <code>gender</code>)</li>
+<li>Provide a visualization of the data with the relevant regression
+lines.</li>
+<li>Write the equation of the linear model separately for males and
+females</li>
+<li>Interpret the slopes and intercepts in the context of the data.</li>
+<li>Decide which model is more appropriate in this case - the main
+effects or interaction model. Justify your choice.</li>
+</ul></li>
 </ol>
 </div>
 </div>
@@ -665,11 +702,11 @@ assignment.</p>
 <tbody>
 <tr class="odd">
 <td align="left">Ex 1</td>
-<td align="left">4</td>
+<td align="left">2</td>
 </tr>
 <tr class="even">
 <td align="left">Ex 2</td>
-<td align="left">4</td>
+<td align="left">2</td>
 </tr>
 <tr class="odd">
 <td align="left">Ex 3</td>
@@ -677,7 +714,7 @@ assignment.</p>
 </tr>
 <tr class="even">
 <td align="left">Ex 4</td>
-<td align="left">4</td>
+<td align="left">2</td>
 </tr>
 <tr class="odd">
 <td align="left">Ex 5</td>
@@ -685,7 +722,7 @@ assignment.</p>
 </tr>
 <tr class="even">
 <td align="left">Ex 6</td>
-<td align="left">4</td>
+<td align="left">2</td>
 </tr>
 <tr class="odd">
 <td align="left">Ex 7</td>
@@ -697,11 +734,11 @@ assignment.</p>
 </tr>
 <tr class="odd">
 <td align="left">Ex 9</td>
-<td align="left">4</td>
+<td align="left">8</td>
 </tr>
 <tr class="even">
 <td align="left">Ex 10</td>
-<td align="left">4</td>
+<td align="left">8</td>
 </tr>
 <tr class="odd">
 <td align="left">Workflow &amp; formatting</td>

@@ -11,7 +11,39 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Announcements
+### Thursday Announcements
+
+- HW 03 due tonight
+- Project data cleaning / EDA due next Thursday
+    + Work session next Thursday, but don't wait until then to start! 
+    + Can always ask for feedback from me before then - Campuswire preferred over email
+- Lab 07 started today, due next THURSDAY (instead of Tuesday)
+
+### Student Qs
+
++ Can linear models be used when you have many variables that have an influence on the predicted variable?
+    + Yep! You'll see some today
+    + Linear actually means *linear in the parameters*. That is, the $\beta$s are to the first power
+        + $y_i = \beta_0 + \beta_1x_1 + \beta_2x_2$ is linear
+        + $y_i = \beta_0 + \beta_1x_1^2 + \beta_2x_2$ is linear
+        + $y_i = \beta_0 + \beta_1^2x_1+ \beta_2x_2$ is NOT linear
+        + $y_i = \beta_0 + \beta_1e^{x_1} + \beta_2x_2$ is linear
+        + $y_i = \beta_0 + e^{\beta_1}x_1 + \beta_2x_2$ is NOT linear
+        
++ How do we interpret $R^2$? Especially when more variables come into play?
+
+    + ____% of variability in [Y] can be explained by [the model]. 
+    + If the model only includes one predictor, that boils down to: ____% of variability in [Y] can be explained by [x].
+
++ What kinds of things are you looking for when doing the re-factoring section of the data-cleaning project assignment?
+    + Only necessary to re-level ordinal categorical variables that have a natural ordering other than alphabetical (e.g. month, High/Medium/Low)
+    + May not be applicable in every dataset
+
++ Is there a way to plot the regression line directly from the linear_reg() function? Or is geom_smooth() necessary? 
+    + You'll see example code in the Lab today for how to use model output to plot regression line
+
+
+### Tuesday Announcements
 
 - HW 03 due Thursday
 - AE 06 in-class today, due Thursday

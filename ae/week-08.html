@@ -71,8 +71,66 @@ code span.ot { color: #007020; }
 
 <div class="entry-content">
 
-<div id="announcements" class="section level3">
-<h3>Announcements</h3>
+<div id="thursday-announcements" class="section level3">
+<h3>Thursday Announcements</h3>
+<ul>
+<li>HW 03 due tonight</li>
+<li>Project data cleaning / EDA due next Thursday
+<ul>
+<li>Work session next Thursday, but don’t wait until then to start!</li>
+<li>Can always ask for feedback from me before then - Campuswire
+preferred over email</li>
+</ul></li>
+<li>Lab 07 started today, due next THURSDAY (instead of Tuesday)</li>
+</ul>
+</div>
+<div id="student-qs" class="section level3">
+<h3>Student Qs</h3>
+<ul>
+<li><p>Can linear models be used when you have many variables that have
+an influence on the predicted variable?</p>
+<ul>
+<li>Yep! You’ll see some today</li>
+<li>Linear actually means <em>linear in the parameters</em>. That is,
+the <span class="math inline">\(\beta\)</span>s are to the first power
+<ul>
+<li><span class="math inline">\(y_i = \beta_0 + \beta_1x_1 +
+\beta_2x_2\)</span> is linear</li>
+<li><span class="math inline">\(y_i = \beta_0 + \beta_1x_1^2 +
+\beta_2x_2\)</span> is linear</li>
+<li><span class="math inline">\(y_i = \beta_0 + \beta_1^2x_1+
+\beta_2x_2\)</span> is NOT linear</li>
+<li><span class="math inline">\(y_i = \beta_0 + \beta_1e^{x_1} +
+\beta_2x_2\)</span> is linear</li>
+<li><span class="math inline">\(y_i = \beta_0 + e^{\beta_1}x_1 +
+\beta_2x_2\)</span> is NOT linear</li>
+</ul></li>
+</ul></li>
+<li><p>How do we interpret <span class="math inline">\(R^2\)</span>?
+Especially when more variables come into play?</p>
+<ul>
+<li>____% of variability in [Y] can be explained by [the model].</li>
+<li>If the model only includes one predictor, that boils down to: ____%
+of variability in [Y] can be explained by [x].</li>
+</ul></li>
+<li><p>What kinds of things are you looking for when doing the
+re-factoring section of the data-cleaning project assignment?</p>
+<ul>
+<li>Only necessary to re-level ordinal categorical variables that have a
+natural ordering other than alphabetical (e.g. month,
+High/Medium/Low)</li>
+<li>May not be applicable in every dataset</li>
+</ul></li>
+<li><p>Is there a way to plot the regression line directly from the
+linear_reg() function? Or is geom_smooth() necessary?</p>
+<ul>
+<li>You’ll see example code in the Lab today for how to use model output
+to plot regression line</li>
+</ul></li>
+</ul>
+</div>
+<div id="tuesday-announcements" class="section level3">
+<h3>Tuesday Announcements</h3>
 <ul>
 <li>HW 03 due Thursday</li>
 <li>AE 06 in-class today, due Thursday</li>

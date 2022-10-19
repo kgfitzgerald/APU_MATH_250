@@ -1,7 +1,7 @@
 ---
 title: "Lab 07 - Grading the professor, Pt. 2"
 subtitle: "Modelling with multiple predictors"
-date: "due Tuesday, October 11 at 11:59p "
+date: "due Thursday, October 27 at 11:59pm"
 output: 
   tufte::tufte_html:
     css: "lab.css"
@@ -73,24 +73,53 @@ You can also find this information [here](https://www.openintro.org/data/index.p
 2.  Fit a new linear model: `score_bty_gen_fit`, predicting average professor evaluation `score` based on average beauty rating (`bty_avg`) and `gender`.
     Write the linear model, and note the $R^2$ and adjusted $R^2$.
 
+The following code plots the above regression model. Include this plot in your report. 
+
+```{r, echo = FALSE}
+score_bty_gen_fit <- linear_reg() %>% 
+  set_engine("lm") %>% 
+  fit(score ~ bty_avg + gender, data = evals)
+```
+
+
+```{r}
+#create augmented dataset
+score_bty_gen_fit_aug <- augment(score_bty_gen_fit$fit)
+
+#plot data + regression line
+ggplot(score_bty_gen_fit_aug, aes(y = score, x = bty_avg, 
+                                  color = gender)) +
+  geom_point() +
+  geom_line(aes(y = .fitted), size = 1.5)
+```
+
+
 3.  Interpret the slopes and intercept of `score_bty_gen_fit` in context of the data.
 
-4.  What percent of the variability in `score` is explained by the model `score_bty_gen_fit`?
+4.  What percent of the variability in `score` is explained by the model `score_bty_gen_fit`? *Use inline code to include your answer in a sentence. Convert to a percentage and then round to 1 decimal place.*
 
-5.  What is the equation of the line corresponding to *just* male professors?
+5.  What is the equation of the line corresponding to *just* male professors? What is it for female professors? 
 
 6.  For two professors who received the same beauty rating, which gender tends to have the higher course evaluation score?
 
-7.  How does the relationship between beauty and evaluation score vary between male and female professors?
+7.  How do the adjusted $R^2$ values of `score_bty_gen_fit` and `score_bty_fit` compare? What does this tell us about how useful `gender` is in explaining the variability in evaluation scores when we already have information on the beauty score of the professor. *Use inline code to include the numbers in your sentence(s).*
 
-8.  How do the adjusted $R^2$ values of `score_bty_gen_fit` and `score_bty_fit` compare?
-    What does this tell us about how useful `gender` is in explaining the variability in evaluation scores when we already have information on the beauty score of the professor.
+8. Compare the slopes of `bty_avg` under the two models (`score_bty_fit` and `score_bty_gen_fit`). Has the addition of `gender` to the model changed the parameter estimate (slope) for `bty_avg`? Discuss what this might indicate. *Use inline code to include the numbers in your sentence(s).*
 
-9. Compare the slopes of `bty_avg` under the two models (`score_bty_fit` and `score_bty_gen_fit`).
-    Has the addition of `gender` to the model changed the parameter estimate (slope) for `bty_avg`?
+9. Create a new model called `score_bty_rank_fit` with `gender` removed and `rank` added in, and provide a visualization of the data with the relevant regression line(s). Write the equation of the linear model, interpret the slopes and intercept in context of the data. *Use inline code to include the numbers in your sentence(s).*
+    
+## Interaction models
 
-10. Create a new model called `score_bty_rank_fit` with `gender` removed and `rank` added in.
-    Write the equation of the linear model and interpret the slopes and intercept in context of the data.
+How does the relationship between beauty and evaluation score vary between male and female professors? 
+
+10. To answer the above question, do the following:
+
+    + Fit an interaction model (with an interaction between `bty_avg` and `gender`)
+    + Provide a visualization of the data with the relevant regression lines. 
+    + Write the equation of the linear model separately for males and females
+    + Interpret the slopes and intercepts in the context of the data. 
+    + Decide which model is more appropriate in this case - the main effects or interaction model. Justify your choice. 
+
 
 # Submission
 
@@ -118,16 +147,16 @@ To submit, you need to export your .html document from RStudio Cloud and then up
 
 | Component | Points |
 |:----------|:-------|
-| Ex 1      | 4      |
-| Ex 2      | 4    |
+| Ex 1      | 2      |
+| Ex 2      | 2    |
 | Ex 3      | 4   |
-| Ex 4      | 4   |
+| Ex 4      | 2   |
 | Ex 5      | 4      |
-| Ex 6      | 4    |
+| Ex 6      | 2    |
 | Ex 7      | 4   |
 | Ex 8      | 4   |
-| Ex 9      | 4   |
-| Ex 10  | 4 |
+| Ex 9      | 8   |
+| Ex 10  | 8 |
 | Workflow & formatting   | 10      |
 
 **Grading notes**:
