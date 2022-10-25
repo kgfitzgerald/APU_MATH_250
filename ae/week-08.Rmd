@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Thursday Announcements
 
+- Exam grades have been updated to include ATC
 - HW 03 due tonight
 - Project data cleaning / EDA due next Thursday
     + Work session next Thursday, but don't wait until then to start! 

@@ -13,15 +13,80 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-- A1
-- A2
+-   Today:
+    -   Finish Lab 07 (w/ interaction model), due Thursday
+    -   AE-07 (due Thursday, midnight)
+-   Thursday:
+    -   Data viz best practices mini-workshop
+    -   Project work session
+    -   Project data cleaning & EDA due Thursday
 
 ### Questions?
 
+-   I generally understand the idea of main effects vs interaction-effects model, but how do we determine which one is a better model to use?
+-   I still don't quite understand when we should and shouldn't use `factor()` in plots
+
+```{r, message = FALSE, warning = FALSE}
+library(openintro)
+library(tidyverse)
+
+evals <- evals %>% 
+  mutate(gender_numeric = as.numeric(gender))
+
+ggplot(evals, aes(x = bty_avg, y = score, 
+                  color = gender_numeric)) +
+  geom_point()
+
+ggplot(evals, aes(x = bty_avg, y = score, 
+                  color = factor(gender_numeric))) +
+  geom_point()
+```
+
+-   Project timeline? Will we have time to work on projects in class?
+
++-------------------+-------------------------------+----------------------+-----------------------------+
+| Week/Dates        | Tue (in-class)                | Thur (in-class)      | Project Due                 |
++===================+===============================+======================+=============================+
+| Week 09           | AE-07                         | Data vis workshop    | Data cleaning & EDA (Thurs) |
+|                   |                               |                      |                             |
+| (Oct 24 - 29)     |                               | Project work session |                             |
++-------------------+-------------------------------+----------------------+-----------------------------+
+| Week 10           | AE-08                         | Lab 08               |                             |
+|                   |                               |                      |                             |
+| (Oct 31 - Nov 5)  |                               |                      |                             |
++-------------------+-------------------------------+----------------------+-----------------------------+
+| Week 11           | AE-09                         | Lab 09               |                             |
+|                   |                               |                      |                             |
+| (Nov 7 - Nov 12)  |                               |                      |                             |
++-------------------+-------------------------------+----------------------+-----------------------------+
+| Week 12           | AE-10                         | Project work session | Rough draft (Thurs)         |
+|                   |                               |                      |                             |
+| (Nov 14 - 19)     |                               |                      |                             |
++-------------------+-------------------------------+----------------------+-----------------------------+
+| THANKSGIVING      |                               |                      |                             |
+|                   |                               |                      |                             |
+| (Nov 21 - 26)     |                               |                      |                             |
++-------------------+-------------------------------+----------------------+-----------------------------+
+| Week 13           | Special Topics: Shiny Apps    | Project Peer Review  |                             |
+|                   |                               |                      |                             |
+| (Nov 28 - Dec 3)  | (AE-11)                       |                      |                             |
++-------------------+-------------------------------+----------------------+-----------------------------+
+| Week 14           | Special Topics: Text analysis | Project Work Session |                             |
+|                   |                               |                      |                             |
+| (Dec 5 - 10)      | (AE-12)                       |                      |                             |
++-------------------+-------------------------------+----------------------+-----------------------------+
+| Week 15           |                               | Presentations        |                             |
+|                   |                               |                      |                             |
+| (Dec 12 - 17)     |                               | (4:05 - 5:55pm)      |                             |
++-------------------+-------------------------------+----------------------+-----------------------------+
+
+-   Vote: prefer to switch Lab 09 and Project work session (in Weeks 11 and 12)?
+
+-   Vote: special topics preference - Shiny apps or text analysis?
 
 ### Application Exercise
 
-- The remainder of class will be spent on AE-07. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
-- To turn it in, you should upload your .html file to Canvas.
+-   The remainder of class will be spent on AE-07.
+-   You can access it from your RStudio Cloud account.
+-   It is due by class-time on Thursday.
+-   To turn it in, you should upload your .html file to Canvas.
