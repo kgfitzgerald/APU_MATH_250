@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [Feature engineering]()
+`r emo::ji("movie_camera")` Watch [Feature engineering](https://www.youtube.com/watch?v=EEQ06cOtZ60)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/30-feature-engineering.html)
 
