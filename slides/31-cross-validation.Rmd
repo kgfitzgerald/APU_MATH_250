@@ -374,7 +374,7 @@ tibble(
   metric    = c("RMSE", "R-squared", "RMSE", "R-squared")
 ) %>%
   pivot_wider(names_from = data, values_from = estimate) %>%
-  bind_cols(comparison = c("RMSE lower for training", "R-squared higher for training")) %>%
+  bind_cols(comparison = c("RMSE lower for training", "R-squared higher for testing")) %>%
   kable()
 ```
 
