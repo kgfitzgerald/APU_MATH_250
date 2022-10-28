@@ -22,11 +22,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/30-feature-engineering.html)
 
-`r emo::ji("movie_camera")` Watch [Cross validation]()
+`r emo::ji("movie_camera")` Watch [Cross validation](https://www.youtube.com/watch?v=GhG1UpvJtW0)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/31-cross-validation.html)
 
-`r emo::ji("memo")` Complete Prep Quiz 10 on Canvas
+`r emo::ji("memo")` There is NO prep quiz this week.
 
 
 ### Optional 
