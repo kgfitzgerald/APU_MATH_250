@@ -74,12 +74,55 @@ code span.ot { color: #007020; }
 <div id="announcements" class="section level3">
 <h3>Announcements</h3>
 <ul>
-<li>A1</li>
-<li>A2</li>
+<li>AE-08 due Thursday (started in-class today)</li>
+<li>HW 04 due Saturday</li>
+<li>Project Rough Draft Nov 17 (2.5 weeks)</li>
+<li>Attend <a href="https://www.causeweb.org/usproc/eusr/2022">eUSR
+Conference</a> - electronic Undergraduate Statistics Research conference
+- FREE on Friday
+<ul>
+<li><a href="https://www.causeweb.org/usproc/eusr/2022/virtual-posters">Alex
+(&amp; Emily Gottry) are presenting</a>!</li>
+<li>Earn stats experience points</li>
+</ul></li>
 </ul>
 </div>
 <div id="questions" class="section level3">
 <h3>Questions?</h3>
+<ul>
+<li><p>The difference between the log odds, regular odds, and the
+probability are still a little confusing. I think the log odds are just
+the logit function equation and then the regular odds are 1/(1+exp(x))
+and the probability is exp(odds)/(1 + exp(odds)). Is that correct or did
+I mix something up?</p>
+<ul>
+<li>log-odds is another name for the logit function, and it’s the scale
+the regression output is provided on</li>
+<li>we exponentiate to get the odds</li>
+<li>we solve for p to get the probability</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[\text{ log odds: } \ \ \ logit(p) =
+log\left(\frac{p}{1-p}\right) \equiv x\]</span></p>
+<p><span class="math display">\[\text{odds: } \ \ \ exp(x) =
+\frac{p}{1-p}\]</span></p>
+<p><span class="math display">\[\text{probability: } \ \ \ p =
+\frac{e^{x}}{1 + e^{x}}\]</span></p>
+<ul>
+<li><p>We saw that we needed to fit a logistic regression model if the
+thing we were trying to predict was a categorical variable and a linear
+regression model if we are trying to predict a numeric variable. Does it
+matter what kind of variables the predictors themselves are
+though?</p></li>
+<li><p>Comments for peers about group work:</p>
+<ul>
+<li>“Please don’t be immediately opposed to work or ideas that are not
+your own. Everyone could have something to contribute if they are
+allowed!”</li>
+<li>“I feel like my group has been very last minute in regards to our
+project so punctuality is something we have to work on.”</li>
+</ul></li>
+</ul>
 </div>
 <div id="application-exercise" class="section level3">
 <h3>Application Exercise</h3>
