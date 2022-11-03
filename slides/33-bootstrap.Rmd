@@ -222,7 +222,7 @@ ggplot(data = boot_df, mapping = aes(x = stat)) +
 .question[
 The 95% confidence interval for the mean rent of three bedroom flats in Edinburgh was calculated as (`r lower_bound`, `r upper_bound`). Which of the following is the correct interpretation of this interval?
 
-**(a)** 95% of the time the mean rent of three bedroom flats in this sample is between £`r lower_bound` and £`r upper_bound`.
+**(a)** 95% of the time the mean rent of three bedroom flats is between £`r lower_bound` and £`r upper_bound`.
 
 **(b)** 95% of all three bedroom flats in Edinburgh have rents between £`r lower_bound` and £`r upper_bound`.
 

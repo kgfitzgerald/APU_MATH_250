@@ -11,7 +11,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Announcements
+### Thursday Announcements
+
+- HW 04 due Saturday
+- Project Rough Draft due Nov 17 (2 weeks)
+- 
+
+### Tuesday Announcements
 
 - AE-08 due Thursday (started in-class today)
 - HW 04 due Saturday 
