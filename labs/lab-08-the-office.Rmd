@@ -1,7 +1,7 @@
 ---
 title: "Lab 08 - The Office, Part II"
 subtitle: "Feature Engineering & Cross Validation"
-date: "due Thursday, October 27 at 11:59pm"
+date: "due Tuesday, November 8 at 11:59pm"
 output: 
   tufte::tufte_html:
     css: "lab.css"
@@ -74,7 +74,12 @@ Let's start by taking a peek at the data.
 glimpse(theoffice)
 ```
 
-There are `r nrow(theoffice)` observations and `r ncol(theoffice)` columns in this dataset.
+```{r, echo = FALSE}
+theoffice <- schrute::theoffice
+```
+
+
+There are 55130 observations and 12 columns in this dataset.
 The variable names are as follows.
 
 ```{r}
@@ -103,9 +108,7 @@ glimpse(theoffice)
 
 ### Data prep
 
-#### Exercise 1
-
-Identify episodes that touch on Halloween, Valentine's Day, and Christmas.
+1. Identify episodes that touch on Halloween, Valentine's Day, and Christmas.
 
 -   First, convert all `text` to lowercase with `str_to_lower()`.
 -   Then, create three new variables (`halloween_mention`, `valentine_mention`, and `christmas_mention`) where that take on the value `1` if the character string `"halloween"`, `"valentine"`, or `"christmas"` appears in the text, respectively, and `0` otherwise.
@@ -122,9 +125,7 @@ theoffice <- theoffice %>%
   )
 ```
 
-#### Exercise 2
-
-In this exercise we'll accomplish two separate tasks.
+2. In this exercise we'll accomplish two separate tasks.
 And there's a good reason why we're doing it all at once; we're going to drastically change our data frame, from one row per line spoken to one row per episode.
 We'll call the resulting data frame `office_episodes`.
 
@@ -175,9 +176,7 @@ So if you want a data frame that doesn't have a grouping structure as a result o
 Before you proceed, read the [documentation for `summarize()`](https://dplyr.tidyverse.org/reference/summarise.html), and specifically the explanation for the `.groups` argument to prepare yourself for future instances where you might see this type of message.
 :::
 
-#### Exercise 3
-
-The Michael Scott character (played by Steve Carrell) left the show at the end of Season 7.
+3. The Michael Scott character (played by Steve Carrell) left the show at the end of Season 7.
 Add an indicator variable, `michael`, that takes on the value `"yes"` if Michael Scott (Steve Carrell) was in the show, and `"no"` if not.
 
 ```{r michael, eval = FALSE}
@@ -185,9 +184,7 @@ office_episodes <- office_episodes %>%
   mutate(michael = if_else(season > ___, "___", "___"))
 ```
 
-#### Exercise 4
-
-Print out the dimensions (`dim()`) of the new dataset you created as well as the `names()` of the columns in the dataset.
+4. Print out the dimensions (`dim()`) of the new dataset you created as well as the `names()` of the columns in the dataset.
 
 Your new dataset, `office_episodes,` should have 186 rows and 14 columns.
 The column names should be `season`, `episode`, `episode_name`, `imdb_rating`, `total_votes`, `air_date`, `lines_jim`, `lines_pam`, `lines_michael`, `lines_dwight`, `halloween`, `valentine`, `christmas`, and `michael`.
@@ -202,9 +199,7 @@ Or calculate the percentage of episodes that mention Halloween, or Valentine's D
 
 ### Modeling prep
 
-#### Exercise 5
-
-Split the data into training (75%) and testing (25%).
+5. Split the data into training (75%) and testing (25%).
 Save the training and testing data as `office_train` and `office_test` respectively.
 
 *Naming suggestion:* Call the initial split `office_split`, the training data `office_train`, and testing data `office_test`.
@@ -216,9 +211,7 @@ office_train <- ___(office_split)
 office_test <- ___(___)
 ```
 
-#### Exercise 6
-
-Specify a linear regression model with engine `"lm"` and call it `office_spec`.
+6. Specify a linear regression model with engine `"lm"` and call it `office_spec`.
 
 *Naming suggestion:* Call the model specification `office_spec`.
 
@@ -226,9 +219,7 @@ Specify a linear regression model with engine `"lm"` and call it `office_spec`.
 office_spec <- ___
 ```
 
-#### Exercise 7
-
-Create a recipe that performs feature engineering using the following steps (in the given order):
+7. Create a recipe that performs feature engineering using the following steps (in the given order):
 
 -   `update_role()`: updates the role of `episode_name` to not be a predictor (be an ID)
 -   `step_rm()`: removes `air_date` as a predictor
@@ -242,9 +233,7 @@ office_rec <- recipe(imdb_rating ~ ., data = office_train) %>%
   ___
 ```
 
-#### Exercise 8
-
-Build a model workflow for fitting the model specified earlier and using the recipe you developed to preprocess the data.
+8. Build a model workflow for fitting the model specified earlier and using the recipe you developed to preprocess the data.
 
 *Naming suggestion:* Call the model workflow `office_wflow`.
 
@@ -256,9 +245,7 @@ office_wflow <- workflow() %>%
 
 ### Model fit and evaluation
 
-#### Exercise 9
-
-Fit the model to training data, neatly display the model output, and interpret two of the slope coefficients.
+9. Fit the model to training data, neatly display the model output, and interpret two of the slope coefficients.
 
 *Naming suggestion:* Call the model fit `office_fit`.
 
@@ -268,37 +255,25 @@ office_fit <- office_wflow %>%
 ___
 ```
 
-#### Exercise 10
-
-Calculate predicted `imdb_rating` for the training data using the `predict()` function.
+10. Calculate predicted `imdb_rating` for the training data using the `predict()` function.
 Then, bind two columns from the training data to this result: `imdb_rating` and `episode_name`.
 The resulting data frame should have three columns: `.pred`, `imdb_rating`, and `episode_name`.
 Then, using this data frame, create a scatterplot of predicted and observed IMDB ratings for the training data.
 
 *Naming suggestion:* Call the resulting data frame `office_train_pred`.
 
-*Stretch goal.* Add episode names, using `geom_text()`, for episodes with much higher and much lower observed IMDB ratings compared to others.
+*Stretch goal.* Add episode names, using `gghighlight()`, for episodes with much higher and much lower observed IMDB ratings compared to others.
 
-#### Exercise 11
-
-Calculate the R-squared and RMSE for this model for predictions on the training data.
+11. Perform 5-fold cross-validation and view model performance metrics.
 
 
-#### Exercise 12
+12. How does the model from this lab compare to the model fit in AE-08 in terms of performance? Which model do you think does a better job in predicting IMDB scores? 
 
-Repeat Exercise 10, but with testing data.
+13. Repeat Exercise 10, but with testing data.
 
 *Naming suggestion:* Call the resulting data frame `office_test_pred`.
 
-#### Exercise 13
-
-Based on your visualization on Exercise 12, speculate on whether you expect the R-squared and RMSE for this model to be higher or lower for predictions on the testing data compared to those on the training data, or do you expect them to be the same?
-Explain your reasoning.
-
-#### Exercise 14
-
-Check your intuition in Exercise 13 by actually calculating the R-squared and RMSE for this model for predictions on the training data.
-Comment on whether your intuition is confirmed or not.
+14. Report the R-squared and RMSE for this model for predictions on the testing data. Use these values to comment on the performance of this model. 
 
 ## Submission
 

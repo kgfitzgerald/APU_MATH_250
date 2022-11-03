@@ -13,44 +13,92 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Thursday Announcements
 
-- HW 04 due Saturday
-- Project Rough Draft due Nov 17 (2 weeks)
-- 
+-   HW 04 due Saturday
+-   Project Rough Draft due Nov 17 (2 weeks)
+    -   Student suggestion: 5 mins at start of class to make plan
+-   Today: Lab 08
+    -   First 4 exercises (potentially) completed in AE-08; copy and paste.
+- What's left, by the numbers:
+    + 4 Application Exercises
+    + 3 Prep Quizzes
+    + 2 HW (including HW 04)
+    + 2 Lab (including Lab 08)
+    + 2-3 Stats Experience points
+    + Project Rough Draft
+    + Project Final Draft
+    + Project Presentation
 
-### Tuesday Announcements
-
-- AE-08 due Thursday (started in-class today)
-- HW 04 due Saturday 
-- Project Rough Draft Nov 17 (2.5 weeks)
-- Attend [eUSR Conference](https://www.causeweb.org/usproc/eusr/2022) - electronic Undergraduate Statistics Research conference - FREE on Friday 
-    + [Alex (& Emily Gottry) are presenting](https://www.causeweb.org/usproc/eusr/2022/virtual-posters)!
-    + Earn stats experience points
++------------------+-------------------------------+----------------------+-----------------------------+
+| Week/Dates       | Tue (in-class)                | Thur (in-class)      | Other                       |
++==================+===============================+======================+=============================+
+| Week 10          |                             | Lab 08               |  HW 04 due                  |
+|                  |                               |                      |                             |
+| (Oct 31 - Nov 4) |                               |                      |                             |
++------------------+-------------------------------+----------------------+-----------------------------+
+| Week 11          | AE-09                         | Project work session |                             |
+|                  |                               |                      |                             |
+| (Nov 7 - Nov 12) |                               |                      |                             |
++------------------+-------------------------------+----------------------+-----------------------------+
+| Week 12          | AE-10                         |  Lab 09              | Rough draft due (Thurs)     |
+|                  |                               |                      | HW 05 due                   |
+| (Nov 14 - 19)    |                               |                      |                             |
++------------------+-------------------------------+----------------------+-----------------------------+
+| THANKSGIVING     |                               |                      |                             |
+|                  |                               |                      |                             |
+| (Nov 21 - 26)    |                               |                      |                             |
++------------------+-------------------------------+----------------------+-----------------------------+
+| Week 13          | Special Topics: Shiny Apps    | Project Peer Review  |                             |
+|                  |                               |                      |                             |
+| (Nov 28 - Dec 3) | (AE-11)                       |                      |                             |
++------------------+-------------------------------+----------------------+-----------------------------+
+| Week 14          | Special Topics: Shiny Apps    | Project Work Session |                             |
+|                  |                               |                      |                             |
+| (Dec 5 - 10)     | (AE-12)                       |                      |                             |
++------------------+-------------------------------+----------------------+-----------------------------+
+| Week 15          |                               | Presentations        |                             |
+|                  |                               |                      |                             |
+| (Dec 12 - 17)    |                               | (4:05 - 5:55pm)      |                             |
++------------------+-------------------------------+----------------------+-----------------------------+
 
 ### Questions?
 
-+ The difference between the log odds, regular odds, and the probability are still a little confusing. I think the log odds are just the logit function equation and then the regular odds are 1/(1+exp(x)) and the probability is exp(odds)/(1 + exp(odds)). Is that correct or did I mix something up?
+-   "I didn't understand what the diagram for the"v-fold" slide was demonstrating. Why was the "testing" set column empty?
+    -   <https://kgfitzgerald.github.io/APU_MATH_250/slides/31-cross-validation.html#35>
+-   "What exactly do the folds represent? And if one has better metrics than the others, what do you do?"
 
-    + log-odds is another name for the logit function, and it's the scale the regression output is provided on
-    + we exponentiate to get the odds
-    + we solve for p to get the probability
-    
-    
+### Tuesday Announcements
+
+-   AE-08 due Thursday (started in-class today)
+-   HW 04 due Saturday
+-   Project Rough Draft Nov 17 (2.5 weeks)
+-   Attend [eUSR Conference](https://www.causeweb.org/usproc/eusr/2022) - electronic Undergraduate Statistics Research conference - FREE on Friday
+    -   [Alex (& Emily Gottry) are presenting](https://www.causeweb.org/usproc/eusr/2022/virtual-posters)!
+    -   Earn stats experience points
+
+### Questions?
+
+-   The difference between the log odds, regular odds, and the probability are still a little confusing. I think the log odds are just the logit function equation and then the regular odds are 1/(1+exp(x)) and the probability is exp(odds)/(1 + exp(odds)). Is that correct or did I mix something up?
+
+    -   log-odds is another name for the logit function, and it's the scale the regression output is provided on
+    -   we exponentiate to get the odds
+    -   we solve for p to get the probability
+
 $$\text{ log odds: } \ \ \ logit(p) = log\left(\frac{p}{1-p}\right) \equiv x$$
 
 $$\text{odds: } \ \ \ exp(x) = \frac{p}{1-p}$$
 
 $$\text{probability: } \ \ \ p = \frac{e^{x}}{1 + e^{x}}$$
 
-+ We saw that we needed to fit a logistic regression model if the thing we were trying to predict was a categorical variable and a linear regression model if we are trying to predict a numeric variable. Does it matter what kind of variables the predictors themselves are though?
+-   We saw that we needed to fit a logistic regression model if the thing we were trying to predict was a categorical variable and a linear regression model if we are trying to predict a numeric variable. Does it matter what kind of variables the predictors themselves are though?
 
-+ Comments for peers about group work:
+-   Comments for peers about group work:
 
-    + "Please don't be immediately opposed to work or ideas that are not your own. Everyone could have something to contribute if they are allowed!"
-    + "I feel like my group has been very last minute in regards to our project so punctuality is something we have to work on."
-    
+    -   "Please don't be immediately opposed to work or ideas that are not your own. Everyone could have something to contribute if they are allowed!"
+    -   "I feel like my group has been very last minute in regards to our project so punctuality is something we have to work on."
+
 ### Application Exercise
 
-- The remainder of class will be spent on AE-08. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
-- To turn it in, you should upload your .html file to Canvas.
+-   The remainder of class will be spent on AE-08.
+-   You can access it from your RStudio Cloud account.
+-   It is due by class-time on Thursday.
+-   To turn it in, you should upload your .html file to Canvas.
