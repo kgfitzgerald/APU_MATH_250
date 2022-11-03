@@ -1,5 +1,5 @@
 ---
-title: "FIX LINE 311 Quantifying uncertainty"
+title: "Quantifying uncertainty"
 subtitle: "MATH 250"
 author: "Katie Fitzgerald, adpated from datasciencebox.org"
 output:
@@ -245,7 +245,7 @@ We can quantify the variability of sample statistics using
 
 or
 
-- theory: via Central Limit Theorem (future stat courses!)
+- theory: via Central Limit Theorem (other stat courses!)
 
 ```{r ref.label="elmhurst-fit", echo=FALSE}
 ```
@@ -307,11 +307,10 @@ ggplot(elmhurst, aes(x = family_income, y = gift_aid)) +
 
 Generated assuming there are more students like the ones in the observed sample...
 
-```{r echo=FALSE, warning=FALSE, eval=FALSE}
-elmhurst_boot %>% 
-  slice_head(n = 50) %>%
-  hoist(splits, "data") %>% 
-  unnest(data) %>% 
+```{r echo=FALSE, warning=FALSE}
+elmhurst %>%
+  specify(gift_aid ~ family_income) %>%
+  generate(reps = 50, type = "bootstrap") %>%
   ggplot(aes(x = family_income, y = gift_aid)) +
   geom_jitter(alpha = 0.11, width = 30, height = 10) +
   geom_point(data = elmhurst, mapping = aes(x = family_income, y = gift_aid), color = "#8E2C90", size = 2) +
@@ -324,6 +323,23 @@ elmhurst_boot %>%
     title = "Gift aid and family income",
     subtitle = "(Simulated) population of students at Elmhurst College"
   )
+
+# elmhurst_boot %>% 
+#   slice_head(n = 50) %>%
+#   hoist(splits, "data") %>% 
+#   unnest(data) %>% 
+#   ggplot(aes(x = family_income, y = gift_aid)) +
+#   geom_jitter(alpha = 0.11, width = 30, height = 10) +
+#   geom_point(data = elmhurst, mapping = aes(x = family_income, y = gift_aid), color = "#8E2C90", size = 2) +
+#   scale_x_continuous(labels = label_dollar(suffix = "K"), limits = c(0, 275)) + 
+#   scale_y_continuous(labels = label_dollar(suffix = "K"), limits = c(0, 42)) +
+#   geom_text(aes(x = 200, y = 40), label = paste("slope = ?"), size = 6, hjust = 0)  +
+#   labs(
+#     x = "Family income",
+#     y = "Gift aid",
+#     title = "Gift aid and family income",
+#     subtitle = "(Simulated) population of students at Elmhurst College"
+#   )
 ```
 
 ---
