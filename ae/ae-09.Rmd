@@ -1,7 +1,7 @@
 ---
 title: "AE 09: Bootstrapping"
-subtitle: "due Thursday, November 10, 4:20pm"
-author: "YOUR NAME HERE"
+subtitle: "INSTRUCTIONS"
+author: "due Thursday, November 10, 4:20pm"
 output: 
   html_document:
     toc: true
@@ -17,7 +17,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r, message = FALSE, warning = FALSE}
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
 library(tidyverse)
 library(infer)
 # install.packages("devtools")
@@ -34,7 +34,7 @@ Prior to the election, thousands of polls were taken to gauge the popularity of 
 Leaving aside the idea that popular opinion changes over time, a poll can be thought of as a sample of individuals measured so as to estimate the proportion of all voters who will vote for each candidate (i.e. the population parameter).
 
 Consider an election in your home town that will take place in a week's time.
-You poll a randomly selected subset of 30 voters in your town and ask them if they plan to vote for Candidate X or Candidate Y. In this application exercise, we will focus on *sampling variability* --- the variability in sample proportions due to polling different randomly selected individuals from the population.
+You poll a randomly selected subset of 30 voters in your town and ask them if they plan to vote for Candidate X. In this application exercise, we will focus on *sampling variability* --- the variability in sample proportions due to polling different randomly selected individuals from the population.
 
 ### Confidence intervals
 
@@ -88,7 +88,7 @@ all_polls <- read_rds("data/all_polls.rds")
 
 -   Compute the sample proportion for each of the 1000 original samples, assigning to `many_sample_props`.
     -   Group by `poll`.
-    -   Summarize to calculate `stat` as the `mean()` of cases of `vote` that equal `"yes"`.
+    -   Summarize to calculate `stat` as the proportion of cases of `vote` that equal `"yes"`.
 
 ```{r resampling, eval = FALSE}
 # Compute p-hat for each poll
@@ -446,3 +446,27 @@ bootstrapped_props %>%
   visualize() +
   shade_confidence_interval(endpoints = bootstrap_ci)
 ```
+
+## Submission
+
+Before submitting, open up your .html in a full window and inspect the following:
+
+-   Check your code for neatness - add spaces and line breaks where appropriate to improve readability
+
+-   Check your visualizations for informative and clean labels and titles
+
+-   Check that you've interpreted each visualization
+
+-   Make sure extraneous warnings and messages are suppressed (e.g. set `warning = FALSE, message = FALSE)`
+
+-   Check that your text responses are visually distinguished
+
+-   Check for overall neatness & organization of the report (e.g. headers, subheaders, use of bullets, font changes)
+
+To submit, you need to export your .html document from RStudio Cloud and then upload it to the AE 08 assignment on Canvas.
+Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment.
+
+## Grading (10 pts)
+
+Application exercises are graded on completion.
+You will receive full credit if you turn in the .html on time and a reasonable attempt was made on each exercise.

@@ -71,14 +71,153 @@ code span.ot { color: #007020; }
 
 <div class="entry-content">
 
-<div id="announcements" class="section level3">
-<h3>Announcements</h3>
+<div id="tuesday-announcements" class="section level3">
+<h3>Tuesday Announcements</h3>
 <ul>
-<li>A1</li>
-<li>A2</li>
+<li>Project Cleaning/EDA grade, feedback available in
+<code>Dr_Fitz_feedback</code> file in your group RStudioCloud workspace.
+<ul>
+<li>Read feedback prior to Thursday</li>
+<li>Will meet with each group on Thursday to discuss feedback and answer
+questions</li>
+</ul></li>
+<li>Lab 08 due tonight</li>
+<li>HW 05 (last one!) posted, due next Thursday</li>
+<li>What’s left, by the numbers:
+<ul>
+<li>3 Application Exercises</li>
+<li>2 Prep Quizzes</li>
+<li>1 HW</li>
+<li>1 Lab</li>
+<li>2-3 Stats Experience points</li>
+<li>Project Rough Draft</li>
+<li>Project Final Draft</li>
+<li>Project Presentation</li>
+</ul></li>
 </ul>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="30%" />
+<col width="22%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week/Dates</th>
+<th>Tue (in-class)</th>
+<th>Thur (in-class)</th>
+<th>Other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Week 11</p>
+<p>(Nov 7 - Nov 12)</p></td>
+<td>AE-09</td>
+<td>Project work session</td>
+<td>Lab 08 due (Tue) HW 05 assigned</td>
+</tr>
+<tr class="even">
+<td><p>Week 12</p>
+<p>(Nov 14 - 19)</p></td>
+<td>AE-10</td>
+<td>Lab 09</td>
+<td>Rough draft due (Thurs) HW 05 due</td>
+</tr>
+<tr class="odd">
+<td><p>THANKSGIVING</p>
+<p>(Nov 21 - 26)</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>Week 13</p>
+<p>(Nov 28 - Dec 3)</p></td>
+<td><p>Special Topics: Shiny Apps</p>
+<p>(AE-11)</p></td>
+<td>Project Peer Review</td>
+<td>SE points due (Thurs)</td>
+</tr>
+<tr class="odd">
+<td><p>Week 14</p>
+<p>(Dec 5 - 10)</p></td>
+<td><p>Special Topics: Shiny Apps</p>
+<p>(AE-12)</p></td>
+<td>Project Work Session</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><p>Week 15</p>
+<p>(Dec 12 - 17)</p></td>
+<td></td>
+<td><p>Presentations</p>
+<p>(4:05 - 5:55pm)</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="questions" class="section level3">
+<h3>Questions?</h3>
+<ul>
+<li>When can we do a simple model fit and when do we have to make a
+recipe and workflow first?
+<ul>
+<li>best practice to always do the recipe and workflow, because it’s
+best practice to always do the model validation process</li>
+<li>didn’t do those steps when you were learning</li>
+</ul></li>
+<li>If after we divide our training data in folds and then test our
+model on the testing data and find out that the model is a poor
+predictor, what do we do? Do we just fit another model? But I thought we
+were only supposed to look at our testing data once, though.
+<ul>
+<li>Cross validation divides training data into folds and then evaluates
+the model on each fold <em>of the training data</em>.</li>
+<li>If you find out through the cross validation process that the model
+is poor, don’t fit it on your testing data. Try to come up with a better
+model.</li>
+</ul></li>
+</ul>
+</div>
+<div id="today-ae-09" class="section level3">
+<h3>Today: AE-09</h3>
+<ul>
+<li>Instructions <a href="https://kgfitzgerald.github.io/APU_MATH_250/ae/ae-09.html">here</a></li>
+<li>Template in Week 11 project in RSC</li>
+<li>More pedagogical in nature than some weeks</li>
+</ul>
+</div>
+<div id="project-comments-for-thursday" class="section level3">
+<h3>Project comments (for Thursday)</h3>
+<ul>
+<li>Make sure to save your clean data as a .RDS file (e.g. using
+<code>saveRDS()</code>), and place it in your <code>data</code>
+folder.</li>
+<li>Check out <a href="https://www.data-to-viz.com">from Data to Viz</a>
+website for suggestions on creative visualizations to use (includes R
+code!)</li>
+<li>Don’t need to run every imaginable analysis on your data, but do
+want you to demonstrate a thorough investigation of your dataset.
+<ul>
+<li>What insight can you glean from these data?</li>
+<li>What (interesting) questions can be answered from these data?</li>
+<li>Should do more exploring than what ends up in your final report</li>
+<li>Explore to death - become an expert on these data!</li>
+</ul></li>
+<li>Comment your code and/or provide narrative</li>
+<li>Use good coding practices (e.g. use of white space, line
+breaks)</li>
+<li>May want to create a new file called <code>analysis.Rmd</code> for
+all the analyses you’re going to explore that may or may not end up in
+your written report.</li>
+<li>Provide a codebook that describes what each variable in your dataset
+is</li>
+</ul>
+</div>
+<div id="questions-1" class="section level3">
 <h3>Questions?</h3>
 </div>
 <div id="application-exercise" class="section level3">
