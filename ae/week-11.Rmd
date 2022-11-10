@@ -18,6 +18,15 @@ knitr::opts_chunk$set(echo = TRUE)
 + Last prep quiz due Tuesday - just a space to submit Qs about the lectures
 + Today: project work session
 
+### Student Qs from Tuesday
+
++ Why do we sample with replacement when bootstrapping?
++ When do we know if we should use 90, 95, or 99% CI? 
++ Since bootstrapping and CLT yield similar results, is one generally better than the other or is it up to preference?
++ Can I do 5 stats experience points if I didn't complete any last time?
+
+
+
 ### Project comments
 
 - Make sure to save your clean data as a .RDS file (e.g. using `saveRDS()`), and place it in your `data` folder. 
