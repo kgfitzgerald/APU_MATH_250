@@ -14,11 +14,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## For November 15
 
-`r emo::ji("movie_camera")` Watch [Hypothesis Testing]()
+`r emo::ji("movie_camera")` Watch [Hypothesis Testing](https://youtu.be/X2evqS-f5_I)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/34-hypothesis-testing.html)
 
-`r emo::ji("movie_camera")` Watch [Inference Overview]()
+`r emo::ji("movie_camera")` Watch [Inference Overview](https://youtu.be/DdBfSb6PV9k)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/35-inference-overview.html)
 

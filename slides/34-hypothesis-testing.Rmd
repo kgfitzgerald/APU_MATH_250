@@ -253,7 +253,7 @@ We need a way to automate this process!
 null_dist <- organ_donor %>%
   specify(response = outcome, success = "complication") %>%
   hypothesize(null = "point", p = c("complication" = 0.10, "no complication" = 0.90)) %>% 
-  generate(reps = 100, type = "simulate") %>% 
+  generate(reps = 100, type = "draw") %>% 
   calculate(stat = "prop")
 ```
 ]
@@ -515,12 +515,11 @@ Yawning and seeing someone yawn are **dependent**, yawning is contagious, observ
 
 2. Count out the top 16 cards and set them aside. These cards represent the people in the control group.
 
-3. Out of the remaining 34 cards (treatment group) count the \red{number of face cards} (the number of people who yawned in the treatment group).
+3. Out of the remaining 34 cards (treatment group) count the number of face cards (the number of people who yawned in the treatment group).
 
-4. Calculate the difference in proportions of yawners (treatment - control), and plot it 
-on the board.
+4. Calculate the difference in proportions of yawners (treatment - control). This gets you one $\hat{p}$ value. 
 
-5. Mark the difference you find on the dot plot on the board.
+5. Do # 1-4 many times
 
 .footnote[
 [1] http://www.dartmouth.edu/~chance/course/topics/winning_number.html
@@ -561,8 +560,8 @@ null_dist <- yawn %>%
 
 ```{r eval=FALSE}
 yawn %>%
-{{  specify(response = result, explanatory = group, 
-          success = "yawn") }}
+  specify(response = result, explanatory = group, 
+          success = "yawn")
 ```
 ]
 
@@ -580,7 +579,7 @@ yawn %>%
 yawn %>%
   specify(response = result, explanatory = group, 
           success = "yawn") %>%
-{{ hypothesize(null = "independence") }}
+  hypothesize(null = "independence")
 ```
 ]
 
@@ -663,7 +662,7 @@ What would you expect the center of the null distribution to be?
 
 --
 
-```{r out.width="70%"}
+```{r out.height="70%"}
 ggplot(data = null_dist, mapping = aes(x = stat)) +
   geom_histogram(binwidth = 0.05) +
   labs(title = "Null distribution")
@@ -679,7 +678,7 @@ simulations was the simulated difference in sample proportion at least as extrem
 as the observed difference in sample proportions?
 ]
 
-```{r echo=FALSE, out.width="80%"}
+```{r echo=FALSE, out.height="80%"}
 ggplot(data = null_dist, mapping = aes(x = stat)) +
   geom_histogram(binwidth = 0.05) +
   labs(title = "Null distribution")

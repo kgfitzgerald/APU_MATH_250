@@ -16,9 +16,15 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Hypothesis testing
+]
+.subtitle[
 ## MATH 250
+]
+.author[
 ### Katie Fitzgerald, adpated from datasciencebox.org
+]
 
 ---
 
@@ -257,7 +263,7 @@ We need a way to automate this process!
 null_dist &lt;- organ_donor %&gt;%
   specify(response = outcome, success = "complication") %&gt;%
   hypothesize(null = "point", p = c("complication" = 0.10, "no complication" = 0.90)) %&gt;% 
-  generate(reps = 100, type = "simulate") %&gt;% 
+  generate(reps = 100, type = "draw") %&gt;% 
   calculate(stat = "prop")
 ```
 ]
@@ -575,12 +581,11 @@ Yawning and seeing someone yawn are **dependent**, yawning is contagious, observ
 
 2. Count out the top 16 cards and set them aside. These cards represent the people in the control group.
 
-3. Out of the remaining 34 cards (treatment group) count the \red{number of face cards} (the number of people who yawned in the treatment group).
+3. Out of the remaining 34 cards (treatment group) count the number of face cards (the number of people who yawned in the treatment group).
 
-4. Calculate the difference in proportions of yawners (treatment - control), and plot it 
-on the board.
+4. Calculate the difference in proportions of yawners (treatment - control). This gets you one `\(\hat{p}\)` value. 
 
-5. Mark the difference you find on the dot plot on the board.
+5. Do # 1-4 many times
 
 .footnote[
 [1] http://www.dartmouth.edu/~chance/course/topics/winning_number.html
@@ -623,8 +628,8 @@ null_dist &lt;- yawn %&gt;%
 
 ```r
 yawn %&gt;%
-{{  specify(response = result, explanatory = group, 
-          success = "yawn") }}
+  specify(response = result, explanatory = group, 
+          success = "yawn")
 ```
 ]
 
@@ -643,7 +648,7 @@ yawn %&gt;%
 yawn %&gt;%
   specify(response = result, explanatory = group, 
           success = "yawn") %&gt;%
-* hypothesize(null = "independence") 
+  hypothesize(null = "independence")
 ```
 ]
 
@@ -736,7 +741,7 @@ ggplot(data = null_dist, mapping = aes(x = stat)) +
   labs(title = "Null distribution")
 ```
 
-&lt;img src="34-hypothesis-testing_files/figure-html/unnamed-chunk-24-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="34-hypothesis-testing_files/figure-html/unnamed-chunk-24-1.png" width="60%" height="70%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -748,7 +753,7 @@ simulations was the simulated difference in sample proportion at least as extrem
 as the observed difference in sample proportions?
 ]
 
-&lt;img src="34-hypothesis-testing_files/figure-html/unnamed-chunk-25-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="34-hypothesis-testing_files/figure-html/unnamed-chunk-25-1.png" width="60%" height="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -831,6 +836,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

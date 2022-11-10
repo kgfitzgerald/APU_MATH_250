@@ -11,6 +11,27 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Thursday announcements
+
++ HW 05 due next Thursday
++ Project Rough Draft due next Thursday
++ Last prep quiz due Tuesday - just a space to submit Qs about the lectures
++ Today: project work session
+
+### Project comments
+
+- Make sure to save your clean data as a .RDS file (e.g. using `saveRDS()`), and place it in your `data` folder. 
+- Check out [from Data to Viz](https://www.data-to-viz.com) website for suggestions on creative visualizations to use (includes R code!)
+- Don't need to run every imaginable analysis on your data, but do want you to demonstrate a thorough investigation of your dataset. 
+    + What insight can you glean from these data? 
+    + What (interesting) questions can be answered from these data?
+    + Should do more exploring than what ends up in your final report 
+    + Explore to death - become an expert on these data! 
+- Comment your code and/or provide narrative
+- Use good coding practices (e.g. use of white space, line breaks)
+- May want to create a new file called `analysis.Rmd` for all the analyses you're going to explore that may or may not end up in your written report. 
+- Provide a codebook that describes what each variable in your dataset is
+
 ### Tuesday Announcements
 
 - Project Cleaning/EDA grade, feedback available in `Dr_Fitz_feedback` file in your group RStudioCloud workspace.

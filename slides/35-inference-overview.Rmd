@@ -58,19 +58,6 @@ class: middle
 
 ---
 
-## Confidence intervals exercises
-
-.question[
-Describe the simulation process for estimating the parameter assigned to your team.
-
-- Note any assumptions you make in terms of sample size, observed sample statistic, etc.
-- Imagine using index cards or chips to represent the data. 
-- Specify whether the simulation type would be bootstrap, simulate, or permute.
-
-]
-
----
-
 ## Accuracy vs. precision
 
 .question[
@@ -128,10 +115,10 @@ ggplot(acs_500, aes(x = stat)) +
 
 ## Equivalency of confidence and significance levels
 
-- Two sided alternative HT with $\alpha$ $\rightarrow$ $CL = 1 - \alpha$
-- One sided alternative HT with $\alpha$ $\rightarrow$ $CL = 1 - (2 \times \alpha)$
+HT with $\alpha$ $\rightarrow$ $CL = 1 - \alpha$
 
-```{r echo = FALSE, message=FALSE, out.width="60%"}
+
+```{r echo = FALSE, message=FALSE, out.height="60%"}
 par(mfrow = c(1,2))
 normTail(U = 1.96, L = -1.96, df = 100, col = "#56B4E9", axes = FALSE)
 text(x = 0, y = 0.15, "0.95", col = "#56B4E9", cex = 2)
@@ -179,58 +166,9 @@ class: middle
 - Calculate the observed sample statistic.
 - Calculate the p-value.
 - Make a conclusion, about the hypotheses, in context of the data and the research question.
-- `infer::hypothesize(null = "point")` and `infer::generate(reps, type = "simulate")` or `infer::generate(reps, type = "bootstrap")`
+- `infer::hypothesize(null = "point")` and `infer::generate(reps, type = "draw")` or `infer::generate(reps, type = "bootstrap")`
 - `infer::hypothesize(null = "independence")` and `infer::generate(reps, type = "permute")`
-  
----
 
-## Hypothesis testing exercises
-
-.question[
-Describe the simulation process for tesing for the parameter assigned to your team.
-
-- Note any assumptions you make in terms of sample size, observed sample statistic, etc.
-- Imagine using index cards or chips to represent the data. 
-- Specify whether the null hypothesis would be independence or point.
-- Specify whether the simulation type would be bootstrap, simulate, or permute.
-]
-
----
-
-## Testing errors
-
-- Type 1: Reject $H_0$ when you shouldn't have
-    - P(Type 1 error) = $\alpha$
-- Type 2: Fail to reject $H_0$ when you should have
-    - P(Type 2 error) is harder to calculate, but increases as $\alpha$ decreases
-
---
-
-.question[
-In a court of law
-
-- Null hypothesis: Defendant is innocent
-- Alternative hypothesis: Defendant is guilty
-
-Which is worse: Type 1 or Type 2 error?
-]
-
----
-
-## Probabilities of testing errors
-
-- P(Type 1 error) = $\alpha$
-- P(Type 2 error) = 1 - Power
-- Power = P(correctly rejecting the null hypothesis)
-
---
-
-.question[
-Fill in the blanks in terms of correctly/incorrectly rejecting/failing to reject the null hypothesis:
-
-- $\alpha$ is the probability of ______.
-- 1 - Power is the probability of ______.
-]
 
 ---
 
@@ -336,22 +274,18 @@ of the bootstrap distribution.
 
 ---
 
-## Set a seed first
-
-From the documentation of `set.seed`:
-
-- `set.seed` uses a single integer argument to set as many seeds as are required. There is no guarantee that different values of seed will seed the RNG differently, although any exceptions would be extremely rare.
-- Initially, there is no seed; a new one is created from the current time and the process ID when one is required. Hence different sessions will give different simulation results, by default.
-
-```{r}
-set.seed(20180326)
-```
-
----
-
 ## Computation for CI for a mean
 
-```{r}
+.panelset[
+.panel[.panel-name[Plot]
+
+```{r ref.label = "viz-ci", echo = FALSE, warning = FALSE, out.width="50%"}
+```
+
+]
+.panel[.panel-name[Code]
+
+```{r viz-ci, fig.show = "hide"}
 boot_means <- ncbirths %>%
   filter(!is.na(weeks)) %>% # remove NAs
   specify(response = weeks) %>%
@@ -360,6 +294,8 @@ boot_means <- ncbirths %>%
 ggplot(data = boot_means, aes(x = stat)) +
   geom_histogram(binwidth = 0.03)
 ```
+]
+]
 
 ---
 
@@ -422,7 +358,15 @@ a distribution of bootstrap means.
 
 ## Computation for HT for a mean
 
-```{r out.width="50%"}
+.panelset[
+.panel[.panel-name[Plot]
+
+```{r ref.label = "viz-1", echo = FALSE, warning = FALSE, out.width="50%"}
+```
+
+]
+.panel[.panel-name[Code]
+```{r viz-1, fig.show = "hide", out.height="30%"}
 boot_means_shifted <- ncbirths %>%
   filter(!is.na(weeks)) %>% # remove NAs
   specify(response = weeks) %>%
@@ -434,7 +378,8 @@ ggplot(data = boot_means_shifted, aes(x = stat)) +
   geom_vline(xintercept = 38.33, color = "red") +
   geom_vline(xintercept = 40 + (40 - 38.33), color = "red")
 ```
-
+]
+]
 ---
 
 ## Length of gestation
