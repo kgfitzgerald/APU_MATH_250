@@ -18,15 +18,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch 
-  
-- [Slides]()
+`r emo::ji("movie_camera")` Watch [Interactive web apps](https://youtu.be/clz1QGGu4oY)
 
-`r emo::ji("memo")` Complete Prep Quiz 13 on Canvas
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/36-shiny.html)
+
+`r emo::ji("memo")` Complete Prep Activities #1 & #2 from slides (nothing to turn in) & submit questions under Prep Quiz 13 in Canvas
+
+
 
 ## Optional 
 
-
+`r emo::ji("movie_camera")` Watch [live demo by Dr. Mine Cetinkaya-Rundel](https://youtu.be/gXBEOFWrxsk)
 
 
 
