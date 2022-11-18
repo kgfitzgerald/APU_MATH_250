@@ -11,10 +11,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-## For November 29
-
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
+
+## For Tuesday, November 29
+
+Read TWO assigned rough drafts. See [Canvas](https://canvas.apu.edu/courses/42480/assignments/757114) for details.
+
+## For Thursday, December 1
 
 ### Required
 
@@ -23,7 +26,6 @@ knitr::opts_chunk$set(echo = TRUE)
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/36-shiny.html)
 
 `r emo::ji("memo")` Complete Prep Activities #1 & #2 from slides (nothing to turn in) & submit questions under Prep Quiz 13 in Canvas
-
 
 
 ## Optional 

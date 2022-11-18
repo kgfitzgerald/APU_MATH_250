@@ -13,15 +13,62 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-- A1
-- A2
+End-of-semester schedule:
+
++--------------+-------------------------+----------------------+--------------------------+
+|              | Tuesday                 | Thursday             | What's due               |
++==============+=========================+======================+==========================+
+| Week 13      | Rough draft peer review | Shiny part I         | Shiny prep (Th)          |
+|              |                         |                      |                          |
+|              |                         |                      | Lab 09 (Th)              |
+|              |                         |                      |                          |
+|              |                         |                      | SE 02 (Th)               |
+|              |                         |                      |                          |
+|              |                         |                      | AE-11 (Sat)              |
++--------------+-------------------------+----------------------+--------------------------+
+| Week 14      | Shiny part II           | Project work session | Shiny prep II (Tue)      |
+|              |                         |                      |                          |
+|              |                         |                      | Formal peer review (Tue) |
+|              |                         |                      |                          |
+|              |                         |                      | AE-12 (Th)               |
+|              |                         |                      |                          |
+|              |                         |                      | Final report (Sat)       |
++--------------+-------------------------+----------------------+--------------------------+
+| Week 15      |                         | Final presentations  |                          |
+|              |                         |                      |                          |
+|              |                         | (on-campus)          |                          |
++--------------+-------------------------+----------------------+--------------------------+
 
 ### Questions?
 
+### Rough Draft Peer Review
 
-### Application Exercise
+We will do the following twice:
 
-- The remainder of class will be spent on AE-11. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
-- To turn it in, you should upload your .html file to Canvas.
+-   (10 mins) In your project groups, discuss assigned paper and fill out feedback form in the shared [Google Drive folder](https://drive.google.com/drive/folders/190TgJca5qleOGoQQMJ6IbLj_RbSRKtOE?usp=share_link) ("Peer feedback for Group X")
+
+-   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group)
+
++-----------+-------------------------------------------------------------+
+|           | Group pairings                                              |
++===========+=============================================================+
+| Session 1 | Group 1 & Group 3                                           |
+|           |                                                             |
+|           | Group 4 & Group 6                                           |
+|           |                                                             |
+|           | Group 2 & Dr. Fitz                                          |
++-----------+-------------------------------------------------------------+
+| Session 2 | Group 1 & Group 6                                           |
+|           |                                                             |
+|           | Group 2 & Group 4                                           |
+|           |                                                             |
+|           | Group 3 & Dr. Fitz                                          |
++-----------+-------------------------------------------------------------+
+
+### Thursday - Shiny Part I
+
+-   For AE-11, you will complete Lessons 03 - 05 from the [Shiny Getting Started Tutorials](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
+
+-   These should be completed in your Shiny project in the `MATH_250_individual` workspace
+
+-   You will turn in a .zip folder that includes the `lesson-03` and `census-app` folders as well as the .Rproj file from your Shiny project

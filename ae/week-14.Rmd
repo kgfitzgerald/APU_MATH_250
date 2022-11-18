@@ -19,9 +19,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Questions?
 
 
-### Application Exercise
+### Tuesday - Shiny Part II
 
-- The remainder of class will be spent on AE-12. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
-- To turn it in, you should upload your .html file to Canvas.
++ For AE-12, you will design and implement Shiny app to explore your project data
+
++ These should be completed in your shared Group Project workspace 
+
++ Begin by sketching out an idea on paper
+
++ When ready to start building your app, you should create a new folder in your project directory called `shiny` and place all necessary files there
+
++ You will turn in a .zip file of the `shiny` folder as well as the `.Rproj` file. Make sure any necessary data is included and in an appropriate file structure in the .zip folder as well so that the app can be run on someone else's computer. 
+
