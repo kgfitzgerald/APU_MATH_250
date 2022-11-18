@@ -11,7 +11,23 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Announcements
+### Thursday Announcements
+
+-   HW-05 & Project Rough Draft due tonight
+
+-   Reminder to fill out [quick poll](https://forms.gle/m1FNm6g5VypV9vEs8) about presentations / Christmas party
+
+    -   11/15 responded so far
+
+    -   Will make the call tomorrow before the break
+
+-   After Thanksgiving - which one do you want on Tuesday?
+
+    -   Peer review of rough drafts (prep: read two groups' drafts)
+
+    -   Interactive Web Apps (prep: 10 min lecture + \<1hr practice activities)
+
+### Tuesday Announcements
 
 -   AE-10 today in class, due Thursday, 4:20pm
 -   HW-05 due Thursday, 11:59pm
