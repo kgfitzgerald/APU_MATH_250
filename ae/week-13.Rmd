@@ -1,6 +1,6 @@
 ---
 title: "Week 13"
-subtitle: "Special Topics: Shiny apps"
+subtitle: "Peer Review & Shiny apps"
 output: 
   prettydoc::html_pretty:
     theme: hpstr
@@ -43,27 +43,39 @@ End-of-semester schedule:
 
 ### Rough Draft Peer Review
 
+Why peer review?
+
+-   Giving good feedback is a skill (that we don't often practice)
+
+-   Receiving and incorporating feedback effectively also takes practice
+
+-   Our work is better when we have multiple perspectives speak into it
+
+-   Makes us better at self-assessing our own work
+
+-   It's part of the scientific process
+
 We will do the following twice:
 
 -   (10 mins) In your project groups, discuss assigned paper and fill out feedback form in the shared [Google Drive folder](https://drive.google.com/drive/folders/190TgJca5qleOGoQQMJ6IbLj_RbSRKtOE?usp=share_link) ("Peer feedback for Group X")
 
 -   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group)
 
-+-----------+-------------------------------------------------------------+
-|           | Group pairings                                              |
-+===========+=============================================================+
-| Session 1 | Group 1 & Group 3                                           |
-|           |                                                             |
-|           | Group 4 & Group 6                                           |
-|           |                                                             |
-|           | Group 2 & Dr. Fitz                                          |
-+-----------+-------------------------------------------------------------+
-| Session 2 | Group 1 & Group 6                                           |
-|           |                                                             |
-|           | Group 2 & Group 4                                           |
-|           |                                                             |
-|           | Group 3 & Dr. Fitz                                          |
-+-----------+-------------------------------------------------------------+
++-------------+--------------------+
+|             | Group pairings     |
++=============+====================+
+| Session 1   | Group 1 & Group 3  |
+|             |                    |
+|             | Group 4 & Group 6  |
+|             |                    |
+|             | Group 2 & Dr. Fitz |
++-------------+--------------------+
+| Session 2   | Group 1 & Group 6  |
+|             |                    |
+|             | Group 2 & Group 4  |
+|             |                    |
+|             | Group 3 & Dr. Fitz |
++-------------+--------------------+
 
 ### Thursday - Shiny Part I
 
