@@ -22,8 +22,6 @@ knitr::opts_chunk$set(echo = TRUE)
 - For each app, post on [Canvas](https://canvas.apu.edu/courses/42480/discussion_topics/499514):
     1. Name of app w/ hyperlink
     2. A 1-2 sentence summary of what the app does
-    3. What [widgets](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/) it uses for user inputs. If you are unsure what widget is behind a particular interactive feature, note that as well. 
-
 
 
 

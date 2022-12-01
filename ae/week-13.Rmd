@@ -35,29 +35,29 @@ knitr::opts_chunk$set(echo = TRUE)
 
 End-of-semester schedule:
 
-+--------------+-------------------------+----------------------+----------------------------------+
-|              | Tuesday                 | Thursday             | What's due                       |
-+==============+=========================+======================+==================================+
-| Week 13      | Rough draft peer review | Shiny part I         | Shiny prep (Th)                  |
-|              |                         |                      |                                  |
-|              |                         |                      | Lab 09 (Th)                      |
-|              |                         |                      |                                  |
-|              |                         |                      | SE 02 (Th)                       |
-|              |                         |                      |                                  |
-|              |                         |                      | AE-11 (Sat)                      |
-+--------------+-------------------------+----------------------+----------------------------------+
-| Week 14      | Shiny part II           | Project work session | Shiny prep II (Tue)              |
-|              |                         |                      |                                  |
-|              |                         |                      | Formal peer review (Tue)         |
-|              |                         |                      |                                  |
-|              |                         |                      | AE-12 (Th)                       |
-|              |                         |                      |                                  |
-|              |                         |                      | Final report (Sat)               |
-+--------------+-------------------------+----------------------+----------------------------------+
-| Week 15      |                         | Final presentations  | End-of-course reflection (Thurs) |
-|              |                         |                      |                                  |
-|              |                         | (on-campus)          |                                  |
-+--------------+-------------------------+----------------------+----------------------------------+
++---------+-------------------------+----------------------+----------------------------------+
+|         | Tuesday                 | Thursday             | What's due                       |
++=========+=========================+======================+==================================+
+| Week 13 | Rough draft peer review | Shiny part I         | Shiny prep (Th)                  |
+|         |                         |                      |                                  |
+|         |                         |                      | Lab 09 (Th)                      |
+|         |                         |                      |                                  |
+|         |                         |                      | SE 02 (Th)                       |
+|         |                         |                      |                                  |
+|         |                         |                      | AE-11 (Sat)                      |
++---------+-------------------------+----------------------+----------------------------------+
+| Week 14 | Shiny part II           | Project work session | Shiny prep II (Tue)              |
+|         |                         |                      |                                  |
+|         |                         |                      | Formal peer review (Tue)         |
+|         |                         |                      |                                  |
+|         |                         |                      | AE-12 (Th)                       |
+|         |                         |                      |                                  |
+|         |                         |                      | Final report (Sat)               |
++---------+-------------------------+----------------------+----------------------------------+
+| Week 15 |                         | Final presentations  | End-of-course reflection (Thurs) |
+|         |                         |                      |                                  |
+|         |                         | (on-campus)          |                                  |
++---------+-------------------------+----------------------+----------------------------------+
 
 ### Questions?
 
@@ -81,21 +81,21 @@ We will do the following twice:
 
 -   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group)
 
-+-------------+--------------------+
-|             | Group pairings     |
-+=============+====================+
-| Session 1   | Group 1 & Group 3  |
-|             |                    |
-|             | Group 4 & Group 6  |
-|             |                    |
-|             | Group 2 & Dr. Fitz |
-+-------------+--------------------+
-| Session 2   | Group 1 & Group 6  |
-|             |                    |
-|             | Group 2 & Group 4  |
-|             |                    |
-|             | Group 3 & Dr. Fitz |
-+-------------+--------------------+
++-----------+--------------------+
+|           | Group pairings     |
++===========+====================+
+| Session 1 | Group 1 & Group 3  |
+|           |                    |
+|           | Group 4 & Group 6  |
+|           |                    |
+|           | Group 2 & Dr. Fitz |
++-----------+--------------------+
+| Session 2 | Group 1 & Group 6  |
+|           |                    |
+|           | Group 2 & Group 4  |
+|           |                    |
+|           | Group 3 & Dr. Fitz |
++-----------+--------------------+
 
 ### General Tips
 

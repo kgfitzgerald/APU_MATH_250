@@ -13,15 +13,22 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-- A1
-- A2
+
 
 ### Questions?
 
 
-### Tuesday - Shiny Part II
+### Tuesday - Shiny Part I 
 
-+ For AE-12, you will design and implement Shiny app to explore your project data
++ For AE-11, you will complete Lessons 03 - 05 from the [Shiny Getting Started Tutorials](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
+
++ These should be completed in your Shiny project in the MATH_250_individual workspace
+
++ You will turn in a .zip folder that includes the lesson-03 and census-app folders as well as the .Rproj file from your Shiny project
+
+### Shiny Part II - Extra Credit
+
++ For AE-12 (Extra Credit), you will design and implement Shiny app to explore your project data
 
 + These should be completed in your shared Group Project workspace 
 
