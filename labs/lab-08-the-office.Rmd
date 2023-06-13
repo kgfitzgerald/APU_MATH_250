@@ -43,7 +43,7 @@ This lab will be completed collaboratively in your randomly assigned Labs 07 - 0
 
 + Navigate to the `MATH_250 Labs 07 - 08 G#` workspace 
 + Launch the MATH_250 Labs 07 - 08` project
-+ Open `lab-08.Rmd`
++ Open `lab-08.qmd`
 
 Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise.
 

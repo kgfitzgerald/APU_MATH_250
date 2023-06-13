@@ -564,7 +564,7 @@ Group Leader in Canvas is responsible for submitting the assignment.</p>
 Cloud Links”</a> and click the link to join your group specific
 <code>MATH_250 Labs 03-04 G#</code> workspace.</li>
 <li>Launch the <code>MATH_250 Labs 03 - 04</code> project</li>
-<li>Open <code>lab-03.Rmd</code></li>
+<li>Open <code>lab-03.qmd</code></li>
 </ul>
 <p>Remember that you are editing simultaneously and any changes you make
 in your files affect your whole group. Make sure to take turns so that
@@ -574,7 +574,7 @@ each group member is “in the driver seat” for at least one exercise.</p>
 <p>We’ll use the <strong>tidyverse</strong> package for much of the data
 wrangling. This package is already installed for you. You can load it by
 adding the following code to the <code>load-packages</code> code chunk
-in your <code>lab-03.Rmd</code> document:</p>
+in your <code>lab-03.qmd</code> document:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
 </div>
 <div id="data" class="section level2">
@@ -688,7 +688,7 @@ analyses, we will consider this subset of laureates only.</p>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(category <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Physics&quot;</span>, <span class="st">&quot;Medicine&quot;</span>, <span class="st">&quot;Chemistry&quot;</span>, <span class="st">&quot;Economics&quot;</span>))</span></code></pre></div>
 <p>For the next exercise work with the <code>nobel_living_science</code>
 data frame you created above. This means you’ll need to define this data
-frame in your R Markdown document, even though the next exercise doesn’t
+frame in your Quarto document, even though the next exercise doesn’t
 explicitly ask you to do so.</p>
 <ol start="3" style="list-style-type: decimal">
 <li><p>Create a faceted bar plot visualizing the relationship between

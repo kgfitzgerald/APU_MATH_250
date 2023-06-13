@@ -39,7 +39,7 @@ This lab will be completed collaboratively in your randomly assigned Labs 03 - 0
 
 + In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Labs 03-04 G#` workspace. 
 + Launch the `MATH_250 Labs 03 - 04` project
-+ Open `lab-03.Rmd`
++ Open `lab-03.qmd`
 
 Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise. 
 
@@ -47,7 +47,7 @@ Remember that you are editing simultaneously and any changes you make in your fi
 
 We'll use the **tidyverse** package for much of the data wrangling.
 This package is already installed for you.
-You can load it by adding the following code to the `load-packages` code chunk in your `lab-03.Rmd` document:
+You can load it by adding the following code to the `load-packages` code chunk in your `lab-03.qmd` document:
 
 ```{r load-packages, message = FALSE, warning = FALSE}
 library(tidyverse)
@@ -154,7 +154,7 @@ nobel_living_science <- nobel_living %>%
 ```
 
 For the next exercise work with the `nobel_living_science` data frame you created above.
-This means you'll need to define this data frame in your R Markdown document, even though the next exercise doesn't explicitly ask you to do so.
+This means you'll need to define this data frame in your Quarto document, even though the next exercise doesn't explicitly ask you to do so.
 
 3.  Create a faceted bar plot visualizing the relationship between the category of prize and whether the laureate was in the US when they won the nobel prize.
     Interpret your visualization, and say a few words about whether the Buzzfeed headline is supported by the data.

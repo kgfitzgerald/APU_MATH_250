@@ -38,7 +38,7 @@ This homework assignment will be completed *individually*. To get started,
 + Login to your RStudio Cloud account
 + Access the `MATH_250_individual` workspace 
 + Launch the `Homework 04` project
-+ Open `hw-04.Rmd`
++ Open `hw-04.qmd`
 
 ## Packages
 

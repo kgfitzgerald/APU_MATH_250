@@ -42,7 +42,7 @@ This lab will be completed collaboratively in your randomly assigned Labs 05 - 0
 + Login to your RStudio Cloud account
 + Navigate to the `MATH_250 Labs 05 - 06 G#` workspace 
 + Launch the MATH_250 Labs 05 - 06` project
-+ Open `lab-06.Rmd`
++ Open `lab-06.qmd`
 
 Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise.
 

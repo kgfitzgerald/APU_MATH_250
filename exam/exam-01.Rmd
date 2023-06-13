@@ -39,7 +39,7 @@ This Exam will assess the following skills:
 + Login to your RStudio Cloud account
 + Navigate to the `MATH_250_individual` workspace 
 + Launch the `Exam1` project
-+ Open `Exam1.Rmd`
++ Open `Exam1.qmd`
 
 # Packages
 

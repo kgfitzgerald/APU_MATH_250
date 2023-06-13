@@ -30,7 +30,7 @@ This homework assignment will be completed *individually*. To get started,
 + Login to your RStudio Cloud account
 + Access the `MATH_250_individual` workspace 
 + Launch the `Week 07` project
-+ Open `hw-03.Rmd`
++ Open `hw-03.qmd`
 
 ## Packages
 

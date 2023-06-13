@@ -73,7 +73,7 @@ RSVP: <https://forms.gle/pj8SvRnM4T773b88A>
 
     -   1/3 of points back
 
-    -   Make a copy of your original Exam.Rmd file, name it appropriately
+    -   Make a copy of your original Exam.qmd file, name it appropriately
 
     -   Include all original code / interpretation
 

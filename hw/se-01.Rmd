@@ -96,7 +96,7 @@ A few guidelines:
 
 - Create an R project for your TidyTuesday submission.
 - Your project should include 
-  - The R Markdown file with all the code needed to reproduce your visualization. 
+  - The Quarto file with all the code needed to reproduce your visualization. 
   - An image of your final visualization 
 - The visualization should include features or customization that are beyond what we've done in class . 
 - Include the image of your visualization in your discussion post.

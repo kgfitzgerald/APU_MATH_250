@@ -32,7 +32,7 @@ This homework assignment will be completed *individually*. You are still allowed
 + Login to your RStudio Cloud account
 + Access the `MATH_250_individual` workspace 
 + Launch the `Week 03` project
-+ Open `hw-01.Rmd`
++ Open `hw-01.qmd`
 
 ## Packages
 
@@ -51,7 +51,7 @@ The data can be found in the **dsbox** package, and it's called `edibnb`.
 Since the dataset is distributed with the package, we don't need to load it separately; it becomes available to us when we load the package.
 
 You can view the dataset as a spreadsheet using the `View()` function.
-Note that you should not put this function in your R Markdown document, but instead type it directly in the Console, as it pops open a new window (and the concept of popping open a window in a static document doesn't really make sense...).
+Note that you should not put this function in your Quarto document, but instead type it directly in the Console, as it pops open a new window (and the concept of popping open a window in a static document doesn't really make sense...).
 When you run this in the console, you'll see the **data viewer** window pop up.
 
 ```{r view-data}

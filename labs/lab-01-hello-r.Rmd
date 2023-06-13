@@ -27,21 +27,21 @@ You should have already set up an RStudio Cloud account and been added to the "M
 + Login to your [RStudio Cloud](rstudio.cloud) account
 + Navigate to the "MATH_250_individual" workspace (your workspaces are listed in the left panel of RStudio Cloud)
 + Click on "Continue" next to Week 01 to launch the Week 01 R project. Note, if you did not do AE 01, you may need to click "Start Assignment" instead of "Continue"
-+ Open `lab-01.Rmd` by clicking on the file name in the Files pane (bottom right quadrant)
++ Open `lab-01.qmd` by clicking on the file name in the Files pane (bottom right quadrant)
 
-The document you are currently reading has all the instructions for Lab 01, but you will complete the lab by adding code and text responses to the `lab-01.Rmd` document in RStudio Cloud.
+The document you are currently reading has all the instructions for Lab 01, but you will complete the lab by adding code and text responses to the `lab-01.qmd` document in RStudio Cloud.
 
 ## Warm up
 
 Before we introduce the data, let's warm up with some simple exercises.
 
 ```{marginfigure}
-The top portion of your R Markdown file (between the three dashed lines) is called YAML. It stands for "YAML Ain't Markup Language". It is a human friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.
+The top portion of your Quarto file (between the three dashed lines) is called YAML. It stands for "YAML Ain't Markup Language". It is a human friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.
 ```
 
 ### YAML
 
-In the R Markdown (Rmd) file in your project, change the author name to your name, and knit the document.
+In the Quarto (Rmd) file in your project, change the author name to your name, and render the document.
 
 ```{r yaml-raw-to-rendered, fig.fullwidth=TRUE, echo = FALSE}
 knitr::include_graphics("img/yaml-raw-to-rendered.png")
@@ -58,7 +58,7 @@ library(tidyverse)
 library(datasauRus)
 ```
 
-Note that the packages are also loaded with the same commands in your R Markdown document.
+Note that the packages are also loaded with the same commands in your Quarto document.
 
 ## Data
 
@@ -99,12 +99,12 @@ The original Datasaurus (`dino`) was created by Alberto Cairo in [this great blo
 The other Dozen were generated using simulated annealing and the process is described in the paper *Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics* through Simulated Annealing by Justin Matejka and George Fitzmaurice.
 In the paper, the authors simulate a variety of datasets that have the same summary statistics as the Datasaurus but have very different distributions.
 
-🧶 ✅ *This is a good place to pause and Knit to make sure there are no errors in your .Rmd*
+🧶 ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
 
 2.  Plot `y` vs. `x` for the `dino` dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset.
 
 Below is the code you will need to complete this exercise.
-Basically, the answer is already given, but you need to include relevant bits in your Rmd document and successfully knit it and view the results.
+Basically, the answer is already given, but you need to include relevant bits in your Rmd document and successfully render it and view the results.
 
 Start with the `datasaurus_dozen` and pipe it into the `filter` function to filter for observations where `dataset == "dino"`.
 Store the resulting filtered data frame as a new data frame called `dino_data`.
@@ -155,15 +155,15 @@ dino_data %>%
   summarize(r = cor(x, y))
 ```
 
-🧶 ✅ *This is a good place to pause and Knit to make sure there are no errors in your .Rmd*
+🧶 ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
 
 3.  Plot `y` vs. `x` for the `star` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
 
-🧶 ✅ *This is a good place to pause and Knit to make sure there are no errors in your .Rmd*
+🧶 ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
 
 4.  Plot `y` vs. `x` for the `circle` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
 
-🧶 ✅ *This is a good place to pause and Knit to make sure there are no errors in your .Rmd*
+🧶 ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
 
 ```{marginfigure}
 Facet by the dataset variable, placing the plots in a 3 column grid, and don't add a legend.
@@ -195,10 +195,10 @@ knitr::include_graphics("img/fig-resize-global.png")
 
 -   **Resize your figures:**
 
-Click on the gear icon in on top of the R Markdown document, and select "Output Options..." in the dropdown menu.
+Click on the gear icon in on top of the Quarto document, and select "Output Options..." in the dropdown menu.
 In the pop up dialogue box go to the Figures tab and change the height and width of the figures, and hit OK when done.
-Then, knit your document and see how you like the new sizes.
-Change and knit again and again until you're happy with the figure sizes.
+Then, render your document and see how you like the new sizes.
+Change and render again and again until you're happy with the figure sizes.
 Note that these values get saved in the YAML.
 
 
@@ -206,7 +206,7 @@ Note that these values get saved in the YAML.
 You can also use different figure sizes for different figures.
 To do so click on the gear icon within the chunk where you want to make a change.
 Changing the figure sizes added new options to these chunks: `fig.width` and `fig.height`.
-You can change them by defining different values directly in your R Markdown document as well.
+You can change them by defining different values directly in your Quarto document as well.
 
 ```{r fig-resize-local, fig.margin = FALSE, echo = FALSE, fig.width=3}
 knitr::include_graphics("img/fig-resize-local.png")
@@ -218,9 +218,9 @@ knitr::include_graphics("img/fig-resize-local.png")
 -   **Change the look of your report:**
 
 
-Once again click on the gear icon in on top of the R Markdown document, and select "Output Options..." in the dropdown menu.
+Once again click on the gear icon in on top of the Quarto document, and select "Output Options..." in the dropdown menu.
 In the General tab of the pop up dialogue box try out different Syntax highlighting and theme options.
-Hit OK and knit your document to see how it looks.
+Hit OK and render your document to see how it looks.
 Play around with these until you're happy with the look.
 
 ```{r theme-highlight, fig.margin = FALSE, echo = FALSE, fig.width=3}
@@ -231,7 +231,7 @@ knitr::include_graphics("img/theme-highlight.png")
 knitr::include_graphics("img/view-html.png")
 ```
 
-🧶 ✅ ⬆️ *Yay, you're done! Knit one last time, and verify that everything is displayed correctly in your lab-01.html file. To view the .html, click on the file name in the Files quadrant, and select "View in Web Browser". If everything looks good, you're ready to submit!*
+🧶 ✅ ⬆️ *Yay, you're done! Render one last time, and verify that everything is displayed correctly in your lab-01.html file. To view the .html, click on the file name in the Files quadrant, and select "View in Web Browser". If everything looks good, you're ready to submit!*
 
 # Submit
 

@@ -38,7 +38,7 @@ knitr::opts_chunk$set(echo = TRUE)
     + Explore to death - become an expert on these data! 
 - Comment your code and/or provide narrative
 - Use good coding practices (e.g. use of white space, line breaks)
-- May want to create a new file called `analysis.Rmd` for all the analyses you're going to explore that may or may not end up in your written report. 
+- May want to create a new file called `analysis.qmd` for all the analyses you're going to explore that may or may not end up in your written report. 
 - Provide a codebook that describes what each variable in your dataset is
 
 ### Tuesday Announcements
@@ -111,7 +111,7 @@ knitr::opts_chunk$set(echo = TRUE)
     + Explore to death - become an expert on these data! 
 - Comment your code and/or provide narrative
 - Use good coding practices (e.g. use of white space, line breaks)
-- May want to create a new file called `analysis.Rmd` for all the analyses you're going to explore that may or may not end up in your written report. 
+- May want to create a new file called `analysis.qmd` for all the analyses you're going to explore that may or may not end up in your written report. 
 - Provide a codebook that describes what each variable in your dataset is
 
 

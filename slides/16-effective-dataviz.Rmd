@@ -734,7 +734,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .your-turn[
 ### .hand[Your turn!]
 .midi[
-- RStudio Cloud > `AE 07 - Brexit + Telling stories with dataviz` > `brexit.Rmd`. 
+- RStudio Cloud > `AE 07 - Brexit + Telling stories with dataviz` > `brexit.qmd`. 
 - Change the visualisation in three different ways to tell slightly different stories with it each time.
 ]
 ]

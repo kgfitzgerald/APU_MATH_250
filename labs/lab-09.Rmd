@@ -33,7 +33,7 @@ For this lab, you will collaborate in groups, but you will turn in an individual
 
 + Navigate to the `MATH_250_individual` workspace 
 + Launch the `Week 12` project
-+ Open `lab-09.Rmd`
++ Open `lab-09.qmd`
 
 All code should follow the tidyverse style guidelines. Make sure to clean up tables and figures and suppress extraneous output.
 

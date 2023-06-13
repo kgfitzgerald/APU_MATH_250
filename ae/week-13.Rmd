@@ -99,13 +99,13 @@ We will do the following twice:
 
 ### General Tips
 
--   Hide code in final report (can have code chunk with `knitr::opts_chunk$set(echo = FALSE)` at the top of your .Rmd)
+-   Hide code in final report (can have code chunk with `knitr::opts_chunk$set(echo = FALSE)` at the top of your .qmd)
 
 -   Think about audience:
 
     -   Generally educated stakeholder - not necessarily an analyst
 
-    -   The .Rmd can have thorough commenting for an analyst to follow, but don't need to include all the analysis/coding decisions in the report itself
+    -   The .qmd can have thorough commenting for an analyst to follow, but don't need to include all the analysis/coding decisions in the report itself
 
     -   Avoid heavy jargon (both statistical and R-related)
 

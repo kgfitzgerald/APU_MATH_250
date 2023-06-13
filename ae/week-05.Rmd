@@ -65,7 +65,7 @@ library(tidyverse)
 ```{r, eval = FALSE}
 #only run this one time
 install.packages("kableExtra")
-#include this in each .Rmd you intend to use the kbl() functions
+#include this in each .qmd you intend to use the kbl() functions
 library(kableExtra)
 ```
 
@@ -105,7 +105,7 @@ ggplot(avengers, aes(x = new_variable)) +
 + TIP: placing your cursor on a line and hitting "Command + Enter" will run just that line (and any pipes/layers attached to it)
 
 + When we are importing data into r do we need to have the data stored somewhere else on our own laptops?
-    + It needs to be stored in the same folder (or subfolder) as your .Rmd.     
+    + It needs to be stored in the same folder (or subfolder) as your .qmd.     
     + For RStudio Cloud, I place the relevant data files in your projects
     + For your project, you will need to upload relevant data files to your project folders
 

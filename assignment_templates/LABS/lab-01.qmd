@@ -1,0 +1,48 @@
+---
+title: "Lab 01: Hello R!"
+subtitle: ""
+author: "YOUR NAME HERE"
+date: "due September 6"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+# Exercise 1
+
+```{r ex-1}
+```
+
+# Exercise 2 
+
+```{r ex-2}
+```
+
+# Exercise 3
+
+```{r ex-3}
+```
+
+# Exercise 4
+
+```{r ex-4}
+```
+
+# Exercise 5
+
+```{r ex-5}
+```

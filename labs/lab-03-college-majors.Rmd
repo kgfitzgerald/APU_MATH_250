@@ -42,7 +42,7 @@ This lab will be completed collaboratively in your randomly assigned Labs 03 - 0
 
 + In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Labs 03-04 G#` workspace. 
 + Launch the `MATH_250 Labs 03 - 04` project
-+ Open `lab-03.Rmd`
++ Open `lab-03.qmd`
 
 Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise.
 

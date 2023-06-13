@@ -28,7 +28,7 @@ In this lab, you will code collaboratively in your randomly assigned Labs 01 - 0
 
 + In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Lab 02 G#` workspace. 
 + In the workspace, click on `MATH_250_Lab_02` to launch the project
-+ Open `lab-02.Rmd` by clicking on the file name in the Files pane (bottom right quadrant)
++ Open `lab-02.qmd` by clicking on the file name in the Files pane (bottom right quadrant)
 
 Each group member has `moderator` access to the workspace, which enables you to collaboratively edit documents which reflect others' changes simultaneously (like Google Docs). This means any changes you make to your files affect the whole team! 
 
