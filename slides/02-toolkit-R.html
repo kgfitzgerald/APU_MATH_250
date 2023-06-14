@@ -61,7 +61,6 @@ layout: true
 - .pink[Programming:]
   - .pink[R]
   - .pink[RStudio]
-  - .pink[RStudio Cloud]
   - .pink[tidyverse]
   - .pink[Quarto]
 ]
@@ -84,11 +83,6 @@ By the end of the course, you will be able to...
 
 --
 - gain insight from data, reproducibly (with literate programming), **using modern programming tools and techniques**
-
---
-- gain insight from data, reproducibly (with literate programming) **and collaboratively**, using modern programming tools and techniques
-
-
 ---
 
 class: middle
@@ -128,7 +122,7 @@ Long-term goals:
 
 --
 
-- Sharability `\(\rightarrow\)` R Projects &amp; RStudio Cloud
+- Sharability `\(\rightarrow\)` R Projects &amp; GitHub
 
 ---
 
@@ -171,7 +165,7 @@ class: middle
 
 - **Packages** are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data&lt;sup&gt;1&lt;/sup&gt;
 
-- As of August 2022, there are over 18,000 R packages available on **CRAN** (the Comprehensive R Archive Network)&lt;sup&gt;2&lt;/sup&gt;
+- As of August 2023, there are over 19,000 R packages available on **CRAN** (the Comprehensive R Archive Network)&lt;sup&gt;2&lt;/sup&gt;
 
 - We're going to work with a small (but important) subset of these!
 
@@ -250,33 +244,21 @@ dataframe$var_name
 
 ---
 
-## rmarkdown
-
-.pull-left[
-.center[.large[
-[rmarkdown.rstudio.com](https://rmarkdown.rstudio.com/)
-]]
-
-- **rmarkdown** and the various packages that support it enable R users to write their code and prose in reproducible computational documents
-- We will generally refer to Quarto documents (with `.qmd` extension), e.g. *"Do this in your Quarto document"* and rarely discuss loading the rmarkdown package
-]
-
-.pull-right[
-&lt;img src="img/rmarkdown.png" width="60%" style="display: block; margin: auto;" /&gt;
-]
-
----
-
 class: middle
 
 # Quarto
 
 ---
 
-
 ## Quarto
 
-- Fully reproducible reports -- each time you render the analysis is run from the beginning
+.center[.large[
+[https://quarto.org/](https://quarto.org/)
+]]
+
+- **Quarto** and the various packages that support it enable R users to write their code and prose in reproducible computational documents
+    + each time you render, the analysis is run from the beginning
+- Quarto documents have a `.qmd` file extension
 - Simple markdown syntax for text
 - Code goes in chunks, defined by three backticks, narrative goes outside of chunks
 
@@ -284,7 +266,7 @@ class: middle
 
 ## Tour: Quarto
 
-&lt;img src="img/tour-rmarkdown.png" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/tour-quarto.png" width="60%" height="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -336,28 +318,9 @@ What happens? Why the error?
 
 ---
 
-## Quarto help
-
-.pull-left[
-.center[
-.midi[Quarto Cheat Sheet  
-`Help -&gt; Cheatsheets`]
-]
-&lt;img src="img/rmd-cheatsheet.png" width="80%" style="display: block; margin: auto;" /&gt;
-]
-.pull-right[
-.center[
-.midi[Markdown Quick Reference  
-`Help -&gt; Markdown Quick Reference`]
-]
-&lt;img src="img/md-cheatsheet.png" width="80%" style="display: block; margin: auto;" /&gt;
-]
-
----
-
 ## How will we use Quarto?
 
-- Every assignment / report / project / etc. is an Quarto document
+- Every assignment / report / project / etc. is a Quarto document
 - You'll always have a template Quarto document to start with
 - The amount of scaffolding in the template will decrease over the semester
 
@@ -374,10 +337,12 @@ Mitchell O'Hara-Wild, [useR! 2018 feature wall](https://www.mitchelloharawild.co
 ---
 
 .your-turn[
-.light-blue[.hand[Your turn:]] `AE 02 - Bechdel + Quarto`
+.light-blue[.hand[Your turn: ]] ` AE 01b - Bechdel + Quarto`
 - [The Bechdel test](https://en.wikipedia.org/wiki/Bechdel_test) asks whether a work of fiction features at least two women who talk to each other about something other than a man, and there must be two women named characters.
-- Go to [RStudio Cloud](https://rstudio.cloud/) and start the assignment `AE 02 - Bechdel + Quarto`. 
-- Open and render the Quarto document `bechdel.qmd`, review the document, and fill in the blanks.
+- Go to our [Github repo ](https://github.com/kgfitzgerald/APU_MATH_250/tree/main/assignment_templates) and navigate to AE &gt; AE-01b-bechdel.qmd
+- Click to "Download raw file"
+- Place the downloaded .qmd document in your MATH_250 folder on your computer
+- From inside your MATH_250 RStudio Project, open and render the Quarto document `AE-01b-bechdel.qmd`, review the document, and fill in the blanks.
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

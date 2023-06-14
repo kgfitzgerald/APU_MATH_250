@@ -1,8 +1,7 @@
 ---
 title: "Lab 01: Hello R!"
-subtitle: ""
 author: "YOUR NAME HERE"
-date: "due September 6"
+date: "`r Sys.Date()`"
 format: 
   html:
     self-contained: true
@@ -12,6 +11,8 @@ format:
     highlight: "tango"
     theme: "cosmo"
     df-print: paged
+    fig-width: 3
+    fig-height: 3
 editor: visual
 editor_options: 
   chunk_output_type: console
@@ -19,15 +20,32 @@ editor_options:
 
 ```{r load-packages, message=FALSE}
 library(tidyverse)
-library(openintro)
+library(datasauRus)
 ```
+
+## Reflection prompts
+
+*Respond to each of the following after you have completed all exercises in this assignment*
+
+*(RP1): What were the main concepts covered in this assignment?*
+
+> YOUR ANSWER HERE
+
+*(RP2): What's one thing you understand better after completing these exercises?*
+
+> YOUR ANSWER HERE
+
+*(RP3): What exercise(s) gave you the most trouble? What was difficult about them/where did you get stuck?*
+
+> YOUR ANSWER HERE
 
 # Exercise 1
 
 ```{r ex-1}
+
 ```
 
-# Exercise 2 
+# Exercise 2
 
 ```{r ex-2}
 ```
@@ -45,4 +63,5 @@ library(openintro)
 # Exercise 5
 
 ```{r ex-5}
+
 ```

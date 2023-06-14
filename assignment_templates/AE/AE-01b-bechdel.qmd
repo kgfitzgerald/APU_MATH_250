@@ -48,7 +48,7 @@ And we'll also use the `binary` and `clean_test` variables for **grouping**.
 
 Let's take a look at how median budget and gross vary by whether the movie passed the Bechdel test, which is stored in the `binary` variable.
 
-```{r message = FALSE}
+```{r message=FALSE}
 bechdel90_13 %>%
   group_by(binary) %>%
   summarise(med_budget = median(budget_2013),

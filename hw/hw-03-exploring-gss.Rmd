@@ -1,5 +1,5 @@
 ---
-title: "HW 04 - Exploring the GSS"
+title: "HW 03 - Exploring the GSS"
 output: 
   tufte::tufte_html:
     css: ./hw.css

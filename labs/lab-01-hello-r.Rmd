@@ -6,6 +6,9 @@ output:
     tufte_variant: "envisioned"
     highlight: pygments
 link-citations: yes
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
 ```{marginfigure}
@@ -18,18 +21,22 @@ As the labs progress, you are encouraged to explore beyond what the labs dictate
 Before we get to that stage, however, you need to build some basic fluency in R.
 Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.
 
-For this first lab, you will collaborate in your (randomly assigned) groups (see Canvas), but you will each submit your own lab. We want to make sure everyone gets a significant amount of time at the steering wheel in the beginning. In future labs you'll learn about collaborating in RStudio Cloud and produce a single lab report for your team.
+For this lab, you will collaborate in your (randomly assigned) groups (see Canvas), but you will each submit your own lab.
+You may share code with your group via Campuswire chat rooms.
 
-# Getting Started - RStudio Cloud
+# Getting Started - RStudio
 
-You should have already set up an RStudio Cloud account and been added to the "MATH_250_individual" workspace. If you haven't, touch base with the professor to get set up. To get started on this lab, do the following:
+You should have already downloaded R & RStudio and created an R Project called "MATH_250".
+If you haven't, touch base with the professor to get set up.
+To get started on this lab, do the following:
 
-+ Login to your [RStudio Cloud](rstudio.cloud) account
-+ Navigate to the "MATH_250_individual" workspace (your workspaces are listed in the left panel of RStudio Cloud)
-+ Click on "Continue" next to Week 01 to launch the Week 01 R project. Note, if you did not do AE 01, you may need to click "Start Assignment" instead of "Continue"
-+ Open `lab-01.qmd` by clicking on the file name in the Files pane (bottom right quadrant)
+-   Open our class [GitHub repo](https://github.com/kgfitzgerald/APU_MATH_250/tree/main/assignment_templates)
+-   Navigate to LABS \> lab-01.qmd
+-   Click to "Download raw file"
+-   Place the downloaded .qmd document in your MATH_250 folder on your computer
+-   From inside your MATH_250 RStudio Project, open and render the Quarto document
 
-The document you are currently reading has all the instructions for Lab 01, but you will complete the lab by adding code and text responses to the `lab-01.qmd` document in RStudio Cloud.
+The document you are currently reading has all the instructions for Lab 01, but you will complete the lab by adding code and text responses to the `lab-01.qmd` document in RStudio.
 
 ## Warm up
 
@@ -41,11 +48,7 @@ The top portion of your Quarto file (between the three dashed lines) is called Y
 
 ### YAML
 
-In the Quarto (Rmd) file in your project, change the author name to your name, and render the document.
-
-```{r yaml-raw-to-rendered, fig.fullwidth=TRUE, echo = FALSE}
-knitr::include_graphics("img/yaml-raw-to-rendered.png")
-```
+In the Quarto (qmd) file in your project, change the author name to your name, and render the document.
 
 ## Packages
 
@@ -70,10 +73,9 @@ The data frame we will be working with today is called `datasaurus_dozen` and it
 Actually, this single data frame contains 13 datasets, designed to show us why data visualisation is important and how summary statistics alone can be misleading.
 The different datasets are marked by the `dataset` variable.
 
-To find out more about the dataset, type the following in your Console: 
+To find out more about the dataset, type the following in your Console:
 
 `?datasaurus_dozen`
-
 
 A question mark before the name of an object will always bring up its help file.
 This command must be run in the Console.
@@ -87,8 +89,7 @@ To do so we can make a *frequency table* of the dataset variable:
 
 ```{r}
 datasaurus_dozen %>%
-  count(dataset) %>%
-  print(13)
+  count(dataset)
 ```
 
 ```{marginfigure}
@@ -98,8 +99,6 @@ Matejka, Justin, and George Fitzmaurice. "Same stats, different graphs: Generati
 The original Datasaurus (`dino`) was created by Alberto Cairo in [this great blog post](http://www.thefunctionalart.com/2016/08/download-datasaurus-never-trust-summary.html).
 The other Dozen were generated using simulated annealing and the process is described in the paper *Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics* through Simulated Annealing by Justin Matejka and George Fitzmaurice.
 In the paper, the authors simulate a variety of datasets that have the same summary statistics as the Datasaurus but have very different distributions.
-
-🧶 ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
 
 2.  Plot `y` vs. `x` for the `dino` dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset.
 
@@ -155,15 +154,15 @@ dino_data %>%
   summarize(r = cor(x, y))
 ```
 
-🧶 ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
+`r emo::ji("pause_button")` `r emo::ji("right_arrow")` ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
 
 3.  Plot `y` vs. `x` for the `star` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
 
-🧶 ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
+`r emo::ji("pause_button")` `r emo::ji("right_arrow")` ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
 
 4.  Plot `y` vs. `x` for the `circle` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
 
-🧶 ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
+`r emo::ji("pause_button")` `r emo::ji("right_arrow")` ✅ *This is a good place to pause and Render to make sure there are no errors in your .qmd*
 
 ```{marginfigure}
 Facet by the dataset variable, placing the plots in a 3 column grid, and don't add a legend.
@@ -189,84 +188,74 @@ datasaurus_dozen %>%
 
 You're done with the data analysis exercises, but we'd like you to do two more things:
 
-```{r fig-resize-global, fig.margin = TRUE, echo = FALSE, fig.width=3}
-knitr::include_graphics("img/fig-resize-global.png")
-```
+
 
 -   **Resize your figures:**
 
-Click on the gear icon in on top of the Quarto document, and select "Output Options..." in the dropdown menu.
-In the pop up dialogue box go to the Figures tab and change the height and width of the figures, and hit OK when done.
-Then, render your document and see how you like the new sizes.
-Change and render again and again until you're happy with the figure sizes.
-Note that these values get saved in the YAML.
+In the YAML under the `html:` settings, add `fig-width: 3` and `fig-height: 3` This will make each plot 3 inches by 3 inches.
 
-
+```{r fig-resize-global, echo = FALSE, fig.width=3}
+knitr::include_graphics("img/fig-resize-global.png")
+```
 
 You can also use different figure sizes for different figures.
-To do so click on the gear icon within the chunk where you want to make a change.
-Changing the figure sizes added new options to these chunks: `fig.width` and `fig.height`.
-You can change them by defining different values directly in your Quarto document as well.
+To do so, add `#| fig-width: ` and `#| fig-height: ` as two new lines to the top of the code chunk for the figure you want to change. For example, change the figure in Exercise 5 to be 15 x 9.
 
-```{r fig-resize-local, fig.margin = FALSE, echo = FALSE, fig.width=3}
+
+```{r fig-resize-local, echo = FALSE, fig.width=3}
 knitr::include_graphics("img/fig-resize-local.png")
 ```
 
 
 
-
 -   **Change the look of your report:**
 
-
-Once again click on the gear icon in on top of the Quarto document, and select "Output Options..." in the dropdown menu.
-In the General tab of the pop up dialogue box try out different Syntax highlighting and theme options.
-Hit OK and render your document to see how it looks.
+In the YAML, this lab is currently set to have `theme: "cosmo"`. See a list of all available themes below and on the [Quarto website](https://quarto.org/docs/output-formats/html-themes.html).
 Play around with these until you're happy with the look.
 
 ```{r theme-highlight, fig.margin = FALSE, echo = FALSE, fig.width=3}
-knitr::include_graphics("img/theme-highlight.png")
+knitr::include_graphics("img/theme.png")
 ```
 
 ```{r view-html, fig.margin = TRUE, echo = FALSE, fig.width=3}
 knitr::include_graphics("img/view-html.png")
 ```
 
-🧶 ✅ ⬆️ *Yay, you're done! Render one last time, and verify that everything is displayed correctly in your lab-01.html file. To view the .html, click on the file name in the Files quadrant, and select "View in Web Browser". If everything looks good, you're ready to submit!*
+`r emo::ji("right_arrow")` ✅ ⬆️ *Yay, you're done! Render one last time, and verify that everything is displayed correctly in your lab-01.html file. To view the .html, click on the file name in the Files quadrant, and select "View in Web Browser". If everything looks good, you're ready to submit!*
 
 # Submit
 
-To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 01 assignment on Canvas. To export the file, select the box next to the appropriate file name in the Files quadrant, click "More" (blue gear icon), and then "Export". 
+To submit, you need to upload your lab-01.html file to the Lab 01 assignment on Canvas.
 
-```{r export, fig.margin = FALSE, echo = FALSE, fig.width=3}
-knitr::include_graphics("img/export-from-cloud.png")
-```
 
 ```{r canvas, fig.margin = TRUE, echo = FALSE, fig.width=3}
 knitr::include_graphics("img/canvas-submission.png")
 ```
 
-The file will export to the downloads file on your computer. To submit on Canvas, follow these steps:
+To submit on Canvas, follow these steps:
 
-+ Navigate to Lab 01 under assignments
-+ Click "Start Assignment"
-+ Click "Upload File"
-+ Click "Choose File"
-+ In the pop-up window, navigate to your Downloads folder and select "lab-01.html"
-+ Click "Submit Assignment"
+-   Navigate to Lab 01 under assignments
+-   Click "Start Assignment"
+-   Click "Upload File"
+-   Click "Choose File"
+-   In the pop-up window, navigate to your MATH_250 folder and select "lab-01.html"
+-   Click "Submit Assignment"
 
 # Grading (50 pts)
 
 <br>
 
-| Component | Points |
-|:----------|:-------|
-| Ex 1      | 8      |
-| Ex 2      | 8    |
-| Ex 3      | 8    |
-| Ex 4      | 8     |
-| Ex 5      | 8      |
-| Workflow & formatting   | 10      |
+| Component             | Points |
+|:----------------------|:-------|
+| Ex 1                  | 8      |
+| Ex 2                  | 8      |
+| Ex 3                  | 8      |
+| Ex 4                  | 8      |
+| Ex 5                  | 8      |
+| Reflection prompts    | 5     |
+| Workflow & formatting | 5     |
+
 
 **Grading notes**:
 
--   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output). 
+-   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output).
