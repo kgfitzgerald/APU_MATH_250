@@ -38,13 +38,9 @@ We should also note that there are many considerations that go into picking a co
 
 # Getting started
 
-This lab will be completed collaboratively in your randomly assigned Labs 03 - 04 groups (see Canvas). The person randomly assigned to be the Group Leader in Canvas is responsible for submitting the assignment. 
++ You will be working in your randomly assigned Lab 03 - 04 Groups. See Canvas.
++ Open our class [GitHub repo](https://github.com/kgfitzgerald/APU_MATH_250/tree/main/assignment_templates) and download the .qmd file for this lab. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to get started on a lab. 
 
-+ In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Labs 03-04 G#` workspace. 
-+ Launch the `MATH_250 Labs 03 - 04` project
-+ Open `lab-03.qmd`
-
-Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise.
 
 ## Packages
 
@@ -203,7 +199,23 @@ We can use the logical operators to also `filter` our data for STEM majors whose
 
 # Submission
 
-To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 03 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. Recall only one group member needs to submit the assignment.
+Before submitting your assignment on Canvas, Render one last time, then open up your .html in a full window and inspect the following:
+
++ Check your code for neatness - add spaces and line breaks where appropriate to improve readability
+
++ Check any visualizations for informative and clean labels and titles
+
++ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
+
++ Check that you've interpreted output as appropriate
+
++ Make sure extraneous warnings and messages are suppressed (e.g. set `#| warning: false`, `#| message: false`)
+
++ Check that Exercises are clearly labeled and your text responses are visually distinguished
+
++ Check for overall neatness & organization of the report (e.g. headers, subheaders, use of bullets, font changes)
+
+To submit, Render one last time and then upload your .html document to the relevant assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to submit your assignment. 
 
 # Grading (50 pts)
 
@@ -226,7 +238,7 @@ To submit, you need to export your .html document from RStudio Cloud and then up
 | Ex 13     | 3    |
 | Ex 14     | 3    |
 | Ex 15     | 3    |
-| Workflow & formatting   | 5      |
+| Reflection prompts    | 5     |
 
 **Grading notes**:
 

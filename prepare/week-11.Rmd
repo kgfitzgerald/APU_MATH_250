@@ -1,6 +1,6 @@
 ---
 title: "Prepare: Week 11"
-subtitle: "Uncertainty Quantification & Bootstrapping"
+subtitle: "Inference for Numerical Data"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -12,25 +12,24 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For November 8
+## For November 7
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [Quantifying uncertainty](https://youtu.be/lquSgUoYoqk)
+`r emo::ji("movie_camera")` Watch []()
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/32-quantify-uncertainty.html)
+- [Slides]()
 
-`r emo::ji("movie_camera")` Watch [Bootstrapping](https://youtu.be/01_8AKpWg84)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/33-bootstrap.html)
+`r emo::ji("memo")` 
 
 `r emo::ji("memo")` Complete Prep Quiz 11 on Canvas
 
-## Optional 
 
-`r emo::ji("book")` Read [IMS: Chapter 12 - Confidence intervals with bootstrapping](https://openintro-ims.netlify.app/foundations-bootstrapping.html)
+### Optional 
+
+`r emo::ji("book")` Read []()
 
 
 

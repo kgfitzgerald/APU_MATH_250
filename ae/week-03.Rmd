@@ -16,39 +16,8 @@ library(tidyverse)
 ```
 
 
-### Thursday Announcements
+### Announcements
 
-- [(Virtual) Notecard](https://forms.gle/hQ7Bh9nLsXmybmVC7) due at end of class
-- First 2 [Statistics Experience points](https://kgfitzgerald.github.io/APU_MATH_250/hw/se-01.html) due next Thursday, September 22
-- HW 01 due next Thursday, September 22
-    + Encouraged to attempt all exercises on your own, before seeking external help
-    + Will help you gauge your current level of understanding and hone your trouble-shooting skills ahead of Exam 1
-- Come eat FREE Korean BBQ on Friday :)
-- StatFest Saturday
-- Today spent in groups on [Lab 03](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-03-college-majors.html)
-    + See group assignments (and access group workspace) under [RStudio Cloud Links on Canvas](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links)
-    + Will only turn in ONE lab per group
-
-### Tuesday Announcements
-
-- Lab 02 was made OPTIONAL. Solutions video available here: [https://youtu.be/p8J6iq8zveQ](https://youtu.be/p8J6iq8zveQ)
-- [(Virtual) Notecard](https://forms.gle/hQ7Bh9nLsXmybmVC7) due at end of class
-- AE 03 (in-class today) due Thursday by class time (4:20pm)
-- First 2 [Statistics Experience points](https://kgfitzgerald.github.io/APU_MATH_250/hw/se-01.html) due next Thursday, September 22
-- HW 01 due next Thursday, September 22
-    + Encouraged to attempt all exercises on your own, before seeking external help
-    + Will help you gauge your current level of understanding and hone your trouble-shooting skills ahead of Exam 1
-- Come eat FREE Korean BBQ on Friday :) [RSVP by TODAY](https://docs.google.com/forms/d/e/1FAIpQLSfzw03iPz-aeh-TWGPApRBD980MfawKOK6h87lYEj8TlZlgfA/viewform)
-
-```{r, echo = FALSE, out.width="50%", fig.align='center'}
-knitr::include_graphics("./img/MPS_BBQ.png")
-```
-
-- StatFest this weekend 
-
-```{r, echo = FALSE}
-knitr::include_graphics("./img/statfest.png")
-```
 
 ### Questions?
 
@@ -82,17 +51,11 @@ ggplot(midwest, aes(x = area, y = poptotal,
   geom_point(color = "pink")
 ```
 
-*What does data wrangling mean? It seems from the videos that we are employing certain commands in r in order to focus on specific aspects of data, but is that the essence of "wrangling" data? Or does it just mean making it more manageable for analysis?*
 
-+ Yes to both :) wrangle = manipulate data into a form so that your question can be answered / task can be accomplished
-
-*How do I suppress warnings and messages*?
-
-+ Add `, message = FALSE, warning = FALSE` inside the curly brackets of a code chunk. 
 
 ### Application Exercise
 
 - The remainder of class will be spent on AE-03. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
+- You can access it from GitHub. 
+- It is due at the end of class today. 
 - To turn it in, you should upload your .html file to Canvas.

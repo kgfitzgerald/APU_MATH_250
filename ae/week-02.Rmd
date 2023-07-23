@@ -14,20 +14,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
 library(tidyverse)
 library(ggthemes)
-library(bbplot)
+#library(bbplot)
 library(cowplot)
 ```
 
 
 ### Announcements
 
-- Notecard due at end of class. Answer one (or more):
-    + What was most confusing/unclear?
-    + What questions are you wondering about?
-    + How can I be praying for you? 
-- Lab 01 (from last Thursday) due TONIGHT (Tuesday), 11:59pm
-- AE 02 (in-class today) due Thursday by class time (4:20pm)
-- First 2 [Statistics Experience points](https://kgfitzgerald.github.io/APU_MATH_250/hw/se-01.html) due September 22
+
 
 ### A few notes / tips
 
@@ -161,17 +155,11 @@ plot_grid(p1, p2, nrow = 1)
 
 + We'll practice a lot more with visualizations this week! At minimum: your labels should be informative and readable. Feel free to get as fancy as you want, but readability is the primary goal! 
 
-*Will the quiz always be as technical as it was this week?*
 
-+ The prep quiz from Week 1 is pretty typical. Main goal is to help you keep track of the new R functions/terminology introduced each week. Quizzes are open note, open internet. 
-
-*I'm not sure if this would be necessarily helpful, but I think it would be nice if the series of videos were combined into one video. Opening up a bunch of new tabs can get a little overwhelming.*
-
-+ Thanks for the feedback. Plan to keep them as separate videos for this semester (mostly for logistical purposes on my end), but if others feel similarly, let me know and I can make the change for the future! 
 
 ### Application Exercise
 
 - The remainder of class will be spent on AE-02. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
+- You can access it from GitHub. 
+- It is due at the end of class today. 
 - To turn it in, you should upload your .html file to Canvas.

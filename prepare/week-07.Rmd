@@ -12,23 +12,23 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For Tuesday, October 11
+## For Tuesday, October 10
 
 ### Required 
 
 `r emo::ji("movie_camera")` Watch [Misrepresentation](https://youtu.be/p4Ip0K-h-a8)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/20-misrepresentation.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/19-misrepresentation.html)
 
 `r emo::ji("movie_camera")` Watch [Data privacy](https://youtu.be/SM9LXXa5ldI)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/21-privacy.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/20-privacy.html)
 
 `r emo::ji("movie_camera")` Watch [Cambridge Analytica Whistleblower](https://www.youtube.com/watch?v=FXdYSQ6nu-M)
 
 `r emo::ji("movie_camera")` Watch [Algorithmic bias](https://youtu.be/WpKOuUgnvxI)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/22-algorithmic-bias.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/21-algorithmic-bias.html)
 
 ### Choose one of the following 
 

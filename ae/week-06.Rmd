@@ -13,44 +13,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-+ Exam 1 due by classtime on Thursday (4:20pm)
-- Today: Brief lecture, project work session
-- Thursday: work session. Encouraged (not required) to come work on:
-    + Lab 05 (due Saturday)
-    + Lab 06 (OPTIONAL - practice pivoting, computing conditional probabilities, formatting tables)
-    + Anything you got wrong/didn't understand on past assignments
-    + Past bonus/stretch exercises
-    + HW 03 (assigned next week)
-    + Project Proposal 
-- Saturday: 
-    + Lab 05 due
-    + Prep Quiz 06 due (extended)
-- NEXT Tuesday:
-    + Data Ethics videos
-    + Discussion post of 2+ questions, things you're wondering about (instead of usual prep quiz)
+
 
 ### Questions / Feedback
 
-Concerns:
 
-  + Group members not following through on their work
-  + Lack of communication about finishing up the assignment
-
-Things I can do:
-
-  + Add accountability for group members - [survey](https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_1ZgcGyd7yfH095c) to fill out each week
-  + Prompt everyone with 5 minutes left to make a plan for how lab will be completed
-  + Go over exercises intermittently throughout the class 
-
-Things you can do:
-
-  + Communicate before leaving class about the plan for finishing assignment, including specific times you plan to meet/check-in/have work done by. 
-  + Follow through on your assigned role / what you say you're going to do ("otherwise I am going to have to do your job and I will be very sad")
-  + Communicate with me if issues arise where you are unable to complete your work on time - labs & homework can be turned in up to 3 days late, 5% deduction for each 24-hour period
-  
-[RStudio Reminders / Tips](https://rstudio.cloud/spaces/268257/content/4657938)
   
 
-### Project Work Session
+### Application Exercise
 
-- See [Doing Data Science slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/19-doing-data-science.html#1) for getting started on your [project proposal](https://apumath250.netlify.app/project/#project-proposal)
+- The remainder of class will be spent on AE-05. 
+- You can access it from GitHub. 
+- It is due at the end of class today. 
+- To turn it in, you should upload your .html file to Canvas.

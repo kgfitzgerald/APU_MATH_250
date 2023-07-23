@@ -1,6 +1,6 @@
 ---
 title: "Prepare: Week 05"
-subtitle: "Data Importing & Cleaning"
+subtitle: "Scientific Practice & Data Science Workflow"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -11,37 +11,37 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## For Tuesday, September 26
 
-## For September 27
++ Sign up for a project group on Canvas.
 
-**Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
++ Complete the following prep exercises:
 
-### Required 
+`r emo::ji("movie_camera")` Watch [Scientific studies and confounding](https://youtu.be/4_tellSmARQ)
 
-`r emo::ji("movie_camera")` Watch [Data classes](https://youtu.be/oQWX5btmtn0)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/17-studies-confounding.html)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/13-data-classes.html)
+`r emo::ji("movie_camera")` Watch [Simpson's paradox](https://youtu.be/bgIn65yX66g)
 
-`r emo::ji("movie_camera")` Watch [Importing data](https://youtu.be/3b9Rb6sWiAk)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/18-simpsons-paradox.html)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/14-data-import.html)
 
-`r emo::ji("movie_camera")` Watch [Recoding data](https://youtu.be/GeFKGqPqEwk)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/15-data-recode.html)
+<!-- `r emo::ji("movie_camera")` Watch [Doing data science](https://youtu.be/b9lSW0kyqBg) -->
+
+<!-- - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/16-doing-data-science.html) -->
 
 `r emo::ji("memo")` Complete Prep Quiz 05 on Canvas
 
-### Optional 
+### Optional
 
-`r emo::ji("book")` [Read R4DS:: Chapter 15 - Factors](https://r4ds.had.co.nz/factors.html)
+`r emo::ji("book")` [Read IMS:: Chapter 2 - Study design](https://openintro-ims.netlify.app/data-design.html)
 
-`r emo::ji("book")` [Read R4DS:: Chapter 11 - Data Import](https://r4ds.had.co.nz/data-import.html)
-
-`r emo::ji("book")` [Read R4DS:: 16.1-16.3 - Dates & Times](https://r4ds.had.co.nz/dates-and-times.html)
+`r emo::ji("book")` [Read R4DS:: Chapter 7 - Exploratory Data Analysis](https://r4ds.had.co.nz/exploratory-data-analysis.html)
 
 
+## For NEXT Tuesday, October 3
 
+By class-time on Tuesday, you should
 
-
-
++ Complete and submit Exam 1. Turn in your .html files to Canvas

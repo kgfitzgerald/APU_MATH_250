@@ -11,53 +11,16 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Thursday Announcements
+### Announcements
 
--   Due tonight: Stats experience points + Lab 09
-
-    -   If you submitted Lab 09 prior to class-time on Tuesday, please re-submit (sorry!)
-
--   Will accept extra credit Stats Experience points through Sat 12/10 (same day written report is due)
-
--   End of Course reflection (1/2 page to 1 page) - due Thurs 12/15 (same day as presentations)
-
--   Fill out IDEA Course Evaluation. \>80% participation will earn everyone 3 extra credit points on final project - due Fri 12/9 (APU deadline)
 
 ### Thursday - Shiny Part I
 
 -   For AE-11, you will complete Lessons 03 - 05 from the [Shiny Getting Started Tutorials](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
 
--   These should be completed in your Shiny project in the `MATH_250_individual` workspace
-
 -   You will turn in a .zip folder that includes the `lesson-03` and `census-app` folders as well as the .Rproj file from your Shiny project
 
-### Tuesday Announcements
 
-End-of-semester schedule:
-
-+---------+-------------------------+----------------------+----------------------------------+
-|         | Tuesday                 | Thursday             | What's due                       |
-+=========+=========================+======================+==================================+
-| Week 13 | Rough draft peer review | Shiny part I         | Shiny prep (Th)                  |
-|         |                         |                      |                                  |
-|         |                         |                      | Lab 09 (Th)                      |
-|         |                         |                      |                                  |
-|         |                         |                      | SE 02 (Th)                       |
-|         |                         |                      |                                  |
-|         |                         |                      | AE-11 (Sat)                      |
-+---------+-------------------------+----------------------+----------------------------------+
-| Week 14 | Shiny part II           | Project work session | Shiny prep II (Tue)              |
-|         |                         |                      |                                  |
-|         |                         |                      | Formal peer review (Tue)         |
-|         |                         |                      |                                  |
-|         |                         |                      | AE-12 (Th)                       |
-|         |                         |                      |                                  |
-|         |                         |                      | Final report (Sat)               |
-+---------+-------------------------+----------------------+----------------------------------+
-| Week 15 |                         | Final presentations  | End-of-course reflection (Thurs) |
-|         |                         |                      |                                  |
-|         |                         | (on-campus)          |                                  |
-+---------+-------------------------+----------------------+----------------------------------+
 
 ### Questions?
 
@@ -81,21 +44,21 @@ We will do the following twice:
 
 -   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group)
 
-+-----------+--------------------+
-|           | Group pairings     |
-+===========+====================+
-| Session 1 | Group 1 & Group 3  |
-|           |                    |
-|           | Group 4 & Group 6  |
-|           |                    |
-|           | Group 2 & Dr. Fitz |
-+-----------+--------------------+
-| Session 2 | Group 1 & Group 6  |
-|           |                    |
-|           | Group 2 & Group 4  |
-|           |                    |
-|           | Group 3 & Dr. Fitz |
-+-----------+--------------------+
+<!-- +-------------+--------------------+ -->
+<!-- |             | Group pairings     | -->
+<!-- +=============+====================+ -->
+<!-- | Session 1   | Group 1 & Group 3  | -->
+<!-- |             |                    | -->
+<!-- |             | Group 4 & Group 6  | -->
+<!-- |             |                    | -->
+<!-- |             | Group 2 & Dr. Fitz | -->
+<!-- +-------------+--------------------+ -->
+<!-- | Session 2   | Group 1 & Group 6  | -->
+<!-- |             |                    | -->
+<!-- |             | Group 2 & Group 4  | -->
+<!-- |             |                    | -->
+<!-- |             | Group 3 & Dr. Fitz | -->
+<!-- +-------------+--------------------+ -->
 
 ### General Tips
 

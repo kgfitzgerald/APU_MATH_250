@@ -37,14 +37,8 @@ In this lab you will...
 
 # Getting started 
 
-This lab will be completed collaboratively in your randomly assigned Labs 05 - 06 groups (see Canvas). 
-
-+ Login to your RStudio Cloud account
-+ Navigate to the `MATH_250 Labs 05 - 06 G#` workspace 
-+ Launch the MATH_250 Labs 05 - 06` project
-+ Open `lab-06.qmd`
-
-Remember that you are editing simultaneously and any changes you make in your files affect your whole group. Make sure to take turns so that each group member is "in the driver seat" for at least one exercise.
++ You will be working in your randomly assigned Lab 05 - 06 Groups. See Canvas.
++ Open our class [GitHub repo](https://github.com/kgfitzgerald/APU_MATH_250/tree/main/assignment_templates) and download the .qmd file for this lab. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to get started on a lab. 
 
 All plots should follow the best visualization practices discussed in lecture, including an informative title, labeled axes, and careful consideration ofaesthetic choices.
 
@@ -120,7 +114,7 @@ table %>%
 
 # Submission
 
-Before submitting, open up your .html in a full window and inspect the following:
+Before submitting your assignment on Canvas, Render one last time, then open up your .html in a full window and inspect the following:
 
 + Check your code for neatness - add spaces and line breaks where appropriate to improve readability
 
@@ -130,13 +124,13 @@ Before submitting, open up your .html in a full window and inspect the following
 
 + Check that you've interpreted output as appropriate
 
-+ Make sure extraneous warnings and messages are suppressed (e.g. set warning = FALSE, message = FALSE)
++ Make sure extraneous warnings and messages are suppressed (e.g. set `#| warning: false`, `#| message: false`)
 
 + Check that Exercises are clearly labeled and your text responses are visually distinguished
 
 + Check for overall neatness & organization of the report (e.g. headers, subheaders, use of bullets, font changes)
 
-To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 06 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. Recall only one group member needs to submit the assignment.
+To submit, Render one last time and then upload your .html document to the relevant assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to submit your assignment. 
 
 # Grading (50pts)
 
@@ -153,9 +147,10 @@ To submit, you need to export your .html document from RStudio Cloud and then up
 | Ex 9      | 4   |
 | Ex 10  | 4 |
 | Ex 11  | 6 |
-| Workflow & formatting   | 6      |
-| Ex 12 (BONUS) | 2 |
-| Ex 13 (BONUS) | 2 |
+| Reflection prompts    | 5     |
+| Workflow & formatting | 1     |
+| Ex 12 (BONUS) | 1 |
+| Ex 13 (BONUS) | 1 |
 
 
 **Grading notes**:

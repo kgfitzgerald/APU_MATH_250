@@ -159,6 +159,6 @@ iris%>%
 ### Application Exercise
 
 -   The remainder of class will be spent on AE-04.
--   You can access it from your RStudio Cloud account.
--   It is due by class-time on Thursday.
+- You can access it from GitHub. 
+- It is due at the end of class today. 
 -   To turn it in, you should upload your .html file to Canvas.

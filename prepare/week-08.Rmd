@@ -12,23 +12,27 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For October 18
+## For October 17
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [Fitting and interpreting models](https://youtu.be/ocrpZMWMBwo)
+`r emo::ji("movie_camera")` Watch [The language of models](https://youtu.be/bQrR8HFKKhI)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/24-fitting-interpreting-models.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/22-language-of-models.html)
 
-`r emo::ji("movie_camera")` Watch [Modeling nonlinear relationships](https://youtu.be/ODDMLnhbNE8)
+`r emo::ji("movie_camera")` Watch [Fitting and interpreting models](https://youtu.be/QOfbzyANOoU)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/25-modeling-nonlinear-relationships.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/23-fitting-interpreting-models.html)
 
-`r emo::ji("movie_camera")` Watch [Models with multiple predictors](https://youtu.be/7gHUTqGqrhs)
+`r emo::ji("movie_camera")` Watch [Model assumptions & diagnostics](https://youtu.be/hQ1vgCCMLH8)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/26-model-multiple-predictors.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/24-model-assumptions-diagnostics.html)
+
+`r emo::ji("movie_camera")` Watch [Models with multiple predictors](https://youtu.be/06ncimugf_w)
+
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/25-multiple-predictors-model-selection.html)
   
 `r emo::ji("memo")` Complete Prep Quiz 08 on Canvas
 

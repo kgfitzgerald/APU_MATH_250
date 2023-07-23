@@ -13,11 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
-## For Tuesday, November 29
+## For Tuesday, November 28
 
 Read TWO assigned rough drafts. See [Canvas](https://canvas.apu.edu/courses/42480/assignments/757114) for details.
 
-## For Thursday, December 1
+## For Thursday, November 30
 
 ### Required
 

@@ -1,6 +1,6 @@
 ---
 title: "Week 11"
-subtitle: "Uncertainty Quantification & Bootstrapping"
+subtitle: "Inference for Numerical Data"
 output: 
   prettydoc::html_pretty:
     theme: hpstr
@@ -11,19 +11,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Thursday announcements
+### Announcements
 
-+ HW 05 due next Thursday
-+ Project Rough Draft due next Thursday
-+ Last prep quiz due Tuesday - just a space to submit Qs about the lectures
-+ Today: project work session
-
-### Student Qs from Tuesday
-
-+ Why do we sample with replacement when bootstrapping?
-+ When do we know if we should use 90, 95, or 99% CI? 
-+ Since bootstrapping and CLT yield similar results, is one generally better than the other or is it up to preference?
-+ Can I do 5 stats experience points if I didn't complete any last time?
 
 
 
@@ -41,88 +30,14 @@ knitr::opts_chunk$set(echo = TRUE)
 - May want to create a new file called `analysis.qmd` for all the analyses you're going to explore that may or may not end up in your written report. 
 - Provide a codebook that describes what each variable in your dataset is
 
-### Tuesday Announcements
-
-- Project Cleaning/EDA grade, feedback available in `Dr_Fitz_feedback` file in your group RStudioCloud workspace.
-    + Read feedback prior to Thursday
-    + Will meet with each group on Thursday to discuss feedback and answer questions
-- Lab 08 due tonight
-- HW 05 (last one!) posted, due next Thursday
-- What's left, by the numbers:
-    + 3 Application Exercises
-    + 2 Prep Quizzes
-    + 1 HW 
-    + 1 Lab 
-    + 2-3 Stats Experience points
-    + Project Rough Draft
-    + Project Final Draft
-    + Project Presentation
-    
-+------------------+-------------------------------+----------------------+-----------------------------+
-| Week/Dates       | Tue (in-class)                | Thur (in-class)      | Other                       |
-+==================+===============================+======================+=============================+
-| Week 11          | AE-09                         | Project work session | Lab 08 due (Tue)            |
-|                  |                               |                      | HW 05 assigned              |
-| (Nov 7 - Nov 12) |                               |                      |                             |
-+------------------+-------------------------------+----------------------+-----------------------------+
-| Week 12          | AE-10                         |  Lab 09              | Rough draft due (Thurs)     |
-|                  |                               |                      | HW 05 due                   |
-| (Nov 14 - 19)    |                               |                      |                             |
-+------------------+-------------------------------+----------------------+-----------------------------+
-| THANKSGIVING     |                               |                      |                             |
-|                  |                               |                      |                             |
-| (Nov 21 - 26)    |                               |                      |                             |
-+------------------+-------------------------------+----------------------+-----------------------------+
-| Week 13          | Special Topics: Shiny Apps    | Project Peer Review  | SE points due (Thurs)       |
-|                  |                               |                      |                             |
-| (Nov 28 - Dec 3) | (AE-11)                       |                      |                             |
-+------------------+-------------------------------+----------------------+-----------------------------+
-| Week 14          | Special Topics: Shiny Apps    | Project Work Session |                             |
-|                  |                               |                      |                             |
-| (Dec 5 - 10)     | (AE-12)                       |                      |                             |
-+------------------+-------------------------------+----------------------+-----------------------------+
-| Week 15          |                               | Presentations        |                             |
-|                  |                               |                      |                             |
-| (Dec 12 - 17)    |                               | (4:05 - 5:55pm)      |                             |
-+------------------+-------------------------------+----------------------+-----------------------------+
     
 ### Questions?
 
-+ When can we do a simple model fit and when do we have to make a recipe and workflow first?
-    + best practice to always do the recipe and workflow, because it's best practice to always do the model validation process
-    + didn't do those steps when you were learning
-+ If after we divide our training data in folds and then test our model on the testing data and find out that the model is a poor predictor, what do we do? Do we just fit another model? But I thought we were only supposed to look at our testing data once, though.
-    + Cross validation divides training data into folds and then evaluates the model on each fold *of the training data*. 
-    + If you find out through the cross validation process that the model is poor, don't fit it on your testing data. Try to come up with a better model. 
-
-###  Today: AE-09
-  + Instructions [here](https://kgfitzgerald.github.io/APU_MATH_250/ae/ae-09.html)
-  + Template in Week 11 project in RSC
-  + More pedagogical in nature than some weeks
-
-### Project comments (for Thursday)
-
-- Make sure to save your clean data as a .RDS file (e.g. using `saveRDS()`), and place it in your `data` folder. 
-- Check out [from Data to Viz](https://www.data-to-viz.com) website for suggestions on creative visualizations to use (includes R code!)
-- Don't need to run every imaginable analysis on your data, but do want you to demonstrate a thorough investigation of your dataset. 
-    + What insight can you glean from these data? 
-    + What (interesting) questions can be answered from these data?
-    + Should do more exploring than what ends up in your final report 
-    + Explore to death - become an expert on these data! 
-- Comment your code and/or provide narrative
-- Use good coding practices (e.g. use of white space, line breaks)
-- May want to create a new file called `analysis.qmd` for all the analyses you're going to explore that may or may not end up in your written report. 
-- Provide a codebook that describes what each variable in your dataset is
-
-
-
-
-### Questions?
 
 
 ### Application Exercise
 
 - The remainder of class will be spent on AE-09. 
-- You can access it from your RStudio Cloud account. 
-- It is due by class-time on Thursday. 
+- You can access it from GitHub. 
+- It is due at the end of class today. 
 - To turn it in, you should upload your .html file to Canvas.

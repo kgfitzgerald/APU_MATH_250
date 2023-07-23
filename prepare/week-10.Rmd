@@ -1,6 +1,6 @@
 ---
 title: "Prepare: Week 10"
-subtitle: "Feature Engineering & Cross Validation"
+subtitle: "Inference for Categorical Data"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -12,28 +12,25 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For November 1
+## For October 31
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [Feature engineering](https://www.youtube.com/watch?v=EEQ06cOtZ60)
+`r emo::ji("movie_camera")` Watch []()
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/30-feature-engineering.html)
+- [Slides]()
 
-`r emo::ji("movie_camera")` Watch [Cross validation](https://www.youtube.com/watch?v=GhG1UpvJtW0)
+`r emo::ji("memo")` 
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/31-cross-validation.html)
-
-`r emo::ji("memo")` There is NO prep quiz this week.
+`r emo::ji("memo")` Complete Prep Quiz 10 on Canvas
 
 
 ### Optional 
 
-`r emo::ji("book")` Read [tidymodels:: Preprocess your data with recipes](https://www.tidymodels.org/start/recipes/)
+`r emo::ji("book")` Read []()
 
-`r emo::ji("book")` Read [tidymodels:: Evaluate your model with re-sampling](https://www.tidymodels.org/start/resampling/) 
 
 
 

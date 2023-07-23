@@ -12,28 +12,26 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For October 25
+## For October 24
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [More models with multiple predictors](https://youtu.be/6ndAIYUk6UU)
+`r emo::ji("movie_camera")` Watch [Quantifying uncertainty](https://youtu.be/ZUBq4cMlBjk)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/27-more-model-multiple-predictors.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/26-quantify-uncertainty.html)
 
-`r emo::ji("movie_camera")` Watch [Logistic regression](https://youtu.be/JBOfSS8gHVM)
+`r emo::ji("movie_camera")` Watch [Hypothesis Testing](https://youtu.be/SSEhrGK9-8k)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/28-logistic-reg.html)
-
-`r emo::ji("movie_camera")` Watch [Prediction overfitting](https://youtu.be/QQXT0sBvrqE)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/29-prediction-overfitting.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/27-hypothesis-testing.html)
 
 `r emo::ji("memo")` Complete Prep Quiz 09 on Canvas
 
 ### Optional 
 
-`r emo::ji("book")` Read [IMS Chapter 9 - Logistic regression](https://openintro-ims.netlify.app/model-logistic.html) 
+`r emo::ji("book")` Read [NUMD: Chapter 10 - Confidence Intervals](https://nustat.github.io/intro-stat-ds/10-CIs.html)
 
-`r emo::ji("book")` Read [tidymodels:: Build a model](https://www.tidymodels.org/start/models/)
+`r emo::ji("book")` Read [NUMD: Chapter 11 - P-values](https://nustat.github.io/intro-stat-ds/11-pvalues.html)
+
+`r emo::ji("book")` Read [NUMD: Chapter 12 - Hypothesis Tests](https://nustat.github.io/intro-stat-ds/12-hypothesis-tests.html)

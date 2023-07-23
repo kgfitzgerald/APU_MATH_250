@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For September 1
+## For Thursday, August 31
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 `r emo::ji("memo")` Complete Prep Quiz 01 on Canvas
 
-`r emo::ji("computer")` Complete AE 01a on RStudio Cloud
+`r emo::ji("computer")` Complete AE 01a in RStudio, submit .html on Canvas
 
 ### Optional 
 

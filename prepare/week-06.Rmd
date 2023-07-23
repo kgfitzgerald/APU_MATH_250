@@ -1,6 +1,6 @@
 ---
-title: "Prepare: Week 06"
-subtitle: "Scientific Practice & Data Science Workflow"
+title: "Prepare: Week 05"
+subtitle: "Data Importing & Cleaning"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -11,47 +11,37 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Note, due to the Exam, this week's schedule is slightly different**
 
-## For Tuesday, October 4
+## For October 3
 
-By class-time on Tuesday, you should
+**Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
-+ Sign up for a project group on Canvas. 
+### Required 
 
-## For Thursday, October 6
+`r emo::ji("movie_camera")` Watch [Data classes](https://youtu.be/oQWX5btmtn0)
 
-By class-time on Thursday, you should
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/13-data-classes.html)
 
-+ Complete and submit Exam 1. Turn in your .html files to Canvas
+`r emo::ji("movie_camera")` Watch [Importing data](https://youtu.be/3b9Rb6sWiAk)
 
-## For Saturday, October 8
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/14-data-import.html)
 
-+ Complete the following prep exercises:
+`r emo::ji("movie_camera")` Watch [Recoding data](https://youtu.be/GeFKGqPqEwk)
 
-`r emo::ji("movie_camera")` Watch [Scientific studies and confounding](https://youtu.be/4_tellSmARQ)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/17-studies-confounding.html)
-
-`r emo::ji("movie_camera")` Watch [Simpson's paradox](https://youtu.be/bgIn65yX66g)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/18-simpsons-paradox.html)
-
-`r emo::ji("movie_camera")` Watch [The language of models](https://youtu.be/bQrR8HFKKhI)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/23-language-of-models.html)
-
-<!-- `r emo::ji("movie_camera")` Watch [Doing data science](https://youtu.be/b9lSW0kyqBg) -->
-
-<!-- - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/19-doing-data-science.html) -->
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/15-data-recode.html)
 
 `r emo::ji("memo")` Complete Prep Quiz 06 on Canvas
 
-### Optional
+### Optional 
 
-`r emo::ji("book")` [Read IMS:: Chapter 2 - Study design](https://openintro-ims.netlify.app/data-design.html)
+`r emo::ji("book")` [Read R4DS:: Chapter 15 - Factors](https://r4ds.had.co.nz/factors.html)
 
-`r emo::ji("book")` [Read R4DS:: Chapter 7 - Exploratory Data Analysis](https://r4ds.had.co.nz/exploratory-data-analysis.html)
+`r emo::ji("book")` [Read R4DS:: Chapter 11 - Data Import](https://r4ds.had.co.nz/data-import.html)
+
+`r emo::ji("book")` [Read R4DS:: 16.1-16.3 - Dates & Times](https://r4ds.had.co.nz/dates-and-times.html)
+
+
+
 
 
 

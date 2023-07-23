@@ -139,23 +139,18 @@ class: middle, center
 
 ## Activities: Prepare, Practice, Perform
 
-- **Prepare**: introduce new content and prepare for class activities
-  - Videos & (optional) readings before class
-  - Low-stakes prep quizzes on basic definitions & concepts from videos (3 attempts, keep average)
-  - See *Prepare* column on course schedule 
+- **Prepare**: lecture videos + prep quizzes (due Tuesday class time)
 
 --
 
-- **Practice**: practice applying statistical concepts and computing
-  - Application Exercises (AE) during Tuesday class, ungraded
-
+- **Practice**: Application Exercises (AE) in class on Tuesdays (exit ticket)
 --
 
 - **Perform**: Put together what you've learned to analyze real-world data
-  -  Weekly team lab assignments
-  -  Periodic individual homework assignments
+  -  Weekly lab assignments (Thursdays in class, due Tuesday class time)
+  -  Periodic homework assignments (Thursday - Thursday midnight)
   -  One take-home exam
-  -  Final team project presented during the final exam period.
+  -  Final team project presented during the final exam period
 
 ---
 
@@ -177,10 +172,10 @@ class: middle, center
 
 --
 
-- Attend Office Hours (aka Student Drop-in Hours)
-  - Tuesdays 10am-12pm
-  - Wednesdays 1-2:20pm
-  - By appointment
+- Attend (drop-in) Student Hours
+  - Mondays 1 - 2:15pm (Segerstrom 112 + Zoom)
+  - Tuesdays 2:30 - 4pm (Segerstrom 112 + Zoom)
+  - Thursdays 10 - 11:30am (Community garden)
 
 --
 
@@ -356,9 +351,9 @@ knitr::include_graphics("img/unvotes/unvotes-14.jpeg")
 
 # Your turn!
 
-- Download R & RStudio
+- Complete 5 steps on Canvas page "R & RStudio Getting Started"
 
-- Application Exercise (AE) 01a (under Week 01)
+- Application Exercise (AE) 01a 
 
 ---
 

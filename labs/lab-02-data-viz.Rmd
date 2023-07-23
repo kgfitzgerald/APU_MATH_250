@@ -24,15 +24,8 @@ In this lab, you will...
 
 ## Getting started 
 
-In this lab, you will code collaboratively in your randomly assigned Labs 01 - 02 groups (see Canvas) and will submit a single lab report for your team. The person randomly assigned to be the Group Leader in Canvas is responsible for submitting the assignment. 
-
-+ In Canvas, navigate to ["RStudio Cloud Links"](https://canvas.apu.edu/courses/42480/pages/rstudio-cloud-links) and click the link to join your group specific `MATH_250 Lab 02 G#` workspace. 
-+ In the workspace, click on `MATH_250_Lab_02` to launch the project
-+ Open `lab-02.qmd` by clicking on the file name in the Files pane (bottom right quadrant)
-
-Each group member has `moderator` access to the workspace, which enables you to collaboratively edit documents which reflect others' changes simultaneously (like Google Docs). This means any changes you make to your files affect the whole team! 
-
-Group members should take turns "at the wheel" throughout the lab. You don't have to switch "drivers" for every exercise; find the rhythm and workflow that works best for your group, but each person must take the lead on at least one exercise.  
++ Open our class [GitHub repo](https://github.com/kgfitzgerald/APU_MATH_250/tree/main/assignment_templates) and download the .qmd file for this lab. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to get started on a lab. 
++ You will be working in your randomly assigned Lab 01 - 02 Groups. See Canvas.
 
 # Packages
 
@@ -133,7 +126,23 @@ anes2 <- anes %>%
 
 # Submission
 
-To submit, you need to export your .html document from RStudio Cloud and then upload it to the Lab 02 assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to export and submit your assignment. Recall only one group member needs to submit the assignment.
+Before submitting your assignment on Canvas, Render one last time, then open up your .html in a full window and inspect the following:
+
++ Check your code for neatness - add spaces and line breaks where appropriate to improve readability
+
++ Check any visualizations for informative and clean labels and titles
+
++ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
+
++ Check that you've interpreted output as appropriate
+
++ Make sure extraneous warnings and messages are suppressed (e.g. set `#| warning: false`, `#| message: false`)
+
++ Check that Exercises are clearly labeled and your text responses are visually distinguished
+
++ Check for overall neatness & organization of the report (e.g. headers, subheaders, use of bullets, font changes)
+
+To submit, Render one last time and then upload your .html document to the relevant assignment on Canvas. Refer back to [Lab 01](https://kgfitzgerald.github.io/APU_MATH_250/labs/lab-01-hello-r.html) for detailed instructions on how to submit your assignment. 
 
 # Grading (50 pts)
 
@@ -153,7 +162,8 @@ To submit, you need to export your .html document from RStudio Cloud and then up
 | Ex 10      | 4    |
 | Ex 11     | 4    |
 | Ex 12     | 4    |
-| Workflow & formatting   | 6      |
+| Reflection prompts    | 5     |
+| Workflow & formatting | 1     |
 
 **Grading notes**:
 

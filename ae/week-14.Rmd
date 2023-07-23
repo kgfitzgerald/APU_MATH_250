@@ -13,64 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-+ Formal peer feedback due tonight, 11:59pm
-+ AE-11 due Thursday, 4:20pm
-+ Final project report & repo due Saturday, 11:59pm
-+ [End of Course reflection](https://canvas.apu.edu/courses/42480/assignments/761367) (1/2 page to 1 page) - due Thurs 12/15 (same day as presentations)
-+ Fill out IDEA Course Evaluation. 
-    + \>80% participation will earn everyone 3 extra credit points on final project - due Fri 12/9 (APU deadline)
-    + Currently at 44%
 
-+ Follow the new MPS Instagram account :) @apu_mps
-    + Take pics of any MPS-related fun :) and send them to me and/or Kate Tickle
-    + Send us any announcements you want to see posted
 
 ### Questions?
 
-+ Are Shiny apps the best way to create visuals and how does it compare to other platforms like Latex?
-+ If you choose to not accept the null hypothesis (there was nothing going on) in some hypothesis test, then you accept the alternative hypothesis (that there is something going on). If you have already determined that there is something going on and want to take it further and draw a more specific conclusion (like determine whether a statistic is less than or greater than some other statistic), how do we do that?
-+ What are all of the kinds of statistic options to use when exploring a hypothesis test and when should we use each? (i.e., when is it better to use the difference of means or difference of proportions, etc.)?
-+ How do we change the code for the server to use ggplot as opposed to its default? Do I just run library(ggplot) and do what we've been doing all semester, or is there more?
 
-```{r, eval = FALSE}
-#original code
-output$distPlot <- renderPlot({
+### Shiny Part II 
 
-    x    <- faithful$waiting
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
-    
-    hist(x, breaks = bins, col = "#007bc2", border = "white",
-         xlab = "Waiting time to next eruption (in mins)",
-         main = "Histogram of waiting times")
-    
-  })
-
-#ggplot code
-output$distPlot <- renderPlot({
-
-    ggplot(faithful, aes(x = waiting)) +
-      geom_histogram(bins = input$bins,
-                     fill = "#007bc2", color = "white") +
-      labs(x = "Waiting time to next eruption (in mins)",
-         title = "Histogram of waiting times")
-    
-  })
-```
-
-
-+ Thanks for sharing great stats experiences! Secret way for me to find new resources :)
-
-### Tuesday - Shiny Part I 
-
-+ For AE-11, you will complete Lessons 03 - 05 from the [Shiny Getting Started Tutorials](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
-
-+ These should be completed in your Shiny project in the MATH_250_individual workspace
-
-+ You will turn in a .zip folder that includes the lesson-03 and census-app folders as well as the .Rproj file from your Shiny project
-
-### Shiny Part II - Extra Credit
-
-+ For AE-12 (Extra Credit), you will design and implement Shiny app to explore your project data
++ For AE-12, you will design and implement a Shiny app to explore your project data
 
 + These should be completed in your shared Group Project workspace 
 

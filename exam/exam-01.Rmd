@@ -36,9 +36,7 @@ This Exam will assess the following skills:
 
 # Getting started
 
-+ Login to your RStudio Cloud account
-+ Navigate to the `MATH_250_individual` workspace 
-+ Launch the `Exam1` project
++ Download `Exam1.qmd` from GitHub
 + Open `Exam1.qmd`
 
 # Packages
