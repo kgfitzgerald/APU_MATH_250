@@ -308,7 +308,6 @@ ggplot(quartet, aes(x = x, y = y)) +
 <!--     ) -->
 <!-- ``` -->
 
-<!-- --- -->
 
 ## Facebook visits
 
