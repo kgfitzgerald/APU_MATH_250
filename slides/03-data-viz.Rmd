@@ -112,7 +112,7 @@ What other variables would help us understand data points that don't follow the 
 Who is the not so tall but really chubby character?
 ]
 
-```{r fig.width = 8, warning = FALSE, echo=FALSE, out.width = "50%"}
+```{r fig.width = 8, warning=FALSE, echo=FALSE, out.width = "50%"}
 ggplot(data = starwars, mapping = aes(x = height, y = mass)) +
   geom_point() +
   labs(title = "Mass vs. height of Starwars characters",
@@ -292,22 +292,6 @@ ggplot(quartet, aes(x = x, y = y)) +
 ```
 
 ---
-
-<!-- ## Age at first kiss -->
-
-<!-- .question[  -->
-<!-- Do you see anything out of the ordinary? -->
-<!-- ] -->
-
-<!-- ```{r echo = FALSE, warning = FALSE} -->
-<!-- ggplot(student_survey, aes(x = first_kiss)) + -->
-<!--   geom_histogram(binwidth = 1) + -->
-<!--   labs( -->
-<!--     title = "How old were you when you had your first kiss?",  -->
-<!--     x = "Age (years)", y = NULL -->
-<!--     ) -->
-<!-- ``` -->
-
 
 ## Facebook visits
 
