@@ -1,7 +1,7 @@
 ---
-title: "Lab 07 - Grading the professor, Pt. 2"
+title: "Lab 06 - Grading the professor, Pt. 2"
 subtitle: "Modelling with multiple predictors"
-date: "due Thursday, October 27 at 11:59pm"
+date: "due Tuesday, October 24 at 4:20pm"
 output: 
   tufte::tufte_html:
     css: "lab.css"

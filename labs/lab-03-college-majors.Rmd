@@ -1,6 +1,6 @@
 ---
 title: "Lab 03 - What should I major in?"
-subtitle: "due Tuesday, September 20 at 11:59p"
+subtitle: "due Tuesday, September 19 at 4:20pm"
 output: 
   tufte::tufte_html:
     css: "lab.css"
