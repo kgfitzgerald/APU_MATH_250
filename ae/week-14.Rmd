@@ -11,6 +11,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statisticians of the Week
+
+[Tommy Wright](https://hardin47.github.io/CURV/scholars/wright.html)
+
+[Robert Santos](https://hardin47.github.io/CURV/scholars/santos.html)
+
+
 ### Announcements
 
 

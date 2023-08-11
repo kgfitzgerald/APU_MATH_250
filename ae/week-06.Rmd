@@ -11,6 +11,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statistician(s) of the Week
+
+[Sherri Rose](http://drsherrirose.org/biocv)
+
+[Liz Stuart](https://publichealth.jhu.edu/faculty/1792/elizabeth-a-stuart)
+
+
 ### Announcements
 
 

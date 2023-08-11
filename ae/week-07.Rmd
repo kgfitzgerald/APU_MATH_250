@@ -11,6 +11,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statistician(s) of the Week
+
+[Erin Hartman](https://erinhartman.com)
+
+[Wendy Cho](https://pol.illinois.edu/directory/profile/wendycho)
+
 ### Announcements
 
 

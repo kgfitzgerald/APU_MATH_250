@@ -11,6 +11,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statistician of the Week
+
+[Kristian Lum](https://hrdag.org/people/kristian-lum-phd/)
+
+[Kira Radinsky](https://en.wikipedia.org/wiki/Kira_Radinsky)
+
 ### Announcements
 
 

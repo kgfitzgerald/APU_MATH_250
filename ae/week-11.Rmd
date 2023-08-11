@@ -11,6 +11,15 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statisticians of the Week
+
+[Beth Tipton](https://www.ipr.northwestern.edu/news/2019/faculty-spotlight-beth-tipton.html)
+
+[Larry Hedges](https://www.ipr.northwestern.edu/who-we-are/faculty-experts/hedges.html)
+
+
+
+
 ### Announcements
 
 

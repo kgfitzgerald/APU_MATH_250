@@ -11,6 +11,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statistician of the Week
+
+[Maria Cuellar](https://crim.sas.upenn.edu/people/maria-cuellar)
+
+[Abby Smith](https://abbylsmith.me)
+
 ### Announcements
 
 

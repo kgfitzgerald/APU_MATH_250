@@ -11,6 +11,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statisticians of the Week
+
+[Tyler Vanderwheele](https://www.hsph.harvard.edu/tyler-vanderweele/)
+
+[Tyler McCormick](https://thmccormick.github.io)
+
 ### Announcements
 
 

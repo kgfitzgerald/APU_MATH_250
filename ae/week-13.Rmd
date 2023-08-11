@@ -11,6 +11,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statistician of the Week
+
+[Cassie Kozyrkov](https://en.wikipedia.org/wiki/Cassie_Kozyrkov)
+
 ### Announcements
 
 

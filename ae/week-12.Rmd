@@ -11,6 +11,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+### Statistician(s) of the Week
+
+[Jo Hardin](https://hardin47.netlify.app/about/)
+
+[Mine Cetinkaya-Rundel](https://mine-cr.com)
+
 ### Announcements
 
 

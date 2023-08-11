@@ -16,6 +16,12 @@ library(tidyverse)
 ```
 
 
+### Statistician(s) of the Week
+
+[Maricela Cruz](https://hardin47.github.io/CURV/scholars/cruz.html)
+
+[Alejandra Castillo](https://hardin47.github.io/CURV/scholars/castillo.html)
+
 ### Announcements
 
 

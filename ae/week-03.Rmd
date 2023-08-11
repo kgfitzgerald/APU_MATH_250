@@ -15,15 +15,22 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
+### Statistician(s) of the Week
+
+[Edna Paisano](https://hardin47.github.io/CURV/scholars/paisano.html)
+
+[Desi Small-Rodriguez](https://hardin47.github.io/CURV/scholars/small-rodriguez.html)
+
+
 
 ### Announcements
-
 
 ### Questions?
 
 *What's the difference between the `fill` and `color` aesthetics in `ggplot`?*
 
-+ For histograms / things with bars, `color` = outside, `fill` = inside.
+-   For histograms / things with bars, `color` = outside, `fill` = inside.
+
 ```{r}
 ggplot(midwest, aes(x = popdensity)) +
   geom_histogram(bins = 10, color = "blue")
@@ -32,7 +39,8 @@ ggplot(midwest, aes(x = popdensity)) +
   geom_histogram(bins = 10, color = "blue", fill = "red")
 ```
 
-+ For points, use `color`
+-   For points, use `color`
+
 ```{r}
 ggplot(midwest, aes(x = area, y = poptotal, 
                     color = state)) +
@@ -41,9 +49,9 @@ ggplot(midwest, aes(x = area, y = poptotal,
 
 Note how the above examples set `color` inside or outside `aes()` in the global `ggplot()` layer.
 
-+ Put inside `aes()` if you want to map a variable in the data to the color/fill
-+ Put outside `aes()`, usually in the `geom_` layer, if you want to set `color/fill` to a specific color for the whole plot
-+ Later layers will override earlier layers
+-   Put inside `aes()` if you want to map a variable in the data to the color/fill
+-   Put outside `aes()`, usually in the `geom_` layer, if you want to set `color/fill` to a specific color for the whole plot
+-   Later layers will override earlier layers
 
 ```{r}
 ggplot(midwest, aes(x = area, y = poptotal, 
@@ -51,11 +59,9 @@ ggplot(midwest, aes(x = area, y = poptotal,
   geom_point(color = "pink")
 ```
 
-
-
 ### Application Exercise
 
-- The remainder of class will be spent on AE-03. 
-- You can access it from GitHub. 
-- It is due at the end of class today. 
-- To turn it in, you should upload your .html file to Canvas.
+-   The remainder of class will be spent on AE-03.
+-   You can access it from GitHub.
+-   It is due at the end of class today.
+-   To turn it in, you should upload your .html file to Canvas.

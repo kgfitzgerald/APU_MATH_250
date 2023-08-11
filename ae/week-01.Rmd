@@ -11,6 +11,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### Statistician of the Week 
+
+[David Blackwell](https://hardin47.github.io/CURV/scholars/blackwell.html)
+
+[C.R. Rao](https://en.wikipedia.org/wiki/C._R._Rao)
+
 ### Announcements
 
 

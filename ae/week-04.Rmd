@@ -11,27 +11,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Thursday Announcements
+### Data Scientist of the Week
 
--   Due TONIGHT, 11:59pm
-    -   First 2 [Statistics Experience points](https://kgfitzgerald.github.io/APU_MATH_250/hw/se-01.html)
-    -   HW 01
--   NEXT Thursday:
-    -   HW 02 due
-    -   Exam 1 made available
+[Mike Dairyko](https://hardin47.github.io/CURV/scholars/dairyko.html)
 
-### ![](img/SRS.jpg)
+### Announcements
 
-### Tuesday Announcements
-
--   AE 04 (in-class today) due Thursday by class time (4:20pm)
--   DUE Thursday:
-    -   First 2 [Statistics Experience points](https://kgfitzgerald.github.io/APU_MATH_250/hw/se-01.html)
-    -   HW 01
--   Looking ahead:
-    -   Due NEXT Thursday: HW 02
-    -   Exam 1 (only exam) assigned next Thursday, due one week later
-    -   By October 4 (2 weeks from now), choose your groups for the final project. Do NOT have to have project idea by then.
 
 ### Tidyverse style guidelines
 
