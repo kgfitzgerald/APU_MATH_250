@@ -1,6 +1,6 @@
 ---
 title: "Prepare: Week 14"
-subtitle: "Special Topics: Shiny Part II"
+subtitle: "Special Topics: Shiny Part II, Communicating Results Part II"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -18,10 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required
 
-- Browse the [Shiny Gallery](https://shiny.rstudio.com/gallery/) and choose 3 apps to explore
-- For each app, post on [Canvas](https://canvas.apu.edu/courses/42480/discussion_topics/499514):
-    1. Name of app w/ hyperlink
-    2. A 1-2 sentence summary of what the app does
+
 
 
 

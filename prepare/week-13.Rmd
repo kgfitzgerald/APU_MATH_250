@@ -15,17 +15,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## For Tuesday, November 28
 
-Read TWO assigned rough drafts. See [Canvas](https://canvas.apu.edu/courses/42480/assignments/757114) for details.
-
-## For Thursday, November 30
-
 ### Required
 
 `r emo::ji("movie_camera")` Watch [Interactive web apps](https://youtu.be/clz1QGGu4oY)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/36-shiny.html)
 
-`r emo::ji("memo")` Complete Prep Activities #1 & #2 from slides (nothing to turn in) & submit questions under Prep Quiz 13 in Canvas
+`r emo::ji("memo")` Complete Prep Activities #1 & #2 from slides (nothing to turn in)
+
+`r emo::ji("memo")` Complete Prep Quiz 13 on Campuswire, which asks you to browse the [Shiny Gallery](https://shiny.rstudio.com/gallery/) and choose 3 apps to explore
+  
+  - For each app, post on [Campuswire](https://campuswire.com/c/G7C5D99E0/assignments/3):
+    1. Name of app w/ hyperlink
+    2. A 1-2 sentence summary of what the app does
 
 
 ## Optional 

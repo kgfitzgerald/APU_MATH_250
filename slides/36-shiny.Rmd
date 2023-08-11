@@ -57,8 +57,9 @@ knitr::include_graphics("img/shiny.png")
 
 # Prep Activity #1
 
-1. Launch the "Shiny" project in the `MATH_250_individual` workspace
-2. Open the `app.R` file in the `hello_shiny` folder and run the App
+1. Create a folder inside your MATH_250 folder called `hello_shiny`
+2. Copy the `app.R` file in the `hello_shiny` folder on GitHub 
+3. Open the `app.R` file and run the App
 3. Change the title from "Hello Shiny!" to "Hello World!"
 4. Set the minimum value of the slider bar to 5.
 5. Change the histogram border color from `"white"` to `"orange"`.
@@ -74,4 +75,6 @@ knitr::include_graphics("img/shiny_hello-modified.png")
 
 Complete [Lesson 2](https://shiny.rstudio.com/tutorial/written-tutorial/lesson2/) of the Shiny Getting Started tutorials.
 
-Note, this should be done in the `lesson-02` folder in your "Shiny" project.
+# Prep Activity #3
+
+`r emo::ji("memo")` Complete Prep Quiz 13 on Campuswire (discussion post)

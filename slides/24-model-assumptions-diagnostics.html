@@ -80,7 +80,7 @@ pp &lt;- read_csv("data/paris-paintings.csv", na = c("n/a", "", "NA"))
 
 .panelset[
 .panel[.panel-name[Plot]
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-3-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-3-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 ]
 .panel[.panel-name[Code]
 
@@ -129,7 +129,7 @@ ht_wt_fit_aug
 - Residuals distributed randomly around 0
 - With no visible pattern along the x or y axes
 
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-5-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-5-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -139,7 +139,7 @@ ht_wt_fit_aug
 **Fan shapes** (equal variance assumption violated)
 ]
 
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-6-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-6-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -149,7 +149,7 @@ ht_wt_fit_aug
 **Groups of patterns** (possible omitted variable)
 ]
 
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-7-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-7-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -159,7 +159,7 @@ ht_wt_fit_aug
 **Residuals correlated with predicted values**
 ]
 
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-8-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-8-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -169,7 +169,7 @@ ht_wt_fit_aug
 **Any patterns!** (linearity violated)
 ]
 
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-9-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-9-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -177,7 +177,7 @@ ht_wt_fit_aug
 What patterns does the residuals plot reveal that should make us question whether a linear model is a good fit for modeling the relationship between price and width of paintings?
 ]
 
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-10-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-10-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -191,13 +191,13 @@ class: middle
 
 ## Data: Paris Paintings
 
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## Price vs. width
 
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -222,11 +222,11 @@ Which plot shows a more linear relationship?
 .small[
   
 .pull-left[
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-15-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-15-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-right[
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-16-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-16-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 ]
@@ -240,10 +240,10 @@ Which plot shows a residuals that are uncorrelated with predicted values from th
 ]
   
 .pull-left[
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-17-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-17-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 .pull-right[
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-18-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="24-model-assumptions-diagnostics_files/figure-html/unnamed-chunk-18-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -321,19 +321,6 @@ log(0 + 0.00001)
 ## [1] -11.51293
 ```
 
-
-
-```r
-model_best &lt;- lm(logprice ~ dealer + year + school_pntg + diff_origin + 
-                   Width_in + Surface, data = pp)
-model_best_aug &lt;- augment(model_best)
-
-ggplot(data = model_best_aug, 
-       mapping = aes(x = .fitted, y = .resid)) +
-  geom_point(alpha = 0.5)
-```
-
-&lt;img src="25-modeling-nonlinear-relationships_files/figure-html/unnamed-chunk-21-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
