@@ -25,25 +25,8 @@ library(infer)
 library(distributional)
 library(ggdist)
 library(DescTools)
+library(readxl)
 ```
-
-
-class: middle
-
-# Choosing the right analysis
-
----
-
-## What do you want to do?
-
-First step: Ask the following questions
-  - What is the research question?
-  - How many variables?
-  - What type(s) of variable(s)?
-
-Estimation -> Confidence interval
-
-Decision -> Hypothesis test
 
 ---
 
@@ -55,7 +38,15 @@ class: middle
 
 ## Case study: Is Kristen Gilbert a serial killer?
 
-.pull-left[
+
+```{r, echo = FALSE}
+knitr::include_graphics("./img/gilbert.png")
+```
+
+---
+
+## Case study: Is Kristen Gilbert a serial killer?
+
 Proportions aren't close to 0.5, odds ratio is more appropriate here.
 
 ```{r}
@@ -64,13 +55,6 @@ gilbert <- matrix(c(40, 34, 217, 1350),
 gilbert
 OddsRatio(gilbert, conf.level = 0.99)
 ```
-]
-
-.pull-right[
-```{r, echo = FALSE}
-knitr::include_graphics("./img/gilbert.png")
-```
-]
 
 ---
 
@@ -199,6 +183,9 @@ ggplot() +
   scale_fill_viridis_d() +
   theme_minimal()
 ```
+
+**Assumptions?** Independence, large sample (at least 5 expected counts in each cell)
+
 ]
 
 ---
@@ -227,4 +214,128 @@ glimpse(gilbert_raw)
 
 chisq_test(gilbert_raw, response = death, explanatory = shift)
 ```
+
+CONCLUSION: We REJECT H0. That is, we have sufficient evidence to claim that the deaths were NOT independent of whether or not Kristen Gilbert was working the shift. That is, this is evidence in favor of her being a serial killer. 
+
+---
+
+## Couldn't I have just used `prop_test()`?
+
+```{r, warning = FALSE}
+prop_test(gilbert_raw, response = death, explanatory = shift)
+
+prop_test(gilbert_raw, response = death, explanatory = shift, z = TRUE)
+```
+
+---
+
+## When to use `prop_test()` vs. `chisq_test()`
+
++ A chi-squared test is the more general/flexible option that works for any two-way table
++ Difference in proportions only appropriate with two-level categorical variables
++ Use difference in proportions if your research question truly is an estimation question, rather than a hypothesis test question
+
+---
+
+class: middle
+
+# Case study: Disaggregating Asian American tobacco use
+
+---
+
+## Case study: tobacco use
+
+Understanding cultural differences in tobacco use across different demographic groups can lead to improved health care education and treatment. A recent study disaggregated tobacco use across Asian American ethnic groups including Asian-Indian (n = 4,373), Chinese (n = 4,736), and Filipino (n = 4,912). The number of current smokers in each group was reported as Asian-Indian (n = 223), Chinese (n = 279), and Filipino (n = 609). (Rao et al. 2021)
+
+In order to assess whether there is a difference in current smoking rates across three Asian American ethnic groups, the observed data is compared to the data that would be expected if there were no association between the variables.
+
+```{r}
+tobacco <- matrix(c(4150, 223, 
+                    4457, 279, 
+                    4303, 609), 
+                  nrow = 3, byrow = TRUE)
+```
+
+---
+
+## Case study: tobacco use
+
+**Research question:** is there a difference in current smoking rates across three Asian American ethnic groups? In other words, are smoking rates and ethnic group independent?
+
+--
+
+**How many variables?** 2
+
+**What type of variables?** Categorical, more than two levels
+
+--
+
+This is a hypothesis test question, and a chi-square test is appropriate.
+
+**Assumptions?** Independence, at least 5 expected counts per cell
+
+---
+
+## Chi-square test
+
+$$H_0: \text{smoking rates are the same for each ethnic group (two variables indep.)}$$
+
+$$H_A: \text{smoking rates are NOT the same for each ethnic group (two variables NOT indep.)}$$
+
+```{r}
+chisq.test(tobacco)
+qchisq(.99, 2)
+```
+
+There is sufficient evidence to REJECT H0 and claim smoking rates differ by ethnic group (they are NOT independent).
+
+---
+
+## Chi-square test
+
+```{r, echo = FALSE}
+stat <- 209.42
+crit_value99 <- qchisq(.99, df = 2)
+ggplot() +
+  xlim(c(-20,250)) + 
+  stat_slab(aes(y = "X^2",
+                   dist = dist_chisq(df = 2),
+                   fill = after_stat(x > stat)),
+               show.legend = FALSE) +
+  geom_vline(xintercept = crit_value99, linewidth = 1, linetype = 21,
+             color = "navyblue") +
+  annotate("label", label = "0.01 Critical\nValue", 
+           x = crit_value99, y = 2, color = "navyblue") +
+    geom_vline(xintercept = stat, linewidth = 1, linetype = 19,
+             color = "purple") +
+  annotate("label", label = "Test\nStatistic", 
+           x = stat, y = 2.25, color = "purple") +
+  coord_cartesian(expand = FALSE, ylim = c(0.9, 2.5)) +
+  labs(y = "", x = "x") +
+  scale_fill_viridis_d() +
+  theme_minimal()
+```
+
+---
+
+## Descriptive analysis to contextualize
+
+A recent study disaggregated tobacco use across Asian American ethnic groups including Asian-Indian (n = 4,373), Chinese (n = 4,736), and Filipino (n = 4,912). The number of current smokers in each group was reported as Asian-Indian (n = 223), Chinese (n = 279), and Filipino (n = 609). (Rao et al. 2021)
+
+```{r}
+prop.table(tobacco, margin = 1)
+```
+
+---
+
+## Recap
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+tab <- read_excel("./data/recap.xlsx", sheet = "categorical")
+
+kable(tab)
+
+```
+
+
 

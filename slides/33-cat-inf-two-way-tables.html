@@ -44,24 +44,6 @@ layout: true
 
 
 
-
-class: middle
-
-# Choosing the right analysis
-
----
-
-## What do you want to do?
-
-First step: Ask the following questions
-  - What is the research question?
-  - How many variables?
-  - What type(s) of variable(s)?
-
-Estimation -&gt; Confidence interval
-
-Decision -&gt; Hypothesis test
-
 ---
 
 class: middle
@@ -72,7 +54,13 @@ class: middle
 
 ## Case study: Is Kristen Gilbert a serial killer?
 
-.pull-left[
+
+&lt;img src="./img/gilbert.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Case study: Is Kristen Gilbert a serial killer?
+
 Proportions aren't close to 0.5, odds ratio is more appropriate here.
 
 
@@ -96,11 +84,6 @@ OddsRatio(gilbert, conf.level = 0.99)
 ## odds ratio     lwr.ci     upr.ci 
 ##   7.319057   3.899287  13.738049
 ```
-]
-
-.pull-right[
-&lt;img src="./img/gilbert.png" width="60%" style="display: block; margin: auto;" /&gt;
-]
 
 ---
 
@@ -266,6 +249,9 @@ What will our p-value be?
 .pull-right[
 
 &lt;img src="33-cat-inf-two-way-tables_files/figure-html/unnamed-chunk-10-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+**Assumptions?** Independence, large sample (at least 5 expected counts in each cell)
+
 ]
 
 ---
@@ -326,6 +312,183 @@ chisq_test(gilbert_raw, response = death, explanatory = shift)
 ##       &lt;dbl&gt;    &lt;int&gt;    &lt;dbl&gt;
 ## 1      83.5        1 6.49e-20
 ```
+
+CONCLUSION: We REJECT H0. That is, we have sufficient evidence to claim that the deaths were NOT independent of whether or not Kristen Gilbert was working the shift. That is, this is evidence in favor of her being a serial killer. 
+
+---
+
+## Couldn't I have just used `prop_test()`?
+
+
+```r
+prop_test(gilbert_raw, response = death, explanatory = shift)
+```
+
+```
+## # A tibble: 1 × 6
+##   statistic chisq_df  p_value alternative lower_ci upper_ci
+##       &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;
+## 1      83.5        1 6.49e-20 two.sided      0.280    0.524
+```
+
+```r
+prop_test(gilbert_raw, response = death, explanatory = shift, z = TRUE)
+```
+
+```
+## # A tibble: 1 × 5
+##   statistic  p_value alternative lower_ci upper_ci
+##       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;
+## 1      9.30 1.41e-20 two.sided      0.287    0.517
+```
+
+---
+
+## When to use `prop_test()` vs. `chisq_test()`
+
++ A chi-squared test is the more general/flexible option that works for any two-way table
++ Difference in proportions only appropriate with two-level categorical variables
++ Use difference in proportions if your research question truly is an estimation question, rather than a hypothesis test question
+
+---
+
+class: middle
+
+# Case study: Disaggregating Asian American tobacco use
+
+---
+
+## Case study: tobacco use
+
+Understanding cultural differences in tobacco use across different demographic groups can lead to improved health care education and treatment. A recent study disaggregated tobacco use across Asian American ethnic groups including Asian-Indian (n = 4,373), Chinese (n = 4,736), and Filipino (n = 4,912). The number of current smokers in each group was reported as Asian-Indian (n = 223), Chinese (n = 279), and Filipino (n = 609). (Rao et al. 2021)
+
+In order to assess whether there is a difference in current smoking rates across three Asian American ethnic groups, the observed data is compared to the data that would be expected if there were no association between the variables.
+
+
+```r
+tobacco &lt;- matrix(c(4150, 223, 
+                    4457, 279, 
+                    4303, 609), 
+                  nrow = 3, byrow = TRUE)
+```
+
+---
+
+## Case study: tobacco use
+
+**Research question:** is there a difference in current smoking rates across three Asian American ethnic groups? In other words, are smoking rates and ethnic group independent?
+
+--
+
+**How many variables?** 2
+
+**What type of variables?** Categorical, more than two levels
+
+--
+
+This is a hypothesis test question, and a chi-square test is appropriate.
+
+**Assumptions?** Independence, at least 5 expected counts per cell
+
+---
+
+## Chi-square test
+
+`$$H_0: \text{smoking rates are the same for each ethnic group (two variables indep.)}$$`
+
+`$$H_A: \text{smoking rates are NOT the same for each ethnic group (two variables NOT indep.)}$$`
+
+
+```r
+chisq.test(tobacco)
+```
+
+```
+## 
+## 	Pearson's Chi-squared test
+## 
+## data:  tobacco
+## X-squared = 209.42, df = 2, p-value &lt; 2.2e-16
+```
+
+```r
+qchisq(.99, 2)
+```
+
+```
+## [1] 9.21034
+```
+
+There is sufficient evidence to REJECT H0 and claim smoking rates differ by ethnic group (they are NOT independent).
+
+---
+
+## Chi-square test
+
+&lt;img src="33-cat-inf-two-way-tables_files/figure-html/unnamed-chunk-17-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Descriptive analysis to contextualize
+
+A recent study disaggregated tobacco use across Asian American ethnic groups including Asian-Indian (n = 4,373), Chinese (n = 4,736), and Filipino (n = 4,912). The number of current smokers in each group was reported as Asian-Indian (n = 223), Chinese (n = 279), and Filipino (n = 609). (Rao et al. 2021)
+
+
+```r
+prop.table(tobacco, margin = 1)
+```
+
+```
+##           [,1]       [,2]
+## [1,] 0.9490053 0.05099474
+## [2,] 0.9410895 0.05891047
+## [3,] 0.8760179 0.12398208
+```
+
+---
+
+## Recap
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variable(s) of interest &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Hypothesis Test &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Parameter for CI &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Point Estimate &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Reference distribution &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; R function &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; One 2-level categorical variable &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; One proportion z-test &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(p\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(\hat{p}\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(N(0,1)\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; prop_test() &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Two 2-level categorical variables &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Two proportion z-test &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(p_1 - p_2\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(\hat{p}_1 - \hat{p}_2\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(N(0,1)\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; prop_test() &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Two 2+ level categorical variables &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Chi-square test &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(X^2\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(\chi^2_{(I-1)(J-1)}\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; chisq_test() or chisq.test() &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

@@ -27,24 +27,6 @@ library(ggdist)
 ```
 
 
-class: middle
-
-# Choosing the right analysis
-
----
-
-## What do you want to do?
-
-First step: Ask the following questions
-  - What is the research question?
-  - How many variables?
-  - What type(s) of variable(s)?
-
-Estimation -> Confidence interval
-
-Decision -> Hypothesis test
-
----
 
 class: middle
 
@@ -108,10 +90,10 @@ The concave nuclei have a conditional proportion of 17/21 = `r round(17/21, 4)`.
 
 **Research question:** Is Cell Shape Associated with Malignancy?
 
-**Research question, redefined:** Is there a difference between the proportion of round vs. concave cells that are malign?
+**Research question, redefined:** Is there a difference between the proportion of round vs. concave cells that are malignant?
 
 + How many variables? **2** (shape, malignancy)
-+ What type(s) of variables? **categorical**
++ What type(s) of variables? **categorical (both w/ two levels)**
 
 This is a **hypothesis test** question about **a difference in two proportions**
 
