@@ -135,9 +135,11 @@ class: middle, center
 
 **GitHub repo:** Assignment templates -- more on this later!
 
+**Perusall:** Community Reading Annotations (Faith Integration)
+
 ---
 
-## Activities: Prepare, Practice, Perform
+## Activities: Prepare, Practice, Perform, Engage
 
 - **Prepare**: lecture videos + prep quizzes (due Tuesday class time)
 
@@ -148,13 +150,16 @@ class: middle, center
 
 - **Perform**: Put together what you've learned to analyze real-world data
   -  Weekly lab assignments (Thursdays in class, due Tuesday class time)
-  -  Periodic homework assignments (Thursday - Thursday midnight)
   -  One take-home exam
   -  Final team project presented during the final exam period
 
+- **Engage**: with important issues in data ethics, and with the data science community itself
+  - Weekly community annotations (due Thursdays class time)
+  - 5 statistics experience points
+
 ---
 
-## Statistics Experiences
+## Statistics Experiences (Engage)
 
 - The world of statistics and data science is vast and dynamic! 
 - The goal of the statistics experience assignments is to help you engage with the statistics and data science communities outside of the classroom. 
@@ -173,7 +178,7 @@ class: middle, center
 --
 
 - Attend (drop-in) Student Hours
-  - Mondays 1 - 2:15pm (Segerstrom 112 + Zoom)
+  - Mondays 4:15 - 5:30pm (Segerstrom 112 + Zoom)
   - Tuesdays 2:30 - 4pm (Segerstrom 112 + Zoom)
   - Thursdays 10 - 11:30am (Community garden)
 
@@ -226,7 +231,7 @@ If you have NOT participated in flipped learning, what is your first impression 
 + Critique ideas, not people
 + Engage new perspectives with curiosity, not judgement
 + Exhibit intellectual humility
-+ Embrace discomfort
++ Embrace discomfort & non-closure
 + Normalize time to think
 + Others??
 
@@ -355,14 +360,17 @@ knitr::include_graphics("img/unvotes/unvotes-14.jpeg")
 
 - Application Exercise (AE) 01a 
 
----
 
-## For Thursday
+### For Thursday
 
 - Complete AE 01 
 - Watch "Meet the Toolkit" lecture + complete prep quiz on Canvas
 - Enroll in Campuswire course and respond to welcome prompt
 
+### For Saturday (this week only)
 
+- Sign up for Perusall account
+- Enroll in our course
+- Complete Community Annotations (3+ thoughtful comments)
 
 
