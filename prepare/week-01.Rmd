@@ -26,6 +26,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 `r emo::ji("computer")` Complete AE 01a in RStudio, submit .html on Canvas
 
+`r emo::ji("computer")` Sign up for Campuswire account, respond to get-to-know-you prompt
+
+
 ### Optional 
 
 `r emo::ji("book")` Read [*R for Data Science (R4DS)*:: Chapter 2 - Introduction](https://r4ds.had.co.nz/explore-intro.html)
