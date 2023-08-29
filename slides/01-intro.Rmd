@@ -108,11 +108,13 @@ A - R
 
 ## Examples of data science in practice
 
-- [What redistricting looks like in every state](https://projects.fivethirtyeight.com/redistricting-2022-maps/)
+- [FiveThirtyEight: How Restarting Student Loan Payments Could Change Millions of Lives — And The Economy ](https://projects.fivethirtyeight.com/redistricting-2022-maps/)
+
+- [The World Bank - ATLAS of Sustainable Development Goals](https://datatopics.worldbank.org/sdgatlas/goal-1-no-poverty)
+
+- [The Upshot: Top 10 Hardest and Easiest Spelling Bee Words, Aug. 19-25](https://www.nytimes.com/2023/08/26/upshot/spelling-bee-words.html)
 
 - [Tracking their life via Fitbit](https://livefreeordichotomize.com/posts/2017-12-27-a-year-in-fitbit.Rmd/)
-
-- [US Spread of COVID-19 maps and analytics](https://www.sharedgeo.org/COVID-19/)
 
 ---
 
@@ -211,16 +213,16 @@ If you have NOT participated in flipped learning, what is your first impression 
 
 ---
 
-## Course community & Learning environment
+<!-- ## Course community & Learning environment -->
 
-*What do you need [from me, from yourself, from your peers] for this semester to be successful?*
+<!-- *What do you need [from me, from yourself, from your peers] for this semester to be successful?* -->
 
-- What makes group dynamics enriching? What hinders learning?
+<!-- - What makes group dynamics enriching? What hinders learning? -->
 
-- Collaborative norm-setting 
+<!-- - Collaborative norm-setting  -->
 
 
----
+<!-- --- -->
 
 ## Class Norms
 
