@@ -19,9 +19,32 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
++ End of class today (ish) - Week 01 Check-in (<5 minutes)
++ Due Saturday (usually Thursdays): Annotations 01
+    + enroll in our Perusall course (see [Canvas](https://canvas.apu.edu/courses/49307))
++ Due Tuesday class-time: Prep Quiz 02
+    + 70 minutes of lecture, broken into 4 videos
 
 ### Questions?
 
++ RMarkdown vs. Quarto??
+
+### Social Identity Activity
+
+Author of this activity: Dr. Missy Crosby 
+
+*Crosby, M. (2022). Becoming: Considering social and personal identities for mathematics teaching and learning. Presentation at Mathematical Association of America’s Project NExT 2022.*
+
+Write down: 
+
++ a specific off-campus location you go to (semi-)regularly out in the community (e.g. gym, grocery store, church, theater, hiking trails, but NOT your home)
+
+Each on a separate notecard, write down:
+
++ your gender
++ your race/ethnicity
++ your religious/spiritual identity or affiliation
++ another aspect that reflects something about who you are (e.g. major, hobby, familial identity)
 
 ### Lab 01
 
