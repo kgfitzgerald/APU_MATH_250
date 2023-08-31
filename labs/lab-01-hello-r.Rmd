@@ -15,7 +15,16 @@ editor_options:
 R is the name of the programming language itself and RStudio is a convenient interface.
 ```
 
+# Goals
+
 The main goal of this lab is to introduce you to R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.
+
+You will...
+
++ Access help documentation with `?`
++ Create scatterplots
++ Calculate correlation coefficients
++ Tweak the YAML 
 
 As the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer.
 Before we get to that stage, however, you need to build some basic fluency in R.
@@ -103,7 +112,7 @@ In the paper, the authors simulate a variety of datasets that have the same summ
 2.  Plot `y` vs. `x` for the `dino` dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset.
 
 Below is the code you will need to complete this exercise.
-Basically, the answer is already given, but you need to include relevant bits in your Rmd document and successfully render it and view the results.
+Basically, the answer is already given, but you need to include relevant bits in your .qmd document and successfully render it and view the results.
 
 Start with the `datasaurus_dozen` and pipe it into the `filter` function to filter for observations where `dataset == "dino"`.
 Store the resulting filtered data frame as a new data frame called `dino_data`.
@@ -168,7 +177,9 @@ dino_data %>%
 Facet by the dataset variable, placing the plots in a 3 column grid, and don't add a legend.
 ```
 
-5.  Finally, let's plot all datasets at once. In order to do this we will make use of faceting.
+5.  Finally, let's plot all datasets at once and calculate the correlation coefficient for each (code below). Comment on your findings - articulate why this is a cautionary tale about the correlation coefficient! (Google "correlation coefficient" if you're unsure what it measures). 
+
+In order to plot all 12 datasets we will make use of faceting.
 
 ```{r all-viz, eval=FALSE, fig.fullwidth=TRUE}
 ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
@@ -182,11 +193,10 @@ And we can use the `group_by` function to generate all the summary correlation c
 ```{r all-r, eval=FALSE}
 datasaurus_dozen %>%
   group_by(dataset) %>%
-  summarize(r = cor(x, y)) %>%
-  print(13)
+  summarize(r = cor(x, y))
 ```
 
-You're done with the data analysis exercises, but we'd like you to do two more things:
+You're done with the data analysis exercises, but I'd like you to do two more things:
 
 
 
