@@ -166,6 +166,16 @@ plot_grid(p1, p2, nrow = 1)
 
 ### Questions?
 
+*What's the difference between typing code in the console vs. the .qmd document?*
+
+-   The console is just for quick calculations / commands - but nothing in the console gets saved!
+
+-   When you're learning, type everything in the .qmd to be safe, then delete what you don't need / what doesn't work
+
+-   When you click "Render", R runs the document from top to bottom (skipping over any code chunks with `eval: false`). You will get an error if you have a code chunk that depends on a package you've only loaded in your console, or an object you've only defined there.
+
+-   Exception: `View(name_of_dataset)` should ONLY be typed in the console.
+
 *What are the possibilities for theme/layout for R?*
 
 -   [html themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/) we saw in Lab 01
