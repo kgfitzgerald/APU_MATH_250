@@ -18,6 +18,18 @@ library(ggthemes)
 library(cowplot)
 ```
 
+### Thursday Announcements
+
+-   MPS BBQ Next Friday (free food!)
+
+    -   Panel for new students right before (4:30)
+
+        ![](images/MPS_BBQ.png)
+
+-   For next week: lecture videos a little shorter (3 videos, 50 mins), but annotation content longer
+
+    -   Content warning: racism in science
+
 ### Statistician(s) of the Week
 
 [W.E.B. DuBois](https://hardin47.github.io/CURV/scholars/dubois.html)
