@@ -662,25 +662,6 @@ with the option <code>method = &quot;lm&quot;</code>.</li>
 not?</li>
 </ul>
 <ol start="10" style="list-style-type: decimal">
-<li>Again make a scatterplot to explore the relationship between
-education and views of scientists, but this time facet by whether the
-person hunted or fished in the past year. There are a lot of data points
-in this dataset, so for this exercise, begin by first taking a sample,
-using the code below:</li>
-</ol>
-<p><label for="tufte-mn-2" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-2" class="margin-toggle"><span class="marginnote"><span style="display: block;">This code takes a
-random subset of the dataset– including <code>set.seed</code> makes sure
-that it is the same subset each time.</span></span></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">18</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>anes2 <span class="ot">&lt;-</span> anes <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  <span class="fu">sample_frac</span>(.<span class="dv">10</span>)</span></code></pre></div>
-<ul>
-<li>Then, please add a <code>geom_smooth()</code> layer with
-<code>method = &quot;lm&quot;</code> for each season and add the argument
-<code>se = FALSE</code> to omit the bands surrounding the line.</li>
-<li>Describe what you observe.</li>
-</ul>
-<ol start="11" style="list-style-type: decimal">
 <li><p>What is an additional question you could investigate using this
 data? State the question, provide a visualization that investigates it,
 and comment on what your visualization shows.</p></li>
@@ -769,16 +750,12 @@ to the relevant assignment on Canvas. Refer back to <a href="https://kgfitzgeral
 <td align="left">4</td>
 </tr>
 <tr class="even">
-<td align="left">Ex 12</td>
-<td align="left">4</td>
-</tr>
-<tr class="odd">
 <td align="left">Reflection prompts</td>
 <td align="left">5</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Workflow &amp; formatting</td>
-<td align="left">1</td>
+<td align="left">5</td>
 </tr>
 </tbody>
 </table>
