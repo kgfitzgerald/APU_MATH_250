@@ -39,7 +39,7 @@ You should have already downloaded R & RStudio and created an R Project called "
 If you haven't, touch base with the professor to get set up.
 To get started on this lab, do the following:
 
--   Open our class [GitHub repo](https://github.com/kgfitzgerald/APU_MATH_250/tree/main/assignment_templates)
+-   Open our class [GitHub repo](https://github.com/kgfitzgerald/APU_MATH_250_templates)
 -   Navigate to LABS \> lab-01.qmd
 -   Click to "Download raw file"
 -   Place the downloaded .qmd document in your MATH_250 folder on your computer

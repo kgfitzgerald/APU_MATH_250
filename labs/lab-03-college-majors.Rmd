@@ -240,6 +240,4 @@ To submit, Render one last time and then upload your .html document to the relev
 | Ex 15     | 3    |
 | Reflection prompts    | 5     |
 
-**Grading notes**:
 
--   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output). 
