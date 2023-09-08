@@ -96,7 +96,7 @@ anes %>%
 You can read more about ridge plots [here](https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html).
 ```
 
-7. Explore the same question as in Exercise 6, this time using `geom_density_ridge()` to construct a ridge plot as an alternative to side-by-side box plots.  
+7. Explore the same question as in Exercise 6, this time using `geom_density_ridges()` to construct a ridge plot as an alternative to side-by-side box plots.  
 
 8. Describe what you observe in both plots from Exercises 6 & 7 and what you learn from one plot that you do not see in the other or that adds additional context to the other.
 
