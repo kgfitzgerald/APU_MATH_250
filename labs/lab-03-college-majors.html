@@ -694,20 +694,18 @@ visualization reveals.</li>
 the <code>summary</code> function:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">summary</span>(college_recent_grads<span class="sc">$</span>median)</span></code></pre></div>
 <ol start="9" style="list-style-type: decimal">
-<li><p>Based on the shape of the histogram you created in the previous
-exercise, determine which summary statistic is most useful for
-describing the distribution.</p></li>
-<li><p>Plot the distribution of <code>median</code> income by
+<li>Plot the distribution of <code>median</code> income by
 <code>major_category</code> using a ridge plot. Comment on what the
-visualization reveals.</p></li>
+visualization reveals.</li>
 </ol>
 <p>Now that we’ve seen the shapes of the distributions of median incomes
 for each major category, we should have a better idea for which summary
-statistic to use to quantify the typical median income.</p>
+statistic to use to quantify the typical median income - the mean or the
+median? (Yes, we are talking about the mean/median of medians!).</p>
 <p><label for="tufte-mn-5" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-5" class="margin-toggle"><span class="marginnote"><span style="display: block;">Hint: This will require
 a <code>group_by()</code> and a
 <code>summarize()</code></span></span></p>
-<ol start="11" style="list-style-type: decimal">
+<ol start="10" style="list-style-type: decimal">
 <li>Which major category has the highest typical (you’ll need to decide
 what this means) median income?</li>
 </ol>
@@ -787,7 +785,7 @@ logical operators that are commonly used are</p>
 <p>We can use the logical operators to also <code>filter</code> our data
 for STEM majors whose median earnings is less than median for all
 majors’ median earnings, which we found to be $36,000 earlier.</p>
-<ol start="12" style="list-style-type: decimal">
+<ol start="11" style="list-style-type: decimal">
 <li>Which STEM majors have median salaries equal to or less than the
 median for all majors’ median earnings? Your output should only show the
 major name and median, 25th percentile, and 75th percentile earning for
@@ -797,22 +795,21 @@ median earning is on top.</li>
 </div>
 <div id="what-types-of-majors-do-women-tend-to-major-in" class="section level2">
 <h2>What types of majors do women tend to major in?</h2>
-<ol start="13" style="list-style-type: decimal">
-<li>Create a scatterplot of median income vs. proportion of women in
+<ol start="12" style="list-style-type: decimal">
+<li><p>Create a scatterplot of median income vs. proportion of women in
 that major, coloured by whether the major is in a STEM field or not.
-Describe the association between these three variables.</li>
+Describe the association between these three variables.</p></li>
+<li><p>Write a brief paragraph summarizing what you found through this
+analysis, what limitations might exist to the data/analyses, and what
+additional data you would like to have to explore further
+questions.</p></li>
 </ol>
 </div>
-<div id="further-exploration" class="section level2">
-<h2>Further exploration</h2>
-<ol start="14" style="list-style-type: decimal">
-<li><p>What is an additional question you could investigate using this
-data? State the question, provide a visualization that investigates it,
-and comment on what your visualization shows.</p></li>
-<li><p>Write a brief paragraph summarizing what you found in this lab,
-what limitations might exist to the data/analyses, and what additional
-data you would like to have to explore further questions.</p></li>
-</ol>
+<div id="bonus" class="section level2">
+<h2>BONUS</h2>
+<p>What is an additional question you could investigate using this data?
+State the question, provide a visualization that investigates it, and
+comment on what your visualization shows.</p>
 </div>
 </div>
 <div id="submission" class="section level1">
@@ -903,19 +900,27 @@ to the relevant assignment on Canvas. Refer back to <a href="https://kgfitzgeral
 <td align="left">3</td>
 </tr>
 <tr class="even">
-<td align="left">Ex 14</td>
-<td align="left">3</td>
+<td align="left">Workflow &amp; formatting</td>
+<td align="left">6</td>
 </tr>
 <tr class="odd">
-<td align="left">Ex 15</td>
-<td align="left">3</td>
-</tr>
-<tr class="even">
 <td align="left">Reflection prompts</td>
 <td align="left">5</td>
 </tr>
+<tr class="even">
+<td align="left">BONUS</td>
+<td align="left">2</td>
+</tr>
 </tbody>
 </table>
+<p><strong>Grading notes</strong>:</p>
+<ul>
+<li>The “Workflow &amp; formatting” grade is to assess the reproducible
+workflow. This includes having readable code (e.g. adequate use of
+spacing and line breaks), labeled code chunks, informative headers and
+sub-headers, and an overall organized and uncluttered report
+(e.g. suppress messages &amp; warnings, no extraneous output).</li>
+</ul>
 </div>
 
 

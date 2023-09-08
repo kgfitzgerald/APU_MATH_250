@@ -132,17 +132,15 @@ We can also calculate summary statistics for this distribution using the `summar
 summary(college_recent_grads$median)
 ```
 
-9.  Based on the shape of the histogram you created in the previous exercise, determine which summary statistic is most useful for describing the distribution.
+9.  Plot the distribution of `median` income by `major_category` using a ridge plot. Comment on what the visualization reveals.
 
-10.  Plot the distribution of `median` income by `major_category` using a ridge plot. Comment on what the visualization reveals.
-
-Now that we've seen the shapes of the distributions of median incomes for each major category, we should have a better idea for which summary statistic to use to quantify the typical median income.
+Now that we've seen the shapes of the distributions of median incomes for each major category, we should have a better idea for which summary statistic to use to quantify the typical median income - the mean or the median? (Yes, we are talking about the mean/median of medians!).
 
 ```{marginfigure}
 Hint: This will require a `group_by()` and a `summarize()`
 ```
 
-11.  Which major category has the highest typical (you'll need to decide what this means) median income? 
+10.  Which major category has the highest typical (you'll need to decide what this means) median income? 
 
 ## All STEM fields aren't the same
 
@@ -185,17 +183,19 @@ Other logical operators that are commonly used are
 
 We can use the logical operators to also `filter` our data for STEM majors whose median earnings is less than median for all majors' median earnings, which we found to be \$36,000 earlier.
 
-12.  Which STEM majors have median salaries equal to or less than the median for all majors' median earnings? Your output should only show the major name and median, 25th percentile, and 75th percentile earning for that major and should be sorted such that the major with the highest median earning is on top.
+11.  Which STEM majors have median salaries equal to or less than the median for all majors' median earnings? Your output should only show the major name and median, 25th percentile, and 75th percentile earning for that major and should be sorted such that the major with the highest median earning is on top.
 
 ## What types of majors do women tend to major in?
 
-13.  Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not. Describe the association between these three variables.
+12.  Create a scatterplot of median income vs. proportion of women in that major, coloured by whether the major is in a STEM field or not. Describe the association between these three variables.
 
-## Further exploration
+13. Write a brief paragraph summarizing what you found through this analysis, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions.
 
-14. What is an additional question you could investigate using this data? State the question, provide a visualization that investigates it, and comment on what your visualization shows. 
+## BONUS
 
-15. Write a brief paragraph summarizing what you found in this lab, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions. 
+What is an additional question you could investigate using this data? State the question, provide a visualization that investigates it, and comment on what your visualization shows. 
+
+ 
 
 # Submission
 
@@ -236,8 +236,11 @@ To submit, Render one last time and then upload your .html document to the relev
 | Ex 11     | 3    |
 | Ex 12     | 3    |
 | Ex 13     | 3    |
-| Ex 14     | 3    |
-| Ex 15     | 3    |
+| Workflow & formatting | 6 |
 | Reflection prompts    | 5     |
+| BONUS     | 2    |
 
+**Grading notes**:
+
+-   The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having readable code (e.g. adequate use of spacing and line breaks), labeled code chunks, informative headers and sub-headers, and an overall organized and uncluttered report (e.g. suppress messages & warnings, no extraneous output).
 
