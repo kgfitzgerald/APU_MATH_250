@@ -21,9 +21,15 @@ library(tidyverse)
 
 [Desi Small-Rodriguez](https://hardin47.github.io/CURV/scholars/small-rodriguez.html)
 
-
-
 ### Announcements
+
+Due now: Lab 02
+
+Due Thursday: Annotations 03
+
+MPS BBQ on Friday (free food!) - RSVP on sign up sheet
+
+![](images/MPS_BBQ.png)
 
 ### Questions?
 
