@@ -17,6 +17,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
++ Lab 03 due now
++ Annotations due Thursday (video of Cathy O'Neil)
++ First 2 Stats Experience Points due Saturday (remember to post brief reflection on Campuswire)
+    + [Informational Interview resource](https://docs.google.com/document/d/17ESP_xm-kXo3gsRrzmbG0XR37yRqnMCT5TiqPli6Pnc/edit?usp=sharing)
+    + [Appointment slots](https://calendar.google.com/calendar/selfsched?sstoken=UUdib21reE5QbWlCfGRlZmF1bHR8Y2Q4NzA0ODFhZjhiNjQzYWJlZjU0YzVjNDQ3NzBmNTY) for dinner with me after class
++ Exam made available at end of class next Tuesday, due following Tuesday
+    + Like a lab, just completed on your own
+    + Coding techniques learned in Weeks 1 - 4
+    + Open note, open internet
+
 
 ### Tidyverse style guidelines
 
@@ -96,50 +106,9 @@ iris%>%
 
 -   Google your errors :) stackoverflow.com typically has a lot of great help
 -   use the `?` command with the name of the function to pull up the help documentation. E.g. `?mean` will pull up the documentation for the function `mean()`
--   Common things to look out for: spelling, capitalization, misplaced or missing commas/parentheses/quotations
--   Run all code chunks above (button next to play button) then run current code chunk
--   Check your Environment to make sure you have the objects you think you have, that you're spelling them correctly, and that they have the dimensions you're expecting
--   Run `View()` in your console to actually view/inspect your data. Can temporarily add this on to the end of a pipe so you can see your results more clearly.
+- Run one piece of a pipe chain at a time, inspecting the dimensions/output each time
 
-### Reminder of Class Norms
 
--   Everyone has expertise
--   Be present
--   Participate to the best of your ability
--   Share talk time
--   Critique ideas, not people
--   Engage new perspectives with curiosity, not judgement
--   Exhibit intellectual humility
--   Embrace discomfort
--   Normalize time to think
-
-#### What hinders group dynamics
-
--   Rely on others too much
--   Lack of preparation
--   Over/under participation
--   Lack of communication
--   Lack of confidence
--   Lack of patience
--   Lack of focus
-
-#### What makes enriching group dynamics
-
--   Get to know classmates
--   Communication & Clarity
--   Problem solving with different approaches
--   Preparation, sleep
--   Accountability
--   Checking in
--   Defining roles / delegation
--   Clear instruction
--   Self-awareness
-
-#### Recommendations
-
--   Don't leave class on Thursdays without discussing a plan for how/when Lab will be finished. Note: it should NOT fall on one person to do this.
--   Check in regularly that each group member is understanding each exercise / part of the code - don't move on until everyone is on the same page.
-    -   Normalize question asking
 
 ### Application Exercise
 
