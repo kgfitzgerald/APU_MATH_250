@@ -1,7 +1,7 @@
 ---
 title: "Exam 01"
 subtitle: "Women's Soccer"
-date: "due Thursday, October 6, 4:20pm"
+date: "due Tuesday, October 3, 4:20pm"
 output: 
   tufte::tufte_html:
     css: "hw.css"
@@ -32,8 +32,6 @@ This Exam will assess the following skills:
 + Clarity of code and written communication 
 + Ability to use data to investigate questions
 
-
-
 # Getting started
 
 + Download `Exam1.qmd` from GitHub
@@ -44,10 +42,13 @@ This Exam will assess the following skills:
 We will use the **tidyverse**, **ggridges**, and **nwslR** packages for this analysis. You should also use **kableExtra** for formatting tables.
 
 ```{r load-package, eval = FALSE}
-library(nwslR)
 library(tidyverse)
 library(ggridges)
 library(kableExtra)
+# install.packages("devtools")
+devtools::install_github("nwslR/nwslR", 
+                         ref = "v0.0.0.9002")
+library(nwslR)
 ```
 
 # Data: The Portland Thorns FC
@@ -70,7 +71,7 @@ You can view the documentation for this dataset by running `?game` in the consol
 Running the following code will make `game` appear in your Environment.
 
 ```{r}
-game <- nwslR::game
+game <- nwslR::matches
 ```
 
 While not required to use the other 6 datasets from the `nwslR` package, you might find it useful to poke around in them. For example, the `franchise` dataset gives the full team names and locations, not just their ids.  
