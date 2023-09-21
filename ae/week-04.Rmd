@@ -15,19 +15,34 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Mike Dairyko](https://hardin47.github.io/CURV/scholars/dairyko.html)
 
+### Thursday Announcements
+
+-   2 Stats Experience Points due Saturday
+-   Sign up for project groups on Canvas by class-time on Tuesday
+    -   choose your own groups of 2
+    -   who will you work well with?
+    -   who do you have common (data) interests with? Check out initial Campuswire responses
+
+What's ahead:
+
+-   Weeks 1 - 4, foundational coding techniques
+-   Weeks 5 - 7, Exam/Start Projects/Ethics
+-   Weeks 8 - 11, statistical analysis techniques
+-   Weeks 12 - 15, communicating results / Projects
+-   Only 4 more labs (after Lab 04), 7 project work sessions
+
+![](images/MATH_talk_Byrant.png)
+
 ### Announcements
 
-+ Lab 03 due now
-+ Annotations due Thursday (video of Cathy O'Neil)
-+ First 2 Stats Experience Points due Saturday (remember to post brief reflection on Campuswire)
-    + [Informational Interview resource](https://docs.google.com/document/d/17ESP_xm-kXo3gsRrzmbG0XR37yRqnMCT5TiqPli6Pnc/edit?usp=sharing)
-    + [Appointment slots](https://calendar.google.com/calendar/selfsched?sstoken=UUdib21reE5QbWlCfGRlZmF1bHR8Y2Q4NzA0ODFhZjhiNjQzYWJlZjU0YzVjNDQ3NzBmNTY) for dinner with me after class
-+ Exam made available at end of class next Tuesday, due following Tuesday
-    + Like a lab, just completed on your own
-    + Coding techniques learned in Weeks 1 - 4
-    + Open note, open internet
-
-
+-   Lab 03 due now
+-   First 2 Stats Experience Points due Saturday (remember to post brief reflection on Campuswire)
+    -   [Informational Interview resource](https://docs.google.com/document/d/17ESP_xm-kXo3gsRrzmbG0XR37yRqnMCT5TiqPli6Pnc/edit?usp=sharing)
+    -   [Appointment slots](https://calendar.google.com/calendar/selfsched?sstoken=UUdib21reE5QbWlCfGRlZmF1bHR8Y2Q4NzA0ODFhZjhiNjQzYWJlZjU0YzVjNDQ3NzBmNTY) for dinner with me after class
+-   Exam made available at end of class next Tuesday, due following Tuesday
+    -   Like a lab, just completed on your own
+    -   Coding techniques learned in Weeks 1 - 4
+    -   Open note, open internet
 
 ### Tidyverse style guidelines
 
@@ -105,21 +120,19 @@ iris%>%
 
 *What's the difference between the various "reflection" questions included on the lab?*
 
-+ "Write a brief paragraph summarizing what you found through this analysis, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions" 
-    + More about what you learned from the DATA (e.g. Engineering majors have highest paying careers)
-+ Reflection prompt "what were the main topics covered in this lab" is more about the techincal coding skills that were covered (e.g. arranging, summarizing data)
+-   "Write a brief paragraph summarizing what you found through this analysis, what limitations might exist to the data/analyses, and what additional data you would like to have to explore further questions"
+    -   More about what you learned from the DATA (e.g. Engineering majors have highest paying careers)
+-   Reflection prompt "what were the main topics covered in this lab" is more about the techincal coding skills that were covered (e.g. arranging, summarizing data)
 
 *Is there a way to debug code in RStudio? I'm not too familiar with it so whenever I get an error, I just go about the trial-and-error method until it works, but this can be a long and exhausting process.*
 
 -   Google your errors :) stackoverflow.com typically has a lot of great help
 -   use the `?` command with the name of the function to pull up the help documentation. E.g. `?mean` will pull up the documentation for the function `mean()`
-- Run one piece of a pipe chain at a time, inspecting the dimensions/output each time
-
-
+-   Run one piece of a pipe chain at a time, inspecting the dimensions/output each time
 
 ### Application Exercise
 
 -   The remainder of class will be spent on AE-04.
-- You can access it from GitHub. 
-- It is due at the end of class today. 
+-   You can access it from GitHub.
+-   It is due at the end of class today.
 -   To turn it in, you should upload your .html file to Canvas.
