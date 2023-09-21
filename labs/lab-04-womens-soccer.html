@@ -882,11 +882,12 @@ below provides the scaffolding, you just need to fill in each blank
 appropriately.</em></p></li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>___ <span class="ot">&lt;-</span> ___ <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="fu">___</span>(<span class="at">POR_points =</span> <span class="fu">if_else</span>(home_team <span class="sc">==</span> <span class="st">&quot;POR&quot;</span>, home_pts, away_pts),</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>      <span class="at">OPP_points =</span> <span class="fu">if_else</span>(___ ___ ___, ___, ___),</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>      <span class="at">result =</span> <span class="fu">case_when</span>(POR_points  <span class="sc">&gt;</span>  OPP_points <span class="sc">~</span> <span class="st">&quot;Win&quot;</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Loss&quot;</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Tie&quot;</span>))</span></code></pre></div>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="fu">___</span>(<span class="at">POR_points =</span> <span class="fu">if_else</span>(home_team_abbr <span class="sc">==</span> <span class="st">&quot;POR&quot;</span>, </span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>                           home_team_score, away_team_score),</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>      <span class="at">OPP_points =</span> <span class="fu">if_else</span>(___ ___ ___, ___, ___),</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>      <span class="at">result =</span> <span class="fu">case_when</span>(POR_points  <span class="sc">&gt;</span>  OPP_points <span class="sc">~</span> <span class="st">&quot;Win&quot;</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Loss&quot;</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Tie&quot;</span>))</span></code></pre></div>
 </div>
 <div id="match-analysis" class="section level2">
 <h2>Match analysis</h2>

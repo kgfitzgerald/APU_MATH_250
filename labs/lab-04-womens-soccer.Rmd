@@ -112,7 +112,8 @@ portland_matches <- portland_matches %>%
 
 ```{r, eval = FALSE}
 ___ <- ___ %>% 
-  ___(POR_points = if_else(home_team == "POR", home_pts, away_pts),
+  ___(POR_points = if_else(home_team_abbr == "POR", 
+                           home_team_score, away_team_score),
       OPP_points = if_else(___ ___ ___, ___, ___),
       result = case_when(POR_points  >  OPP_points ~ "Win",
                          POR_points ___ OPP_points ~ "Loss",
