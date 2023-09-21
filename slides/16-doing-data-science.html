@@ -106,7 +106,23 @@ Jeffery T. Leek and Roger D. Peng. "What is the question?." Science 347.6228 (20
 
 ---
 
-## Questions to data science problems
+## In Groups, ....
+
+Choose one of the following datasets we've worked with so far in this class:
+
++ American National Election Study (Lab 02)
++ College Majors (Lab 03)
++ Women's Soccer (Lab 04)
++ UN Votes (AE-01a)
++ Bechdel Test of movies (AE-01b)
++ Midwest - demographics, population density, poverty (AE-02)
++ NYC Flights (AE-03 and AE-04)
+
+Try to come up with research questions that fit into each of the 6 categories on the previous slide (Descriptive, Exploratory, Inferential, Predictive, Causal, Mechanistic). 
+
+---
+
+## Questions to ask about data science problems
 
 - Do you have appropriate data to answer your question?
 - Do you have information on confounding variables?
@@ -367,13 +383,6 @@ ggplot(squirrels, aes(x = long, y = lat, color = where)) +
 .panelset[
 
 .panel[.panel-name[Plot]
-
-```
-## Warning: Computation failed in `stat_binhex()`
-## Caused by error in `compute_group()`:
-## ! The package "hexbin" is required for `stat_binhex()`
-```
-
 &lt;img src="16-doing-data-science_files/figure-html/unnamed-chunk-12-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 ]
 
@@ -396,12 +405,6 @@ squirrels %&gt;%
   left_join(hectare_centroids, by = "hectare") %&gt;%
   ggplot(aes(x = centroid_x, y = centroid_y, color = n)) +
   geom_hex()
-```
-
-```
-## Warning: Computation failed in `stat_binhex()`
-## Caused by error in `compute_group()`:
-## ! The package "hexbin" is required for `stat_binhex()`
 ```
 ]
 
@@ -431,14 +434,14 @@ squirrels %&gt;%
 ## # ℹ 5 more rows
 ```
 
----
+&lt;!-- --- --&gt;
 
-## Communicating for your audience
+&lt;!-- ## Communicating for your audience --&gt;
 
-- Avoid: Jargon, uninterpreted results, lengthy output
-- Pay attention to: Organization, presentation, flow
-- Don't forget about: Code style, coding best practices, meaningful commits
-- Be open to: Suggestions, feedback, taking (calculated) risks
+&lt;!-- - Avoid: Jargon, uninterpreted results, lengthy output --&gt;
+&lt;!-- - Pay attention to: Organization, presentation, flow --&gt;
+&lt;!-- - Don't forget about: Code style, coding best practices, meaningful commits --&gt;
+&lt;!-- - Be open to: Suggestions, feedback, taking (calculated) risks --&gt;
 
 ---
 
@@ -449,7 +452,7 @@ squirrels %&gt;%
 + Locate a dataset
 + Determine a research question that could be answered with that data
 + Settle on three substantially different datasets, and start working on [project proposal](https://apumath250.netlify.app/project/#project-proposal)
-+ Proposal due NEXT Wednesday, 11:59pm
++ Proposal due Tuesday October 10, 11:59pm
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

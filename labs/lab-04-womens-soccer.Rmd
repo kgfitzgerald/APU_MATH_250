@@ -106,7 +106,7 @@ portland_matches <- portland_matches %>%
   left_join(home_team_info)
 ```
 
-2.  Include the code above in your lab report. Then, following the above code as a template, create a similar `away_team_info` dataset that renames the columns with the prefix `away_`. Then, join those columns to `portland_matches`. *Confirm `portland_matches` has dimensions 196 x 23 before continuing.*
+2.  Include the code above in your lab report. Then, following the above code as a template, create a similar `away_team_info` dataset that renames the columns with the prefix `away_`. Then, join those columns to `portland_matches`. *Confirm `portland_matches` has dimensions 196 x 19 before continuing.*
 
 3.  Create three new variables, `POR_points` (the number of points Portland scored), `OPP_points` (the number of points the opponent scored), and `result` (a categorical variable for whether the result was a `Win`, `Loss`, or `Tie` for Portland). *Hint: the code below provides the scaffolding, you just need to fill in each blank appropriately.*
 
