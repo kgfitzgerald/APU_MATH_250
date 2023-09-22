@@ -24,12 +24,16 @@ library(tidyverse)
 
 ### Announcements
 
++ Sign up for project group in Canvas if you haven't already - sit with your partner today
++ Exam made available at end of class today, due Tuesday class-time
++ No lab or annotations this week, but you will have lecture recordings & prep quiz for Tuesday (~60 mins, 3 videos)
++ No class Thursday (work or exam, or watch lecture recordings)
 
 ### Exam ground rules
 
 + This is an INDIVIDUAL EXAM. You may NOT work together or consult other people on this exam.
 + You are ENCOURAGED to use your notes, lecture slides/videos, previous assignments, and the internet
-    + You may utilize already existing resources on the internet, but you may NOT post to any online forums to ask for help on the exam.  
+    + You may utilize already existing resources on the internet, but you may NOT post to any online forums or ask as AI chat bot for help on the exam.  
     + If you find code online, cite it, and annotate the code to demonstrate understanding. 
 + Failure to adhere to any of the above policies will be considered a violation of academic integrity and will be handled according to university policy.
 
