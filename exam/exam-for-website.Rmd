@@ -4,4 +4,4 @@ output:
   tufte::tufte_html
 ---
 
-Exam 1 will be made available [on Canvas](https://canvas.apu.edu/courses/42480/assignments/692863) at 5:45pm on September 29.
+Exam 1 will be made available [on Canvas](https://canvas.apu.edu/courses/49307/assignments/837760) at 5:45pm on September 26.
