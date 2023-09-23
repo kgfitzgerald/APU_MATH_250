@@ -1,6 +1,6 @@
 ---
 title: "Exam 01"
-subtitle: "Avengers"
+subtitle: "Data Wrangling & Visualization"
 date: "due Tuesday, October 3, 4:20pm"
 output: 
   tufte::tufte_html:
@@ -70,25 +70,25 @@ Don't worry if you aren't a Marvel fan; no background knowledge is needed to suc
 
 We will focus on the following variables in this exam:
 
-| Header                | Definition                                                                                                                                                                         |
-|-------------------|-----------------------------------------------------|
-| `name`                | The full name or alias of the character                                                                                                                                            |
-| `appearances`         | The number of comic books that character appeared in as of April 30                                                                                                                |
-| `current`             | Is the member currently active on an avengers affiliated team?                                                                                                                     |
-| `gender`              | The recorded gender of the character                                                                                                                                               |
-| `probationary_introl` | Sometimes the character was given probationary status as an Avenger, this is the date that happened. The value will be *NA* if the character was never given probationary status.  |
-| `full_reserve`        | The month and year the character was introduced as a full or reserve member of the Avengers                                                                                        |
-| `year`                | The year the character was introduced as a full or reserve member of the Avengers                                                                                                  |
-| `years_since_joining` | 2015 minus the year                                                                                                                                                                |
-| `death1`              | Yes if the Avenger died, No if not.                                                                                                                                                |
-| `return1`             | Yes if the Avenger returned from their first death, No if they did not, blank if not applicable                                                                                    |
+| Header                | Definition                                                                                                                                                                        |
+|---------------------|---------------------------------------------------|
+| `name`                | The full name or alias of the character                                                                                                                                           |
+| `appearances`         | The number of comic books that character appeared in as of April 30                                                                                                               |
+| `current`             | Is the member currently active on an avengers affiliated team?                                                                                                                    |
+| `gender`              | The recorded gender of the character                                                                                                                                              |
+| `probationary_introl` | Sometimes the character was given probationary status as an Avenger, this is the date that happened. The value will be *NA* if the character was never given probationary status. |
+| `full_reserve`        | The month and year the character was introduced as a full or reserve member of the Avengers                                                                                       |
+| `year`                | The year the character was introduced as a full or reserve member of the Avengers                                                                                                 |
+| `years_since_joining` | 2015 minus the year                                                                                                                                                               |
+| `death1`              | Yes if the Avenger died, No if not.                                                                                                                                               |
+| `return1`             | Yes if the Avenger returned from their first death, No if they did not, blank if not applicable                                                                                   |
 
 See FiveThirtyEight's [GitHub repo](https://github.com/fivethirtyeight/data/tree/master/avengers) for the full codebook.
 
 1.  You are interested in creating a data frame with the most "classic" Avengers.
     Create a new data frame that only includes Avengers that were 1) created in 1970 or earlier and 2) were not given probationary status.
     Call the new data frame `classic_avengers`.
-    *Check: your new data frame should have 27 observations.*
+    *Hint: `is.na()` will be useful. Check: your new data frame should have 27 observations.*
 
 2.  *Who are the newest classic Avengers?* Using a single pipeline: Create a new variable called `years_served` that represents the number of years served **as of 2023.** *(Hint: you can use either the `year` variable or `years_since_joining` variables to do this.)* Arrange the data appropriately to display the newest classic Avengers first.
     Display only necessary columns and the first 10 rows in a nicely formatted table.
@@ -102,14 +102,14 @@ See FiveThirtyEight's [GitHub repo](https://github.com/fivethirtyeight/data/tree
 
     -   What do you observe about these Avengers in terms of deaths and returns?
 
-5.  Use the full `avengers` dataset to examine the mean and median number of appearances for Avengers who have died at least once compared to those who have **not** died at least once.
+5.  *Do characters who die at least once tend to appear more or less often than characters who never die?* Create a visualization using the full `avengers` dataset to examine the distribution of appearances by whether or not character has died at least once.
+    There are multiple correct way to visualize this, just make sure your visualization is clean and easy to read.
 
     -   What do you learn about Marvel movies from your results?
-    -   What do the mean and median tell you about the distribution of appearances for these two groups?
 
 # Airbnb Data
 
-The Airbnb data can be found in the **dsbox** package, and it\'s called `edibnb`.
+The Airbnb data can be found in the **dsbox** package, and it's called `edibnb`.
 Since the dataset is distributed with the package, we can load it with the following code:
 
 ```{r, eval = FALSE}
@@ -120,7 +120,7 @@ You can find out more about the dataset by inspecting its documentation, which y
 You can also find this information [here](https://rstudio-education.github.io/dsbox/reference/edibnb.html).
 
 6.  Create a faceted histogram where each facet represents a neighborhood and displays the distribution of Airbnb prices in that neighbourhood. Think critically about whether it makes more sense to stack the facets on top of each other in a column, lay them out in a row, or wrap them around. Along with your visualisation, include your reasoning for the layout you chose for your facets.
-7.  Use a single pipeline to identity the neighbourhoods with the top five median listing prices. Then, in another pipeline filter the data for these five neighbourhoods, and make ridge plots of the distributions of listing prices in these five neighbourhoods. In a third pipeline, calculate the minimum, mean, median, max, IQR, and standard deviation of listing price in each of these neighbourhoods. Use the visualization and the summary statistics to describe the distribution of listing prices in the neighbourhoods. (Your answer will include three pipelines - one of which ends in a visualization - and a narrative.)
+7.  Use a single pipeline to identity the neighbourhoods with the top five (most expensive) median listing prices. Then, in another pipeline filter the data for these five neighbourhoods, and make ridge plots of the distributions of listing prices in these five neighbourhoods. In a third pipeline, calculate the minimum, mean, median, max, IQR, and standard deviation of listing price in each of these neighbourhoods. Use the visualization and the summary statistics to describe the distribution of listing prices in the neighbourhoods. (Your answer will include three pipelines - one of which ends in a visualization - and a narrative.)
 8.  Create a visualization that will help you compare the distribution of review scores (`review_scores_rating`) across neighbourhoods. You get to decide what type of visualisation to create and there is more than one correct answer! In your answer, include a brief interpretation of how Airbnb guests rate properties in general and how the neighbourhoods compare to each other in terms of their ratings.
 
 # Further exploration

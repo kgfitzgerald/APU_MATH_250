@@ -504,7 +504,7 @@ padding-left: 1em;
 
 
 <h1 class="title toc-ignore">Exam 01</h1>
-<h3 class="subtitle">Avengers</h3>
+<h3 class="subtitle">Data Wrangling &amp; Visualization</h3>
 <h4 class="date">due Tuesday, October 3, 4:20pm</h4>
 
 
@@ -600,8 +600,8 @@ this exam!</p>
 <p>We will focus on the following variables in this exam:</p>
 <table>
 <colgroup>
-<col width="26%" />
-<col width="73%" />
+<col width="29%" />
+<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -665,8 +665,9 @@ repo</a> for the full codebook.</p>
 “classic” Avengers. Create a new data frame that only includes Avengers
 that were 1) created in 1970 or earlier and 2) were not given
 probationary status. Call the new data frame
-<code>classic_avengers</code>. <em>Check: your new data frame should
-have 27 observations.</em></p></li>
+<code>classic_avengers</code>. <em>Hint: <code>is.na()</code> will be
+useful. Check: your new data frame should have 27
+observations.</em></p></li>
 <li><p><em>Who are the newest classic Avengers?</em> Using a single
 pipeline: Create a new variable called <code>years_served</code> that
 represents the number of years served <strong>as of 2023.</strong>
@@ -692,21 +693,21 @@ of <code>appearances</code> and display only the columns
 <li>What do you observe about these Avengers in terms of deaths and
 returns?</li>
 </ul></li>
-<li><p>Use the full <code>avengers</code> dataset to examine the mean
-and median number of appearances for Avengers who have died at least
-once compared to those who have <strong>not</strong> died at least
-once.</p>
+<li><p><em>Do characters who die at least once tend to appear more or
+less often than characters who never die?</em> Create a visualization
+using the full <code>avengers</code> dataset to examine the distribution
+of appearances by whether or not character has died at least once. There
+are multiple correct way to visualize this, just make sure your
+visualization is clean and easy to read.</p>
 <ul>
 <li>What do you learn about Marvel movies from your results?</li>
-<li>What do the mean and median tell you about the distribution of
-appearances for these two groups?</li>
 </ul></li>
 </ol>
 </div>
 <div id="airbnb-data" class="section level1">
 <h1>Airbnb Data</h1>
 <p>The Airbnb data can be found in the <strong>dsbox</strong> package,
-and it&#39;s called <code>edibnb</code>. Since the dataset is distributed
+and it’s called <code>edibnb</code>. Since the dataset is distributed
 with the package, we can load it with the following code:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>edibnb <span class="ot">&lt;-</span> dsbox<span class="sc">::</span>edibnb</span></code></pre></div>
 <p>You can find out more about the dataset by inspecting its
@@ -721,14 +722,15 @@ stack the facets on top of each other in a column, lay them out in a
 row, or wrap them around. Along with your visualisation, include your
 reasoning for the layout you chose for your facets.</li>
 <li>Use a single pipeline to identity the neighbourhoods with the top
-five median listing prices. Then, in another pipeline filter the data
-for these five neighbourhoods, and make ridge plots of the distributions
-of listing prices in these five neighbourhoods. In a third pipeline,
-calculate the minimum, mean, median, max, IQR, and standard deviation of
-listing price in each of these neighbourhoods. Use the visualization and
-the summary statistics to describe the distribution of listing prices in
-the neighbourhoods. (Your answer will include three pipelines - one of
-which ends in a visualization - and a narrative.)</li>
+five (most expensive) median listing prices. Then, in another pipeline
+filter the data for these five neighbourhoods, and make ridge plots of
+the distributions of listing prices in these five neighbourhoods. In a
+third pipeline, calculate the minimum, mean, median, max, IQR, and
+standard deviation of listing price in each of these neighbourhoods. Use
+the visualization and the summary statistics to describe the
+distribution of listing prices in the neighbourhoods. (Your answer will
+include three pipelines - one of which ends in a visualization - and a
+narrative.)</li>
 <li>Create a visualization that will help you compare the distribution
 of review scores (<code>review_scores_rating</code>) across
 neighbourhoods. You get to decide what type of visualisation to create
