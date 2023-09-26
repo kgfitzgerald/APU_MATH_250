@@ -31,6 +31,10 @@ library(tidyverse)
 + [Undergraduate Student Guide for Grad School: PhD & MS Programs in Stats, Biostats, & Data Science](https://www.niss.org/events/undergraduate-student-guide-grad-school-phd-ms-programs-stats-biostats-data-science-degrees)
     + Next Friday, October 6, 9 - 11AM PT (look out for time zones!)
     + Free but registration required 
++ Research opportunity to look out for: 
+    + [SCORE Network](https://scorenetwork.org/index.html)
+    + analyzing sports data, developing analyses into data science activities 
+    + funding for up to 5 students, Summer '24 and Summer '25
 
 
 ### Exam ground rules
