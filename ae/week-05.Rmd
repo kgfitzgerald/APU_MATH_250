@@ -27,7 +27,11 @@ library(tidyverse)
 + Sign up for project group in Canvas if you haven't already - sit with your partner today
 + Exam made available at end of class today, due Tuesday class-time
 + No lab or annotations this week, but you will have lecture recordings & prep quiz for Tuesday (~60 mins, 3 videos)
-+ No class Thursday (work or exam, or watch lecture recordings)
++ No class Thursday (work on exam, or watch lecture recordings)
++ [Undergraduate Student Guide for Grad School: PhD & MS Programs in Stats, Biostats, & Data Science](https://www.niss.org/events/undergraduate-student-guide-grad-school-phd-ms-programs-stats-biostats-data-science-degrees)
+    + Next Friday, October 6, 9 - 11AM PT (look out for time zones!)
+    + Free but registration required 
+
 
 ### Exam ground rules
 
