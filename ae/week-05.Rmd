@@ -57,6 +57,8 @@ library(tidyverse)
 
 ### Questions?
 
++ How does the `if_else()` statement work?
++ When should I save the output of a pipe back into a dataset?
 
 ### Project Work Session
 
