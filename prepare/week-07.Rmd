@@ -11,34 +11,26 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Week 07 will follow a different format, since we will be spending the whole week doing a deep dive into Data Ethics. 
 
 ## For Tuesday, October 10
 
-### Required 
+`r emo::ji("memo")` **A first look at Ethics:** Read [this "ethics lab"](https://kgfitzgerald.github.io/APU_MATH_250/prepare/week-07-ethics-lab.html) and take some time to answer the questions. You do not need to turn in your answers, but you should write them down (or type them). You will be discussing your reflections in groups during class on Tuesday.
 
 `r emo::ji("movie_camera")` Watch [Misrepresentation](https://youtu.be/p4Ip0K-h-a8)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/19-misrepresentation.html)
 
-`r emo::ji("movie_camera")` Watch [Data privacy](https://youtu.be/SM9LXXa5ldI)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/20-privacy.html)
-
-`r emo::ji("movie_camera")` Watch [Cambridge Analytica Whistleblower](https://www.youtube.com/watch?v=FXdYSQ6nu-M)
-
 `r emo::ji("movie_camera")` Watch [Algorithmic bias](https://youtu.be/WpKOuUgnvxI)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/21-algorithmic-bias.html)
 
-### Choose one of the following 
+`r emo::ji("memo")` For Tuesday's "prep quiz", respond to this discussion post in [Campuswire](https://campuswire.com/c/G7C5D99E0/feed/8).
 
-`r emo::ji("movie_camera")` [Joy Buolamwini - How I’m fighting bias in algorithms](https://youtu.be/UG_X_7g63rY)
 
-`r emo::ji("movie_camera")` [Cathy O’Neil - Weapons of Math Destruction](https://youtu.be/TQHs8SA1qpk)
+## For Thursday, October 12
 
-`r emo::ji("movie_camera")` [Safiya Umoja Noble - Imagining a Future Free from the Algorithms of Oppression](https://youtu.be/tNi_U1Bb1S0)
+There is additional ethics material that you should engage with in Perusall (Annotations 05) before class on Thursday.
 
-`r emo::ji("movie_camera")` [Kristian Lum - What’s An Algorithm Got To Do With It](https://youtu.be/5zxDwA99soA)
 
-`r emo::ji("memo")` **Note:** Prep quiz this week is a discussion post about the above videos.
 
