@@ -42,11 +42,10 @@ All code should follow the tidyverse style guidelines.
 
 ## Packages
 
-We'll use the **tidyverse** package for much of the data wrangling and visualisation, the **tidymodels** package for modeling and inference, and the data lives in the **openintro** package.
+We'll use the **tidyverse** package for much of the data wrangling and visualisation, and the data lives in the **openintro** package.
 
 ```{r}
 library(tidyverse) 
-library(tidymodels)
 library(openintro)
 ```
 
