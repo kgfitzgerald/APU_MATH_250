@@ -19,7 +19,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
+No class Thursday
 
+Project Data Cleaning & EDA due Thursday 
+
++ Make sure to turn in .zip folder with all appropriate files
+
+Annotations due Saturday (in case you want extra time to focus on project)
+
+Next week: Inference for Numerical Data
+
++ 3 videos, 51 mins total
+
+Today: AE-07 / Lab 07 
+
++ Points wise counts as 2 AEs (20 points instead of 10) but will be graded for correctness (not just completion)
+
++ Due Tuesday by class-time, like a lab
 
 ### Questions?
 
