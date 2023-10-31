@@ -1,6 +1,6 @@
 ---
 title: "Week 10"
-subtitle: "Inference for Categorical Data"
+subtitle: "Inference for Numerical Data"
 output: 
   prettydoc::html_pretty:
     theme: hpstr
@@ -19,6 +19,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
++ Annotations due Thursday
++ AE-07 / Lab 07 due now
++ This week: AE-08 / Lab 08, due next Tuesday
++ Thursday: will continue working on Lab 08, and will meet with each group to discuss EDA / analysis plans
++ Note: no prep quizzes for the next couple of weeks, but still important to watch the lecture videos
 
 ### Questions?
 
@@ -26,7 +31,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Application Exercise
 
-+ This week, the Application Exercise & Lab are combined into one larger Lab 07, which you will work on during both class sessions.
++ This week, the Application Exercise & Lab are combined into one larger Lab 08, which you will work on during both class sessions.
 - You can access it from GitHub. 
 - It is due by class-time next Tuesday. 
 - To turn it in, you should upload your .html file to Canvas.
