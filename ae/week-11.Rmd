@@ -22,7 +22,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-
++ Today: continue working on Lab 08, due class-time Thursday
++ Thursday: project work session
++ Rough draft due next Tuesday at midnight, early submission encouraged
+    + Will read two groups' reports prior to class that Thursday
 
 
 ### Project comments

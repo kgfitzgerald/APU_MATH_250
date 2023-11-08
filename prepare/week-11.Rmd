@@ -1,6 +1,6 @@
 ---
 title: "Prepare: Week 11"
-subtitle: "Inference for Numerical Data"
+subtitle: "Inference for Categorical Data"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Required
 
-`r emo::ji("movie_camera")` Watch [Infernce with Categorical Data, Part I: One Proportion](https://youtu.be/Di9weeNXhCg)
+`r emo::ji("movie_camera")` Watch [Inference with Categorical Data, Part I: One Proportion](https://youtu.be/Di9weeNXhCg)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/31-cat-inf-one-prop.html)
 
@@ -26,12 +26,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/32-cat-inf-diff-props-OR-RR.html)
 
-`r emo::ji("movie_camera")` Watch [Infernce with Categorical Data, Part III: Two-way tables, Chi-square test](https://youtu.be/aUtjnTfmVuA)
+`r emo::ji("movie_camera")` Watch [Inference with Categorical Data, Part III: Two-way tables, Chi-square test](https://youtu.be/aUtjnTfmVuA)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/33-cat-inf-two-way-tables.html)
 
 
-`r emo::ji("memo")` Complete Prep Quiz 11 on Canvas
+<!-- `r emo::ji("memo")` Complete Prep Quiz 11 on Canvas -->
 
 
 ### Optional 
