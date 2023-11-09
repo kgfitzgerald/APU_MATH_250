@@ -28,25 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Questions?
 
-### Rough Draft Peer Review
 
-Why peer review?
-
--   Giving good feedback is a skill (that we don't often practice)
-
--   Receiving and incorporating feedback effectively also takes practice
-
--   Our work is better when we have multiple perspectives speak into it
-
--   Makes us better at self-assessing our own work
-
--   It's part of the scientific process
-
-We will do the following twice:
-
--   (10 mins) In your project groups, discuss assigned paper and fill out feedback form in the shared [Google Drive folder](https://drive.google.com/drive/folders/190TgJca5qleOGoQQMJ6IbLj_RbSRKtOE?usp=share_link) ("Peer feedback for Group X")
-
--   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group)
 
 <!-- +-------------+--------------------+ -->
 <!-- |             | Group pairings     | -->
@@ -64,22 +46,3 @@ We will do the following twice:
 <!-- |             | Group 3 & Dr. Fitz | -->
 <!-- +-------------+--------------------+ -->
 
-### General Tips
-
--   Hide code in final report (can have code chunk with `knitr::opts_chunk$set(echo = FALSE)` at the top of your .qmd)
-
--   Think about audience:
-
-    -   Generally educated stakeholder - not necessarily an analyst
-
-    -   The .qmd can have thorough commenting for an analyst to follow, but don't need to include all the analysis/coding decisions in the report itself
-
-    -   Avoid heavy jargon (both statistical and R-related)
-
--   Focus more on commentary of your results and what they mean, less on analysis/coding decisions
-
--   Use spellcheck :)
-
--   Use "English" in your table headers - rather than the raw column headers
-
-### 

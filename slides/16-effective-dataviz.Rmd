@@ -1,5 +1,5 @@
 ---
-title: "Tips for effective data visualization"
+title: "Tips for effective data visualization & communication"
 subtitle: "MATH 250"
 author: "Katie Fitzgerald, adpated from datasciencebox.org"
 output:
@@ -731,10 +731,20 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 
 ---
 
-.your-turn[
-### .hand[Your turn!]
-.midi[
-- RStudio Cloud > `AE 07 - Brexit + Telling stories with dataviz` > `brexit.qmd`. 
-- Change the visualisation in three different ways to tell slightly different stories with it each time.
-]
-]
+## Tips for written report
+
+-   Hide code in final report (can have code chunk with `knitr::opts_chunk$set(echo = FALSE)` at the top of your .qmd)
+
+-   Use spellcheck :)
+
+-   Use "English" in your table headers - rather than the raw column headers
+
+- Use good coding practices (e.g. use of white space, line breaks)
+
+-   Think about audience:
+
+    -   Generally educated stakeholder - not necessarily an analyst
+
+    -   The .qmd can have thorough commenting for an analyst to follow, but don't need to include all the analysis/coding decisions in the report itself
+
+    -   Avoid heavy jargon (both statistical and R-related)

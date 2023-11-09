@@ -24,10 +24,50 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Questions?
 
 
+### Rough Draft Peer Review
 
-### Application Exercise
+Why peer review?
 
--   The remainder of class will be spent on AE-10.
-- You can access it from GitHub. 
-- It is due at the end of class today. 
--   To turn it in, you should upload your .html file to Canvas.
+-   Giving good feedback is a skill (that we don't often practice)
+
+-   Receiving and incorporating feedback effectively also takes practice
+
+-   Our work is better when we have multiple perspectives speak into it
+
+-   Makes us better at self-assessing our own work
+
+-   It's part of the scientific process
+
+Logistics:
+
+-   (15 mins) In your project groups, discuss assigned paper and fill out the "SHORT Rough Draft Peer Feedback - Group X" form in the shared [Google Drive folder](https://drive.google.com/drive/folders/190TgJca5qleOGoQQMJ6IbLj_RbSRKtOE?usp=share_link) (located in the folder of the group you're reviewing)
+
+-   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group)
+
++-------------+--------------------+
+|             | Group pairings     |
++=============+====================+
+| Session 1   | Group 1 & Group 3  |
+|             |                    |
+|             | Group 2 & Group 4  |
+|             |                    |
+|             | Group 5 & Dr. Fitz |
++-------------+--------------------+
+
+For the group you did NOT already exchange feedback with, you will write up a FORMAL peer review
+
++ Group 1 formally reviews Group 2
++ Group 2 formally reviews Group 3
++ Group 3 formally reviews Group 4
++ Group 4 formally reviews Group 5
++ Group 5 formally reviews Group 1
+
+Your formal review will include:
+
++ FULL evaluation rubric filled out (in the folder of the group you're reviewing)
++ A brief write-up (~1 page) highlighting the following:
+    + A summary of the research questions, data context, and findings, as you understand them
+    + Brief comments on strengths of the paper
+    + Constructive criticism, raising questions / points of confusion, and outlining what needs to be changed/improved in order for the report to be exemplary
+
+The constructive criticism should make up the bulk of the 1-page review. Remember: the goal is to help them IMPROVE the work. You should NOT simply tell them it's wonderful, and you should NOT simply criticize without offering concrete suggestions for HOW to improve. 
