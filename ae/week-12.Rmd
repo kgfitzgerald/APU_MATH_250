@@ -11,7 +11,6 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 ### Statistician(s) of the Week
 
 [Jo Hardin](https://hardin47.netlify.app/about/)
@@ -20,9 +19,40 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
+### ![](images/ms_stem.png)
+
+![](images/Stats%20talk.PNG)
+
+-   2 extra credit points on your final project (b/c relevant to communicating data!)
+
+-   Attending grad info session could be 1 stats experience point
+
+-   Register for Putnam Exam! Saturday, December 1. Talk to Dr. Mathews.
+
+-   THIS WEEK
+
+    -   Rough drafts due TONIGHT! Upload .zip to Google Drive
+
+    -   BEFORE CLASS THURSDAY: Read two assigned rough drafts (this replaces annotations this week)
+
+-   WEEK 13 (AFTER THANKSGIVING)
+
+    -   For Tuesday class-time: Annotations 10 / Prep Week 13 (\~30 mins of YouTube videos)
+
+    -   Due Tuesday 11:59pm: Formal Peer Review due (recommend getting this done before Thanksgiving - will start in class this Thursday)
+
+    -   For Thursday class-time: Prep Quiz 13 (10 min lecture, then 3 short Prep Activities with Shiny Apps)
+
+    -   Any last stats experience points (5 total for semester) due Thursday after thanksgiving (was originally this Thursday)
+
+|         | Tue in-class                         | Thur in-class                                |
+|---------|--------------------------------------|----------------------------------------------|
+| Week 12 | Communicating Results Part 1 (no AE) | Peer review                                  |
+| Week 13 | Communicating Results Part 2 (no AE) | Shiny Apps (Lab 09)                          |
+| Week 14 | Poster work session                  | Poster peer review                           |
+| Week 15 |                                      | Poster presentations - invite your friends!  |
 
 ### Questions?
-
 
 ### Rough Draft Peer Review
 
@@ -44,30 +74,32 @@ Logistics:
 
 -   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group)
 
-+-------------+--------------------+
-|             | Group pairings     |
-+=============+====================+
-| Session 1   | Group 1 & Group 3  |
-|             |                    |
-|             | Group 2 & Group 4  |
-|             |                    |
-|             | Group 5 & Dr. Fitz |
-+-------------+--------------------+
+-   Remainder of class will be spent on working on your FORMAL review (this is graded and counts towards your final project grade!)
+
++---------------+--------------------+
+|               | Group pairings     |
++===============+====================+
+| Session 1     | Group 1 & Group 3  |
+|               |                    |
+|               | Group 2 & Group 4  |
+|               |                    |
+|               | Group 5 & Dr. Fitz |
++---------------+--------------------+
 
 For the group you did NOT already exchange feedback with, you will write up a FORMAL peer review
 
-+ Group 1 formally reviews Group 2
-+ Group 2 formally reviews Group 3
-+ Group 3 formally reviews Group 4
-+ Group 4 formally reviews Group 5
-+ Group 5 formally reviews Group 1
+-   Group 1 formally reviews Group 2
+-   Group 2 formally reviews Group 3
+-   Group 3 formally reviews Group 4
+-   Group 4 formally reviews Group 5
+-   Group 5 formally reviews Group 1
 
 Your formal review will include:
 
-+ FULL evaluation rubric filled out (in the folder of the group you're reviewing)
-+ A brief write-up (~1 page) highlighting the following:
-    + A summary of the research questions, data context, and findings, as you understand them
-    + Brief comments on strengths of the paper
-    + Constructive criticism, raising questions / points of confusion, and outlining what needs to be changed/improved in order for the report to be exemplary
+-   FORMAL evaluation rubric filled out (Written report section ONLY) (in the folder of the group you're reviewing)
+-   A brief write-up (\~1 page) highlighting the following:
+    -   A summary of the research questions, data context, and findings, as you understand them
+    -   Brief comments on strengths of the paper
+    -   Constructive criticism, raising questions / points of confusion, and outlining what needs to be changed/improved in order for the report to be exemplary
 
-The constructive criticism should make up the bulk of the 1-page review. Remember: the goal is to help them IMPROVE the work. You should NOT simply tell them it's wonderful, and you should NOT simply criticize without offering concrete suggestions for HOW to improve. 
+The constructive criticism should make up the bulk of the 1-page review. Remember: the goal is to help them IMPROVE the work. You should NOT simply tell them it's wonderful, and you should NOT simply criticize without offering concrete suggestions for HOW to improve.

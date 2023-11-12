@@ -11,9 +11,15 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
+**Note:** the Prep Work & annotations are rearranged for this week, so that less is due on the Tuesday after Thanksgiving :) The assigned work is due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
 ## For Tuesday, November 28
+
+### Required
+
+`r emo::ji("movie_camera")` Watch the two YouTube videos on Perusall Annotations 10 / Week 13 Prep about academic posters. **Note: for the first video, you only need to watch the 2nd half, starting at 10:44.** You can comment as you watch or write one longer comment at the end. 
+
+## For Thursday, November 30
 
 ### Required
 
@@ -21,9 +27,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/36-shiny.html)
 
-`r emo::ji("memo")` Complete Prep Activities #1 & #2 from slides (nothing to turn in)
+`r emo::ji("memo")` Complete Prep Activities #1 - #2 from slides (nothing to turn in). Note, the shiny app code can be found on GitHub (not the "MATH_250_individual workspace" mentioned in the video)
 
-`r emo::ji("memo")` Complete Prep Quiz 13 on Campuswire, which asks you to browse the [Shiny Gallery](https://shiny.rstudio.com/gallery/) and choose 3 apps to explore
+`r emo::ji("memo")` Complete Prep Activity #3 by responding to Prep Quiz 13 on Campuswire, which asks you to browse the [Shiny Gallery](https://shiny.rstudio.com/gallery/) and choose 3 apps to explore
   
   - For each app, post on [Campuswire](https://campuswire.com/c/G7C5D99E0/assignments/3):
     1. Name of app w/ hyperlink
