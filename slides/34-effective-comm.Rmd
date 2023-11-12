@@ -21,6 +21,36 @@ library(tidyverse)
 library(scales)
 ```
 
+---
+
+class: middle
+
+# What makes for a good (scientific) paper?
+
+---
+
+## In your project groups
+
++ Discuss what the "exemplar" reports did well 
++ Brainstorm a list of 5+ characteristics of a good scientific paper
+
+--
+
++ What questions do you have about how to incorporate these characteristics into your project?
+
+---
+
+# Tips for written report
+
++ Think about audience:
+    + Generally educated audience, but not experts in the same thing as you
++ Avoid the trap of "we did this, and then we did this, and then we did this..." 
+    + Should be a NARRATIVE that helps the reader understand the most interesting findings, why they're important.
+    + Exception: Methods section can be dull
++ "Demonstrate that you are proficient at asking meaningful questions and answering them using data, that you are skilled in interpreting and presenting results, and that you can accomplish these tasks using R. More is not necessarily better."
+
+---
+
 class: middle
 
 # Designing effective visualizations
@@ -210,7 +240,7 @@ ggplot(brexit, aes(x = fct_infreq(opinion))) + #<<
 .panel[.panel-name[Code]
 
 ```{r labels, fig.show = "hide"}
-ggplot(brexit, aes(x = opinion)) +
+ggplot(brexit, aes(x = fct_infreq(opinion))) +
   geom_bar() +
   labs( #<<
     x = "Opinion", #<<
@@ -476,13 +506,13 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .panelset[
 
 .panel[.panel-name[Plot]
-```{r ref.label="hide-legend", echo = FALSE, fig.asp = 0.45, out.width = "90%"}
+```{r ref.label="hide-legend", echo = FALSE, fig.asp = 0.45, out.width = "90%", warning = FALSE}
 ```
 ]
 
 .panel[.panel-name[Code]
 
-```{r hide-legend, fig.show = "hide"}
+```{r hide-legend, fig.show = "hide", warning = FALSE}
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1) +
@@ -731,20 +761,4 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 
 ---
 
-## Tips for written report
 
--   Hide code in final report (can have code chunk with `knitr::opts_chunk$set(echo = FALSE)` at the top of your .qmd)
-
--   Use spellcheck :)
-
--   Use "English" in your table headers - rather than the raw column headers
-
-- Use good coding practices (e.g. use of white space, line breaks)
-
--   Think about audience:
-
-    -   Generally educated stakeholder - not necessarily an analyst
-
-    -   The .qmd can have thorough commenting for an analyst to follow, but don't need to include all the analysis/coding decisions in the report itself
-
-    -   Avoid heavy jargon (both statistical and R-related)
