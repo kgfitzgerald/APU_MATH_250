@@ -761,4 +761,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 
 ---
 
+# Next steps
 
++ Come to my talk on Monday after Thanksgiving for more data viz / communication tips! (And 2 extra credit points)
++ Rest of class: work on rough draft
