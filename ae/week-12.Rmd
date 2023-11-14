@@ -31,26 +31,29 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   THIS WEEK
 
-    -   Rough drafts due TONIGHT! Upload .zip to Google Drive
+    -   Rough drafts due Thursday by classtime! Upload .zip to Google Drive
 
-    -   BEFORE CLASS THURSDAY: Read two assigned rough drafts (this replaces annotations this week)
+    -   BEFORE CLASS THURSDAY: Watch 2 YouTube videos on Perusall (see note about starting partway through video 1)
 
 -   WEEK 13 (AFTER THANKSGIVING)
 
-    -   For Tuesday class-time: Annotations 10 / Prep Week 13 (\~30 mins of YouTube videos)
+    -   For Tuesday class-time: Read two assigned rough drafts
 
-    -   Due Tuesday 11:59pm: Formal Peer Review due (recommend getting this done before Thanksgiving - will start in class this Thursday)
-
-    -   For Thursday class-time: Prep Quiz 13 (10 min lecture, then 3 short Prep Activities with Shiny Apps)
+    -   For Thursday class-time: Prep Quiz 13 (10 min lecture, then 3 Prep Activities with Shiny Apps)
 
     -   Any last stats experience points (5 total for semester) due Thursday after thanksgiving (was originally this Thursday)
 
-|         | Tue in-class                         | Thur in-class                               |
-|---------|--------------------------------------|---------------------------------------------|
-| Week 12 | Communicating Results Part 1 (no AE) | Peer review                                 |
-| Week 13 | Communicating Results Part 2 (no AE) | Shiny Apps (Lab 09)                         |
-| Week 14 | Poster work session                  | Poster peer review                          |
-| Week 15 |                                      | Poster presentations - invite your friends! |
++-------------+--------------------------------------+---------------------------------------------+
+|             | Tue in-class                         | Thur in-class                               |
++=============+======================================+=============================================+
+| Week 12     | Communicating Results Part 1 (no AE) | Communicating Results Part 2 (no Lab)       |
++-------------+--------------------------------------+---------------------------------------------+
+| Week 13     | Peer Review                          | Shiny Apps (Lab 09)                         |
++-------------+--------------------------------------+---------------------------------------------+
+| Week 14     | Poster work session                  | Poster peer review                          |
++-------------+--------------------------------------+---------------------------------------------+
+| Week 15     |                                      | Poster presentations - invite your friends! |
++-------------+--------------------------------------+---------------------------------------------+
 
 ### Questions?
 
@@ -76,15 +79,15 @@ Logistics:
 
 -   Remainder of class will be spent on working on your FORMAL review (this is graded and counts towards your final project grade!)
 
-+-----------+--------------------+
-|           | Group pairings     |
-+===========+====================+
-| Session 1 | Group 1 & Group 3  |
-|           |                    |
-|           | Group 2 & Group 4  |
-|           |                    |
-|           | Group 5 & Dr. Fitz |
-+-----------+--------------------+
++-------------+--------------------+
+|             | Group pairings     |
++=============+====================+
+| Session 1   | Group 1 & Group 3  |
+|             |                    |
+|             | Group 2 & Group 4  |
+|             |                    |
+|             | Group 5 & Dr. Fitz |
++-------------+--------------------+
 
 For the group you did NOT already exchange feedback with, you will write up a FORMAL peer review
 

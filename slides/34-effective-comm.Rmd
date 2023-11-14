@@ -1,5 +1,5 @@
 ---
-title: "Tips for effective data visualization & communication"
+title: "Tips for effective communication"
 subtitle: "MATH 250"
 author: "Katie Fitzgerald, adpated from datasciencebox.org"
 output:
@@ -40,6 +40,14 @@ class: middle
 
 ---
 
+# Lab Answers - where did I go wrong? 
+
+[Group 1 Google Doc](https://docs.google.com/document/d/13NSlH2ePWrq4EPqDkeL5JfHg3XubmPDF/edit?usp=sharing&ouid=106967575594472014629&rtpof=true&sd=true)
+
+[Group 2 Google Doc](https://docs.google.com/document/d/1BZoKq1DNL_EFhxKPBn69wyNMdgFJpa_2/edit?usp=share_link&ouid=106967575594472014629&rtpof=true&sd=true)
+
+---
+
 # Tips for written report
 
 + Think about audience:
@@ -48,6 +56,36 @@ class: middle
     + Should be a NARRATIVE that helps the reader understand the most interesting findings, why they're important.
     + Exception: Methods section can be dull
 + "Demonstrate that you are proficient at asking meaningful questions and answering them using data, that you are skilled in interpreting and presenting results, and that you can accomplish these tasks using R. More is not necessarily better."
+
+---
+
+class: middle
+
+# Written interpretations / explanations
+
+---
+
+## Regression results
+
++ Provide CLEAN regression table output (e.g. use `kableExtra`)
++ In results section, write out the generic model
+
+"We fit a multiple linear regression model of the form
+
+$$y_i = \beta_0 + \beta_1X_{1i} + \beta_2X_{2i} + \epsilon_i,$$
+
+where $y_i$ is the ______ for [observation] $i$, $X_{1i}$ is the ______ for [observation] $i$, ...., and $\epsilon_i$ is the error term."
+
+---
+
+# Regression interpretations
+
++ Help the reader know how to interpret each estimate, but don't need to use "formal"/template language for each one. 
+    + "Our coefficients show that ABC have a positive relationship with Y, whereas DEF have a negative relationship."
+    + "X has strongest relationship with Y, indicated by ...."
+    + "Each predictor is significant at the ___ level" 
+    + Provide more explicit interpretation for key predictors of interest, and for categorical predictors, as these are harder to interpret
+
 
 ---
 
@@ -122,6 +160,7 @@ knitr::include_graphics("img/time-series-story.png")
 .footnote[
 Credit: Angela Zoss and Eric Monson, Duke DVS
 ]
+
 
 ---
 
