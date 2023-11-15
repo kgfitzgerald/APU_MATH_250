@@ -76,6 +76,8 @@ $$y_i = \beta_0 + \beta_1X_{1i} + \beta_2X_{2i} + \epsilon_i,$$
 
 where $y_i$ is the ______ for [observation] $i$, $X_{1i}$ is the ______ for [observation] $i$, ...., and $\epsilon_i$ is the error term."
 
++ Include (and interpret) adjusted $R^2$
+
 ---
 
 # Regression interpretations
