@@ -5,6 +5,7 @@ output:
   prettydoc::html_pretty:
     theme: hpstr
     highlight: github
+bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -15,28 +16,54 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <!-- [Cassie Kozyrkov](https://en.wikipedia.org/wiki/Cassie_Kozyrkov) -->
 
+### Citation management
+
+-   Download & Install [LaTeX](https://www.latex-project.org/get/#tex-distributions)
+
+-   Download & Install [Zotero](https://www.zotero.org)
+
+-   Install the [Zotero Connector for Chrome](https://www.zotero.org/download/connectors)
+
+-   Install [Better BibTeX for Zotero](https://retorque.re/zotero-better-bibtex/installation/)
+
+-   See `Zotero_demo.qmd` on GitHub (and `references.bib`) for demo of citations in Quarto
+
+-   Open Microsoft Word on your computer and look for the [Zotero tab](https://www.zotero.org/support/word_processor_plugin_usage)
+
+-   Open a Google Doc (in Chrome) and look for the [Zotero tab](https://www.zotero.org/support/google_docs)
+
+Citation tasks:
+
+1.  In Chrome, search for and locate the sources you plan to cite, and click on the Extensions puzzle piece to add them to your Zotero library
+
+    1.  If they are just websites rather than academic papers or books, you may need to manually edit the citation info in Zotero
+
+2.  In a Quarto file (e.g. your written report), create (potentially placeholder) sentences with in-text citations (Insert \> @ Citation), then Render.
+
+3.  OPTIONAL: Repeat the citation process in Word (or Google Docs)
+
 ### Announcements
 
-- Take a vote: Shiny or no Shiny? 
-- Any last stats experience points (5 total for semester) due Thursday
-    + can submit up to 10 additional ones for extra credit on lowest lab assignment(s)
-- THIS SATURDAY: American Statistical Association SoCal event AT APU
-    + 10:30 – 11:30 AM  talk by Jacob Rode  “Meta-analysis as a tool to address complex problems: An example on climate change perceptions and overview using R”
-    + 11:30 – 11:45 AM  break
-    + 11:45 AM – 12:30 PM talk by Chong Ho (Alex) Yu “From traditional statistics to modern data science and machine learning”
-    + 12:30 – 1:30 PM lunch
-    + 1:30 – 1:35 PM book raffle (must be present to win)
-    + 1:35 – 2:30 PM SCASA Business Meeting
+-   Take a vote: `Shiny` or no Shiny?
+-   Any last stats experience points (5 total for semester) due Thursday
+    -   can submit up to 10 additional ones for extra credit on lowest lab assignment(s)
+-   THIS SATURDAY: American Statistical Association SoCal event AT APU
+    -   10:30 -- 11:30 AM talk by Jacob Rode "Meta-analysis as a tool to address complex problems: An example on climate change perceptions and overview using R"
+    -   11:30 -- 11:45 AM break
+    -   11:45 AM -- 12:30 PM talk by Chong Ho (Alex) Yu "From traditional statistics to modern data science and machine learning"
+    -   12:30 -- 1:30 PM lunch
+    -   1:30 -- 1:35 PM book raffle (must be present to win)
+    -   1:35 -- 2:30 PM SCASA Business Meeting
 
-+--------------+--------------------------------------+---------------------------------------------+
-|              | Tue in-class                         | Thur in-class                               |
-+==============+======================================+=============================================+
-| Week 13      | Peer Review                          | Shiny Apps (Lab 09)                         |
-+--------------+--------------------------------------+---------------------------------------------+
-| Week 14      | Poster work session                  | Poster peer review                          |
-+--------------+--------------------------------------+---------------------------------------------+
-| Week 15      |                                      | Poster presentations - invite your friends! |
-+--------------+--------------------------------------+---------------------------------------------+
++---------------+---------------------+---------------------------------------------+
+|               | Tue in-class        | Thur in-class                               |
++===============+=====================+=============================================+
+| Week 13       | Peer Review         | Zotero + poster work session                |
++---------------+---------------------+---------------------------------------------+
+| Week 14       | Poster work session | Poster peer review                          |
++---------------+---------------------+---------------------------------------------+
+| Week 15       |                     | Poster presentations - invite your friends! |
++---------------+---------------------+---------------------------------------------+
 
 ### Questions?
 
@@ -50,7 +77,7 @@ Why peer review?
 
 -   Our work is better when we have multiple perspectives speak into it
 
--   It's one of the only cures to the curse of expertise! 
+-   It's one of the only cures to the curse of expertise!
 
 -   Makes us better at self-assessing our own work
 
@@ -97,6 +124,3 @@ The constructive criticism should make up the bulk of the 1-page review. Remembe
 -   For AE-11, you will complete Lessons 03 - 05 from the [Shiny Getting Started Tutorials](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
 
 -   You will turn in a .zip folder that includes the `lesson-03` and `census-app` folders as well as the .Rproj file from your Shiny project
-
-
-
