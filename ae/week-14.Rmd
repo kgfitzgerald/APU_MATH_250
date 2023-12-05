@@ -20,20 +20,45 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-
++ Today: poster work session
++ Should have draft of poster uploaded by class-time on Thursday
+    + Also have a ~2 minute "elevator pitch" prepared
++ Thursday: poster peer review & elevator pitch practice
++ Friday @ noon: poster due to me (I have to place print order that afternoon)
++ [Final project repo](https://canvas.apu.edu/courses/49307/assignments/837781) due at time of presentation
+    + Feedback on your rough draft written report in our shared Google Drive
++ [IDEA survey](https://apu.campuslabs.com/eval-home/direct/3120564) due Friday - 2% extra credit on final project if >80% fill it out (currently 30%)
++ [End of Course Reflection](https://canvas.apu.edu/courses/49307/assignments/837759) (~1 page), due next Thursday
+    + Meta-cognition important for learning
+    + More nitty gritty feedback / course-specific suggestions for how to improve
+    + Concrete things changed based on last year's feedback:
+        + No HW assignments (reduced work-load)
+        + No Posit Cloud (web-based version of RStudio)
+        + In-class group work but individual submissions
+        + More focus on interpreting results (re-did middle 3rd of the course to be more stats-focused, added more interpretation Qs & reflection prompts)
++ Poster session: Thursday, Dec 14, 4 - 5:15pm
+    + invite your friends! 
+    + if cooking/baking is your thing, bring your favorite treat to share
++ Escape Room - [Ministry of Peculiarities](https://www.theministryofpeculiarities.com/)
+    + after poster session 7:15 - 8:45
+    + 5 spots left (4 students, 3 profs signed up)
+    + currently \$53/person, drops to \$48 w/ 2 more people, \$45 with 4 more people
 
 ### Questions?
 
+### Poster Tips / Guidelines
 
-### Shiny Part II 
++ What is your main / most interesting finding? What succinct & catchy sentence will you use to communicate it?
++ Identify your best 2 - 3 visualizations
++ [#betterposter templates](https://osf.io/ef53g/)
++ Examples in our Google Drive also
++ Be careful with font size and image quality! 
++ Update slide size to be 48" wide x 36" tall
++ In elevator pitch:
+    + beware of the curse of expertise
+    + use gestures to guide where they should be looking
+    + don't need to tell them EVERYTHING - best pitches are interesting discussion starters
+    + help them connect to something they already know
 
-+ For AE-12, you will design and implement a Shiny app to explore your project data
 
-+ These should be completed in your shared Group Project workspace 
-
-+ Begin by sketching out an idea on paper
-
-+ When ready to start building your app, you should create a new folder in your project directory called `shiny` and place all necessary files there
-
-+ You will turn in a .zip file of the `shiny` folder as well as the `.Rproj` file. Make sure any necessary data is included and in an appropriate file structure in the .zip folder as well so that the app can be run on someone else's computer. 
 
