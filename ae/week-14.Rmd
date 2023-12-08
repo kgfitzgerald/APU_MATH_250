@@ -17,6 +17,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Robert Santos](https://hardin47.github.io/CURV/scholars/santos.html)
 
+### Thursday Announcements
+
+-   Final draft of poster - upload to Canvas AND email to me by noon tomorrow
+
+-   IDEA survey - need two more people - closes tomorrow
+
+-   [Final project repo](https://canvas.apu.edu/courses/49307/assignments/837781) - make game plan for what docs you still need
+
 ### Announcements
 
 -   Today: poster work session
