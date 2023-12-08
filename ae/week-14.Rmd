@@ -25,6 +25,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   [Final project repo](https://canvas.apu.edu/courses/49307/assignments/837781) - make game plan for what docs you still need
 
+-   Next Thursday:
+
+    -   Try to arrive \~10 mins early to hang poster
+
+    -   Will be starting in Physics Lab to watch their 1 presentation (15 mins), then everyone outside for poster session
+
 ### Announcements
 
 -   Today: poster work session
