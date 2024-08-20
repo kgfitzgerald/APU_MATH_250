@@ -129,7 +129,7 @@ Before submitting your assignment on Canvas, Render one last time, then open up 
 
 + Check any visualizations for informative and clean labels and titles
 
-+ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
++ Check any tables for clean formatting (e.g. with `kbl() |> kable_minmal()`)
 
 + Check that you've interpreted output as appropriate
 

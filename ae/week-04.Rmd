@@ -48,20 +48,20 @@ What's ahead:
 
 [Tidyverse style guidelines](https://style.tidyverse.org/pipes.html) for line breaks, white space, etc.
 
-1.  Have space before `%>%` and a linebreak after
+1.  Have space before `|>` and a linebreak after
 
 ```{r, eval = FALSE}
 # Good
-iris %>%
-  group_by(Species) %>%
-  summarize_if(is.numeric, mean) %>%
-  ungroup() %>%
-  gather(measure, value, -Species) %>%
+iris |>
+  group_by(Species) |>
+  summarize_if(is.numeric, mean) |>
+  ungroup() |>
+  gather(measure, value, -Species) |>
   arrange(value)
 
 # Bad
-iris %>% group_by(Species) %>% summarize_all(mean) %>%
-ungroup %>% gather(measure, value, -Species) %>%
+iris |> group_by(Species) |> summarize_all(mean) |>
+ungroup |> gather(measure, value, -Species) |>
 arrange(value)
 ```
 
@@ -85,16 +85,16 @@ ggplot(aes(x = Sepal.Width, y = Sepal.Length, color = Species))+
 3.  If arguments to a function don't fit on one line, put each argument on its own line
 
 ```{r, eval = FALSE}
-iris %>%
-  group_by(Species) %>%
+iris |>
+  group_by(Species) |>
   summarise(
     Sepal.Length = mean(Sepal.Length),
     Sepal.Width = mean(Sepal.Width),
     Species = n_distinct(Species)
   )
 
-iris %>%
-  group_by(Species) %>%
+iris |>
+  group_by(Species) |>
   summarise(Sepal.Length = mean(Sepal.Length),
             Sepal.Width = mean(Sepal.Width),
             Species = n_distinct(Species))
@@ -104,14 +104,14 @@ iris %>%
 
 ```{r, eval = FALSE}
 # Good
-iris %>% 
-  mutate(ratio = Sepal.Length/Sepal.Width) %>% 
+iris |> 
+  mutate(ratio = Sepal.Length/Sepal.Width) |> 
   ggplot(aes(x = Sepal.Width, y = Sepal.Length)) +
   geom_point()
 
 # Bad
-iris%>% 
-  mutate(ratio=Sepal.Length/Sepal.Width) %>% 
+iris|> 
+  mutate(ratio=Sepal.Length/Sepal.Width) |> 
   ggplot(aes(x=Sepal.Width,y = Sepal.Length)) +
   geom_point()
 ```

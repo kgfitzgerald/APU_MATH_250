@@ -86,18 +86,18 @@ all_polls <- read_rds("data/all_polls.rds")
 
 ```{r resampling, eval = FALSE}
 # Compute p-hat for each poll
-many_sample_props <- all_polls %>% 
+many_sample_props <- all_polls |> 
   # Group by poll
-  ___(___) %>% 
+  ___(___) |> 
   # Calculate proportion of yes votes
   ___(stat = ___)
 ```
 
 ```{r resampling-solutions, echo = FALSE}
 # Compute p-hat for each poll
-many_sample_props <- all_polls %>% 
+many_sample_props <- all_polls |> 
   # Group by poll
-  group_by(poll) %>% 
+  group_by(poll) |> 
   # Calculate proportion of yes votes
   summarize(stat = mean(vote == "yes"))
 ```
@@ -114,36 +114,36 @@ many_sample_props <- all_polls %>%
 
 ```{r resampling2, eval = FALSE}
 # Select one poll from which to resample
-one_poll <- all_polls %>%
+one_poll <- all_polls |>
   # Filter for the first poll
-  ___(___) %>%
+  ___(___) |>
   # Select vote
   ___(___)
   
 # Compute p-hat* for each resampled poll
-bootstrapped_props <- one_poll %>%
+bootstrapped_props <- one_poll |>
   # Specify vote as the response, where yes means success
-  ___(response = ___, success = ___) %>%
+  ___(response = ___, success = ___) |>
   # Generate 1000 reps of type bootstrap
-  ___(reps = ___, type = ___) %>% 
+  ___(reps = ___, type = ___) |> 
   # Calculate the summary stat "prop"
   ___(stat = ___)
 ```
 
 ```{r resampling2-solution, echo = FALSE}
 # Select one poll from which to resample
-one_poll <- all_polls %>%
+one_poll <- all_polls |>
   # Filter for the first poll
-  filter(poll == 1) %>%
+  filter(poll == 1) |>
   # Select vote
   select(vote)
   
 # Compute p-hat* for each resampled poll
-bootstrapped_props <- one_poll %>%
+bootstrapped_props <- one_poll |>
   # Specify vote as the response, where yes means success
-  specify(response = vote, success = "yes") %>%
+  specify(response = vote, success = "yes") |>
   # Generate 1000 reps of type bootstrap
-  generate(reps = 1000, type = "bootstrap") %>% 
+  generate(reps = 1000, type = "bootstrap") |> 
   # Calculate the summary stat "prop"
   calculate(stat = "prop")
 ```
@@ -155,11 +155,11 @@ bootstrapped_props <- one_poll %>%
 
 ```{r resampling3, eval = FALSE}
 # Calculate variability of p-hat
-many_sample_props %>% 
+many_sample_props |> 
   summarize(variability = ___)
   
 # Calculate variability of p-hat*
-bootstrapped_props %>% 
+bootstrapped_props |> 
   ___
 ```
 
@@ -172,7 +172,7 @@ In order to compare the variability of the sampled $\hat{p}$ and bootstrapped $\
 Note that the curves are quite similar in shape. The sampled $\hat{p}$ values are centered around the true (typically **unknown** parameter) parameter (black); the resampled $\hat{p}^*$ values are centered around the estimate from the very first poll (green). They both will have the same variability (as measured by the standard error) as confirmed above, and here we can see visually that the green bootstrap distribution is approximately the same width as the black distribution, which measured the true variability of $\hat{p}$ values from the population. 
 
 ```{r, fig.width=8, echo = FALSE}
-data.frame(samp = dnorm(seq(0.2,1,.01), mean = 0.6, sd = 0.09), boot = dnorm(seq(0.2,1,.01), mean = 0.72, sd = 0.09), ex = seq(0.2,1,.01), col1 = rep(openintro::COL[5,1], length(seq(0.2,1,.01))), col2 = rep(openintro::COL[2,1], length(seq(0.2,1,.01)))) %>% 
+data.frame(samp = dnorm(seq(0.2,1,.01), mean = 0.6, sd = 0.09), boot = dnorm(seq(0.2,1,.01), mean = 0.72, sd = 0.09), ex = seq(0.2,1,.01), col1 = rep(openintro::COL[5,1], length(seq(0.2,1,.01))), col2 = rep(openintro::COL[2,1], length(seq(0.2,1,.01)))) |> 
 ggplot() + 
   geom_line(aes(x = ex, y = samp, col = "sample from population")) +
   geom_point(x = 0.6, y = dnorm(0.507, 0.6,0.09), col = openintro::COL[5,1]) +
@@ -203,7 +203,7 @@ ggplot() +
 The Central Limit Theorem tells us that the distribution of $\hat{p}$ values is symmetric and bell shaped (follows a normal distribution), therefore roughly 95% of samples will produce $\hat{p}$s that are within two standard errors ($z^* = 1.96$) of the center. This idea is called the **empirical rule**.
 
 ```{r, fig.width=8, echo = FALSE}
-data.frame(samp = dnorm(seq(0.2,1,.01), mean = 0.6, sd = 0.09), boot = dnorm(seq(0.2,1,.01), mean = 0.72, sd = 0.09), ex = seq(0.2,1,.01), col1 = rep(openintro::COL[5,1], length(seq(0.2,1,.01))), col2 = rep(openintro::COL[2,1], length(seq(0.2,1,.01)))) %>% 
+data.frame(samp = dnorm(seq(0.2,1,.01), mean = 0.6, sd = 0.09), boot = dnorm(seq(0.2,1,.01), mean = 0.72, sd = 0.09), ex = seq(0.2,1,.01), col1 = rep(openintro::COL[5,1], length(seq(0.2,1,.01))), col2 = rep(openintro::COL[2,1], length(seq(0.2,1,.01)))) |> 
 ggplot() + 
   geom_line(aes(x = ex, y = samp, col = "sample from population")) +
   geom_point(x = 0.6, y = dnorm(0.507, 0.6,0.09), col = openintro::COL[5,1]) +
@@ -236,12 +236,12 @@ If our data is one of the red dots, our confidence interval will correctly captu
 
 ```{r, fig.width=6, echo = FALSE}
 set.seed(4747)
-all_polls %>%
-  group_by(poll) %>%
-  summarize(prop_yes = mean(vote == "yes")) %>%
-  sample_n(200) %>%
-  arrange(prop_yes) %>%
-  mutate(pointer = ifelse(prop_yes <= .42, "col1", ifelse(prop_yes >= 0.78, "col1", "col2"))) %>%
+all_polls |>
+  group_by(poll) |>
+  summarize(prop_yes = mean(vote == "yes")) |>
+  sample_n(200) |>
+  arrange(prop_yes) |>
+  mutate(pointer = ifelse(prop_yes <= .42, "col1", ifelse(prop_yes >= 0.78, "col1", "col2"))) |>
 ggplot() + 
   geom_dotplot(aes(x = prop_yes, fill = pointer, color = pointer), binwidth = 0.01) +
   xlab("sample p-hat values") +
@@ -283,7 +283,7 @@ Note that this method of constructing bootstrap intervals also gives an intuitiv
 
 ```{r bootstrap_percentile, eval = FALSE}
 # manually calculate a 95% percentile interval
-bootstrapped_props %>%
+bootstrapped_props |>
   summarize(
     lower = ___(stat, p = ___),
     upper = ___
@@ -299,7 +299,7 @@ For the interval call the output `bootstrap_ci`, and use `level = 0.95`.
 ```{r bootstrap_percentile_2, eval = FALSE}
 
 # Calculate the same interval, more conveniently
-bootstrap_ci <- bootstrapped_props %>% 
+bootstrap_ci <- bootstrapped_props |> 
   ___
 ```
 
@@ -316,7 +316,7 @@ Does the interval capture the true parameter in this case? *Note we won't know t
     - Add a red vertical line to denote the true proportion (note this part is unknown in real life)
 
 ```{r bootstrap_percentile_3, eval = FALSE}
-bootstrapped_props %>% 
+bootstrapped_props |> 
   # Visualize distribution
   visualize() +
   # highlight middle 95%
@@ -327,10 +327,10 @@ bootstrapped_props %>%
 
 ```{r bootstrap_percentile_3-solution, echo = FALSE, eval = FALSE}
 # From previous step
-bootstrap_ci <- bootstrapped_props %>% 
+bootstrap_ci <- bootstrapped_props |> 
   get_confidence_interval(level = 0.95)
   
-bootstrapped_props %>% 
+bootstrapped_props |> 
   # Visualize in-between the endpoints given by bootstrap_ci
   visualize() +
   shade_confidence_interval(endpoints = bootstrap_ci)
@@ -350,31 +350,31 @@ Place your three visualizations in a single plot using `plot_grid()` from the `c
 
 ```{r, eval = FALSE}
 # Calculate a 90% bootstrap percentile interval
-bootstrap_ci90 <- ___ %>% 
+bootstrap_ci90 <- ___ |> 
   ___(___) 
 bootstrap_ci90
 
 # Calculate a 99% bootstrap percentile interval
-bootstrap_ci99 <- ___ %>% 
+bootstrap_ci99 <- ___ |> 
   ___(___) 
 bootstrap_ci99
 
 # re-compute and save a 95% bootstrap percentile interval
-bootstrap_ci95 <- ___ %>% 
+bootstrap_ci95 <- ___ |> 
   ___(___) 
 
 # code for 90% CI plot
-p90 <- ___ %>% 
+p90 <- ___ |> 
   ___ + 
   ___
 
 # code for 95% CI plot
-p95 <- ___ %>% 
+p95 <- ___ |> 
   ___ + 
   ___
 
 # code for 99% CI plot
-p99 <- ___ %>% 
+p99 <- ___ |> 
   ___ + 
   ___
 
@@ -408,25 +408,25 @@ Instead of `poll == 1`, select the 5th poll from `all_polls`. Use that sample to
 Refer to the dotplot between Exercises 3 & 4 - where does the sample proportion for the 5th poll fall in the true sampling distribution of $\hat{p}$ values? Explain what this illustrates regarding your answer above.
 
 ```{r, eval = FALSE, echo = FALSE}
-one_poll <- all_polls %>%
+one_poll <- all_polls |>
   # Filter for the first poll
-  filter(poll == 5) %>%
+  filter(poll == 5) |>
   # Select vote
   select(vote)
   
 # Compute p-hat* for each resampled poll
-bootstrapped_props <- one_poll %>%
+bootstrapped_props <- one_poll |>
   # Specify vote as the response, where yes means success
-  specify(response = vote, success = "yes") %>%
+  specify(response = vote, success = "yes") |>
   # Generate 1000 reps of type bootstrap
-  generate(reps = 1000, type = "bootstrap") %>% 
+  generate(reps = 1000, type = "bootstrap") |> 
   # Calculate the summary stat "prop"
   calculate(stat = "prop")
 
-bootstrap_ci <- bootstrapped_props %>% 
+bootstrap_ci <- bootstrapped_props |> 
   get_confidence_interval(level = 0.90)
 
-bootstrapped_props %>% 
+bootstrapped_props |> 
   visualize() +
   shade_confidence_interval(endpoints = bootstrap_ci)
 ```

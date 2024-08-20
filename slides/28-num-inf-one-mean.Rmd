@@ -71,7 +71,7 @@ We have data on 100 participants in the 2017 Cherry Blossom Race.
 ```{r, echo = FALSE}
 library(cherryblossom)
 set.seed(437)
-race17 <- run17 %>% 
+race17 <- run17 |> 
   sample_n(100)
 ```
 
@@ -101,7 +101,7 @@ CLT tells us, $$T = \frac{\overline{x} - \mu}{SE(\overline{x})} = \frac{\overlin
 --
 
 ```{r, echo = FALSE}
-race17 <- race17 %>% 
+race17 <- race17 |> 
   mutate(time_mins = net_sec/60)
 ```
 

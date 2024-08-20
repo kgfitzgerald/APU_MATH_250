@@ -86,10 +86,10 @@ Remember that continuing to develop a sound workflow for reproducible data analy
   - You should start your code with:
 
 ```{r, eval = FALSE}
-anes %>%
-  drop_na(hunt_fish) %>%
+anes |>
+  drop_na(hunt_fish) |>
   mutate(hunted_fished = ifelse(hunt_fish == 0, "Did Not Hunt or Fish",  
-                                "Hunted or Fished")) %>%
+                                "Hunted or Fished")) |>
 ```
 
 ```{marginfigure}
@@ -116,7 +116,7 @@ Before submitting your assignment on Canvas, Render one last time, then open up 
 
 + Check any visualizations for informative and clean labels and titles
 
-+ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
++ Check any tables for clean formatting (e.g. with `kbl() |> kable_minmal()`)
 
 + Check that you've interpreted output as appropriate
 

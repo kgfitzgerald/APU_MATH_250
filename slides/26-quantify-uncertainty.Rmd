@@ -65,7 +65,7 @@ The data come from the openintro package: [`elmhurst`](http://openintrostat.gith
 .pull-left[
 .small[
 ```{r}
-lm(gift_aid ~ family_income, data = elmhurst) %>%
+lm(gift_aid ~ family_income, data = elmhurst) |>
   tidy()
 ```
 ]
@@ -92,7 +92,7 @@ ggplot(elmhurst, aes(x = family_income, y = gift_aid)) +
 
 .pull-left-wide[
 ```{r elmhurst-fit, echo=FALSE}
-lm(gift_aid ~ family_income, data = elmhurst) %>%
+lm(gift_aid ~ family_income, data = elmhurst) |>
   tidy()
 ```
 ]
@@ -226,20 +226,20 @@ Suppose you randomly sample 50 students and 5 of them are left handed. If you we
 
 
 ```{r echo=FALSE}
-elmhurst_fit <- linear_reg() %>%
-  set_engine("lm") %>%
-  fit(gift_aid ~ family_income, data = elmhurst) %>%
+elmhurst_fit <- linear_reg() |>
+  set_engine("lm") |>
+  fit(gift_aid ~ family_income, data = elmhurst) |>
   tidy() 
-elmhurst_slope_obs <- elmhurst_fit %>%
-  filter(term == "family_income") %>%
-  pull(estimate) %>%
+elmhurst_slope_obs <- elmhurst_fit |>
+  filter(term == "family_income") |>
+  pull(estimate) |>
   round(4)
 ```
 
 ```{r echo=FALSE, warning=FALSE}
-elmhurst %>%
-  specify(gift_aid ~ family_income) %>%
-  generate(reps = 50, type = "bootstrap") %>%
+elmhurst |>
+  specify(gift_aid ~ family_income) |>
+  generate(reps = 50, type = "bootstrap") |>
   ggplot(aes(x = family_income, y = gift_aid)) +
   geom_jitter(alpha = 0.11, width = 30, height = 10) +
   geom_point(data = elmhurst, mapping = aes(x = family_income, y = gift_aid), color = "#8E2C90", size = 2) +
@@ -254,10 +254,10 @@ elmhurst %>%
     subtitle = "(Simulated) population of students at Elmhurst College"
   )
 
-# elmhurst_boot %>% 
-#   slice_head(n = 50) %>%
-#   hoist(splits, "data") %>% 
-#   unnest(data) %>% 
+# elmhurst_boot |> 
+#   slice_head(n = 50) |>
+#   hoist(splits, "data") |> 
+#   unnest(data) |> 
 #   ggplot(aes(x = family_income, y = gift_aid)) +
 #   geom_jitter(alpha = 0.11, width = 30, height = 10) +
 #   geom_point(data = elmhurst, mapping = aes(x = family_income, y = gift_aid), color = "#8E2C90", size = 2) +

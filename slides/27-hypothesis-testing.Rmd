@@ -140,7 +140,7 @@ tidy(m1)
 ]
 .panel[.panel-name[Code]
 ```{r t-plot, fig.show="hide"}
-t_stat <- abs(tidy(m1)[2,2]/tidy(m1)[2,3]) %>% pull()
+t_stat <- abs(tidy(m1)[2,2]/tidy(m1)[2,3]) |> pull()
 crit_value <- qt(.975, nrow(elmhurst) - 2)
 ggplot() +
   xlim(c(-5,5)) + 

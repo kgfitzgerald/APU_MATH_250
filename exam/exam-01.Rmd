@@ -146,7 +146,7 @@ Before submitting, open up your .html in a full window and inspect the following
 
 -   Check any visualizations for informative and clean labels and titles
 
--   Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
+-   Check any tables for clean formatting (e.g. with `kbl() |> kable_minmal()`)
 
 -   Check that you've interpreted output as appropriate
 

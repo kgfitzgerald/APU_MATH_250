@@ -49,7 +49,7 @@ cell_data <- data.frame(type = c(rep("Benign", 13), rep("Malignant", 24)),
 ```
 
 ```{r}
-cell_data %>% 
+cell_data |> 
   count(type, shape)
 ```
 
@@ -60,8 +60,8 @@ cell_data %>%
 The **proportion** of malignant nuclei in this study is 24/37 = `r round(24/37, 4)`
 
 ```{r}
-cell_data %>% 
-  count(type) %>% 
+cell_data |> 
+  count(type) |> 
   mutate(prop = n/sum(n))
 ```
 
@@ -74,9 +74,9 @@ This overall proportion of malignancy is often called the **risk** or **baseline
 The *conditional proportion* is the proportion of malignant cells for each cell shape.
 
 ```{r}
-cell_data %>% 
-  count(type, shape) %>% 
-  group_by(shape) %>% 
+cell_data |> 
+  count(type, shape) |> 
+  group_by(shape) |> 
   mutate(prop = n/sum(n))
 ```
 
@@ -150,12 +150,12 @@ Both have difference of 0.01, but in Study 2, the proportion in group 1 $\hat{p}
 
 $$\text{Relative risk } = \frac{\text{proportion of successes in group 1}}{\text{proportion of successes in group 2}} = \frac{\hat{p}_1}{\hat{p}_2}$$
 ```{r, echo = FALSE}
-summary <- cell_data %>% 
-  count(type, shape) %>% 
-  group_by(shape) %>% 
+summary <- cell_data |> 
+  count(type, shape) |> 
+  group_by(shape) |> 
   mutate(prop = n/sum(n))
-phat_1 <- summary %>% filter(type == "Malignant", shape == "Concave") %>% pull(prop)
-phat_2 <- summary %>% filter(type == "Malignant", shape == "Round") %>% pull(prop)
+phat_1 <- summary |> filter(type == "Malignant", shape == "Concave") |> pull(prop)
+phat_2 <- summary |> filter(type == "Malignant", shape == "Round") |> pull(prop)
 ```
 
 .pull-left[
@@ -167,9 +167,9 @@ That is, the risk of malignancy is 1.85 times greater for the Concave group than
 .pull-right[
 
 ```{r}
-cell_data %>% 
-  count(type, shape) %>% 
-  group_by(shape) %>% 
+cell_data |> 
+  count(type, shape) |> 
+  group_by(shape) |> 
   mutate(prop = n/sum(n))
 ```
 
@@ -198,7 +198,7 @@ The odds ratio in the cancer cell study is $\frac{17/4}{7/9} = 5.5$
 
 
 ```{r}
-cell_data %>% 
+cell_data |> 
   count(shape, type) 
 ```
 
@@ -221,7 +221,7 @@ When proportions are far away from 0.5, inference for difference in proportions 
 ```{r, warning = FALSE, message = FALSE}
 library(DescTools)
 
-cell_data <- cell_data %>% 
+cell_data <- cell_data |> 
   mutate(type = factor(type, levels = c("Malignant", "Benign")))
 
 RelRisk(x = cell_data$shape, y = cell_data$type, conf.level = 0.99)

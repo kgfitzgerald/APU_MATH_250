@@ -160,12 +160,12 @@ $\sum_{i = 1}^n e_i^2$.
 ## Visualizing residuals
 
 ```{r vis-res-1, echo=FALSE, out.width="70%"}
-ht_wt_fit <- linear_reg() %>%
-  set_engine("lm") %>%
+ht_wt_fit <- linear_reg() |>
+  set_engine("lm") |>
   fit(Height_in ~ Width_in, data = pp)
 
 ht_wt_fit_tidy <- tidy(ht_wt_fit$fit) 
-ht_wt_fit_aug  <- augment(ht_wt_fit$fit) %>%
+ht_wt_fit_aug  <- augment(ht_wt_fit$fit) |>
   mutate(res_cat = ifelse(.resid > 0, TRUE, FALSE))
 
 p <- ggplot(data = ht_wt_fit_aug, 
@@ -234,8 +234,8 @@ class: middle
 .pull-left-narrow[
 .small[
 ```{r echo=FALSE}
-pp %>% 
-  select(name, Height_in, landsALL) %>%
+pp |> 
+  select(name, Height_in, landsALL) |>
   print(n = 20)
 ```
 ]
@@ -290,10 +290,10 @@ tidy(model3)
 
 .pull-left-wide[
 ```{r echo=FALSE}
-dummy_df <- pp %>% 
-  select(school_pntg) %>% 
-  group_by(school_pntg) %>% 
-  sample_n(1) %>%
+dummy_df <- pp |> 
+  select(school_pntg) |> 
+  group_by(school_pntg) |> 
+  sample_n(1) |>
   mutate(
     D_FL = as.integer(ifelse(school_pntg == "D/FL", 1L, 0)),
     F    = as.integer(ifelse(school_pntg == "F", 1L, 0)),
@@ -303,22 +303,22 @@ dummy_df <- pp %>%
     X    = as.integer(ifelse(school_pntg == "X", 1L, 0))
   )
 
-dummy_df %>%
-  kable(align = "lcccccc") %>%
-  kable_styling() %>%
-  column_spec(2, width = "10em", background = spec_color(dummy_df$D_FL[1:7], end = 0.8), color = "white") %>%
-  column_spec(3, width = "10em", background = spec_color(dummy_df$F[1:7], end = 0.8), color = "white") %>%
-  column_spec(4, width = "10em", background = spec_color(dummy_df$G[1:7], end = 0.8), color = "white") %>%
-  column_spec(5, width = "10em", background = spec_color(dummy_df$I[1:7], end = 0.8), color = "white") %>%
-  column_spec(6, width = "10em", background = spec_color(dummy_df$S[1:7], end = 0.8), color = "white") %>%
+dummy_df |>
+  kable(align = "lcccccc") |>
+  kable_styling() |>
+  column_spec(2, width = "10em", background = spec_color(dummy_df$D_FL[1:7], end = 0.8), color = "white") |>
+  column_spec(3, width = "10em", background = spec_color(dummy_df$F[1:7], end = 0.8), color = "white") |>
+  column_spec(4, width = "10em", background = spec_color(dummy_df$G[1:7], end = 0.8), color = "white") |>
+  column_spec(5, width = "10em", background = spec_color(dummy_df$I[1:7], end = 0.8), color = "white") |>
+  column_spec(6, width = "10em", background = spec_color(dummy_df$S[1:7], end = 0.8), color = "white") |>
   column_spec(7, width = "10em", background = spec_color(dummy_df$X[1:7], end = 0.8), color = "white")
 ```
 ]
 .pull-right-narrow[
 .small[
 ```{r echo=FALSE}
-pp %>% 
-  select(name, Height_in, school_pntg) %>%
+pp |> 
+  select(name, Height_in, school_pntg) |>
   print(n = 20)
 ```
 ]

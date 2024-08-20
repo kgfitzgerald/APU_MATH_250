@@ -93,7 +93,7 @@ Select all that apply questions in a survey pose some difficult wrangling tasks.
 The following code creates three new variables to indicate if a student has access to each type. Note you will need to adapt this code if you named your variable something other than `laptop.`
 
 ```{r, eval = FALSE}
-survey <- survey %>% 
+survey <- survey |> 
   mutate(Mac = if_else(grepl("Mac laptop", laptop), "Yes", "No"),
          iPad = if_else(grepl("iPad", laptop), "Yes", "No"),
          PC = if_else(grepl("PC/Windows laptop", laptop), "Yes", "No"))
@@ -125,7 +125,7 @@ Before submitting your assignment on Canvas, Render one last time, then open up 
 
 + Check any visualizations for informative and clean labels and titles
 
-+ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
++ Check any tables for clean formatting (e.g. with `kbl() |> kable_minmal()`)
 
 + Check that you've interpreted output as appropriate
 

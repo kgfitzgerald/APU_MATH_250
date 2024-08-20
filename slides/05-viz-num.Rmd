@@ -20,7 +20,7 @@ output:
 library(tidyverse)
 library(openintro)
 library(hexbin)
-loans_full_schema <- loans_full_schema %>%
+loans_full_schema <- loans_full_schema |>
   mutate(grade = factor(grade, ordered = TRUE))
 ```
 
@@ -81,7 +81,7 @@ glimpse(loans_full_schema)
 ## Selected variables
 
 ```{r}
-loans <- loans_full_schema %>%
+loans <- loans_full_schema |>
   select(loan_amount, interest_rate, term, grade, 
          state, annual_income, homeownership, debt_to_income)
 glimpse(loans)
@@ -439,7 +439,7 @@ ggplot(loans, aes(x = debt_to_income, y = interest_rate)) +
 ## Hex plot
 
 ```{r warning = FALSE}
-ggplot(loans %>% filter(debt_to_income < 100), 
+ggplot(loans |> filter(debt_to_income < 100), 
        aes(x = debt_to_income, y = interest_rate)) +
   geom_hex()
 ```

@@ -39,7 +39,7 @@ class: middle
 pp <- read_csv(
   "data/paris-paintings.csv",
   na = c("n/a", "", "NA")
-) %>%
+) |>
   mutate(log_price = log(price))
 ```
 
@@ -82,13 +82,13 @@ tidy(pp_fit)
 p <- plot_ly(pp,
   x = ~Width_in, y = ~Height_in, z = ~log_price,
   marker = list(size = 3, color = "lightgray", alpha = 0.5, 
-                line = list(color = "gray", width = 2))) %>%
-  add_markers() %>%
+                line = list(color = "gray", width = 2))) |>
+  add_markers() |>
   plotly::layout(scene = list(
     xaxis = list(title = "Width (in)"),
     yaxis = list(title = "Height (in)"),
     zaxis = list(title = "log_price")
-  )) %>%
+  )) |>
   config(displayModeBar = FALSE)
 frameWidget(p)
 ```
@@ -99,13 +99,13 @@ frameWidget(p)
 p <- plot_ly(pp,
   x = ~Width_in, y = ~Height_in, z = ~log_price,
   marker = list(size = 3, color = "lightgray", alpha = 0.5, 
-                line = list(color = "gray", width = 2))) %>%
-  add_markers() %>%
+                line = list(color = "gray", width = 2))) |>
+  add_markers() |>
   plotly::layout(scene = list(
     xaxis = list(title = "Width (in)"),
     yaxis = list(title = "Height (in)"),
     zaxis = list(title = "log_price")
-  )) %>%
+  )) |>
   config(displayModeBar = FALSE)
 frameWidget(p)
 ```
@@ -127,7 +127,7 @@ The `allbacks` data frame gives measurements on the volume and weight of 15 book
 .small[
 ```{r echo=FALSE}
 library(DAAG)
-as_tibble(allbacks) %>%
+as_tibble(allbacks) |>
   print(n = 15)
 ```
 ]
@@ -145,7 +145,7 @@ These books are from the bookshelf of J. H. Maindonald at Australian National Un
 
 .pull-left[
 ```{r}
-lm(weight ~ volume, data = allbacks) %>%
+lm(weight ~ volume, data = allbacks) |>
   tidy()
 ```
 ]
@@ -162,7 +162,7 @@ ggplot(allbacks, aes(x = volume, y = weight)) +
 
 .pull-left[
 ```{r}
-lm(weight ~ volume + cover, data = allbacks) %>%
+lm(weight ~ volume + cover, data = allbacks) |>
   tidy()
 ```
 ]
@@ -180,7 +180,7 @@ ggplot(allbacks, aes(x = volume, y = weight, color = cover, shape = cover)) +
 ## Interpretation of estimates
 
 ```{r echo=FALSE}
-lm(weight ~ volume + cover, data = allbacks) %>%
+lm(weight ~ volume + cover, data = allbacks) |>
   tidy()
 ```
 
@@ -356,12 +356,12 @@ glance(book_int_fit)$adj.r.squared > glance(book_main_fit)$adj.r.squared
 ```{r, message = FALSE, echo = FALSE}
 library(leaps)
 pp <- read_csv("data/paris-paintings.csv", na = c("n/a", "", "NA"))
-pp_subset <- pp %>% 
+pp_subset <- pp |> 
   select(position, dealer, year, origin_cat, 
          school_pntg, diff_origin, 
          logprice, artistliving, Height_in,
          Width_in, Surface, paired, relig, landsALL,
-         mytho, portrait) %>% 
+         mytho, portrait) |> 
   mutate(across(where(is.character), factor))
 ```
 
@@ -386,7 +386,7 @@ model_best <- lm(logprice ~ dealer + year + school_pntg + diff_origin +
 ## "Best" model: Adjusted $R^2 = 0.445$
 
 ```{r, echo = FALSE}
-tidy(model_best) %>% print(n = 14)
+tidy(model_best) |> print(n = 14)
 ```
 
 ---

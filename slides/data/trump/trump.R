@@ -10,10 +10,10 @@ trump_raw <- read_csv(here::here("week-03/w3-d06-tidying/data","trump/approval_t
 
 # prep -------------------------------------------------------------------------
 
-trump <- trump_raw %>%
-  filter(subgroup != "All polls") %>%
-  mutate(date = mdy(modeldate)) %>%
-  select(subgroup, date, contains("estimate")) %>%
+trump <- trump_raw |>
+  filter(subgroup != "All polls") |>
+  mutate(date = mdy(modeldate)) |>
+  select(subgroup, date, contains("estimate")) |>
   rename(
     approval = approve_estimate,
     disapproval = disapprove_estimate
@@ -23,7 +23,7 @@ write_csv(trump, path = here::here("week-03/w3-d06-tidying/data","trump/trump.cs
 
 # plot -------------------------------------------------------------------------
 
-trump_longer <- trump %>%
+trump_longer <- trump |>
   pivot_longer(
     cols = c(approval, disapproval),
     names_to = "rating_type",

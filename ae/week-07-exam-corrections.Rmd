@@ -25,10 +25,10 @@ library(kableExtra)
 ```{r, echo = FALSE}
 game <- nwslR::game
 
-portland <- game %>%
+portland <- game |>
   filter(home_team == "POR" | away_team == "POR")
 
-portland <- portland %>% 
+portland <- portland |> 
   mutate(POR_points = if_else(home_team == "POR", 
                               home_pts, away_pts),
       OPP_points = if_else(home_team == "POR" , 
@@ -37,15 +37,15 @@ portland <- portland %>%
                          POR_points < OPP_points ~ "Loss",
                          POR_points == OPP_points ~ "Tie"))
 
-portland <- portland %>%
+portland <- portland |>
   mutate(gamelocation = 
            case_when(home_team == "POR" ~ "Home",
                      away_team == "POR" ~ "Away"))
 
-portland <- portland %>% 
-  group_by(season) %>% 
-  arrange(game_date) %>% 
-  mutate(game_number = row_number()) %>% 
+portland <- portland |> 
+  group_by(season) |> 
+  arrange(game_date) |> 
+  mutate(game_number = row_number()) |> 
   ungroup()
 ```
 
@@ -120,8 +120,8 @@ ggplot(portland,
 ### Student B
 
 ```{r}
-portland <- portland %>% 
-  group_by(home_team) %>% 
+portland <- portland |> 
+  group_by(home_team) |> 
   mutate(portland_home_game = home_team =="POR")
 ggplot(portland, aes(x=POR_points, y=portland_home_game))+
   geom_boxplot(fill="pink")+
@@ -144,10 +144,10 @@ ggplot(portland, aes(x = POR_points, fill = gamelocation)) +
 ### Student D
 
 ```{r}
-portland_home <- portland %>%
+portland_home <- portland |>
   filter(home_team == "POR", na.rm=TRUE) 
 
-portland_away <- portland %>%
+portland_away <- portland |>
   filter(away_team == "POR", na.rm=TRUE)
 
 ggplot(data = portland_home, mapping = aes(x = home_pts)) + 
@@ -172,44 +172,44 @@ Here are 7 examples of (partially) incorrect code. For each,
 ### Student A
 
 ```{r}
-portland %>%
-  count(gamelocation, winner == "POR") %>%
-  mutate(proportion = n/sum(n)) %>%
-  kbl %>% 
+portland |>
+  count(gamelocation, winner == "POR") |>
+  mutate(proportion = n/sum(n)) |>
+  kbl |> 
   kable_minimal()
 ```
 
 ### Student B
 
 ```{r}
-portland %>%
-  group_by(gamelocation) %>%
-  count(result) %>%
-  filter(result == "Win") %>%
-  summarise(n/59) %>%
-  kbl() %>%
+portland |>
+  group_by(gamelocation) |>
+  count(result) |>
+  filter(result == "Win") |>
+  summarise(n/59) |>
+  kbl() |>
   kable_minimal()
 ```
 
 ### Student C
 
 ```{r}
-portland %>% 
-  group_by(gamelocation) %>%
-  mutate(num_games = n()) %>% 
-  group_by(gamelocation, result) %>% 
-  mutate(num_result = n()) %>% 
-  summarise(prop = num_result/num_games) %>% 
+portland |> 
+  group_by(gamelocation) |>
+  mutate(num_games = n()) |> 
+  group_by(gamelocation, result) |> 
+  mutate(num_result = n()) |> 
+  summarise(prop = num_result/num_games) |> 
   distinct()
 ```
 
 ### Student D
 
 ```{r}
-portland %>%
-  group_by(gamelocation) %>% 
-  summarise(portland, winner == "POR")%>%
-kbl %>%
+portland |>
+  group_by(gamelocation) |> 
+  summarise(portland, winner == "POR")|>
+kbl |>
   kable_minimal()
 ```
 
@@ -217,32 +217,32 @@ kbl %>%
 ### Student E
 
 ```{r}
-portland %>%
-  group_by(gamelocation) %>%
-  summarise(prop_wins = sum(result == "Win")/118) %>%
-  kbl %>%
+portland |>
+  group_by(gamelocation) |>
+  summarise(prop_wins = sum(result == "Win")/118) |>
+  kbl |>
   kable_minimal()
 ```
 
 ### Student F
 
 ```{r}
-portland %>% 
-  group_by(portland_home_game) %>% 
-  count(result) %>% 
-  mutate(percent=n/118*100) %>% 
-  kbl() %>%
+portland |> 
+  group_by(portland_home_game) |> 
+  count(result) |> 
+  mutate(percent=n/118*100) |> 
+  kbl() |>
   kable_minimal()
 ```
 
 ### Student G
 
 ```{r}
-portland %>% 
-  group_by(gamelocation) %>%
-  count(result == "Win") %>%
-  summarise(prop = n/sum(n)) %>%
-  kbl() %>%
+portland |> 
+  group_by(gamelocation) |>
+  count(result == "Win") |>
+  summarise(prop = n/sum(n)) |>
+  kbl() |>
   kable_minimal()
 ```
 
@@ -334,8 +334,8 @@ Student Interpretation:
 The Portland Thorns tied several games on their home field in the 2015-2019 data. Did they tie because both teams did poorly or because both teams did well?
 
 ```{r}
-portland %>% 
-  filter(result == "Tie") %>% 
+portland |> 
+  filter(result == "Tie") |> 
   ggplot(aes(x = POR_points, fill = gamelocation)) +
   geom_histogram()  +
   labs(x = "Tie points", y = "Count", title = "Tie points of Portland Thorns", subtitle = "NWSL 2015-2019", fill = "Game") + 
@@ -355,8 +355,8 @@ Student Question:
 
 ```{r}
 #How many points the Thorns lost by
-portland %>%
-  filter(result == "Loss") %>%
+portland |>
+  filter(result == "Loss") |>
 ggplot(aes(x = OPP_points - POR_points, factor(season))) +
   geom_boxplot() +
   labs(title = "Number of Points Games Were Lost By",
@@ -367,8 +367,8 @@ ggplot(aes(x = OPP_points - POR_points, factor(season))) +
 
 ```{r}
 #How many points the Thorns won by
-portland %>%
-  filter(result == "Win") %>%
+portland |>
+  filter(result == "Win") |>
 ggplot(aes(x = POR_points - OPP_points, factor(season))) +
   geom_boxplot() +
   labs(title = "Number of Points Games Were Won By",
@@ -407,13 +407,13 @@ Student Question:
 > Did every NWSL Team have a home court advantage?
 
 ```{r}
-game %>%
-  group_by(home_team) %>%
+game |>
+  group_by(home_team) |>
   summarise(mean(home_pts),
             mean(away_pts),
             median(home_pts),
-            median(away_pts)) %>%
-  kbl() %>%
+            median(away_pts)) |>
+  kbl() |>
   kable_minimal()
 ```
 

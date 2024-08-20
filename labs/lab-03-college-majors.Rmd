@@ -80,9 +80,9 @@ In the next section we aim to answer these questions.
 2.  Which major category is the least popular in this sample? Meaning, which major category has the fewest number of total graduates? Use the partial code below, filling it in with the appropriate function and relevant variable. Also note that we are looking for the least popular major, so make sure to arrange in the correct direction.
 
 ```{r eval=FALSE}
-college_recent_grads %>%
-  group_by(major_category) %>%
-  summarise(total_per_category = ___(___)) %>%
+college_recent_grads |>
+  group_by(major_category) |>
+  summarise(total_per_category = ___(___)) |>
   arrange(___)
 ```
 
@@ -96,7 +96,7 @@ The function `slice` and/or its variations might be helpful in displaying only a
 You can check out more table formatting options using the `kableExtra` package [here](https://haozhu233.github.io/kableExtra/awesome_table_in_html.html)
 ```
 
-3. Using what you've learned so far, put together a pipeline of code to answer the above question. Make sure to sort your data in a reasonable way, and choose only a small subset of variables to display in your output to improve readability. Make a decision about how many rows to display in your output. Add `kbl %>% kable_minimal()` to the end of your pipeline to clean up how your table appears in your html.
+3. Using what you've learned so far, put together a pipeline of code to answer the above question. Make sure to sort your data in a reasonable way, and choose only a small subset of variables to display in your output to improve readability. Make a decision about how many rows to display in your output. Add `kbl |> kable_minimal()` to the end of your pipeline to clean up how your table appears in your html.
 
 ```{marginfigure}
 Hint: read the `?percent()` documentation to see how the `accuracy` argument works.
@@ -159,7 +159,7 @@ stem_categories <- c("Biology & Life Science",
 Then, we can use this to create a new variable in our data frame indicating whether a major is STEM or not.
 
 ```{r}
-college_recent_grads <- college_recent_grads %>%
+college_recent_grads <- college_recent_grads |>
   mutate(major_type = ifelse(major_category %in% stem_categories, "stem", "not stem"))
 ```
 
@@ -205,7 +205,7 @@ Before submitting your assignment on Canvas, Render one last time, then open up 
 
 + Check any visualizations for informative and clean labels and titles
 
-+ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
++ Check any tables for clean formatting (e.g. with `kbl() |> kable_minmal()`)
 
 + Check that you've interpreted output as appropriate
 

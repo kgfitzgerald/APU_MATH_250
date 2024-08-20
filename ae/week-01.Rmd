@@ -19,11 +19,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-+ End of class today (ish) - Week 01 Check-in (<5 minutes)
++ Due Thursday (class-time): Watch Week 01 lecture videos + complete Prep Quiz 01
 + Due Saturday (usually Thursdays): Annotations 01
-    + enroll in our Perusall course (see [Canvas](https://canvas.apu.edu/courses/49307))
-+ Due Tuesday class-time: Prep Quiz 02
-    + 70 minutes of lecture, broken into 4 videos
+
 
 ### Questions?
 

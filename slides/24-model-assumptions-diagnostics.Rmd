@@ -208,8 +208,8 @@ ggplot(ht_wt_fit_aug, mapping = aes(x = .fitted, y = .resid)) +
 
 ```{r out.width = "60%", echo=FALSE, eval = FALSE}
 m1 <- lm(price ~ Width_in + portrait, data = pp)
-pp <- pp %>% rownames_to_column(var = ".rownames")
-m1_aug <- augment(m1) %>% 
+pp <- pp |> rownames_to_column(var = ".rownames")
+m1_aug <- augment(m1) |> 
   left_join(pp)
 
 ggplot(m1_aug, mapping = aes(x = .fitted, y = .resid)) +
@@ -251,7 +251,7 @@ ggplot(data = pp, aes(x = Width_in, y = price)) +
 That is, paintings with width < 8.3ft
 
 ```{r}
-pp_wt_lt_100 <- pp %>% 
+pp_wt_lt_100 <- pp |> 
   filter(Width_in < 100)
 ```
 
@@ -321,7 +321,7 @@ ggplot(data = price_wt_fit_aug,
 ]
 .pull-right[
 ```{r message=FALSE, echo=FALSE, out.width = "100%"}
-pp_wt_lt_100 <- pp_wt_lt_100 %>% 
+pp_wt_lt_100 <- pp_wt_lt_100 |> 
   mutate(log_price = log(price))
 
 lprice_wt_fit <- lm(log_price ~ Width_in, 

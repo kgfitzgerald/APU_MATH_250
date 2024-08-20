@@ -78,12 +78,12 @@ The parameter of interest is the **difference in population means**, $\mu_A - \m
 ## Hypothesis test for two (independent) means
 
 ```{r, echo = FALSE}
-classdata <- classdata %>% 
+classdata <- classdata |> 
   filter(lecture != "c")
 ```
 
 ```{r}
-classdata %>% group_by(lecture) %>% summarize(xbar = mean(m1), s = sd(m1), n = n())
+classdata |> group_by(lecture) |> summarize(xbar = mean(m1), s = sd(m1), n = n())
 ```
 
 $$H_0: \mu_{A} = \mu_B \ \ \ \Rightarrow \mu_A - \mu_B = 0$$
@@ -145,10 +145,10 @@ ggplot() +
 .panel[.panel-name[Calculations (by hand)]
 
 ```{r}
-lectureA <- classdata %>% filter(lecture == "a")
+lectureA <- classdata |> filter(lecture == "a")
 xbarA <- mean(lectureA$m1)
 sA <- sd(lectureA$m1)
-lectureB <- classdata %>% filter(lecture == "b")
+lectureB <- classdata |> filter(lecture == "b")
 xbarB <- mean(lectureB$m1)
 sB <- sd(lectureB$m1)
 (t_stat <- (xbarA - xbarB)/sqrt(sA^2/nrow(lectureA) + sB^2/nrow(lectureB)))
@@ -214,8 +214,8 @@ class: middle
 + What type(s) of variable(s)? **numerical, categorical (two levels)**
 
 ```{r}
-ucla_textbooks_f18 %>% 
-  select(subject, textbook_isbn, amazon_used, bookstore_used) %>% 
+ucla_textbooks_f18 |> 
+  select(subject, textbook_isbn, amazon_used, bookstore_used) |> 
   glimpse()
 ```
 
@@ -226,9 +226,9 @@ Note: These two samples of 201 prices are not independent! They're **paired**
 ## Hypothesis test for paired means
 
 ```{r, echo = FALSE, out.height="70%"}
-textbooks_long <- ucla_textbooks_f18 %>% 
-  select(textbook_isbn, amazon_used, bookstore_used) %>% 
-  na.omit() %>% 
+textbooks_long <- ucla_textbooks_f18 |> 
+  select(textbook_isbn, amazon_used, bookstore_used) |> 
+  na.omit() |> 
   pivot_longer(cols = 2:3, names_to = "type", values_to = "price") 
 ggplot(textbooks_long, aes(x = type, y = price)) +
   geom_boxplot() +
@@ -256,9 +256,9 @@ n = number of pairs
 ## Hypothesis test for paired means
 
 ```{r}
-ucla_textbooks_f18 <- ucla_textbooks_f18 %>% 
-  select(textbook_isbn, amazon_used, bookstore_used) %>%
-  na.omit() %>% 
+ucla_textbooks_f18 <- ucla_textbooks_f18 |> 
+  select(textbook_isbn, amazon_used, bookstore_used) |>
+  na.omit() |> 
   mutate(diff = bookstore_used - amazon_used)
 
 t_test(ucla_textbooks_f18, response = diff, conf_level = 0.99)

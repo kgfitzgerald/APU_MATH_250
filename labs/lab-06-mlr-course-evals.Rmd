@@ -70,8 +70,8 @@ You can also find this information [here](https://www.openintro.org/data/index.p
 The following code plots the above regression model. Include this plot in your report. 
 
 ```{r, echo = FALSE}
-score_bty_gen_fit <- linear_reg() %>% 
-  set_engine("lm") %>% 
+score_bty_gen_fit <- linear_reg() |> 
+  set_engine("lm") |> 
   fit(score ~ bty_avg + gender, data = evals)
 ```
 
@@ -123,7 +123,7 @@ Before submitting your assignment on Canvas, Render one last time, then open up 
 
 + Check any visualizations for informative and clean labels and titles
 
-+ Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
++ Check any tables for clean formatting (e.g. with `kbl() |> kable_minmal()`)
 
 + Check that you've interpreted output as appropriate
 

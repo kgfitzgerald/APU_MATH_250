@@ -97,12 +97,12 @@ The following code creates a new dataset called `home_team_info` that `selects` 
 It then joins these columns to the `portland_matches` data.
 
 ```{r, eval = FALSE}
-home_team_info <- teams %>% 
+home_team_info <- teams |> 
   select(home_team_id = team_id, 
          home_team_name = team_name, 
          home_team_abbr = team_abbreviation)
 
-portland_matches <- portland_matches %>% 
+portland_matches <- portland_matches |> 
   left_join(home_team_info)
 ```
 
@@ -111,7 +111,7 @@ portland_matches <- portland_matches %>%
 3.  Create three new variables, `POR_points` (the number of points Portland scored), `OPP_points` (the number of points the opponent scored), and `result` (a categorical variable for whether the result was a `Win`, `Loss`, or `Tie` for Portland). *Hint: the code below provides the scaffolding, you just need to fill in each blank appropriately.*
 
 ```{r, eval = FALSE}
-___ <- ___ %>% 
+___ <- ___ |> 
   ___(POR_points = if_else(home_team_abbr == "POR", 
                            home_team_score, away_team_score),
       OPP_points = if_else(___ ___ ___, ___, ___),
@@ -175,21 +175,21 @@ player_stats <- readRDS("./data/player_stats.rds")
 + Your end result should be either a nicely formatted table, or a nicely formatted visualization, like the ones below. Use these end results to help you decide what wrangling will help you build up to this information.
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-summary_data <- player_stats %>% 
-  filter(team_id == 8) %>% 
-  select(player_id, team_id, shots_total, shots_outside_box, goals) %>% 
-  group_by(player_id) %>% 
+summary_data <- player_stats |> 
+  filter(team_id == 8) |> 
+  select(player_id, team_id, shots_total, shots_outside_box, goals) |> 
+  group_by(player_id) |> 
   summarize(shots_total = sum(shots_total),
             shots_outside_box = sum(shots_outside_box, na.rm = TRUE),
-            goals = sum(goals, na.rm = TRUE)) %>%
-  filter(shots_total >= 15) %>% 
+            goals = sum(goals, na.rm = TRUE)) |>
+  filter(shots_total >= 15) |> 
   mutate(prop_outside_box = shots_outside_box/shots_total,
          prop_shots_made = goals/shots_total) 
 
-summary_data %>% 
-  arrange(desc(prop_outside_box)) %>% 
-  left_join(players) %>% 
-  slice(1:10) %>% 
+summary_data |> 
+  arrange(desc(prop_outside_box)) |> 
+  left_join(players) |> 
+  slice(1:10) |> 
   ggplot(aes(x = prop_outside_box, 
              y = reorder(player_match_name, prop_outside_box))) +
   geom_col(fill = "purple") +
@@ -200,12 +200,12 @@ summary_data %>%
        title = "Portland players with Highest % of shots taken outside the box",
        subtitle = "Minimum 15 shots")
 
-summary_data %>% 
-  arrange(desc(prop_shots_made)) %>% 
-  left_join(players) %>% 
-  slice(1:10) %>% 
-  select(player_match_name, shots_total, goals, prop_shots_made) %>% 
-  kable(format = "html", table.attr = "style='width:50%;'") %>% 
+summary_data |> 
+  arrange(desc(prop_shots_made)) |> 
+  left_join(players) |> 
+  slice(1:10) |> 
+  select(player_match_name, shots_total, goals, prop_shots_made) |> 
+  kable(format = "html", table.attr = "style='width:50%;'") |> 
   kableExtra::kable_styling(position = "left")
 ```
 
@@ -221,7 +221,7 @@ Before submitting your assignment on Canvas, Render one last time, then open up 
 
 -   Check any visualizations for informative and clean labels and titles
 
--   Check any tables for clean formatting (e.g. with `kbl() %>% kable_minmal()`)
+-   Check any tables for clean formatting (e.g. with `kbl() |> kable_minmal()`)
 
 -   Check that you've interpreted output as appropriate
 

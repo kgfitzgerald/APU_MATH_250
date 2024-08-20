@@ -65,11 +65,11 @@ $$H_0: \mu_{OF} = \mu_{IF} = \mu_C$$
 $$H_A: \text{at least one mean differs from the others}$$
 
 ```{r, echo = FALSE}
-mlb <- mlb_players_18 %>%
+mlb <- mlb_players_18 |>
   filter(
     AB >= 100, 
     !position %in% c("P", "DH")
-  ) %>%
+  ) |>
   mutate(
     position = case_when(
       position %in% c("LF", "CF", "RF")       ~ "OF",
@@ -81,8 +81,8 @@ mlb <- mlb_players_18 %>%
 ```
 .pull-left[
 ```{r, echo = FALSE}
-mlb %>% 
-  group_by(position) %>% 
+mlb |> 
+  group_by(position) |> 
   summarize(n = n(),
             mean = mean(OBP),
             sd = sd(OBP))
@@ -153,9 +153,9 @@ qf(.99, 2, 426) #critical value
 .pull-right[
 ```{r, echo = FALSE, fig.height="50%"}
 anova_results <- tidy(anova(mlb_model))
-stat <-  anova_results[1,5] %>% pull()
-df1 <- anova_results[1,2] %>% pull()
-df2 <- anova_results[2,2] %>% pull()
+stat <-  anova_results[1,5] |> pull()
+df1 <- anova_results[1,2] |> pull()
+df2 <- anova_results[2,2] |> pull()
 crit_value99 <- qf(.99, df1, df2)
 
 ggplot() +
@@ -207,7 +207,7 @@ summary(mlb_model)
 ---
 
 ```{r, echo = FALSE}
-classdata <- classdata %>% 
+classdata <- classdata |> 
   filter(lecture != "c")
 ```
 

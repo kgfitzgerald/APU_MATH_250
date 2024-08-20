@@ -59,7 +59,7 @@ class: middle
 ```{r, echo = FALSE}
 set.seed(437)
 survey <- data.frame(married = c(rep("yes", 530),
-                                  rep("no", 470))) %>% 
+                                  rep("no", 470))) |> 
   sample_n(1000)
 ```
 
@@ -77,8 +77,8 @@ The parameter of interest is the **population proportion**, $p$, and the sample 
 In 2019, a survey of 1,000 randomly sampled US adults age 25 - 54 found that 53% were married. 
 
 ```{r}
-survey %>% 
-  count(married) %>% 
+survey |> 
+  count(married) |> 
   mutate(prop = n/sum(n))
 ```
 
@@ -121,7 +121,7 @@ This is a **hypothesis test** question about **one proportion**
 ```{r, echo = FALSE}
 set.seed(437)
 newclinic <- data.frame(live_birth = c(rep("yes", 18),
-                                       rep("no", 12))) %>% 
+                                       rep("no", 12))) |> 
   sample_n(n())
 ```
 
