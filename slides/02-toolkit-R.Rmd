@@ -136,13 +136,6 @@ knitr::include_graphics("img/rstudio-logo.png")
 
 ---
 
-# RStudio Cloud & R Projects
-
-- RStudio Cloud is a web-based version of RStudio
-- R Projects are a way of organizing your workspace, files and working directories
-
----
-
 ## R packages
 
 - **Packages** are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup>
