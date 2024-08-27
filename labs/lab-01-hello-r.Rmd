@@ -31,7 +31,7 @@ Before we get to that stage, however, you need to build some basic fluency in R.
 Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.
 
 For this lab, you will collaborate in your (randomly assigned) groups (see Canvas), but you will each submit your own lab.
-You may share code with your group via Campuswire chat rooms.
+You may share code with your group via Canvas Group Messages (general FYI - instructors can see these messages!).
 
 # Getting Started - RStudio
 

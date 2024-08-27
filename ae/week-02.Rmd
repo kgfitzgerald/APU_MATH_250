@@ -18,17 +18,17 @@ library(ggthemes)
 library(cowplot)
 ```
 
-### Thursday Announcements
+<!-- ### Thursday Announcements -->
 
--   MPS BBQ Next Friday (free food!)
+<!-- -   MPS BBQ Next Friday (free food!) -->
 
-    -   Panel for new students right before (4:30)
+<!--     -   Panel for new students right before (4:30) -->
 
-        ![](images/MPS_BBQ.png)
+<!--         ![](images/MPS_BBQ.png) -->
 
--   For next week: lecture videos a little shorter (3 videos, 50 mins), but annotation content longer
+<!-- -   For next week: lecture videos a little shorter (3 videos, 50 mins), but annotation content longer -->
 
-    -   Content warning: racism in science
+<!--     -   Content warning: racism in science -->
 
 ### Statistician(s) of the Week
 
@@ -44,13 +44,13 @@ Check out his [book](https://www.amazon.com/W-Boiss-Data-Portraits-Visualizing/d
 
 ### Announcements
 
--   [Statistical Computing In Action, Mini Symposium](https://asa-ssc.github.io/minisymp2023/)
-    -   November 4
-    -   Worth 3 Stats Experience Points
--   See running list of SE opportunities in Campuswire - feel free to add your own
--   APU STEM Research Symposium - go support Avery (and other STEM friends)!
+<!-- -   [Statistical Computing In Action, Mini Symposium](https://asa-ssc.github.io/minisymp2023/) -->
+<!--     -   November 4 -->
+<!--     -   Worth 3 Stats Experience Points -->
+<!-- -   See running list of SE opportunities in Campuswire - feel free to add your own -->
+<!-- -   APU STEM Research Symposium - go support Avery (and other STEM friends)! -->
 
-![](images/2023_SRS_flyer_APU125.png)
+<!-- ![](images/2023_SRS_flyer_APU125.png) -->
 
 ### A few notes / tips
 

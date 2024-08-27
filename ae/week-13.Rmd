@@ -1,6 +1,6 @@
 ---
 title: "Week 13"
-subtitle: "Peer Review & Citation Management"
+subtitle: "Communicating Results II"
 output: 
   prettydoc::html_pretty:
     theme: hpstr
@@ -44,22 +44,22 @@ Citation tasks:
 
 ### Announcements
 
--   Take a vote: `Shiny` or no Shiny?
--   Any last stats experience points (5 total for semester) due Thursday
-    -   can submit up to 10 additional ones for extra credit on lowest lab assignment(s)
--   THIS SATURDAY: American Statistical Association SoCal event AT APU
-    -   10:30 -- 11:30 AM talk by Jacob Rode "Meta-analysis as a tool to address complex problems: An example on climate change perceptions and overview using R"
-    -   11:30 -- 11:45 AM break
-    -   11:45 AM -- 12:30 PM talk by Chong Ho (Alex) Yu "From traditional statistics to modern data science and machine learning"
-    -   12:30 -- 1:30 PM lunch
-    -   1:30 -- 1:35 PM book raffle (must be present to win)
-    -   1:35 -- 2:30 PM SCASA Business Meeting
+<!-- -   Take a vote: `Shiny` or no Shiny? -->
+<!-- -   Any last stats experience points (5 total for semester) due Thursday -->
+<!--     -   can submit up to 10 additional ones for extra credit on lowest lab assignment(s) -->
+<!-- -   THIS SATURDAY: American Statistical Association SoCal event AT APU -->
+<!--     -   10:30 -- 11:30 AM talk by Jacob Rode "Meta-analysis as a tool to address complex problems: An example on climate change perceptions and overview using R" -->
+<!--     -   11:30 -- 11:45 AM break -->
+<!--     -   11:45 AM -- 12:30 PM talk by Chong Ho (Alex) Yu "From traditional statistics to modern data science and machine learning" -->
+<!--     -   12:30 -- 1:30 PM lunch -->
+<!--     -   1:30 -- 1:35 PM book raffle (must be present to win) -->
+<!--     -   1:35 -- 2:30 PM SCASA Business Meeting -->
 
-|         | Tue in-class        | Thur in-class                               |
-|---------|---------------------|---------------------------------------------|
-| Week 13 | Peer Review         | Zotero + poster work session                |
-| Week 14 | Poster work session | Poster peer review                          |
-| Week 15 |                     | Poster presentations - invite your friends! |
+<!-- |         | Tue in-class        | Thur in-class                               | -->
+<!-- |---------|---------------------|---------------------------------------------| -->
+<!-- | Week 13 | Peer Review         | Zotero + poster work session                | -->
+<!-- | Week 14 | Poster work session | Poster peer review                          | -->
+<!-- | Week 15 |                     | Poster presentations - invite your friends! | -->
 
 ### Questions?
 
@@ -79,44 +79,40 @@ Why peer review?
 
 -   It's part of the scientific process
 
-Logistics:
+<!-- Logistics: -->
 
--   (15 mins) In your project groups, discuss assigned paper and fill out the "SHORT Rough Draft Peer Feedback - Group X" form in the shared [Google Drive folder](https://drive.google.com/drive/folders/190TgJca5qleOGoQQMJ6IbLj_RbSRKtOE?usp=share_link) (located in the folder of the group you're reviewing)
+<!-- -   (15 mins) In your project groups, discuss assigned paper and fill out the "SHORT Rough Draft Peer Feedback - Group X" form in the shared [Google Drive folder](https://drive.google.com/drive/folders/190TgJca5qleOGoQQMJ6IbLj_RbSRKtOE?usp=share_link) (located in the folder of the group you're reviewing) -->
 
--   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group)
+<!-- -   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group) -->
 
--   Remainder of class will be spent on working on your FORMAL review (this is graded and counts towards your final project grade!)
+<!-- -   Remainder of class will be spent on working on your FORMAL review (this is graded and counts towards your final project grade!) -->
 
-+-----------+--------------------+
-|           | Group pairings     |
-+===========+====================+
-| Session 1 | Group 1 & Group 3  |
-|           |                    |
-|           | Group 2 & Group 4  |
-|           |                    |
-|           | Group 5 & Dr. Fitz |
-+-----------+--------------------+
+<!-- +-----------+--------------------+ -->
+<!-- |           | Group pairings     | -->
+<!-- +===========+====================+ -->
+<!-- | Session 1 | Group 1 & Group 3  | -->
+<!-- |           |                    | -->
+<!-- |           | Group 2 & Group 4  | -->
+<!-- |           |                    | -->
+<!-- |           | Group 5 & Dr. Fitz | -->
+<!-- +-----------+--------------------+ -->
 
-For the group you did NOT already exchange feedback with, you will write up a FORMAL peer review
+<!-- For the group you did NOT already exchange feedback with, you will write up a FORMAL peer review -->
 
--   Group 1 formally reviews Group 2
--   Group 2 formally reviews Group 3
--   Group 3 formally reviews Group 4
--   Group 4 formally reviews Group 5
--   Group 5 formally reviews Group 1
+<!-- -   Group 1 formally reviews Group 2 -->
+<!-- -   Group 2 formally reviews Group 3 -->
+<!-- -   Group 3 formally reviews Group 4 -->
+<!-- -   Group 4 formally reviews Group 5 -->
+<!-- -   Group 5 formally reviews Group 1 -->
 
-Your formal review will include:
+<!-- Your formal review will include: -->
 
--   FORMAL evaluation rubric filled out (Written report section ONLY) (in the folder of the group you're reviewing)
--   A brief write-up (\~1 page) highlighting the following:
-    -   A summary of the research questions, data context, and findings, as you understand them
-    -   Brief comments on strengths of the paper
-    -   Constructive criticism, raising questions / points of confusion, and outlining what needs to be changed/improved in order for the report to be exemplary
+<!-- -   FORMAL evaluation rubric filled out (Written report section ONLY) (in the folder of the group you're reviewing) -->
+<!-- -   A brief write-up (\~1 page) highlighting the following: -->
+<!--     -   A summary of the research questions, data context, and findings, as you understand them -->
+<!--     -   Brief comments on strengths of the paper -->
+<!--     -   Constructive criticism, raising questions / points of confusion, and outlining what needs to be changed/improved in order for the report to be exemplary -->
 
-The constructive criticism should make up the bulk of the 1-page review. Remember: the goal is to help them IMPROVE the work. You should NOT simply tell them it's wonderful, and you should NOT simply criticize without offering concrete suggestions for HOW to improve.
+<!-- The constructive criticism should make up the bulk of the 1-page review. Remember: the goal is to help them IMPROVE the work. You should NOT simply tell them it's wonderful, and you should NOT simply criticize without offering concrete suggestions for HOW to improve. -->
 
-### Thursday - Shiny Part I
 
--   For AE-11, you will complete Lessons 03 - 05 from the [Shiny Getting Started Tutorials](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/)
-
--   You will turn in a .zip folder that includes the `lesson-03` and `census-app` folders as well as the .Rproj file from your Shiny project

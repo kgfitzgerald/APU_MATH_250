@@ -31,7 +31,6 @@ library(lubridate)
 ### .gray[Course operation]
 .gray[
 - apumath250.netlify.app
-- Campuswire
 - Canvas
 ]
 ]

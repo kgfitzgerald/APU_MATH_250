@@ -15,34 +15,34 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Mike Dairyko](https://hardin47.github.io/CURV/scholars/dairyko.html)
 
-### Thursday Announcements
+<!-- ### Thursday Announcements -->
 
--   2 Stats Experience Points due Saturday
--   Sign up for project groups on Canvas by class-time on Tuesday
-    -   choose your own groups of 2
-    -   who will you work well with?
-    -   who do you have common (data) interests with? Check out initial Campuswire responses
+<!-- -   2 Stats Experience Points due Saturday -->
+<!-- -   Sign up for project groups on Canvas by class-time on Tuesday -->
+<!--     -   choose your own groups of 2 -->
+<!--     -   who will you work well with? -->
+<!--     -   who do you have common (data) interests with? Check out initial Campuswire responses -->
 
-What's ahead:
+<!-- What's ahead: -->
 
--   Weeks 1 - 4, foundational coding techniques
--   Weeks 5 - 7, Exam/Start Projects/Ethics
--   Weeks 8 - 11, statistical analysis techniques
--   Weeks 12 - 15, communicating results / Projects
--   Only 4 more labs (after Lab 04), 7 project work sessions
+<!-- -   Weeks 1 - 4, foundational coding techniques -->
+<!-- -   Weeks 5 - 7, Exam/Start Projects/Ethics -->
+<!-- -   Weeks 8 - 11, statistical analysis techniques -->
+<!-- -   Weeks 12 - 15, communicating results / Projects -->
+<!-- -   Only 4 more labs (after Lab 04), 7 project work sessions -->
 
-![](images/MATH_talk_Byrant.png)
+<!-- ![](images/MATH_talk_Byrant.png) -->
 
 ### Announcements
 
--   Lab 03 due now
--   First 2 Stats Experience Points due Saturday (remember to post brief reflection on Campuswire)
-    -   [Informational Interview resource](https://docs.google.com/document/d/17ESP_xm-kXo3gsRrzmbG0XR37yRqnMCT5TiqPli6Pnc/edit?usp=sharing)
-    -   [Appointment slots](https://calendar.google.com/calendar/selfsched?sstoken=UUdib21reE5QbWlCfGRlZmF1bHR8Y2Q4NzA0ODFhZjhiNjQzYWJlZjU0YzVjNDQ3NzBmNTY) for dinner with me after class
--   Exam made available at end of class next Tuesday, due following Tuesday
-    -   Like a lab, just completed on your own
-    -   Coding techniques learned in Weeks 1 - 4
-    -   Open note, open internet
+<!-- -   Lab 03 due now -->
+<!-- -   First 2 Stats Experience Points due Saturday (remember to post brief reflection on Campuswire) -->
+<!--     -   [Informational Interview resource](https://docs.google.com/document/d/17ESP_xm-kXo3gsRrzmbG0XR37yRqnMCT5TiqPli6Pnc/edit?usp=sharing) -->
+<!--     -   [Appointment slots](https://calendar.google.com/calendar/selfsched?sstoken=UUdib21reE5QbWlCfGRlZmF1bHR8Y2Q4NzA0ODFhZjhiNjQzYWJlZjU0YzVjNDQ3NzBmNTY) for dinner with me after class -->
+<!-- -   Exam made available at end of class next Tuesday, due following Tuesday -->
+<!--     -   Like a lab, just completed on your own -->
+<!--     -   Coding techniques learned in Weeks 1 - 4 -->
+    <!-- -   Open note, open internet -->
 
 ### Tidyverse style guidelines
 

@@ -21,31 +21,31 @@ library(tidyverse)
 
 [Desi Small-Rodriguez](https://hardin47.github.io/CURV/scholars/small-rodriguez.html)
 
-### Thursday announcements
+<!-- ### Thursday announcements -->
 
-Next week:
+<!-- Next week: -->
 
--   Week 04 lectures: 60 minutes, 3 videos
+<!-- -   Week 04 lectures: 60 minutes, 3 videos -->
 
--   Annotations: 1hr YouTube video of Cathy O'Neil talking at Google about *Weapons of Math Destruction*
+<!-- -   Annotations: 1hr YouTube video of Cathy O'Neil talking at Google about *Weapons of Math Destruction* -->
 
-Upcoming:
+<!-- Upcoming: -->
 
--   First 2 [Statistics Experience Points](https://kgfitzgerald.github.io/APU_MATH_250/engage/se-01.html) due NEXT Saturday
+<!-- -   First 2 [Statistics Experience Points](https://kgfitzgerald.github.io/APU_MATH_250/engage/se-01.html) due NEXT Saturday -->
 
--   Exam 1 is in Week 5 - made available on Tuesday 9/26, due the following Tuesday 10/3
+<!-- -   Exam 1 is in Week 5 - made available on Tuesday 9/26, due the following Tuesday 10/3 -->
 
--   No class on Thursday 9/28
+<!-- -   No class on Thursday 9/28 -->
 
 ### Announcements
 
-Due now: Lab 02
+<!-- Due now: Lab 02 -->
 
-Due Thursday: Annotations 03
+<!-- Due Thursday: Annotations 03 -->
 
-MPS BBQ on Friday (free food!) - RSVP on sign up sheet
+<!-- MPS BBQ on Friday (free food!) - RSVP on sign up sheet -->
 
-![](images/MPS_BBQ.png)
+<!-- ![](images/MPS_BBQ.png) -->
 
 ### Questions?
 
