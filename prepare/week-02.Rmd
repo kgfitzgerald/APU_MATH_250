@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For September 5
+## For September 3
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
