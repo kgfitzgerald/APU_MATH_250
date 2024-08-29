@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 `r emo::ji("memo")` Complete Prep Quiz 01 on Canvas
 
-`r emo::ji("computer")` Complete AE 01a in RStudio, submit .html on Canvas
+<!-- `r emo::ji("computer")` Complete AE 01a in RStudio, submit .html on Canvas -->
 
 ### Optional 
 
