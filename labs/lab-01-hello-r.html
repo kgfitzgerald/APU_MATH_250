@@ -390,7 +390,7 @@ your document.</span></span></p>
 <div id="packages" class="section level2">
 <h2>Packages</h2>
 <p>In this lab we will work with two packages: <strong>datasauRus</strong> which contains the dataset we’ll be using and <strong>tidyverse</strong> which is a collection of packages for doing data analysis in a “tidy” way.
-These packages are already installed for you.
+These packages should already be installed if you ran the code in the <code>install_packages.R</code> file previously.
 You can load the packages by running the following in the Console.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(datasauRus)</span></code></pre></div>
@@ -444,10 +444,8 @@ Conference on Human Factors in Computing Systems. ACM, 2017.</span></span></p>
 The other Dozen were generated using simulated annealing and the process is described in the paper <em>Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics</em> through Simulated Annealing by Justin Matejka and George Fitzmaurice.
 In the paper, the authors simulate a variety of datasets that have the same summary statistics as the Datasaurus but have very different distributions.</p>
 <ol start="2" style="list-style-type: decimal">
-<li>Plot <code>y</code> vs. <code>x</code> for the <code>dino</code> dataset. Then, calculate the correlation coefficient between <code>x</code> and <code>y</code> for this dataset.</li>
+<li>Plot <code>y</code> vs. <code>x</code> for the <code>dino</code> dataset. Then, calculate the correlation coefficient between <code>x</code> and <code>y</code> for this dataset. <em>Below is the code you will need to complete this exercise. Basically, the answer is already given, but you need to include relevant bits in your .qmd document and successfully render it and view the results.</em></li>
 </ol>
-<p>Below is the code you will need to complete this exercise.
-Basically, the answer is already given, but you need to include relevant bits in your .qmd document and successfully render it and view the results.</p>
 <p>Start with the <code>datasaurus_dozen</code> and pipe it into the <code>filter</code> function to filter for observations where <code>dataset == &quot;dino&quot;</code>.
 Store the resulting filtered data frame as a new data frame called <code>dino_data</code>.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>dino_data <span class="ot">&lt;-</span> datasaurus_dozen <span class="sc">|&gt;</span></span>
