@@ -90,22 +90,17 @@ Nightingale</a></p>
 </div>
 <div id="announcements" class="section level3">
 <h3>Announcements</h3>
-<!-- -   [Statistical Computing In Action, Mini Symposium](https://asa-ssc.github.io/minisymp2023/) -->
-<!--     -   November 4 -->
-<!--     -   Worth 3 Stats Experience Points -->
-<!-- -   See running list of SE opportunities in Campuswire - feel free to add your own -->
-<!-- -   APU STEM Research Symposium - go support Avery (and other STEM friends)! -->
-<!-- ![](images/2023_SRS_flyer_APU125.png) -->
+<ul>
+<li>Annotations due Thursday</li>
+<li>Lab 01 due Thursday</li>
+</ul>
 </div>
 <div id="a-few-notes-tips" class="section level3">
 <h3>A few notes / tips</h3>
+<!-- -   Setting changes (under Settings icon): -->
+<!--     -   Select "Preview in Viewer Pane" -->
+<!--     -   Select "Chunk Output in Console" -->
 <ul>
-<li>You don’t need to memorize code</li>
-<li>Setting changes (under Settings icon):
-<ul>
-<li>Select “Preview in Viewer Pane”</li>
-<li>Select “Chunk Output in Console”</li>
-</ul></li>
 <li>Add <code>color = &quot;white&quot;</code> to your
 <code>geom_histogram()</code> layers</li>
 </ul>
@@ -140,53 +135,37 @@ data scientist - <strong>be curious about the data</strong> and
 <strong>dig further</strong> into it when your visualizations reveal
 certain patterns or unusual observations.</p></li>
 </ul>
+<!-- ### Group dynamics / reminder of norms -->
+<!-- -   Everyone has expertise -->
+<!-- -   Be present -->
+<!-- -   Participate to the best of your ability -->
+<!-- -   Share talk time -->
+<!-- -   Critique ideas, not people -->
+<!-- -   Engage new perspectives with curiosity, not judgement -->
+<!-- -   Exhibit intellectual humility -->
+<!-- -   Embrace discomfort & non-closure -->
+<!-- -   Normalize time to think -->
+<!-- -   New: be patient with yourself and others as you learn -->
+<!-- -   New: value question-asking! -->
+<!-- -   Others?? -->
+<!-- ### Questions? -->
+<!-- *What's the difference between typing code in the console vs. the .qmd document?* -->
+<!-- -   The console is just for quick calculations / commands - but nothing in the console gets saved! -->
+<!-- -   When you're learning, type everything in the .qmd to be safe, then delete what you don't need / what doesn't work -->
+<!-- -   When you click "Render", R runs the document from top to bottom (skipping over any code chunks with `eval: false`). You will get an error if you have a code chunk that depends on a package you've only loaded in your console, or an object you've only defined there. -->
+<!-- -   Exception: `View(name_of_dataset)` should ONLY be typed in the console. -->
+<!-- *What are the possibilities for theme/layout for R?* -->
+<!-- -   [html themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/) we saw in Lab 01 -->
+<!-- -   Note, you can use Quarto to create -->
+<!--     -   pdfs, word documents, presentation slides -->
+<!--     -   books using the `bookdown` package (see [here](https://openintro-ims.netlify.app) and [here](https://nustat.github.io/intro-stat-ds/)) -->
+<!--     -   websites using the `blogdown` package (see [here](https://www.silviacanelon.com) and [here](https://katie-fitzgerald.netlify.app)), and -->
+<!--     -   interactive web apps using the `shiny` package (see [here](https://gallery.shinyapps.io/freedom-press-index/?_ga=2.81315735.1827555729.1662265788-1653842836.1662265788#home) and [here](https://kgfitz.shinyapps.io/confidence_intervals/?_ga=2.165073215.1872464027.1644259610-1518862278.1644259610))! -->
 </div>
-<div id="group-dynamics-reminder-of-norms" class="section level3">
-<h3>Group dynamics / reminder of norms</h3>
+<div id="live-coding-demo" class="section level3">
+<h3>Live coding demo</h3>
 <ul>
-<li><p>Everyone has expertise</p></li>
-<li><p>Be present</p></li>
-<li><p>Participate to the best of your ability</p></li>
-<li><p>Share talk time</p></li>
-<li><p>Critique ideas, not people</p></li>
-<li><p>Engage new perspectives with curiosity, not judgement</p></li>
-<li><p>Exhibit intellectual humility</p></li>
-<li><p>Embrace discomfort &amp; non-closure</p></li>
-<li><p>Normalize time to think</p></li>
-<li><p>New: be patient with yourself and others as you learn</p></li>
-<li><p>New: value question-asking!</p></li>
-<li><p>Others??</p></li>
-</ul>
-</div>
-<div id="questions" class="section level3">
-<h3>Questions?</h3>
-<p><em>What’s the difference between typing code in the console vs. the
-.qmd document?</em></p>
-<ul>
-<li><p>The console is just for quick calculations / commands - but
-nothing in the console gets saved!</p></li>
-<li><p>When you’re learning, type everything in the .qmd to be safe,
-then delete what you don’t need / what doesn’t work</p></li>
-<li><p>When you click “Render”, R runs the document from top to bottom
-(skipping over any code chunks with <code>eval: false</code>). You will
-get an error if you have a code chunk that depends on a package you’ve
-only loaded in your console, or an object you’ve only defined
-there.</p></li>
-<li><p>Exception: <code>View(name_of_dataset)</code> should ONLY be
-typed in the console.</p></li>
-</ul>
-<p><em>What are the possibilities for theme/layout for R?</em></p>
-<ul>
-<li><a href="https://www.datadreaming.org/post/r-markdown-theme-gallery/">html
-themes</a> we saw in Lab 01</li>
-<li>Note, you can use Quarto to create
-<ul>
-<li>pdfs, word documents, presentation slides</li>
-<li>books using the <code>bookdown</code> package (see <a href="https://openintro-ims.netlify.app">here</a> and <a href="https://nustat.github.io/intro-stat-ds/">here</a>)</li>
-<li>websites using the <code>blogdown</code> package (see <a href="https://www.silviacanelon.com">here</a> and <a href="https://katie-fitzgerald.netlify.app">here</a>), and</li>
-<li>interactive web apps using the <code>shiny</code> package (see <a href="https://gallery.shinyapps.io/freedom-press-index/?_ga=2.81315735.1827555729.1662265788-1653842836.1662265788#home">here</a>
-and <a href="https://kgfitz.shinyapps.io/confidence_intervals/?_ga=2.165073215.1872464027.1644259610-1518862278.1644259610">here</a>)!</li>
-</ul></li>
+<li>Download week-02-live-code.qmd to follow along</li>
 </ul>
 </div>
 <div id="application-exercise" class="section level3">

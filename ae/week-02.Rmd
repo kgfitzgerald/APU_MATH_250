@@ -44,20 +44,14 @@ Check out his [book](https://www.amazon.com/W-Boiss-Data-Portraits-Visualizing/d
 
 ### Announcements
 
-<!-- -   [Statistical Computing In Action, Mini Symposium](https://asa-ssc.github.io/minisymp2023/) -->
-<!--     -   November 4 -->
-<!--     -   Worth 3 Stats Experience Points -->
-<!-- -   See running list of SE opportunities in Campuswire - feel free to add your own -->
-<!-- -   APU STEM Research Symposium - go support Avery (and other STEM friends)! -->
-
-<!-- ![](images/2023_SRS_flyer_APU125.png) -->
++ Annotations due Thursday
++ Lab 01 due Thursday
 
 ### A few notes / tips
 
--   You don't need to memorize code
--   Setting changes (under Settings icon):
-    -   Select "Preview in Viewer Pane"
-    -   Select "Chunk Output in Console"
+<!-- -   Setting changes (under Settings icon): -->
+<!--     -   Select "Preview in Viewer Pane" -->
+<!--     -   Select "Chunk Output in Console" -->
 -   Add `color = "white"` to your `geom_histogram()` layers
 
 ```{r, message = FALSE, warning = FALSE, echo = FALSE}
@@ -150,52 +144,56 @@ plot_grid(p1, p2, nrow = 1)
 
 -   Keep in mind that you're not just practicing your technical coding skills, but you're also developing your investigative skills as a data scientist - **be curious about the data** and **dig further** into it when your visualizations reveal certain patterns or unusual observations.
 
-### Group dynamics / reminder of norms
+<!-- ### Group dynamics / reminder of norms -->
 
--   Everyone has expertise
+<!-- -   Everyone has expertise -->
 
--   Be present
+<!-- -   Be present -->
 
--   Participate to the best of your ability
+<!-- -   Participate to the best of your ability -->
 
--   Share talk time
+<!-- -   Share talk time -->
 
--   Critique ideas, not people
+<!-- -   Critique ideas, not people -->
 
--   Engage new perspectives with curiosity, not judgement
+<!-- -   Engage new perspectives with curiosity, not judgement -->
 
--   Exhibit intellectual humility
+<!-- -   Exhibit intellectual humility -->
 
--   Embrace discomfort & non-closure
+<!-- -   Embrace discomfort & non-closure -->
 
--   Normalize time to think
+<!-- -   Normalize time to think -->
 
--   New: be patient with yourself and others as you learn
+<!-- -   New: be patient with yourself and others as you learn -->
 
--   New: value question-asking!
+<!-- -   New: value question-asking! -->
 
--   Others??
+<!-- -   Others?? -->
 
-### Questions?
+<!-- ### Questions? -->
 
-*What's the difference between typing code in the console vs. the .qmd document?*
+<!-- *What's the difference between typing code in the console vs. the .qmd document?* -->
 
--   The console is just for quick calculations / commands - but nothing in the console gets saved!
+<!-- -   The console is just for quick calculations / commands - but nothing in the console gets saved! -->
 
--   When you're learning, type everything in the .qmd to be safe, then delete what you don't need / what doesn't work
+<!-- -   When you're learning, type everything in the .qmd to be safe, then delete what you don't need / what doesn't work -->
 
--   When you click "Render", R runs the document from top to bottom (skipping over any code chunks with `eval: false`). You will get an error if you have a code chunk that depends on a package you've only loaded in your console, or an object you've only defined there.
+<!-- -   When you click "Render", R runs the document from top to bottom (skipping over any code chunks with `eval: false`). You will get an error if you have a code chunk that depends on a package you've only loaded in your console, or an object you've only defined there. -->
 
--   Exception: `View(name_of_dataset)` should ONLY be typed in the console.
+<!-- -   Exception: `View(name_of_dataset)` should ONLY be typed in the console. -->
 
-*What are the possibilities for theme/layout for R?*
+<!-- *What are the possibilities for theme/layout for R?* -->
 
--   [html themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/) we saw in Lab 01
--   Note, you can use Quarto to create
-    -   pdfs, word documents, presentation slides
-    -   books using the `bookdown` package (see [here](https://openintro-ims.netlify.app) and [here](https://nustat.github.io/intro-stat-ds/))
-    -   websites using the `blogdown` package (see [here](https://www.silviacanelon.com) and [here](https://katie-fitzgerald.netlify.app)), and
-    -   interactive web apps using the `shiny` package (see [here](https://gallery.shinyapps.io/freedom-press-index/?_ga=2.81315735.1827555729.1662265788-1653842836.1662265788#home) and [here](https://kgfitz.shinyapps.io/confidence_intervals/?_ga=2.165073215.1872464027.1644259610-1518862278.1644259610))!
+<!-- -   [html themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/) we saw in Lab 01 -->
+<!-- -   Note, you can use Quarto to create -->
+<!--     -   pdfs, word documents, presentation slides -->
+<!--     -   books using the `bookdown` package (see [here](https://openintro-ims.netlify.app) and [here](https://nustat.github.io/intro-stat-ds/)) -->
+<!--     -   websites using the `blogdown` package (see [here](https://www.silviacanelon.com) and [here](https://katie-fitzgerald.netlify.app)), and -->
+<!--     -   interactive web apps using the `shiny` package (see [here](https://gallery.shinyapps.io/freedom-press-index/?_ga=2.81315735.1827555729.1662265788-1653842836.1662265788#home) and [here](https://kgfitz.shinyapps.io/confidence_intervals/?_ga=2.165073215.1872464027.1644259610-1518862278.1644259610))! -->
+
+### Live coding demo
+
+- Download week-02-live-code.qmd to follow along
 
 ### Application Exercise
 
