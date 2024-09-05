@@ -1,6 +1,6 @@
 ---
 title: "Lab 03 - What should I major in?"
-subtitle: "due Tuesday, September 19 at 4:20pm"
+subtitle: "due Thursday, September 19 at 4:20pm"
 output: 
   tufte::tufte_html:
     css: "lab.css"
@@ -32,7 +32,7 @@ The first step in the process of turning information into knowledge is to summar
 In this assignment we explore data on college majors and earnings, specifically the data in the FiveThirtyEight story ["The Economic Guide To Picking A College Major"](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/).
 
 These data originally come from the American Community Survey (ACS) 2010-2012 Public Use Microdata Series.
-While this is outside the scope of this assignment, if you are curious about how raw data from the ACS were cleaned and prepared, see [the code](https://github.com/fivethirtyeight/data/blob/master/college-majors/college-majors-rscript.R) FiveThirtyEight authors used. This data is about a decade old at this point, but you could pull and analyze more recent ACS data for your project! The ACS includes many more survey topics than those in this analysis. 
+While this is outside the scope of this assignment, if you are curious about how raw data from the ACS were cleaned and prepared, see [the code](https://github.com/fivethirtyeight/data/blob/master/college-majors/college-majors-rscript.R) FiveThirtyEight authors used. This data is over a decade old at this point, but you could pull and analyze more recent ACS data for your project! The ACS includes many more survey topics than those in this analysis. 
 
 We should also note that there are many considerations that go into picking a college major. Earnings potential and employment prospects are two of them, and they are important, but they don't tell the whole story. Keep this in mind as you analyze the data.
 
