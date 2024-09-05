@@ -90,7 +90,7 @@ class: middle
 ## Take a peek at data
 
 
-```r
+``` r
 library(openintro)
 glimpse(loans_full_schema)
 ```
@@ -122,8 +122,8 @@ glimpse(loans_full_schema)
 ## Selected variables
 
 
-```r
-loans &lt;- loans_full_schema %&gt;%
+``` r
+loans &lt;- loans_full_schema |&gt;
   select(loan_amount, interest_rate, term, grade, 
          state, annual_income, homeownership, debt_to_income)
 glimpse(loans)
@@ -206,7 +206,7 @@ class: middle
 ## Histogram
 
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_histogram()
 ```
@@ -225,7 +225,7 @@ ggplot(loans, aes(x = loan_amount)) +
 .panelset[
 .panel[.panel-name[binwidth = 1000]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_histogram(binwidth = 1000)
 ```
@@ -234,7 +234,7 @@ ggplot(loans, aes(x = loan_amount)) +
 ]
 .panel[.panel-name[binwidth = 5000]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_histogram(binwidth = 5000)
 ```
@@ -243,7 +243,7 @@ ggplot(loans, aes(x = loan_amount)) +
 ]
 .panel[.panel-name[binwidth = 20000]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_histogram(binwidth = 20000)
 ```
@@ -262,7 +262,7 @@ ggplot(loans, aes(x = loan_amount)) +
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_histogram(binwidth = 5000) +
 * labs(
@@ -284,7 +284,7 @@ ggplot(loans, aes(x = loan_amount)) +
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount, 
 *                 fill = homeownership)) +
   geom_histogram(binwidth = 5000,
@@ -308,7 +308,7 @@ ggplot(loans, aes(x = loan_amount,
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount, fill = homeownership)) + 
   geom_histogram(binwidth = 5000) +
   labs(
@@ -332,7 +332,7 @@ class: middle
 ## Density plot
 
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_density()
 ```
@@ -346,7 +346,7 @@ ggplot(loans, aes(x = loan_amount)) +
 .panelset[
 .panel[.panel-name[adjust = 0.5]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_density(adjust = 0.5)
 ```
@@ -355,7 +355,7 @@ ggplot(loans, aes(x = loan_amount)) +
 ]
 .panel[.panel-name[adjust = 1]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_density(adjust = 1) # default bandwidth
 ```
@@ -364,7 +364,7 @@ ggplot(loans, aes(x = loan_amount)) +
 ]
 .panel[.panel-name[adjust = 2]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_density(adjust = 2)
 ```
@@ -383,7 +383,7 @@ ggplot(loans, aes(x = loan_amount)) +
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount)) +
   geom_density(adjust = 2) +
 * labs(
@@ -405,7 +405,7 @@ ggplot(loans, aes(x = loan_amount)) +
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(loans, aes(x = loan_amount, 
 *                 fill = homeownership)) +
   geom_density(adjust = 2, 
@@ -431,7 +431,7 @@ class: middle
 ## Box plot
 
 
-```r
+``` r
 ggplot(loans, aes(x = interest_rate)) +
   geom_boxplot()
 ```
@@ -443,7 +443,7 @@ ggplot(loans, aes(x = interest_rate)) +
 ## Box plot and outliers
 
 
-```r
+``` r
 ggplot(loans, aes(x = annual_income)) +
   geom_boxplot()
 ```
@@ -460,7 +460,7 @@ ggplot(loans, aes(x = annual_income)) +
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(loans, aes(x = interest_rate)) +
   geom_boxplot() +
   labs(
@@ -486,7 +486,7 @@ ggplot(loans, aes(x = interest_rate)) +
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(loans, aes(x = interest_rate,
 *                 y = grade)) +
   geom_boxplot() +
@@ -511,7 +511,7 @@ class: middle
 ## Scatterplot
 
 
-```r
+``` r
 ggplot(loans, aes(x = debt_to_income, y = interest_rate)) +
   geom_point()
 ```
@@ -523,7 +523,7 @@ ggplot(loans, aes(x = debt_to_income, y = interest_rate)) +
 ## Hex plot
 
 
-```r
+``` r
 ggplot(loans, aes(x = debt_to_income, y = interest_rate)) +
   geom_hex()
 ```
@@ -535,8 +535,8 @@ ggplot(loans, aes(x = debt_to_income, y = interest_rate)) +
 ## Hex plot
 
 
-```r
-ggplot(loans %&gt;% filter(debt_to_income &lt; 100), 
+``` r
+ggplot(loans |&gt; filter(debt_to_income &lt; 100), 
        aes(x = debt_to_income, y = interest_rate)) +
   geom_hex()
 ```

@@ -60,9 +60,9 @@ class: middle
 ### Data 
 
 
-```r
+``` r
 library(openintro)
-loans &lt;- loans_full_schema %&gt;%
+loans &lt;- loans_full_schema |&gt;
   select(loan_amount, interest_rate, term, grade, 
          state, annual_income, homeownership, debt_to_income)
 glimpse(loans)
@@ -92,7 +92,7 @@ class: middle
 ## Bar plot
 
 
-```r
+``` r
 ggplot(loans, aes(x = homeownership)) +
   geom_bar()
 ```
@@ -104,7 +104,7 @@ ggplot(loans, aes(x = homeownership)) +
 ## Segmented bar plot
 
 
-```r
+``` r
 ggplot(loans, aes(x = homeownership, 
 *                 fill = grade)) +
   geom_bar()
@@ -117,7 +117,7 @@ ggplot(loans, aes(x = homeownership,
 ## Segmented bar plot
 
 
-```r
+``` r
 ggplot(loans, aes(x = homeownership, fill = grade)) +
 * geom_bar(position = "fill")
 ```
@@ -147,7 +147,7 @@ Which bar plot is a more useful representation for visualizing the relationship 
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 *ggplot(loans, aes(y = homeownership,
                   fill = grade)) +
   geom_bar(position = "fill") +
@@ -180,7 +180,7 @@ class: middle
 ## Violin plots
 
 
-```r
+``` r
 ggplot(loans, aes(x = homeownership, y = loan_amount)) +
   geom_violin()
 ```
@@ -192,7 +192,7 @@ ggplot(loans, aes(x = homeownership, y = loan_amount)) +
 ## Ridge plots
 
 
-```r
+``` r
 library(ggridges)
 ggplot(loans, aes(x = loan_amount, y = grade, fill = grade, color = grade)) + 
   geom_density_ridges(alpha = 0.5)

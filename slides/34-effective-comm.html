@@ -216,7 +216,7 @@ class: middle
 
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(brexit, aes(x = opinion)) +
   geom_bar()
 ```
@@ -239,7 +239,7 @@ ggplot(brexit, aes(x = opinion)) +
 `fct_infreq`: Reorder factors' levels by frequency
 
 
-```r
+``` r
 *ggplot(brexit, aes(x = fct_infreq(opinion))) +
   geom_bar()
 ```
@@ -260,7 +260,7 @@ ggplot(brexit, aes(x = opinion)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(x = fct_infreq(opinion))) +
   geom_bar() +
 * labs(
@@ -285,7 +285,7 @@ ggplot(brexit, aes(x = fct_infreq(opinion))) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(x = region)) +
   geom_bar()
 ```
@@ -304,8 +304,8 @@ ggplot(brexit, aes(x = region)) +
 `fct_relevel`: Reorder factor levels using a custom order
 
 
-```r
-brexit &lt;- brexit %&gt;%
+``` r
+brexit &lt;- brexit |&gt;
   mutate(
 *   region = fct_relevel(
       region,
@@ -332,8 +332,8 @@ brexit &lt;- brexit %&gt;%
 `fct_recode`: Change factor levels by hand
 
 
-```r
-brexit &lt;- brexit %&gt;%
+``` r
+brexit &lt;- brexit |&gt;
   mutate(
 *   region = fct_recode(
       region,
@@ -378,7 +378,7 @@ class: middle
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 *ggplot(brexit, aes(y = region)) +
   geom_bar()
 ```
@@ -401,7 +401,7 @@ class: middle
 `fct_rev`: Reverse order of factor levels
 
 
-```r
+``` r
 *ggplot(brexit, aes(y = fct_rev(region))) +
   geom_bar()
 ```
@@ -422,7 +422,7 @@ class: middle
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = fct_rev(region))) +
   geom_bar() +
 * labs(
@@ -453,7 +453,7 @@ class: middle
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 *ggplot(brexit, aes(y = region, fill = opinion)) +
   geom_bar()
 ```
@@ -474,7 +474,7 @@ class: middle
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = region)) +
   geom_bar() +
 * facet_wrap(~region, nrow = 1)
@@ -502,7 +502,7 @@ ggplot(brexit, aes(y = opinion, fill = region)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1)
@@ -524,7 +524,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1) +
@@ -547,7 +547,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1) +
@@ -574,7 +574,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1) +
@@ -603,7 +603,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1) +
@@ -632,7 +632,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region,
@@ -676,7 +676,7 @@ class: middle
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1, labeller = label_wrap_gen(width = 12)) +
@@ -718,7 +718,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1, labeller = label_wrap_gen(width = 12)) +
@@ -750,7 +750,7 @@ ggplot(brexit, aes(y = opinion, fill = opinion)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(brexit, aes(y = opinion, fill = opinion)) +
   geom_bar() +
   facet_wrap(~region, nrow = 1, labeller = label_wrap_gen(width = 12)) +

@@ -89,7 +89,7 @@ class: middle
 - Goal for original data collection: Development of prediction models to classify a hotel booking's likelihood to be cancelled ([Antonia et al., 2019](https://www.sciencedirect.com/science/article/pii/S2352340918315191#bib5))
 
 
-```r
+``` r
 hotels &lt;- read_csv("data/hotels.csv")
 ```
 
@@ -102,7 +102,7 @@ Source: [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master
 ## First look: Variables
 
 
-```r
+``` r
 names(hotels)
 ```
 
@@ -133,7 +133,7 @@ names(hotels)
 ## Second look: Overview
 
 
-```r
+``` r
 glimpse(hotels)
 ```
 
@@ -166,7 +166,7 @@ glimpse(hotels)
 View only `lead_time` (number of days between booking and arrival date):
 
 
-```r
+``` r
 select(hotels, lead_time)
 ```
 
@@ -189,7 +189,7 @@ select(hotels, lead_time)
 
 .pull-left[
 
-```r
+``` r
 *select(
   hotels, 
   lead_time
@@ -206,7 +206,7 @@ select(hotels, lead_time)
 
 .pull-left[
 
-```r
+``` r
 select( 
 * hotels,
   lead_time
@@ -224,7 +224,7 @@ select(
 
 .pull-left[
 
-```r
+``` r
 select( 
   hotels, 
 * lead_time
@@ -243,7 +243,7 @@ select(
 
 .pull-left[
 
-```r
+``` r
 select( 
   hotels, 
   lead_time
@@ -277,7 +277,7 @@ dplyr functions always expect a data frame and always yield a data frame.
 ]
 
 
-```r
+``` r
 select(hotels, lead_time)
 ```
 
@@ -305,7 +305,7 @@ View only the `hotel` type and `lead_time`:
 
 .pull-left[
 
-```r
+``` r
 select(hotels, hotel, lead_time)
 ```
 
@@ -336,8 +336,8 @@ What if we wanted to select these columns, and then arrange the data in descendi
 .pull-left[
 Select:
 
-```r
-hotels %&gt;%
+``` r
+hotels |&gt;
   select(hotel, lead_time)
 ```
 
@@ -359,9 +359,9 @@ hotels %&gt;%
 .pull-right[
 Select, then arrange:
 
-```r
-hotels %&gt;%
-  select(hotel, lead_time) %&gt;%
+``` r
+hotels |&gt;
+  select(hotel, lead_time) |&gt;
   arrange(desc(lead_time))
 ```
 
@@ -399,9 +399,9 @@ In programming, a pipe is a technique for passing information from one process t
 .pull-right[
 .small[
 
-```r
-*hotels %&gt;%
-  select(hotel, lead_time) %&gt;%
+``` r
+*hotels |&gt;
+  select(hotel, lead_time) |&gt;
   arrange(desc(lead_time))
 ```
 
@@ -433,9 +433,9 @@ In programming, a pipe is a technique for passing information from one process t
 .pull-right[
 .small[
 
-```r
-hotels %&gt;%
-* select(hotel, lead_time) %&gt;%
+``` r
+hotels |&gt;
+* select(hotel, lead_time) |&gt;
   arrange(desc(lead_time))
 ```
 
@@ -468,9 +468,9 @@ In programming, a pipe is a technique for passing information from one process t
 .pull-right[
 .small[
 
-```r
-hotels %&gt;%
-  select(hotel, lead_time) %&gt;% 
+``` r
+hotels |&gt;
+  select(hotel, lead_time) |&gt; 
 * arrange(desc(lead_time))
 ```
 
@@ -520,7 +520,7 @@ unlock car, start car, drive to work, park.
 --
 - Expressed as a set of nested functions in R pseudocode this would look like:
 
-```r
+``` r
 park(drive(start_car(find("keys")), to = "work"))
 ```
 
@@ -528,10 +528,10 @@ park(drive(start_car(find("keys")), to = "work"))
 - Writing it out using pipes give it a more natural (and easier to read) 
 structure:
 
-```r
-find("keys") %&gt;%
-  start_car() %&gt;%
-  drive(to = "work") %&gt;%
+``` r
+find("keys") |&gt;
+  start_car() |&gt;
+  drive(to = "work") |&gt;
   park()
 ```
 
@@ -539,7 +539,7 @@ find("keys") %&gt;%
 
 ## A note on piping and layering
 
-- `%&gt;%` used mainly in **dplyr** pipelines, *we pipe the output of the previous line of code as the first input of the next line of code*
+- `|&gt;` used mainly in **dplyr** pipelines, *we pipe the output of the previous line of code as the first input of the next line of code*
 
 --
 - `+` used in **ggplot2** plots is used for "layering", *we create the plot in layers, separated by `+`*
@@ -552,7 +552,7 @@ find("keys") %&gt;%
 ❌
 
 
-```r
+``` r
 hotels +
   select(hotel, lead_time)
 ```
@@ -564,8 +564,8 @@ hotels +
 ✅
 
 
-```r
-hotels %&gt;%
+``` r
+hotels |&gt;
   select(hotel, lead_time)
 ```
 
@@ -589,21 +589,21 @@ hotels %&gt;%
 ❌
 
 
-```r
-ggplot(hotels, aes(x = hotel, fill = deposit_type)) %&gt;%
+``` r
+ggplot(hotels, aes(x = hotel, fill = deposit_type)) |&gt;
   geom_bar()
 ```
 
 ```
 ## Error in `geom_bar()`:
-## ! `mapping` must be created by `aes()`
+## ! `mapping` must be created by `aes()`.
 ## ℹ Did you use `%&gt;%` or `|&gt;` instead of `+`?
 ```
 
 ✅
 
 
-```r
+``` r
 ggplot(hotels, aes(x = hotel, fill = deposit_type)) +
   geom_bar()
 ```
@@ -615,7 +615,7 @@ ggplot(hotels, aes(x = hotel, fill = deposit_type)) +
 
 ## Code styling
 
-Many of the styling principles are consistent across `%&gt;%` and `+`:
+Many of the styling principles are consistent across `|&gt;` and `+`:
 
 - always a space before
 - always a line break after (for pipelines with more than 2 lines)
@@ -623,14 +623,14 @@ Many of the styling principles are consistent across `%&gt;%` and `+`:
 ❌
 
 
-```r
+``` r
 ggplot(hotels,aes(x=hotel,y=deposit_type))+geom_bar()
 ```
 
 ✅
 
 
-```r
+``` r
 ggplot(hotels, aes(x = hotel, y = deposit_type)) + 
   geom_bar()
 ```

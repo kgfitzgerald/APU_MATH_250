@@ -64,7 +64,7 @@ class: middle
 Proportions aren't close to 0.5, odds ratio is more appropriate here.
 
 
-```r
+``` r
 gilbert &lt;- matrix(c(40, 34, 217, 1350), 
                   nrow = 2, byrow = TRUE)
 gilbert
@@ -76,7 +76,7 @@ gilbert
 ## [2,]  217 1350
 ```
 
-```r
+``` r
 OddsRatio(gilbert, conf.level = 0.99)
 ```
 
@@ -95,7 +95,7 @@ OddsRatio(gilbert, conf.level = 0.99)
 How many deaths would we expect in each column if `\(H_0\)` is true?
 
 
-```r
+``` r
 baseline_risk &lt;- 74/1641 
 baseline_risk*257 #gilbert shifts
 ```
@@ -104,7 +104,7 @@ baseline_risk*257 #gilbert shifts
 ## [1] 11.58927
 ```
 
-```r
+``` r
 baseline_risk*1384 #non-gilbert shifts
 ```
 
@@ -126,36 +126,12 @@ In general, we can compute the expected counts for the `\(i^{th}\)` row and `\(j
 
 `$$\text{Expected Count}_{\text{row i, col j}} = \frac{\text{(row i total) x (column j total)}}{\text{table total}}$$`
 
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Gilbert worked &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Gilbert did NOT work &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Total &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Death occured &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 40   (11.59) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 34   (62.4) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 74 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Death did NOT occur &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 217   (245.4) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1350   (1321.6) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1567 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Total &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 257 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1384 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1641 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+|                    |Gilbert worked |Gilbert did NOT work |Total |
+|:-------------------|:--------------|:--------------------|:-----|
+|Death occured       |40   (11.59)   |34   (62.4)          |74    |
+|Death did NOT occur |217   (245.4)  |1350   (1321.6)      |1567  |
+|Total               |257            |1384                 |1641  |
 
 ---
 
@@ -170,36 +146,12 @@ Want some way to summarize how far off observed counts are from expected counts
 Note: when independent, `\(O \approx E\)`, so we expect `\(X^2\)` to be small when `\(H_0\)` is true.
 ]
 .pull-right[
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Gilbert worked &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Gilbert did NOT work &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Total &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Death occured &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 40   (11.59) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 34   (62.4) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 74 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Death did NOT occur &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 217   (245.4) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1350   (1321.6) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1567 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Total &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 257 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1384 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1641 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+|                    |Gilbert worked |Gilbert did NOT work |Total |
+|:-------------------|:--------------|:--------------------|:-----|
+|Death occured       |40   (11.59)   |34   (62.4)          |74    |
+|Death did NOT occur |217   (245.4)  |1350   (1321.6)      |1567  |
+|Total               |257            |1384                 |1641  |
 
 
 `$$\begin{aligned}
@@ -232,7 +184,7 @@ For the Kristen Gilbert data, `\(X^2 = 86.5\)`
 Critical value for `\(\alpha = 0.01\)`:
 
 
-```r
+``` r
 qchisq(0.99, df = 1)
 ```
 
@@ -259,7 +211,7 @@ What will our p-value be?
 ## Chi-squared test in R
 
 
-```r
+``` r
 gilbert
 ```
 
@@ -269,7 +221,7 @@ gilbert
 ## [2,]  217 1350
 ```
 
-```r
+``` r
 chisq.test(gilbert)
 ```
 
@@ -291,7 +243,7 @@ Note: Yates' continuity correction is used. Set `correct = FALSE` to match our b
 
 
 
-```r
+``` r
 glimpse(gilbert_raw)
 ```
 
@@ -302,7 +254,7 @@ glimpse(gilbert_raw)
 ## $ death &lt;chr&gt; "death", "death", "death", "death", "death", "dea…
 ```
 
-```r
+``` r
 chisq_test(gilbert_raw, response = death, explanatory = shift)
 ```
 
@@ -320,7 +272,7 @@ CONCLUSION: We REJECT H0. That is, we have sufficient evidence to claim that the
 ## Couldn't I have just used `prop_test()`?
 
 
-```r
+``` r
 prop_test(gilbert_raw, response = death, explanatory = shift)
 ```
 
@@ -328,10 +280,10 @@ prop_test(gilbert_raw, response = death, explanatory = shift)
 ## # A tibble: 1 × 6
 ##   statistic chisq_df  p_value alternative lower_ci upper_ci
 ##       &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;
-## 1      83.5        1 6.49e-20 two.sided      0.280    0.524
+## 1      83.5        1 6.49e-20 two.sided     0.0837    0.178
 ```
 
-```r
+``` r
 prop_test(gilbert_raw, response = death, explanatory = shift, z = TRUE)
 ```
 
@@ -339,7 +291,7 @@ prop_test(gilbert_raw, response = death, explanatory = shift, z = TRUE)
 ## # A tibble: 1 × 5
 ##   statistic  p_value alternative lower_ci upper_ci
 ##       &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;
-## 1      9.30 1.41e-20 two.sided      0.287    0.517
+## 1      9.30 1.41e-20 two.sided     0.0860    0.176
 ```
 
 ---
@@ -365,7 +317,7 @@ Understanding cultural differences in tobacco use across different demographic g
 In order to assess whether there is a difference in current smoking rates across three Asian American ethnic groups, the observed data is compared to the data that would be expected if there were no association between the variables.
 
 
-```r
+``` r
 tobacco &lt;- matrix(c(4150, 223, 
                     4457, 279, 
                     4303, 609), 
@@ -399,7 +351,7 @@ This is a hypothesis test question, and a chi-square test is appropriate.
 `$$H_A: \text{smoking rates are NOT the same for each ethnic group (two variables NOT indep.)}$$`
 
 
-```r
+``` r
 chisq.test(tobacco)
 ```
 
@@ -411,7 +363,7 @@ chisq.test(tobacco)
 ## X-squared = 209.42, df = 2, p-value &lt; 2.2e-16
 ```
 
-```r
+``` r
 qchisq(.99, 2)
 ```
 
@@ -434,7 +386,7 @@ There is sufficient evidence to REJECT H0 and claim smoking rates differ by ethn
 A recent study disaggregated tobacco use across Asian American ethnic groups including Asian-Indian (n = 4,373), Chinese (n = 4,736), and Filipino (n = 4,912). The number of current smokers in each group was reported as Asian-Indian (n = 223), Chinese (n = 279), and Filipino (n = 609). (Rao et al. 2021)
 
 
-```r
+``` r
 prop.table(tobacco, margin = 1)
 ```
 
@@ -449,44 +401,12 @@ prop.table(tobacco, margin = 1)
 
 ## Recap
 
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Variable(s) of interest &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Hypothesis Test &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Parameter for CI &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Point Estimate &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Reference distribution &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; R function &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; One 2-level categorical variable &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; One proportion z-test &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(p\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(\hat{p}\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(N(0,1)\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; prop_test() &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Two 2-level categorical variables &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Two proportion z-test &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(p_1 - p_2\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(\hat{p}_1 - \hat{p}_2\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(N(0,1)\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; prop_test() &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Two 2+ level categorical variables &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Chi-square test &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(X^2\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(\chi^2_{(I-1)(J-1)}\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; chisq_test() or chisq.test() &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+|Variable(s) of interest            |Hypothesis Test       |Parameter for CI |Point Estimate          |Reference distribution |R function                   |
+|:----------------------------------|:---------------------|:----------------|:-----------------------|:----------------------|:----------------------------|
+|One 2-level categorical variable   |One proportion z-test |$p$              |$\hat{p}$               |$N(0,1)$               |prop_test()                  |
+|Two 2-level categorical variables  |Two proportion z-test |$p_1 - p_2$      |$\hat{p}_1 - \hat{p}_2$ |$N(0,1)$               |prop_test()                  |
+|Two 2+ level categorical variables |Chi-square test       |NA               |$X^2$                   |$\chi^2_{(I-1)(J-1)}$  |chisq_test() or chisq.test() |
 
 
 

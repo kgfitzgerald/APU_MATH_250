@@ -94,8 +94,8 @@ The parameter of interest is the **difference in population means**, `\(\mu_A - 
 
 
 
-```r
-classdata %&gt;% group_by(lecture) %&gt;% summarize(xbar = mean(m1), s = sd(m1), n = n())
+``` r
+classdata |&gt; group_by(lecture) |&gt; summarize(xbar = mean(m1), s = sd(m1), n = n())
 ```
 
 ```
@@ -124,17 +124,17 @@ classdata %&gt;% group_by(lecture) %&gt;% summarize(xbar = mean(m1), s = sd(m1),
 ## Hypothesis test for two (independent) means
 
 
-```r
+``` r
 t_test(classdata, response = m1, explanatory = lecture, 
        conf_level = 0.99, alternative = "greater")
 ```
 
 ```
-## Warning: The statistic is based on a difference or ratio; by
-## default, for difference-based statistics, the explanatory
-## variable is subtracted in the order "a" - "b", or divided in the
-## order "a" / "b" for ratio-based statistics. To specify this
-## order yourself, supply `order = c("a", "b")`.
+## Warning: The statistic is based on a difference or ratio; by default, for
+## difference-based statistics, the explanatory variable is
+## subtracted in the order "a" - "b", or divided in the order "a" /
+## "b" for ratio-based statistics. To specify this order yourself,
+## supply `order = c("a", "b")`.
 ```
 
 ```
@@ -153,11 +153,11 @@ t_test(classdata, response = m1, explanatory = lecture,
 .panel[.panel-name[Calculations (by hand)]
 
 
-```r
-lectureA &lt;- classdata %&gt;% filter(lecture == "a")
+``` r
+lectureA &lt;- classdata |&gt; filter(lecture == "a")
 xbarA &lt;- mean(lectureA$m1)
 sA &lt;- sd(lectureA$m1)
-lectureB &lt;- classdata %&gt;% filter(lecture == "b")
+lectureB &lt;- classdata |&gt; filter(lecture == "b")
 xbarB &lt;- mean(lectureB$m1)
 sB &lt;- sd(lectureB$m1)
 (t_stat &lt;- (xbarA - xbarB)/sqrt(sA^2/nrow(lectureA) + sB^2/nrow(lectureB)))
@@ -167,7 +167,7 @@ sB &lt;- sd(lectureB$m1)
 ## [1] 1.207263
 ```
 
-```r
+``` r
 (crit_value99 &lt;- qt(.99, df = nrow(lectureA) + nrow(lectureB) - 2))
 ```
 
@@ -175,7 +175,7 @@ sB &lt;- sd(lectureB$m1)
 ## [1] 2.360412
 ```
 
-```r
+``` r
 (p_value &lt;- 2*pt(t_stat, df = nrow(lectureA) + nrow(lectureB) - 2, lower.tail = FALSE))
 ```
 
@@ -186,7 +186,7 @@ sB &lt;- sd(lectureB$m1)
 
 .panel[.panel-name[Calculations (t_test)]
 
-```r
+``` r
 t_test_results &lt;- t_test(classdata, response = m1, 
                 explanatory = lecture, 
                 conf_level = 0.99)
@@ -200,7 +200,7 @@ t_test_results
 ## 1      1.21  111.   0.230 two.sided       3.14    -3.68     9.96
 ```
 
-```r
+``` r
 t_stat &lt;- t_test_results$statistic
 df &lt;- t_test_results$t_df
 qt(.99, df) #critical value
@@ -219,7 +219,7 @@ qt(.99, df) #critical value
 `$$H_A: \mu_{A} &gt; \mu_B \ \ \ \Rightarrow \mu_A - \mu_B &gt; 0$$`
 
 
-```r
+``` r
 t_test(classdata, response = m1, explanatory = lecture, 
        conf_level = 0.99, alternative = "greater")
 ```
@@ -240,7 +240,7 @@ We FAIL TO REJECT H0.
 This is an **estimation** question
 
 
-```r
+``` r
 t_test(classdata, response = m1, explanatory = lecture, 
        conf_level = 0.99)
 ```
@@ -272,9 +272,9 @@ class: middle
 + What type(s) of variable(s)? **numerical, categorical (two levels)**
 
 
-```r
-ucla_textbooks_f18 %&gt;% 
-  select(subject, textbook_isbn, amazon_used, bookstore_used) %&gt;% 
+``` r
+ucla_textbooks_f18 |&gt; 
+  select(subject, textbook_isbn, amazon_used, bookstore_used) |&gt; 
   glimpse()
 ```
 
@@ -315,10 +315,10 @@ n = number of pairs
 ## Hypothesis test for paired means
 
 
-```r
-ucla_textbooks_f18 &lt;- ucla_textbooks_f18 %&gt;% 
-  select(textbook_isbn, amazon_used, bookstore_used) %&gt;%
-  na.omit() %&gt;% 
+``` r
+ucla_textbooks_f18 &lt;- ucla_textbooks_f18 |&gt; 
+  select(textbook_isbn, amazon_used, bookstore_used) |&gt;
+  na.omit() |&gt; 
   mutate(diff = bookstore_used - amazon_used)
 
 t_test(ucla_textbooks_f18, response = diff, conf_level = 0.99)
@@ -343,7 +343,7 @@ $$\overline{x}_{diff} = \$12.20$$
 .panel[.panel-name[Calculations (by hand)]
 
 
-```r
+``` r
 xbar_diff &lt;- mean(ucla_textbooks_f18$diff)
 s_diff &lt;- sd(ucla_textbooks_f18$diff)
 n &lt;- nrow(ucla_textbooks_f18)
@@ -354,7 +354,7 @@ n &lt;- nrow(ucla_textbooks_f18)
 ## [1] 4.597531
 ```
 
-```r
+``` r
 qt(.995, df = n - 1)
 ```
 
@@ -365,7 +365,7 @@ qt(.995, df = n - 1)
 
 .panel[.panel-name[Calculations (t_test)]
 
-```r
+``` r
 t_test_results &lt;- t_test(ucla_textbooks_f18, response = diff,
                          conf_level = 0.99)
 t_test_results
@@ -378,7 +378,7 @@ t_test_results
 ## 1      4.60    63  2.11e-5 two.sided       12.2     5.14     19.2
 ```
 
-```r
+``` r
 t_stat &lt;- t_test_results$statistic
 df &lt;- t_test_results$t_df
 qt(.99, df) #critical value
@@ -394,7 +394,7 @@ qt(.99, df) #critical value
 ## Paired t-test with t.test()
 
 
-```r
+``` r
 t.test(x = ucla_textbooks_f18$bookstore_used,
        y = ucla_textbooks_f18$amazon_used, 
        paired = TRUE)
@@ -422,7 +422,7 @@ t.test(x = ucla_textbooks_f18$bookstore_used,
 
 `$$H_A: \mu_{diff} \neq 0$$`
 
-```r
+``` r
 t_test(ucla_textbooks_f18, response = diff,
                          conf_level = 0.99)
 ```

@@ -18,17 +18,15 @@ library(ggthemes)
 library(cowplot)
 ```
 
-<!-- ### Thursday Announcements -->
+### Thursday Announcements
 
-<!-- -   MPS BBQ Next Friday (free food!) -->
+ - Save the Date: CEMPS BBQ Next Friday (free food!), 5 - 7pm
+ - Save the Date: APU STEM Research Symposium Saturday, Sept 21
+    + counts as 2 Stats Experience points!
 
-<!--     -   Panel for new students right before (4:30) -->
 
-<!--         ![](images/MPS_BBQ.png) -->
-
-<!-- -   For next week: lecture videos a little shorter (3 videos, 50 mins), but annotation content longer -->
-
-<!--     -   Content warning: racism in science -->
+  - For next week: lecture videos a little shorter (3 videos, 50 mins), but annotation content longer 
+    + Content warning: racism in science 
 
 ### Statistician(s) of the Week
 

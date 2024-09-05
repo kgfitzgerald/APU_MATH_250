@@ -123,8 +123,8 @@ What can you say about the overall gender distribution? Hint: Calculate the foll
 ]
 
 
-```r
-ucbadmit %&gt;%
+``` r
+ucbadmit |&gt;
   count(gender, admit)
 ```
 
@@ -141,10 +141,10 @@ ucbadmit %&gt;%
 ---
 
 
-```r
-ucbadmit %&gt;%
-  count(gender, admit) %&gt;%
-  group_by(gender) %&gt;%
+``` r
+ucbadmit |&gt;
+  count(gender, admit) |&gt;
+  group_by(gender) |&gt;
   mutate(prop_admit = n / sum(n))
 ```
 
@@ -174,7 +174,7 @@ ucbadmit %&gt;%
 
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(ucbadmit, aes(y = gender, fill = admit)) +
   geom_bar(position = "fill") + 
   scale_fill_viridis_d() +
@@ -192,8 +192,8 @@ What can you say about the gender distribution by department ?
 ]
 
 
-```r
-ucbadmit %&gt;%
+``` r
+ucbadmit |&gt;
   count(dept, gender, admit)
 ```
 
@@ -217,9 +217,9 @@ Let's try again... What can you say about the gender distribution by department?
 ]
 
 
-```r
-ucbadmit %&gt;%
-  count(dept, gender, admit) %&gt;%
+``` r
+ucbadmit |&gt;
+  count(dept, gender, admit) |&gt;
   pivot_wider(names_from = dept, values_from = n)
 ```
 
@@ -245,7 +245,7 @@ ucbadmit %&gt;%
 
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(ucbadmit, aes(y = gender, fill = admit)) +
   geom_bar(position = "fill") +
   facet_wrap(. ~ dept) +
@@ -300,17 +300,17 @@ ggplot(ucbadmit, aes(y = gender, fill = admit)) +
 
 .panel[.panel-name[Code]
 
-```r
-ucbadmit %&gt;%
-  count(dept, gender, admit) %&gt;%
-  group_by(dept, gender) %&gt;%
+``` r
+ucbadmit |&gt;
+  count(dept, gender, admit) |&gt;
+  group_by(dept, gender) |&gt;
   mutate(
     n_applied  = sum(n),
     prop_admit = n / n_applied
-    ) %&gt;%
-  filter(admit == "Admitted") %&gt;%
-  rename(n_admitted = n) %&gt;%
-  select(-admit) %&gt;%
+    ) |&gt;
+  filter(admit == "Admitted") |&gt;
+  rename(n_admitted = n) |&gt;
+  select(-admit) |&gt;
   print(n = 12)
 ```
 ]
@@ -437,7 +437,7 @@ class: middle
 
 .pull-left[
 
-```r
+``` r
 ucbadmit
 ```
 
@@ -456,8 +456,8 @@ ucbadmit
 ]
 .pull-right[
 
-```r
-ucbadmit %&gt;% 
+``` r
+ucbadmit |&gt; 
   group_by(gender)
 ```
 
@@ -484,8 +484,8 @@ ucbadmit %&gt;%
 
 .pull-left[
 
-```r
-ucbadmit %&gt;% 
+``` r
+ucbadmit |&gt; 
   group_by(gender)
 ```
 
@@ -505,8 +505,8 @@ ucbadmit %&gt;%
 ]
 .pull-right[
 
-```r
-ucbadmit %&gt;% 
+``` r
+ucbadmit |&gt; 
   arrange(gender)
 ```
 
@@ -532,8 +532,8 @@ ucbadmit %&gt;%
 
 .pull-left[
 
-```r
-ucbadmit %&gt;% 
+``` r
+ucbadmit |&gt; 
   group_by(gender)
 ```
 
@@ -553,8 +553,8 @@ ucbadmit %&gt;%
 ]
 .pull-right[
 
-```r
-ucbadmit %&gt;% 
+``` r
+ucbadmit |&gt; 
   count(gender)
 ```
 
@@ -573,11 +573,11 @@ ucbadmit %&gt;%
 
 .pull-left[
 
-```r
-ucbadmit %&gt;%
-  count(gender, admit) %&gt;%
-  group_by(gender) %&gt;%
-  mutate(prop_admit = n / sum(n)) %&gt;%
+``` r
+ucbadmit |&gt;
+  count(gender, admit) |&gt;
+  group_by(gender) |&gt;
+  mutate(prop_admit = n / sum(n)) |&gt;
   select(gender, prop_admit)
 ```
 
@@ -594,12 +594,12 @@ ucbadmit %&gt;%
 ]
 .pull-right[
 
-```r
-ucbadmit %&gt;%
-  count(gender, admit) %&gt;%
-  group_by(gender) %&gt;%
-  mutate(prop_admit = n / sum(n)) %&gt;%
-  select(gender, prop_admit) %&gt;%
+``` r
+ucbadmit |&gt;
+  count(gender, admit) |&gt;
+  group_by(gender) |&gt;
+  mutate(prop_admit = n / sum(n)) |&gt;
+  select(gender, prop_admit) |&gt;
   ungroup()
 ```
 
@@ -622,9 +622,9 @@ ucbadmit %&gt;%
 
 .pull-left[
 
-```r
-ucbadmit %&gt;%
-  group_by(gender) %&gt;%
+``` r
+ucbadmit |&gt;
+  group_by(gender) |&gt;
   summarise(n = n()) 
 ```
 
@@ -638,8 +638,8 @@ ucbadmit %&gt;%
 ]
 .pull-right[
 
-```r
-ucbadmit %&gt;%
+``` r
+ucbadmit |&gt;
   count(gender)
 ```
 
@@ -658,9 +658,9 @@ ucbadmit %&gt;%
 
 .pull-left[
 
-```r
-ucbadmit %&gt;%
-  group_by(gender, admit) %&gt;%
+``` r
+ucbadmit |&gt;
+  group_by(gender, admit) |&gt;
   summarise(n = n()) 
 ```
 
@@ -677,8 +677,8 @@ ucbadmit %&gt;%
 ]
 .pull-right[
 
-```r
-ucbadmit %&gt;%
+``` r
+ucbadmit |&gt;
   count(gender, admit)
 ```
 
@@ -702,9 +702,9 @@ ucbadmit %&gt;%
 
 
 
-```r
-ucbadmit %&gt;%
-  group_by(gender, admit) %&gt;%
+``` r
+ucbadmit |&gt;
+  group_by(gender, admit) |&gt;
   summarise(n = n()) 
 ```
 

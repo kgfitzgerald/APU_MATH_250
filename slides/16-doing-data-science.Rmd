@@ -17,6 +17,7 @@ output:
 ```
 
 ```{r packages, echo = FALSE, message=FALSE, warning=FALSE}
+#devtools::install_github("mine-cetinkaya-rundel/nycsquirrels18")
 library(tidyverse)
 ```
 

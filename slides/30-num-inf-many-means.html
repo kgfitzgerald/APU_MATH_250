@@ -133,7 +133,7 @@ where `\(k\)` is the number of groups and `\(n\)` is the (total) sample size `\(
 Syntax is similar to fitting a regression model.
 
 
-```r
+``` r
 mlb_model &lt;- lm(OBP ~ position, data = mlb)
 anova(mlb_model)
 ```
@@ -155,7 +155,7 @@ anova(mlb_model)
 
 .pull-left[
 
-```r
+``` r
 tidy(anova(mlb_model))
 ```
 
@@ -167,7 +167,7 @@ tidy(anova(mlb_model))
 ## 2 Residuals   426 0.674  0.00158     NA    NA
 ```
 
-```r
+``` r
 qf(.99, 2, 426) #critical value
 ```
 
@@ -200,7 +200,7 @@ Independence is always important. Normality is important in small sample sizes. 
 # How is this different from linear regression?
 
 
-```r
+``` r
 mlb_model &lt;- lm(OBP ~ position, data = mlb)
 summary(mlb_model)
 ```
@@ -234,7 +234,7 @@ summary(mlb_model)
 When only comparing two groups (two-level categorical variable), two-sample t-test is equivalent to ANOVA F-test. In fact, `\(t^2 = F\)`, and the p-values will be identical.
 
 
-```r
+``` r
 class_model &lt;- lm(m1 ~ lecture, data = classdata)
 tidy(summary(class_model))
 ```
@@ -247,7 +247,7 @@ tidy(summary(class_model))
 ## 2 lectureb       -3.14      2.60     -1.21 2.30e- 1
 ```
 
-```r
+``` r
 tidy(anova(class_model))
 ```
 
@@ -264,47 +264,13 @@ tidy(anova(class_model))
 
 ## Recap
 
-&lt;table&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Parameter of Interest &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Statistical Method &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Point Estimate &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Reference distribution &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; R function &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; One mean &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; one-sample t-test &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(\overline{x}\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(t_{n-1}\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; t_test() &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Difference in two (independent) means &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; two-sample t-test &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(\overline{x}_1 - \overline{x}_2\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(t_{n_1 + n_2 -2}\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; t_test() &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Difference in paired means &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; paired t-test &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(\overline{x}_{diff}\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(t_{n-1}\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; t_test() &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Many means &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; ANOVA &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; MSB/MSE &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; `\(F_{k-1, n - k}\)` &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; lm(), anova() &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+|Parameter of Interest                 |Statistical Method |Point Estimate                    |Reference distribution |R function    |
+|:-------------------------------------|:------------------|:---------------------------------|:----------------------|:-------------|
+|One mean                              |one-sample t-test  |$\overline{x}$                    |$t_{n-1}$              |t_test()      |
+|Difference in two (independent) means |two-sample t-test  |$\overline{x}_1 - \overline{x}_2$ |$t_{n_1 + n_2 -2}$     |t_test()      |
+|Difference in paired means            |paired t-test      |$\overline{x}_{diff}$             |$t_{n-1}$              |t_test()      |
+|Many means                            |ANOVA              |MSB/MSE                           |$F_{k-1, n - k}$       |lm(), anova() |
 
 
 

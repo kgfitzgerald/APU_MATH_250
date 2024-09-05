@@ -73,7 +73,7 @@ We talked about *types* so far, next we'll introduce the concept of *classes*
 R uses factors to handle categorical variables, variables that have a fixed and known set of possible values
 
 
-```r
+``` r
 x &lt;- factor(c("BS", "MS", "PhD", "MS"))
 x
 ```
@@ -87,7 +87,7 @@ x
 
 .pull-left[
 
-```r
+``` r
 typeof(x)
 ```
 
@@ -97,7 +97,7 @@ typeof(x)
 ]
 .pull-right[
 
-```r
+``` r
 class(x)
 ```
 
@@ -114,7 +114,7 @@ class(x)
 We can think of factors like character (level labels) and an integer (level numbers) glued together
 
 
-```r
+``` r
 glimpse(x)
 ```
 
@@ -122,7 +122,7 @@ glimpse(x)
 ##  Factor w/ 3 levels "BS","MS","PhD": 1 2 3 2
 ```
 
-```r
+``` r
 as.integer(x)
 ```
 
@@ -135,7 +135,7 @@ as.integer(x)
 ## Dates
 
 
-```r
+``` r
 y &lt;- as.Date("2020-01-01")
 y
 ```
@@ -144,7 +144,7 @@ y
 ## [1] "2020-01-01"
 ```
 
-```r
+``` r
 typeof(y)
 ```
 
@@ -152,7 +152,7 @@ typeof(y)
 ## [1] "double"
 ```
 
-```r
+``` r
 class(y)
 ```
 
@@ -167,7 +167,7 @@ class(y)
 We can think of dates like an integer (the number of days since the origin, 1 Jan 1970) and an integer (the origin) glued together
 
 
-```r
+``` r
 as.integer(y)
 ```
 
@@ -175,7 +175,7 @@ as.integer(y)
 ## [1] 18262
 ```
 
-```r
+``` r
 as.integer(y) / 365 # roughly 50 yrs
 ```
 
@@ -190,7 +190,7 @@ as.integer(y) / 365 # roughly 50 yrs
 We can think of data frames like like vectors of equal length glued together
 
 
-```r
+``` r
 df &lt;- data.frame(x = 1:2, y = 3:4)
 df
 ```
@@ -203,7 +203,7 @@ df
 
 .pull-left[
 
-```r
+``` r
 typeof(df)
 ```
 
@@ -213,7 +213,7 @@ typeof(df)
 ]
 .pull-right[
 
-```r
+``` r
 class(df)
 ```
 
@@ -229,7 +229,7 @@ class(df)
 Lists are a generic vector container vectors of any type can go in them
 
 
-```r
+``` r
 l &lt;- list(
   x = 1:4,
   y = c("hi", "hello", "jello"),
@@ -257,7 +257,7 @@ l
 - When we use the `pull()` function, we extract a vector from the data frame
 
 
-```r
+``` r
 df
 ```
 
@@ -267,8 +267,8 @@ df
 ## 2 2 4
 ```
 
-```r
-df %&gt;%
+``` r
+df |&gt;
   pull(y)
 ```
 
@@ -290,7 +290,7 @@ class: middle
 ## Read data in as character strings
 
 
-```r
+``` r
 glimpse(cat_lovers)
 ```
 
@@ -307,7 +307,7 @@ glimpse(cat_lovers)
 ## But coerce when plotting
 
 
-```r
+``` r
 ggplot(cat_lovers, mapping = aes(x = handedness)) +
   geom_bar()
 ```
@@ -319,9 +319,9 @@ ggplot(cat_lovers, mapping = aes(x = handedness)) +
 ## Use forcats to manipulate factors
 
 
-```r
-cat_lovers %&gt;%
-* mutate(handedness = fct_infreq(handedness)) %&gt;%
+``` r
+cat_lovers |&gt;
+* mutate(handedness = fct_infreq(handedness)) |&gt;
   ggplot(mapping = aes(x = handedness)) +
   geom_bar()
 ```
@@ -382,8 +382,8 @@ Calculate and visualise the number of bookings on any given arrival date.
 ]
 
 
-```r
-hotels %&gt;%
+``` r
+hotels |&gt;
   select(starts_with("arrival_"))
 ```
 
@@ -407,13 +407,13 @@ hotels %&gt;%
 
 .midi[
 
-```r
+``` r
 library(glue)
 
-hotels %&gt;%
+hotels |&gt;
   mutate(
 *   arrival_date = glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}")
-    ) %&gt;% 
+    ) |&gt; 
   relocate(arrival_date)
 ```
 
@@ -435,9 +435,9 @@ hotels %&gt;%
 
 .midi[
 
-```r
-hotels %&gt;%
-  mutate(arrival_date = glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}")) %&gt;%
+``` r
+hotels |&gt;
+  mutate(arrival_date = glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}")) |&gt;
   count(arrival_date)
 ```
 
@@ -461,10 +461,10 @@ hotels %&gt;%
 
 .midi[
 
-```r
-hotels %&gt;%
-  mutate(arrival_date = glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}")) %&gt;%
-  count(arrival_date) %&gt;%
+``` r
+hotels |&gt;
+  mutate(arrival_date = glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}")) |&gt;
+  count(arrival_date) |&gt;
   ggplot(aes(x = arrival_date, y = n, group = 1)) +
   geom_line()
 ```
@@ -490,13 +490,13 @@ Why does the plot start with August when we know our data start in July? And why
 
 .midi[
 
-```r
+``` r
 library(lubridate)
 
-hotels %&gt;%
+hotels |&gt;
   mutate(
 *   arrival_date = ymd(glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}"))
-    ) %&gt;% 
+    ) |&gt; 
   relocate(arrival_date)
 ```
 
@@ -518,9 +518,9 @@ hotels %&gt;%
 
 .midi[
 
-```r
-hotels %&gt;%
-  mutate(arrival_date = ymd(glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}"))) %&gt;% 
+``` r
+hotels |&gt;
+  mutate(arrival_date = ymd(glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}"))) |&gt; 
   count(arrival_date)
 ```
 
@@ -544,10 +544,10 @@ hotels %&gt;%
 
 .midi[
 
-```r
-hotels %&gt;%
-  mutate(arrival_date = ymd(glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}"))) %&gt;% 
-  count(arrival_date) %&gt;%
+``` r
+hotels |&gt;
+  mutate(arrival_date = ymd(glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}"))) |&gt; 
+  count(arrival_date) |&gt;
   ggplot(aes(x = arrival_date, y = n, group = 1)) +
   geom_line()
 ```
@@ -561,10 +561,10 @@ hotels %&gt;%
 
 .midi[
 
-```r
-hotels %&gt;%
-  mutate(arrival_date = ymd(glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}"))) %&gt;% 
-  count(arrival_date) %&gt;%
+``` r
+hotels |&gt;
+  mutate(arrival_date = ymd(glue("{arrival_date_year} {arrival_date_month} {arrival_date_day_of_month}"))) |&gt; 
+  count(arrival_date) |&gt;
   ggplot(aes(x = arrival_date, y = n, group = 1)) +
 * geom_smooth()
 ```

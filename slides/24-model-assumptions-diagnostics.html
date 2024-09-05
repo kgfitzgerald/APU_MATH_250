@@ -67,7 +67,7 @@ class: middle
 ## Data: Paris Paintings
 
 
-```r
+``` r
 pp &lt;- read_csv("data/paris-paintings.csv", na = c("n/a", "", "NA"))
 ```
 
@@ -84,7 +84,7 @@ pp &lt;- read_csv("data/paris-paintings.csv", na = c("n/a", "", "NA"))
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ht_wt_fit &lt;- lm(Height_in ~ Width_in, data = pp)
 
 *ht_wt_fit_aug &lt;- augment(ht_wt_fit)
@@ -98,7 +98,7 @@ ggplot(ht_wt_fit_aug, mapping = aes(x = .fitted, y = .resid)) +
 
 .panel[.panel-name[Augment]
 
-```r
+``` r
 ht_wt_fit_aug
 ```
 
@@ -206,8 +206,8 @@ class: middle
 That is, paintings with width &lt; 8.3ft
 
 
-```r
-pp_wt_lt_100 &lt;- pp %&gt;% 
+``` r
+pp_wt_lt_100 &lt;- pp |&gt; 
   filter(Width_in &lt; 100)
 ```
 
@@ -300,7 +300,7 @@ useful when the response variable is counts.
 In some cases the value of the response variable might be 0, and
 
 
-```r
+``` r
 log(0)
 ```
 
@@ -313,7 +313,7 @@ log(0)
 The trick is to add a very small number to the value of the response variable for these cases so that the `log` function can still be applied:
 
 
-```r
+``` r
 log(0 + 0.00001)
 ```
 

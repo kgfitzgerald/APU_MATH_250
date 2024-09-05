@@ -70,8 +70,8 @@ The data come from the openintro package: [`elmhurst`](http://openintrostat.gith
 .pull-left[
 .small[
 
-```r
-lm(gift_aid ~ family_income, data = elmhurst) %&gt;%
+``` r
+lm(gift_aid ~ family_income, data = elmhurst) |&gt;
   tidy()
 ```
 
@@ -239,7 +239,7 @@ Example:
 `\(\alpha = 0.05\)`, `\(p = 2\)` (1 intercept + 1 predictor)
 
 
-```r
+``` r
 qt(.975, nrow(elmhurst) - 2)
 ```
 
@@ -252,7 +252,7 @@ qt(.975, nrow(elmhurst) - 2)
 ## 95% confidence interval
 
 
-```r
+``` r
 m1 &lt;- lm(gift_aid ~ family_income, data = elmhurst)
 tidy(m1)
 ```
@@ -265,7 +265,7 @@ tidy(m1)
 ## 2 family_income  -0.0431    0.0108     -3.98 2.29e- 4
 ```
 
-```r
+``` r
 confint(m1)
 ```
 

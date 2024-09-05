@@ -90,9 +90,9 @@ The parameter of interest is the **population proportion**, `\(p\)`, and the sam
 In 2019, a survey of 1,000 randomly sampled US adults age 25 - 54 found that 53% were married. 
 
 
-```r
-survey %&gt;% 
-  count(married) %&gt;% 
+``` r
+survey |&gt; 
+  count(married) |&gt; 
   mutate(prop = n/sum(n))
 ```
 
@@ -110,7 +110,7 @@ survey %&gt;%
 `prop_test()` will provide a confidence interval
 
 
-```r
+``` r
 prop_test(survey, response = married, success = "yes", 
           conf_level = 0.99)
 ```
@@ -168,7 +168,7 @@ Assumptions?
 ]
 .panel[.panel-name[Calculations]
 
-```r
+``` r
 phat &lt;- 0.6
 p0 &lt;- 0.488
 n &lt;- 30
@@ -187,7 +187,7 @@ SE &lt;- sqrt(p0*(1-p0)/n)
 # Hypothesis test for one proportion
 
 
-```r
+``` r
 glimpse(newclinic)
 ```
 
@@ -197,7 +197,7 @@ glimpse(newclinic)
 ## $ live_birth &lt;chr&gt; "yes", "no", "no", "no", "no", "yes", "no", …
 ```
 
-```r
+``` r
 prop_test(newclinic, response = live_birth, success = "yes", 
           conf_level = 0.99, z = TRUE, p = 0.488, alternative = "greater")
 ```

@@ -61,7 +61,7 @@ class: middle
 ## Data &amp; model
 
 
-```r
+``` r
 m1 &lt;- lm(gift_aid ~ family_income, data = elmhurst)
 tidy(m1)
 ```
@@ -154,7 +154,7 @@ Mathematical theory tells us the when `\(H_0\)` is true,
 ```
 
 
-```r
+``` r
 -0.0431/0.0108
 ```
 
@@ -172,8 +172,8 @@ Mathematical theory tells us the when `\(H_0\)` is true,
 ]
 .panel[.panel-name[Code]
 
-```r
-t_stat &lt;- abs(tidy(m1)[2,2]/tidy(m1)[2,3]) %&gt;% pull()
+``` r
+t_stat &lt;- abs(tidy(m1)[2,2]/tidy(m1)[2,3]) |&gt; pull()
 crit_value &lt;- qt(.975, nrow(elmhurst) - 2)
 ggplot() +
   xlim(c(-5,5)) + 
@@ -236,7 +236,7 @@ ggplot() +
 `$$H_A: \beta_1 \neq 0$$`
 
 
-```r
+``` r
 tidy(m1)
 ```
 

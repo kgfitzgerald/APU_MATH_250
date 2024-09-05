@@ -63,8 +63,8 @@ Below is data collected at the University of Wisconsin on 37 tumors.
 
 
 
-```r
-cell_data %&gt;% 
+``` r
+cell_data |&gt; 
   count(type, shape)
 ```
 
@@ -83,9 +83,9 @@ cell_data %&gt;%
 The **proportion** of malignant nuclei in this study is 24/37 = 0.6486
 
 
-```r
-cell_data %&gt;% 
-  count(type) %&gt;% 
+``` r
+cell_data |&gt; 
+  count(type) |&gt; 
   mutate(prop = n/sum(n))
 ```
 
@@ -104,10 +104,10 @@ This overall proportion of malignancy is often called the **risk** or **baseline
 The *conditional proportion* is the proportion of malignant cells for each cell shape.
 
 
-```r
-cell_data %&gt;% 
-  count(type, shape) %&gt;% 
-  group_by(shape) %&gt;% 
+``` r
+cell_data |&gt; 
+  count(type, shape) |&gt; 
+  group_by(shape) |&gt; 
   mutate(prop = n/sum(n))
 ```
 
@@ -162,7 +162,7 @@ Type II = Fail to detect that cell shape and malignancy are related when they ar
 `$$H_A: p_R \neq p_C \ \ \ \Rightarrow p_R - p_C \neq 0$$`
 
 
-```r
+``` r
 prop_test(cell_data, response = type, explanatory = shape,
           success = "Malignant", conf_level = 0.99)
 ```
@@ -171,7 +171,7 @@ prop_test(cell_data, response = type, explanatory = shape,
 ## # A tibble: 1 × 6
 ##   statistic chisq_df p_value alternative lower_ci upper_ci
 ##       &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;
-## 1      4.00        1  0.0454 two.sided    -0.0659    0.867
+## 1      4.00        1  0.0454 two.sided    -0.0713    0.815
 ```
 
 Because our p-value &gt; 0.01, we FAIL TO REJECT. We do NOT have sufficient evidence to claim that cell shape and malignancy are related. 
@@ -210,10 +210,10 @@ That is, the risk of malignancy is 1.85 times greater for the Concave group than
 .pull-right[
 
 
-```r
-cell_data %&gt;% 
-  count(type, shape) %&gt;% 
-  group_by(shape) %&gt;% 
+``` r
+cell_data |&gt; 
+  count(type, shape) |&gt; 
+  group_by(shape) |&gt; 
   mutate(prop = n/sum(n))
 ```
 
@@ -253,8 +253,8 @@ The odds ratio in the cancer cell study is `\(\frac{17/4}{7/9} = 5.5\)`
 
 
 
-```r
-cell_data %&gt;% 
+``` r
+cell_data |&gt; 
   count(shape, type) 
 ```
 
@@ -283,10 +283,10 @@ When proportions are far away from 0.5, inference for difference in proportions 
 ## Relative risk, odds ratio, &amp; confidence intervals
 
 
-```r
+``` r
 library(DescTools)
 
-cell_data &lt;- cell_data %&gt;% 
+cell_data &lt;- cell_data |&gt; 
   mutate(type = factor(type, levels = c("Malignant", "Benign")))
 
 RelRisk(x = cell_data$shape, y = cell_data$type, conf.level = 0.99)
@@ -297,7 +297,7 @@ RelRisk(x = cell_data$shape, y = cell_data$type, conf.level = 0.99)
 ## 1.8503401 0.9439074 4.4678079
 ```
 
-```r
+``` r
 OddsRatio(x = cell_data$shape, y = cell_data$type, conf.level = 0.99)
 ```
 

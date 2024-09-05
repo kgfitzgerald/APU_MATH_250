@@ -72,7 +72,7 @@ class: middle
 ## Paris Paintings
 
 
-```r
+``` r
 pp &lt;- read_csv("data/paris-paintings.csv", na = c("n/a", "", "NA"))
 ```
 
@@ -138,9 +138,9 @@ Two paintings very rich in composition, of a beautiful execution, and whose meri
 ---
 
 
-```r
-pp %&gt;%
-  filter(name == "R1777-89a") %&gt;%
+``` r
+pp |&gt;
+  filter(name == "R1777-89a") |&gt;
   glimpse()
 ```
 
@@ -217,7 +217,7 @@ class: middle
 
 .small[
 
-```r
+``` r
 ggplot(data = pp, aes(x = Height_in)) +
   geom_histogram(binwidth = 5) +
   labs(x = "Height, in inches", y = NULL)
@@ -232,7 +232,7 @@ ggplot(data = pp, aes(x = Height_in)) +
 
 .small[
 
-```r
+``` r
 ggplot(data = pp, aes(x = Width_in)) +
   geom_histogram(binwidth = 5) +
   labs(x = "Width, in inches", y = NULL)
@@ -261,7 +261,7 @@ ggplot(data = pp, aes(x = Width_in)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
   geom_point() +
   geom_smooth(method = "lm") +
@@ -274,13 +274,13 @@ ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
 ```
 
 ```
-## Warning: Removed 258 rows containing non-finite values
+## Warning: Removed 258 rows containing non-finite outside the scale range
 ## (`stat_smooth()`).
 ```
 
 ```
-## Warning: Removed 258 rows containing missing values
-## (`geom_point()`).
+## Warning: Removed 258 rows containing missing values or values outside the
+## scale range (`geom_point()`).
 ```
 ]
 ]
@@ -296,7 +296,7 @@ ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
   geom_point() +
   geom_smooth(method = "lm", 
@@ -322,7 +322,7 @@ ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE,
@@ -348,7 +348,7 @@ ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
   geom_point() +
 * geom_smooth(method = "gam",
@@ -374,7 +374,7 @@ ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
 .panel[.panel-name[Code]
 
 
-```r
+``` r
 ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
   geom_point() +
 * geom_smooth(method = "loess",
@@ -418,13 +418,13 @@ ggplot(data = pp, aes(x = Width_in, y = Height_in)) +
 .panel[.panel-name[Code]
 .small[
 
-```r
-ht_wt_fit &lt;- linear_reg() %&gt;%
-  set_engine("lm") %&gt;%
+``` r
+ht_wt_fit &lt;- linear_reg() |&gt;
+  set_engine("lm") |&gt;
   fit(Height_in ~ Width_in, data = pp)
 
 ht_wt_fit_tidy &lt;- tidy(ht_wt_fit$fit) 
-ht_wt_fit_aug  &lt;- augment(ht_wt_fit$fit) %&gt;%
+ht_wt_fit_aug  &lt;- augment(ht_wt_fit$fit) |&gt;
   mutate(res_cat = ifelse(.resid &gt; 0, TRUE, FALSE))
 
 ggplot(data = ht_wt_fit_aug) +
@@ -486,7 +486,7 @@ How, if at all, does the relationship between width and height of paintings vary
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(data = pp, aes(x = Width_in, y = Height_in, color = factor(landsALL))) +
   geom_point(alpha = 0.4) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -512,7 +512,7 @@ ggplot(data = pp, aes(x = Width_in, y = Height_in, color = factor(landsALL))) +
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(data = pp, aes(x = Width_in, y = Height_in, color = factor(landsALL))) +
   geom_point(alpha = 0.4) +
   geom_smooth(method = "lm", se = FALSE,

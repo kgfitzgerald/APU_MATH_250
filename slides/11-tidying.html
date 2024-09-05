@@ -170,7 +170,7 @@ more rows
 ]
 .pull-right[
 
-```r
+``` r
 pivot_longer(
 * data,
   cols, 
@@ -190,7 +190,7 @@ pivot_longer(
 ]
 .pull-right[
 
-```r
+``` r
 pivot_longer(
   data, 
 * cols,
@@ -211,7 +211,7 @@ pivot_longer(
 ]
 .pull-right[
 
-```r
+``` r
 pivot_longer(
   data, 
   cols, 
@@ -233,7 +233,7 @@ pivot_longer(
 ]
 .pull-right[
 
-```r
+``` r
 pivot_longer(
   data, 
   cols, 
@@ -248,8 +248,8 @@ pivot_longer(
 ## Customers `\(\rightarrow\)` purchases
 
 
-```r
-purchases &lt;- customers %&gt;%
+``` r
+purchases &lt;- customers |&gt;
 * pivot_longer(
 *   cols = item_1:item_3,  # variables item_1 to item_3
 *   names_to = "item_no",  # column names -&gt; new column called item_no
@@ -281,7 +281,7 @@ Most likely, because the next step of your analysis needs it
 
 .pull-left[
 
-```r
+``` r
 prices
 ```
 
@@ -298,8 +298,8 @@ prices
 ]
 .pull-right[
 
-```r
-purchases %&gt;%
+``` r
+purchases |&gt;
 * left_join(prices)
 ```
 
@@ -327,8 +327,8 @@ purchases %&gt;%
 ]
 .pull-right-wide[
 
-```r
-purchases %&gt;%
+``` r
+purchases |&gt;
 * pivot_wider(
 *   names_from = item_no,
 *   values_from = item
@@ -365,7 +365,7 @@ Source: [FiveThirtyEight](https://projects.fivethirtyeight.com/trump-approval-ra
 
 
 
-```r
+``` r
 trump
 ```
 
@@ -409,8 +409,8 @@ trump
 ## Pivot
 
 
-```r
-trump_longer &lt;- trump %&gt;%
+``` r
+trump_longer &lt;- trump |&gt;
   pivot_longer(
     cols = c(approval, disapproval),
     names_to = "rating_type",
@@ -440,7 +440,7 @@ trump_longer
 ## Plot
 
 
-```r
+``` r
 ggplot(trump_longer, 
        aes(x = date, y = rating_value, color = rating_type, group = rating_type)) +
   geom_line() +
@@ -455,7 +455,7 @@ ggplot(trump_longer,
 
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(trump_longer, 
        aes(x = date, y = rating_value, 
            color = rating_type, group = rating_type)) +
@@ -484,7 +484,7 @@ ggplot(trump_longer,
 
 .panel[.panel-name[Code]
 
-```r
+``` r
 ggplot(trump_longer, 
        aes(x = date, y = rating_value, 
            color = rating_type, group = rating_type)) +

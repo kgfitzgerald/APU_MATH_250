@@ -61,7 +61,7 @@ class: middle
 - Explanatory variables: Width and height
 
 
-```r
+``` r
 pp_fit &lt;- lm(log_price ~ Width_in + Height_in, data = pp)
 tidy(pp_fit)
 ```
@@ -108,23 +108,23 @@ tidy(pp_fit)
 .panelset[
 .panel[.panel-name[Plot]
 .pull-left-wide[
-<div id="htmlwidget-8f836166d559454ecd73" style="width:100%;height:1483.2px;" class="widgetframe html-widget "></div>
+<div id="htmlwidget-8f836166d559454ecd73" style="width:100%;height:1483.2px;" class="widgetframe html-widget"></div>
 <script type="application/json" data-for="htmlwidget-8f836166d559454ecd73">{"x":{"url":"25-multiple-predictors-model-selection_files/figure-html//widgets/widget_plotly-plot.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 .panel[.panel-name[Code]
 
-```r
+``` r
 p &lt;- plot_ly(pp,
   x = ~Width_in, y = ~Height_in, z = ~log_price,
   marker = list(size = 3, color = "lightgray", alpha = 0.5, 
-                line = list(color = "gray", width = 2))) %&gt;%
-  add_markers() %&gt;%
+                line = list(color = "gray", width = 2))) |&gt;
+  add_markers() |&gt;
   plotly::layout(scene = list(
     xaxis = list(title = "Width (in)"),
     yaxis = list(title = "Height (in)"),
     zaxis = list(title = "log_price")
-  )) %&gt;%
+  )) |&gt;
   config(displayModeBar = FALSE)
 frameWidget(p)
 ```
@@ -180,8 +180,8 @@ These books are from the bookshelf of J. H. Maindonald at Australian National Un
 
 .pull-left[
 
-```r
-lm(weight ~ volume, data = allbacks) %&gt;%
+``` r
+lm(weight ~ volume, data = allbacks) |&gt;
   tidy()
 ```
 
@@ -203,8 +203,8 @@ lm(weight ~ volume, data = allbacks) %&gt;%
 
 .pull-left[
 
-```r
-lm(weight ~ volume + cover, data = allbacks) %&gt;%
+``` r
+lm(weight ~ volume + cover, data = allbacks) |&gt;
   tidy()
 ```
 
@@ -300,7 +300,7 @@ Visually, which of the two models is preferable under Occam's razor?
 the regression model.
 
 
-```r
+``` r
 glance(book_main_fit)$r.squared
 ```
 
@@ -308,7 +308,7 @@ glance(book_main_fit)$r.squared
 ## [1] 0.9274776
 ```
 
-```r
+``` r
 glance(book_int_fit)$r.squared
 ```
 
@@ -340,7 +340,7 @@ regression models.
 
 .pull-left[
 
-```r
+``` r
 glance(book_main_fit)$r.squared
 ```
 
@@ -348,7 +348,7 @@ glance(book_main_fit)$r.squared
 ## [1] 0.9274776
 ```
 
-```r
+``` r
 glance(book_int_fit)$r.squared
 ```
 
@@ -358,7 +358,7 @@ glance(book_int_fit)$r.squared
 ]
 .pull-right[
 
-```r
+``` r
 glance(book_main_fit)$adj.r.squared
 ```
 
@@ -366,7 +366,7 @@ glance(book_main_fit)$adj.r.squared
 ## [1] 0.9153905
 ```
 
-```r
+``` r
 glance(book_int_fit)$adj.r.squared
 ```
 
@@ -381,7 +381,7 @@ glance(book_int_fit)$adj.r.squared
 .small[
 - Is R-sq higher for int model?
 
-```r
+``` r
 glance(book_int_fit)$r.squared &gt; glance(book_main_fit)$r.squared 
 ```
 
@@ -392,7 +392,7 @@ glance(book_int_fit)$r.squared &gt; glance(book_main_fit)$r.squared
 - Is R-sq adj. higher for int model?
 
 
-```r
+``` r
 glance(book_int_fit)$adj.r.squared &gt; glance(book_main_fit)$adj.r.squared
 ```
 
@@ -423,7 +423,7 @@ glance(book_int_fit)$adj.r.squared &gt; glance(book_main_fit)$adj.r.squared
 
 
 
-```r
+``` r
 models &lt;- regsubsets(logprice ~ ., data = pp_subset, nvmax = 10, method = "seqrep")
 summary(models)$which[,1:6]
 ```
@@ -442,7 +442,7 @@ summary(models)$which[,1:6]
 ## 10        TRUE    FALSE    TRUE   FALSE    TRUE  TRUE
 ```
 
-```r
+``` r
 summary(models)$adjr2
 ```
 
@@ -456,7 +456,7 @@ summary(models)$adjr2
 ## "Best" model
 
 
-```r
+``` r
 summary(models)$which[7,]
 ```
 
@@ -477,7 +477,7 @@ summary(models)$which[7,]
 ##           FALSE           FALSE
 ```
 
-```r
+``` r
 model_best &lt;- lm(logprice ~ dealer + year + school_pntg + diff_origin + 
                    Width_in + Surface, data = pp_subset)
 ```
@@ -512,7 +512,7 @@ model_best &lt;- lm(logprice ~ dealer + year + school_pntg + diff_origin +
 ## Model diagnostics
 
 
-```r
+``` r
 model_best &lt;- lm(logprice ~ dealer + year + school_pntg + diff_origin + 
                    Width_in + Surface, data = pp)
 model_best_aug &lt;- augment(model_best)

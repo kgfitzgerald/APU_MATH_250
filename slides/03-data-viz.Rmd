@@ -20,6 +20,7 @@ output:
 library(tidyverse)
 library(magick)
 library(Tmisc)
+#devtools::install_github("tidyverse/dsbox")
 library(dsbox)
 ```
 

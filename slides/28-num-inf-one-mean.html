@@ -113,7 +113,7 @@ CLT tells us, `$$T = \frac{\overline{x} - \mu}{SE(\overline{x})} = \frac{\overli
 
 
 
-```r
+``` r
 t_stat &lt;- (mean(race17$time_mins) - 93.29)/(sd(race17$time_mins)/sqrt(nrow(race17)))
 t_stat
 ```
@@ -133,7 +133,7 @@ t_stat
 ]
 .panel[.panel-name[Calculations]
 
-```r
+``` r
 xbar &lt;- mean(race17$time_mins)
 s &lt;- sd(race17$time_mins)
 n &lt;- nrow(race17)
@@ -145,7 +145,7 @@ SE &lt;- s/sqrt(n)
 ## [1] -0.4338636
 ```
 
-```r
+``` r
 (crit_value99 &lt;- qt(.995, df = n - 1))
 ```
 
@@ -153,7 +153,7 @@ SE &lt;- s/sqrt(n)
 ## [1] 2.626405
 ```
 
-```r
+``` r
 (p_value &lt;- 2*pt(t_stat, df = n - 1))
 ```
 
@@ -170,7 +170,7 @@ SE &lt;- s/sqrt(n)
 `$$H_A: \mu_{2017} \neq 93.29$$`
 
 
-```r
+``` r
 t_test(race17, response = time_mins, 
        mu = 93.29, conf_level = 0.99)
 ```
@@ -191,7 +191,7 @@ We FAIL TO REJECT H0. That is, there is NOT sufficient evidence to claim that th
 We actually have a **census**
 
 
-```r
+``` r
 library(cherryblossom)
 glimpse(run17)
 ```
@@ -215,7 +215,7 @@ glimpse(run17)
 ## What if we had more data?
 
 
-```r
+``` r
 mean(run17$net_sec, na.rm = TRUE)
 ```
 
@@ -223,7 +223,7 @@ mean(run17$net_sec, na.rm = TRUE)
 ## [1] 5427.947
 ```
 
-```r
+``` r
 mean(run17$net_sec, na.rm = TRUE)/60
 ```
 
@@ -254,7 +254,7 @@ Runners ***are*** in fact faster in 2017, on average, compared to 2006, but we d
 Recall, we will reject at `\(\alpha = 0.01\)` when `\(T = \frac{\overline{x} - \mu}{s/\sqrt{n}} \approx 2.576\)`
 
 
-```r
+``` r
 qnorm(.995)
 ```
 
@@ -267,7 +267,7 @@ Solve for `\(n\)`!
 `$$n = \left(\frac{T*s}{\overline{x} - \mu}\right)^2$$`
 
 
-```r
+``` r
 n &lt;- (2.576*s/(xbar - mu))^2
 n
 ```

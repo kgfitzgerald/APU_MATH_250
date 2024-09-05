@@ -170,7 +170,7 @@ class: middle
 - Read it into R with `read_csv()` or friends (`read_delim()`, `read_excel()`, etc.)
 
 
-```r
+``` r
 library(readxl)
 fav_food &lt;- read_excel("data/favourite-food.xlsx")
 fav_food
@@ -194,9 +194,9 @@ fav_food
 If the variable names are malformatted, use `janitor::clean_names()`
 
 
-```r
+``` r
 library(janitor)
-fav_food %&gt;% clean_names()  
+fav_food |&gt; clean_names()  
 ```
 
 ```
@@ -218,7 +218,7 @@ fav_food %&gt;% clean_names()
 - This table contains squirrel data for each of the 3,023 sightings, including location coordinates, age, primary and secondary fur color, elevation, activities, communications, and interactions between squirrels and with humans.
 
 
-```r
+``` r
 #devtools::install_github("mine-cetinkaya-rundel/nycsquirrels18")
 library(nycsquirrels18)
 ```
@@ -236,7 +236,7 @@ library(nycsquirrels18)
 ## Check the dimensions
 
 
-```r
+``` r
 dim(squirrels)
 ```
 
@@ -249,8 +249,8 @@ dim(squirrels)
 ## Look at the top...
 
 
-```r
-squirrels %&gt;% head()
+``` r
+squirrels |&gt; head()
 ```
 
 ```
@@ -278,8 +278,8 @@ squirrels %&gt;% head()
 
 .small[
 
-```r
-squirrels %&gt;% tail()
+``` r
+squirrels |&gt; tail()
 ```
 
 ```
@@ -339,7 +339,7 @@ squirrels %&gt;% tail()
 ## Make a plot
 
 
-```r
+``` r
 ggplot(squirrels, aes(x = long, y = lat)) +
   geom_point(alpha = 0.2)
 ```
@@ -364,9 +364,9 @@ ggplot(squirrels, aes(x = long, y = lat)) +
 
 .panel[.panel-name[Code]
 
-```r
-squirrels &lt;- squirrels %&gt;%
-  separate(hectare, into = c("NS", "EW"), sep = 2, remove = FALSE) %&gt;%
+``` r
+squirrels &lt;- squirrels |&gt;
+  separate(hectare, into = c("NS", "EW"), sep = 2, remove = FALSE) |&gt;
   mutate(where = if_else(NS %in% c("01", "42") | EW %in% c("A", "I"), "perimeter", "inside")) 
 
 ggplot(squirrels, aes(x = long, y = lat, color = where)) +
@@ -388,21 +388,21 @@ ggplot(squirrels, aes(x = long, y = lat, color = where)) +
 
 .panel[.panel-name[Code]
 
-```r
-hectare_counts &lt;- squirrels %&gt;%
-  group_by(hectare) %&gt;%
+``` r
+hectare_counts &lt;- squirrels |&gt;
+  group_by(hectare) |&gt;
   summarise(n = n()) 
 
-hectare_centroids &lt;- squirrels %&gt;%
-  group_by(hectare) %&gt;%
+hectare_centroids &lt;- squirrels |&gt;
+  group_by(hectare) |&gt;
   summarise(
     centroid_x = mean(long),
     centroid_y = mean(lat)
   )
 
-squirrels %&gt;%
-  left_join(hectare_counts, by = "hectare") %&gt;%
-  left_join(hectare_centroids, by = "hectare") %&gt;%
+squirrels |&gt;
+  left_join(hectare_counts, by = "hectare") |&gt;
+  left_join(hectare_centroids, by = "hectare") |&gt;
   ggplot(aes(x = centroid_x, y = centroid_y, color = n)) +
   geom_hex()
 ```
@@ -415,9 +415,9 @@ squirrels %&gt;%
 ## The squirrel is staring at me!
 
 
-```r
-squirrels %&gt;%
-  filter(str_detect(other_interactions, "star")) %&gt;%
+``` r
+squirrels |&gt;
+  filter(str_detect(other_interactions, "star")) |&gt;
   select(shift, age, other_interactions)
 ```
 
