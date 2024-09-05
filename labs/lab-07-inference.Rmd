@@ -1,5 +1,5 @@
 ---
-title: "Lab 08 - Inference for numeric data"
+title: "Lab 07 - Inference for numeric data"
 subtitle: "General Social Survey, Hotels, & Diets"
 date: "due Tuesday, October 24 at 4:20pm"
 output: 
