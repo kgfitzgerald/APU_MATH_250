@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## For September 19
+## For September 17
 
 **Note:** All required prepare activities are due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
 
@@ -26,9 +26,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/11-tidying.html)
 
-`r emo::ji("movie_camera")` Watch [Data types](https://youtu.be/WQYKkfj1bOg)
+`r emo::ji("movie_camera")` Watch [Simpson's paradox](https://youtu.be/bgIn65yX66g)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/12-data-types.html)
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/18-simpsons-paradox.html)
+
+<!-- `r emo::ji("movie_camera")` Watch [Data types](https://youtu.be/WQYKkfj1bOg) -->
+
+<!-- - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/12-data-types.html) -->
 
 <!-- `r emo::ji("movie_camera")` Watch [Visualizing Spatial Data](https://warpwire.duke.edu/w/Yw4GAA/). -->
 

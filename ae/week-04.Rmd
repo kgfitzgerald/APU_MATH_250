@@ -35,14 +35,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Announcements
 
-<!-- -   Lab 03 due now -->
-<!-- -   First 2 Stats Experience Points due Saturday (remember to post brief reflection on Campuswire) -->
-<!--     -   [Informational Interview resource](https://docs.google.com/document/d/17ESP_xm-kXo3gsRrzmbG0XR37yRqnMCT5TiqPli6Pnc/edit?usp=sharing) -->
-<!--     -   [Appointment slots](https://calendar.google.com/calendar/selfsched?sstoken=UUdib21reE5QbWlCfGRlZmF1bHR8Y2Q4NzA0ODFhZjhiNjQzYWJlZjU0YzVjNDQ3NzBmNTY) for dinner with me after class -->
-<!-- -   Exam made available at end of class next Tuesday, due following Tuesday -->
-<!--     -   Like a lab, just completed on your own -->
-<!--     -   Coding techniques learned in Weeks 1 - 4 -->
-    <!-- -   Open note, open internet -->
+- Due Thursday: Lab 03 (no annotations this week)
+- First 2 Stats Experience Points due Saturday (remember to post brief reflection on Canvas)
+  -   [Informational Interview resource](https://docs.google.com/document/d/17ESP_xm-kXo3gsRrzmbG0XR37yRqnMCT5TiqPli6Pnc/edit?usp=sharing)
+   -   [Appointment slots](https://calendar.app.google/vciEZtXbBiz4aEWP7) for dinner with me after class
+   -   Exam 1 in-class next Thursday, will have take-home component due the following Tuesday
 
 ### Tidyverse style guidelines
 

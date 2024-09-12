@@ -37,6 +37,18 @@ library(tidyverse)
 
 <!-- -   No class on Thursday 9/28 -->
 
+### Thursday announcements
+
+CEMPS BBQ [RSVP here](https://docs.google.com/forms/d/e/1FAIpQLSdg3jWxFtrZk9ZsNNrPHjmAOhzRgsUlX4UOLEijBEDlL9wLyA/viewform)
+
+Next week: 
+
++ regular Prep due next Tuesday
++ no annotations
++ P01: Project brainstorm due next Thursday
++ Stats Experience points due next Saturday
+
+
 ### Announcements
 
 <!-- Due now: Lab 02 -->

@@ -21,9 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/17-studies-confounding.html)
 
-`r emo::ji("movie_camera")` Watch [Simpson's paradox](https://youtu.be/bgIn65yX66g)
 
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/18-simpsons-paradox.html)
 
 
 
