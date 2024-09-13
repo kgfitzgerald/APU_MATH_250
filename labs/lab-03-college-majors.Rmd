@@ -96,7 +96,7 @@ The function `slice` and/or its variations might be helpful in displaying only a
 You can check out more table formatting options using the `kableExtra` package [here](https://haozhu233.github.io/kableExtra/awesome_table_in_html.html)
 ```
 
-3. Using what you've learned so far, put together a pipeline of code to answer the above question. Make sure to sort your data in a reasonable way, and choose only a small subset of variables to display in your output to improve readability. Make a decision about how many rows to display in your output. Add `kbl |> kable_minimal()` to the end of your pipeline to clean up how your table appears in your html.
+3. Using what you've learned so far, put together a pipeline of code to answer the above question. Make sure to sort your data in a reasonable way, and choose only a small subset of variables to display in your output to improve readability. Make a decision about how many rows to display in your output. Add `kbl() |> kable_minimal()` to the end of your pipeline to clean up how your table appears in your html.
 
 ```{marginfigure}
 Hint: read the `?percent()` documentation to see how the `accuracy` argument works.
