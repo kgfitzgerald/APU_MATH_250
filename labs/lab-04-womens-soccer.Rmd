@@ -75,11 +75,18 @@ You're encouraged (but not required) to use the viridis color palette.
 
 All code should follow the tidyverse style guidelines.
 
+```{r, echo = FALSE}
+portland_matches <- matches |> 
+  filter(home_team_id == 8 | away_team_id == 8)
+
+```
+
+
 ## Data Wrangling
 
 Before beginning the analysis, you will need to conduct some data wrangling to look only at the Portland Thorns data.
 
-1.  Inspect the `teams` data to determine the `team_id` for the Portland Thorns. Filter the `matches` dataset to only keep matches where Portland was playing. Save this as a new dataset called `portland_matches`. *Confirm that your new data has 196 observations before proceeding.*
+1.  Inspect the `teams` data to determine the `team_id` for the Portland Thorns. Filter the `matches` dataset to only keep matches where Portland was playing. Save this as a new dataset called `portland_matches`. *Confirm that your new data has `r nrow(portland_matches)` observations before proceeding.*
 
 We want to add in information from the `teams` data into the `matches` data so we can have the team name and abbreviation in addition to just the numeric team id.
 However, we will have to join the `teams` information twice: once for home team and once for away team.

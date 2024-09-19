@@ -606,25 +606,8 @@ If you wish to use the viridis color palettes, you will need the <strong>viridis
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co">#library(scales)</span></span>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;nwslR/nwslR&quot;</span>, </span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>                         <span class="at">ref =</span> <span class="st">&quot;v0.0.0.9002&quot;</span>)</span></code></pre></div>
-<pre><code>## rlang  (1.1.3 -&gt; 1.1.4) [CRAN]
-## cli    (3.6.2 -&gt; 3.6.3) [CRAN]
-## cpp11  (0.4.7 -&gt; 0.5.0) [CRAN]
-## withr  (3.0.0 -&gt; 3.0.1) [CRAN]
-## crayon (1.5.2 -&gt; 1.5.3) [CRAN]
-## 
-## The downloaded binary packages are in
-##  /var/folders/p8/jlfsprj11l9_m0yn03553y2w0000gn/T//Rtmp9ls2uR/downloaded_packages
-## ── R CMD build ─────────────────────────────────────────────────────────────────
-##      checking for file ‘/private/var/folders/p8/jlfsprj11l9_m0yn03553y2w0000gn/T/Rtmp9ls2uR/remotes1ce67a4953a5/nwslR-nwslR-6374520/DESCRIPTION’ ...  ✔  checking for file ‘/private/var/folders/p8/jlfsprj11l9_m0yn03553y2w0000gn/T/Rtmp9ls2uR/remotes1ce67a4953a5/nwslR-nwslR-6374520/DESCRIPTION’ (356ms)
-##   ─  preparing ‘nwslR’:
-##      checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
-##   ─  checking for LF line-endings in source and make files and shell scripts
-##   ─  checking for empty or unneeded directories
-##   ─  building ‘nwslR_0.0.0.9002.tar.gz’
-##      
-## </code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">library</span>(nwslR)</span></code></pre></div>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>                         <span class="at">ref =</span> <span class="st">&quot;v0.0.0.9002&quot;</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu">library</span>(nwslR)</span></code></pre></div>
 </div>
 <div id="data-the-portland-thorns-fc" class="section level1">
 <h1>Data: The Portland Thorns FC</h1>
@@ -638,10 +621,10 @@ Data for this lab was sourced from the <a href="https://github.com/adror1/nwslR"
 <li>load_metrics() All metrics available from scrapers with definitions. Not all metrics are available for all players/matches/teams/etc.</li>
 </ul>
 <p>Running the following code will make four datasets appear in your Environment.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>matches <span class="ot">&lt;-</span> <span class="fu">load_matches</span>()</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>players <span class="ot">&lt;-</span> <span class="fu">load_players</span>()</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">load_teams</span>()</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>metrics <span class="ot">&lt;-</span> <span class="fu">load_metrics</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>matches <span class="ot">&lt;-</span> <span class="fu">load_matches</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>players <span class="ot">&lt;-</span> <span class="fu">load_players</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>teams <span class="ot">&lt;-</span> <span class="fu">load_teams</span>()</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>metrics <span class="ot">&lt;-</span> <span class="fu">load_metrics</span>()</span></code></pre></div>
 </div>
 <div id="exercises" class="section level1">
 <h1>Exercises</h1>
@@ -652,7 +635,7 @@ You’re encouraged (but not required) to use the viridis color palette.</p>
 <h2>Data Wrangling</h2>
 <p>Before beginning the analysis, you will need to conduct some data wrangling to look only at the Portland Thorns data.</p>
 <ol style="list-style-type: decimal">
-<li>Inspect the <code>teams</code> data to determine the <code>team_id</code> for the Portland Thorns. Filter the <code>matches</code> dataset to only keep matches where Portland was playing. Save this as a new dataset called <code>portland_matches</code>. <em>Confirm that your new data has 196 observations before proceeding.</em></li>
+<li>Inspect the <code>teams</code> data to determine the <code>team_id</code> for the Portland Thorns. Filter the <code>matches</code> dataset to only keep matches where Portland was playing. Save this as a new dataset called <code>portland_matches</code>. <em>Confirm that your new data has 223 observations before proceeding.</em></li>
 </ol>
 <p>We want to add in information from the <code>teams</code> data into the <code>matches</code> data so we can have the team name and abbreviation in addition to just the numeric team id.
 However, we will have to join the <code>teams</code> information twice: once for home team and once for away team.
@@ -665,24 +648,24 @@ We want to end up with the following four variables added to the <code>portland_
 </ul>
 <p>The following code creates a new dataset called <code>home_team_info</code> that <code>selects</code> the relevant columns from <code>teams</code> and renames them to include the prefix <code>home_</code> .
 It then joins these columns to the <code>portland_matches</code> data.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>home_team_info <span class="ot">&lt;-</span> teams <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">home_team_id =</span> team_id, </span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>         <span class="at">home_team_name =</span> team_name, </span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>         <span class="at">home_team_abbr =</span> team_abbreviation)</span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>portland_matches <span class="ot">&lt;-</span> portland_matches <span class="sc">|&gt;</span> </span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  <span class="fu">left_join</span>(home_team_info)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>home_team_info <span class="ot">&lt;-</span> teams <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">home_team_id =</span> team_id, </span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>         <span class="at">home_team_name =</span> team_name, </span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>         <span class="at">home_team_abbr =</span> team_abbreviation)</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>portland_matches <span class="ot">&lt;-</span> portland_matches <span class="sc">|&gt;</span> </span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  <span class="fu">left_join</span>(home_team_info)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Include the code above in your lab report. Then, following the above code as a template, create a similar <code>away_team_info</code> dataset that renames the columns with the prefix <code>away_</code>. Then, join those columns to <code>portland_matches</code>. <em>Confirm <code>portland_matches</code> has dimensions 196 x 19 before continuing.</em></p></li>
 <li><p>Create three new variables, <code>POR_points</code> (the number of points Portland scored), <code>OPP_points</code> (the number of points the opponent scored), and <code>result</code> (a categorical variable for whether the result was a <code>Win</code>, <code>Loss</code>, or <code>Tie</code> for Portland). <em>Hint: the code below provides the scaffolding, you just need to fill in each blank appropriately.</em></p></li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>___ <span class="ot">&lt;-</span> ___ <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="fu">___</span>(<span class="at">POR_points =</span> <span class="fu">if_else</span>(home_team_abbr <span class="sc">==</span> <span class="st">&quot;POR&quot;</span>, </span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>                           home_team_score, away_team_score),</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>      <span class="at">OPP_points =</span> <span class="fu">if_else</span>(___ ___ ___, ___, ___),</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>      <span class="at">result =</span> <span class="fu">case_when</span>(POR_points  <span class="sc">&gt;</span>  OPP_points <span class="sc">~</span> <span class="st">&quot;Win&quot;</span>,</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Loss&quot;</span>,</span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Tie&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>___ <span class="ot">&lt;-</span> ___ <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="fu">___</span>(<span class="at">POR_points =</span> <span class="fu">if_else</span>(home_team_abbr <span class="sc">==</span> <span class="st">&quot;POR&quot;</span>, </span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>                           home_team_score, away_team_score),</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>      <span class="at">OPP_points =</span> <span class="fu">if_else</span>(___ ___ ___, ___, ___),</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>      <span class="at">result =</span> <span class="fu">case_when</span>(POR_points  <span class="sc">&gt;</span>  OPP_points <span class="sc">~</span> <span class="st">&quot;Win&quot;</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Loss&quot;</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>                         POR_points ___ OPP_points <span class="sc">~</span> <span class="st">&quot;Tie&quot;</span>))</span></code></pre></div>
 </div>
 <div id="match-analysis" class="section level2">
 <h2>Match analysis</h2>
@@ -704,10 +687,10 @@ It then joins these columns to the <code>portland_matches</code> data.</p>
 <div id="player-stats" class="section level2">
 <h2>Player stats</h2>
 <p>The code below loads data for players’ individual stats for the matches in <code>portland_matches</code>. Don’t worry too much about how this code is working, it is provided by the <code>nwslR</code> package. Note, it takes a few minutes to run!</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co"># * A small number of matches do not have data, so we wrap this in a safe call to ensure this runs without error </span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>safe_load_pms <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">possibly</span>(load_player_match_stats, <span class="at">otherwise =</span> <span class="fu">data.frame</span>())</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>player_stats <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_df</span>(portland_matches<span class="sc">$</span>match_id, safe_load_pms, <span class="at">.progress =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># * A small number of matches do not have data, so we wrap this in a safe call to ensure this runs without error </span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>safe_load_pms <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">possibly</span>(load_player_match_stats, <span class="at">otherwise =</span> <span class="fu">data.frame</span>())</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>player_stats <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_df</span>(portland_matches<span class="sc">$</span>match_id, safe_load_pms, <span class="at">.progress =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <div id="which-portland-players-had-the-highest-percentage-of-shots-outside-the-box" class="section level3">
 <h3>Which Portland players had the highest percentage of shots outside the box?</h3>
 </div>
