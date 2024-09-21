@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## For Tuesday, September 26
+## For Tuesday, September 24
 
 + Sign up for a project group on Canvas.
 
@@ -21,13 +21,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/17-studies-confounding.html)
 
+`r emo::ji("movie_camera")` Watch [Doing data science](https://youtu.be/b9lSW0kyqBg)
 
-
-
-
-<!-- `r emo::ji("movie_camera")` Watch [Doing data science](https://youtu.be/b9lSW0kyqBg) -->
-
-<!-- - [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/16-doing-data-science.html) -->
+- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/16-doing-data-science.html)
 
 `r emo::ji("memo")` Complete Prep Quiz 05 on Canvas
 
@@ -38,8 +34,4 @@ knitr::opts_chunk$set(echo = TRUE)
 `r emo::ji("book")` [Read R4DS:: Chapter 7 - Exploratory Data Analysis](https://r4ds.had.co.nz/exploratory-data-analysis.html)
 
 
-## For NEXT Tuesday, October 3
 
-By class-time on Tuesday, you should
-
-+ Complete and submit Exam 1. Turn in your .html files to Canvas
