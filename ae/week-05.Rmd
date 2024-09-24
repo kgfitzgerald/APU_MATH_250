@@ -24,20 +24,15 @@ library(tidyverse)
 
 ### Announcements
 
-<!-- + Sign up for project group in Canvas if you haven't already - sit with your partner today -->
-<!-- + Exam made available at end of class today, due Tuesday class-time -->
-<!-- + No lab or annotations this week, but you will have lecture recordings & prep quiz for Tuesday (~60 mins, 3 videos) -->
-<!-- + No class Thursday (work on exam, or watch lecture recordings) -->
-<!-- + [Undergraduate Student Guide for Grad School: PhD & MS Programs in Stats, Biostats, & Data Science](https://www.niss.org/events/undergraduate-student-guide-grad-school-phd-ms-programs-stats-biostats-data-science-degrees) -->
-<!--     + Next Friday, October 6, 9 - 11AM PT (look out for time zones!) -->
-<!--     + Free but registration required  -->
-<!-- + Research opportunity to look out for:  -->
-<!--     + [SCORE Network](https://scorenetwork.org/index.html) -->
-<!--     + analyzing sports data, developing analyses into data science activities  -->
-<!--     + funding for up to 5 students, Summer '24 and Summer '25 -->
++ Sign up for project group in Canvas if you haven't already - sit with your partner today
++ In-class exam made on Thursday, will also release take-home exam due next Tuesday at midnight
+    + AE solutions have been posted (home page of Canvas)
+    + everything graded - reminder if you submitted on time, can revise & resubmit for up to full credit w/in one week of when assignment was graded
++ No lab or annotations this week, but you will have lecture recordings & prep quiz for Tuesday (~60 mins, 3 videos)
++ Project proposal due next Saturday
 
 
-### Exam ground rules
+<!-- ### Exam ground rules -->
 
 <!-- + This is an INDIVIDUAL EXAM. You may NOT work together or consult other people on this exam. -->
 <!-- + You are ENCOURAGED to use your notes, lecture slides/videos, previous assignments, and the internet -->
@@ -45,7 +40,7 @@ library(tidyverse)
 <!--     + If you find code online, cite it, and annotate the code to demonstrate understanding.  -->
 <!-- + Failure to adhere to any of the above policies will be considered a violation of academic integrity and will be handled according to university policy. -->
 
-### Reminders / Tips
+<!-- ### Reminders / Tips -->
 
 <!-- + Make sure you've answered all parts of the question! -->
 <!-- + Make sure to clean up visualizations - add titles, clean axis labels, all text should be readable -->

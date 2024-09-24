@@ -41,6 +41,18 @@ Roger D. Peng and Elizabeth Matsui. "The Art of Data Science." A Guide for Anyon
 
 ---
 
+# Reading\* makes you a better writer!
+
++ \*Critically engaged / intentional reading makes you a better writer
+
++ Start paying attention to how people communicate about data / results of an analysis 
+
++ As you start your project, have the end product (communication) in mind. What are the main questions you want yourself / your reader to understand at the end? 
+
++ What are the "threats to validity" of your data / analysis? If you were a skeptic reading your project, where would you try to poke holes? What can you do as an analyst & communicator to shore up those holes? 
+ 
+---
+
 class: middle
 
 # Stating and refining the question
@@ -95,7 +107,7 @@ Choose one of the following datasets we've worked with so far in this class:
 + Midwest - demographics, population density, poverty (AE-02)
 + NYC Flights (AE-03 and AE-04)
 
-Try to come up with research questions that fit into each of the 6 categories on the previous slide (Descriptive, Exploratory, Inferential, Predictive, Causal, Mechanistic). 
+First, remind yourself of the observational units for the data. Then, try to come up with research questions that fit into each of the 6 categories on the previous slide (Descriptive, Exploratory, Inferential, Predictive, Causal, Mechanistic). 
 
 ---
 
@@ -121,10 +133,13 @@ class: middle
 
 ## Checklist
 
+
 - Formulate your question
 - Read in your data
-- Check the dimensions
+- Check the dimensions - Identify the observational units and variables 
 - Look at the top and the bottom of your data
+
+
 - Validate with at least one external data source
 - Make a plot
 - Try the easy solution first
@@ -141,10 +156,12 @@ class: middle
 
 ---
 
-## Read in your data
+## Set up project & Read in your data
 
+- Create a new R project for your course project
 - Place your data in a folder called `data`
-- Read it into R with `read_csv()` or friends (`read_delim()`, `read_excel()`, etc.)
+- Create a file called `project_proposal.qmd` 
+- Read your data into R with `read_csv()` or friends (`read_delim()`, `read_excel()`, etc.)
 
 ```{r}
 library(readxl)
@@ -177,19 +194,21 @@ library(nycsquirrels18)
 
 ---
 
-## Locate the codebook
+## Locate & read the codebook / documentation
 
 [mine-cetinkaya-rundel.github.io/nycsquirrels18/reference/squirrels.html](https://mine-cetinkaya-rundel.github.io/nycsquirrels18/reference/squirrels.html)
 
-<br><br>
-
 --
 
-## Check the dimensions
+## Check the dimensions 
 
 ```{r}
 dim(squirrels)
 ```
+
+## Identify observational units & variables
+
+Observations are squirrel sightings (3023), have data on location & time of sighting, characteristics of squirrel & their behavior
 
 ---
 
@@ -208,6 +227,42 @@ squirrels |> head()
 squirrels |> tail()
 ```
 ]
+
+
+
+<!-- --- -->
+
+<!-- ## Communicating for your audience -->
+
+<!-- - Avoid: Jargon, uninterpreted results, lengthy output -->
+<!-- - Pay attention to: Organization, presentation, flow -->
+<!-- - Don't forget about: Code style, coding best practices, meaningful commits -->
+<!-- - Be open to: Suggestions, feedback, taking (calculated) risks -->
+
+---
+
+# Project requirements
+
+Let's look at [course website](https://apumath250.netlify.app/project/#data-sources) together
+
+---
+
+## In your groups...
+
++ Set up a new R project for this course project
++ Determine how you're going to share files - Google Drive or Github (requires more set-up)
++ Review each other's P01 brainstorm post to identify topic(s) of common interest. 
+    + Start by ranking the other's 3 in order of interest
+    + Together decide on a top 3, with at least one from each person
++ Browse [data sources](https://apumath250.netlify.app/project/#data-sources) on course website
+    + This is a good task for ChatGPT! Give it your 3 interests and ask for publically available data
++ Locate a dataset
++ Determine observational units, variables, and a research question that could be answered with that data
++ Settle on three substantially different datasets, and start working on [project proposal](https://apumath250.netlify.app/project/#project-proposal)
++ Proposal due Saturday October 5, 11:59pm
+    + See course website for details - in part, will involve identifying the three Ws from Ch 2 of book
+
+---
 
 ---
 
@@ -308,23 +363,3 @@ squirrels |>
   filter(str_detect(other_interactions, "star")) |>
   select(shift, age, other_interactions)
 ```
-
-<!-- --- -->
-
-<!-- ## Communicating for your audience -->
-
-<!-- - Avoid: Jargon, uninterpreted results, lengthy output -->
-<!-- - Pay attention to: Organization, presentation, flow -->
-<!-- - Don't forget about: Code style, coding best practices, meaningful commits -->
-<!-- - Be open to: Suggestions, feedback, taking (calculated) risks -->
-
----
-
-## In your groups...
-
-+ Brainstorm topic(s) of common interest
-+ Browse [data sources](https://apumath250.netlify.app/project/#data-sources) on course website
-+ Locate a dataset
-+ Determine a research question that could be answered with that data
-+ Settle on three substantially different datasets, and start working on [project proposal](https://apumath250.netlify.app/project/#project-proposal)
-+ Proposal due Tuesday October 10, 11:59pm
