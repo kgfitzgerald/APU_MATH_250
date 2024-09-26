@@ -1,7 +1,7 @@
 ---
 title: "Exam 01"
 subtitle: "Data Wrangling & Visualization"
-date: "due Tuesday, October 3, 4:20pm"
+date: "due Tuesday, October 1, 11:59pm"
 output: 
   tufte::tufte_html:
     css: "hw.css"
@@ -18,8 +18,8 @@ editor_options:
 # Exam ground rules
 
 -   This is an INDIVIDUAL EXAM. You may NOT work together or consult other people on this exam.
--   You are ENCOURAGED to use your notes, lecture slides/videos, previous assignments, and the internet
-    -   You may utilize already existing resources on the internet, but you may NOT post to any online forums (or ask an AI Chat bot) to ask for help on the exam.\
+-   You are ENCOURAGED to use your notes, lecture slides/videos, previous assignments, and the internet, with some restrictions:
+    -   You may utilize already existing resources on the internet, but you may NOT post to any online forums or ask an AI Chat bot (e.g. ChatGPT) to ask for help on the exam.\
     -   If you find code online, cite it, and annotate the code to demonstrate understanding.
 -   Failure to adhere to any of the above policies will be considered a violation of academic integrity and will be handled according to university policy.
 
@@ -90,12 +90,12 @@ See FiveThirtyEight's [GitHub repo](https://github.com/fivethirtyeight/data/tree
     Call the new data frame `classic_avengers`.
     *Hint: `is.na()` will be useful. Check: your new data frame should have 27 observations.*
 
-2.  *Who are the newest classic Avengers?* Using a single pipeline: Create a new variable called `years_served` that represents the number of years served **as of 2023.** *(Hint: you can use either the `year` variable or `years_since_joining` variables to do this.)* Arrange the data appropriately to display the newest classic Avengers first.
+2.  *Who are the newest classic Avengers?* Using a single pipeline: Create a new variable called `years_served` that represents the number of years served **as of 2024.** *(Hint: you can use either the `year` variable or `years_since_joining` variables to do this.)* Arrange the data appropriately to display the newest classic Avengers first.
     Display only necessary columns and the first 10 rows in a nicely formatted table.
 
-    -   Report the names of the three newest classic Avengers and how long they have served in your narrative text (in addition to the table).
+    -   In addition to the table, report the names of the three newest classic Avengers and how long they have served in your narrative text.
 
-3.  *Has the percentage of female Avengers changed over time?* To explore this question, find the percentage of female Avengers in the `classic_avengers` dataset and compare it to the percentage of females among **all** Avengers.
+3.  *Has the percentage of female Avengers changed over time?* To explore this question, compute the percentage of female Avengers in the `classic_avengers` dataset and compare it to the percentage of females among **all** Avengers.
     What do you conclude based on these results?
 
 4.  Sort the full `avengers` dataset in descending order of `appearances` and display only the columns `name`, `appearances`, `death1`, and `return1` for the top five observations.
