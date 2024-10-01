@@ -17,17 +17,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Liz Stuart](https://publichealth.jhu.edu/faculty/1792/elizabeth-a-stuart)
 
-<!-- ### Thursday Announcements -->
+### Announcements
 
-<!-- Join [American Statistical Association](https://www.amstat.org/membership/become-a-member/membership-options) -->
+Take-home exam due tonight
 
-<!-- -   \$30 for one-year subscription -->
+-   will have opportunity for Annotated Test Corrections to get 1/3 of points back on both sections
 
-<!-- -   1 stats experience point -->
+Annotations due Thursday (1hr video)
 
-<!-- -   Good if you're looking for internship/job opportunities -->
+[Project Proposal](https://apumath250.netlify.app/project/#project-proposal) due Saturday, 11:59pm
 
-<!-- -   Consider starting a [student chapter](https://www.amstat.org/membership/asa-communities/student-chapters?utm_source=informz&utm_medium=email&utm_campaign=asa&_zs=cipOe1&_zl=B4kr7) at APU - looks good on a resume! -->
+Join [American Statistical Association](https://www.amstat.org/membership/become-a-member/membership-options)
+
+  -   \$30 for one-year subscription
+
+  -   1 stats experience point
+
+  -   Good if you're looking for internship/job opportunities
+
+  -   Consider starting a [student chapter](https://www.amstat.org/membership/asa-communities/student-chapters?utm_source=informz&utm_medium=email&utm_campaign=asa&_zs=cipOe1&_zl=B4kr7) at APU - looks good on a resume!
+  
+
 
 <!-- [U.S. Olympic & Paraolympic Committee Data Challenge](https://statds.org/events/ucsas2024/challenge.html) -->
 
@@ -47,21 +57,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <!-- ![](images/real_world_data.jpg) -->
 
-### Announcements
-
 <!-- Exam due now -->
 
 <!-- -   graded no later than next Tuesday -->
 
-<!-- -   will have opportunity for Annotated Test Corrections to get 1/3 of points back -->
 
-<!-- Annotations due Thursday -->
-
-<!-- Today: AE-05 -->
-
-<!-- Thursday: Lab 05 -->
-
-<!-- [Project Proposal](https://apumath250.netlify.app/project/#project-proposal) due next Tuesday, 11:59pm -->
 
 <!-- [International Day of Women in Statistics & Data Science](https://www.idwsds.org/program/) -->
 
@@ -89,7 +89,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Application Exercise
 
--   The remainder of class will be spent on AE-06.
+-   The remainder of class will be spent on AE-05.
 -   You can access it from GitHub.
 -   It is due at the end of class today.
 -   To turn it in, you should upload your .html file to Canvas.
