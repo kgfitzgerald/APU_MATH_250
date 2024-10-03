@@ -17,6 +17,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Liz Stuart](https://publichealth.jhu.edu/faculty/1792/elizabeth-a-stuart)
 
+### Thursday announcements
+
+- Annotated test corrections due next Thursday for both
+
+  + Identify your mistake / what you misunderstood / got tripped up on
+  + Provide correct solution
+  + For in-class, do separate sheet of paper
+  + For take-home, make a copy of .qmd, leave old answers in and make sure to clearly distinguish new answers
+
+- Next week: Data ethics
+
+-   Prep work is 2 lecture videos (\<40 mins) + mini "ethics lab" (read + reflect - handout provided today)
+
+-   Discussion post in Canvas instead of prep quiz
+
+-   Today: Lab 05 - data cleaning
+
+![](images/real_world_data.jpg)
+
 ### Announcements
 
 Take-home exam due tonight
@@ -45,17 +64,7 @@ Join [American Statistical Association](https://www.amstat.org/membership/become
 
 <!-- -   submission deadline January 15 -->
 
-<!-- Next week: Data ethics -->
 
-<!-- -   [Prep work](https://kgfitzgerald.github.io/APU_MATH_250/prepare/week-07-ethics-lab.html) is 2 lecture videos (\<40 mins) + mini "ethics lab" (read + reflect) -->
-
-<!-- -   Discussion post in Campuswire instead of prep quiz -->
-
-<!-- Next stats experience points due Nov 16, should respond to prompt in "[Class Feed](https://campuswire.com/c/G7C5D99E0/feed/9)" in Campuswire, so your responses are visible to each other. -->
-
-<!-- Today: Lab 05 - data cleaning -->
-
-<!-- ![](images/real_world_data.jpg) -->
 
 <!-- Exam due now -->
 
