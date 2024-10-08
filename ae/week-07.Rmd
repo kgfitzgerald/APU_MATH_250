@@ -17,13 +17,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Wendy Cho](https://pol.illinois.edu/directory/profile/wendycho)
 
+### Announcements
+
++ Test corrections due Thursday
+
++ Annotations 05 due Thursday (9 min lecture, 13 min YouTube video, 1 case study article)
+
++ Will talk through feedback on proposals on Thursday. 
+
+### Data Ethics activities
+
++ [Group 1 Google doc](https://docs.google.com/document/d/1LmDx2tFIFefP5PClob8vcMle5RVRSkc_/edit?usp=sharing&ouid=106967575594472014629&rtpof=true&sd=true)
+
++ [Group 2 Google doc](https://docs.google.com/document/d/1MuIp6wwUDTVHcfNN2fJKyCV87o32XPSE/edit?usp=sharing&ouid=106967575594472014629&rtpof=true&sd=true)
+
 <!-- ### Thursday Announcements -->
 
 <!-- Project: [Data cleaning & Preliminary EDA](https://apumath250.netlify.app/project/#data-cleaning--preliminary-eda) due in 2 weeks: Oct 26 -->
 
 <!-- Next week: back to "regular" schedule w/ prep material, AE, & lab -->
 
-### Announcements
+
 
 <!-- Exams graded, annotated test corrections due next Tuesday 10/17 -->
 
