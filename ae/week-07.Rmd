@@ -17,6 +17,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Wendy Cho](https://pol.illinois.edu/directory/profile/wendycho)
 
+### Thursday announcements
+
++ Test corrections due now
+
++ No AE or Lab this week
+
++ Project EDA & Data cleaning due date extended to next Saturday
+
++ Prep material for next week is ~75mins of lecture
+
+
 ### Announcements
 
 + Test corrections due Thursday
