@@ -47,6 +47,7 @@ We'll use the **tidyverse** package for much of the data wrangling and visualisa
 ```{r}
 library(tidyverse) 
 library(openintro)
+library(broom)
 ```
 
 ## Data
@@ -78,7 +79,7 @@ score_bty_gen_fit <- linear_reg() |>
 
 ```{r}
 #create augmented dataset
-score_bty_gen_fit_aug <- augment(score_bty_gen_fit$fit)
+score_bty_gen_fit_aug <- augment(score_bty_gen_fit)
 
 #plot data + regression line
 ggplot(score_bty_gen_fit_aug, aes(y = score, x = bty_avg, 

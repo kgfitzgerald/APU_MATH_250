@@ -377,7 +377,8 @@ This time we will use multiple predictors to model evaluation scores.</p>
 <h2>Packages</h2>
 <p>We’ll use the <strong>tidyverse</strong> package for much of the data wrangling and visualisation, and the data lives in the <strong>openintro</strong> package.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(openintro)</span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(openintro)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">library</span>(broom)</span></code></pre></div>
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>
@@ -403,7 +404,7 @@ Write the linear model, and note the <span class="math inline">\(R^2\)</span> an
 </ol>
 <p>The following code plots the above regression model. Include this plot in your report.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co">#create augmented dataset</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>score_bty_gen_fit_aug <span class="ot">&lt;-</span> <span class="fu">augment</span>(score_bty_gen_fit<span class="sc">$</span>fit)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>score_bty_gen_fit_aug <span class="ot">&lt;-</span> <span class="fu">augment</span>(score_bty_gen_fit)</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#plot data + regression line</span></span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">ggplot</span>(score_bty_gen_fit_aug, <span class="fu">aes</span>(<span class="at">y =</span> score, <span class="at">x =</span> bty_avg, </span>
