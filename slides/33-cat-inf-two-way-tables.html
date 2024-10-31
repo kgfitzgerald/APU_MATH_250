@@ -9,6 +9,8 @@
     <link href="libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="slides.css" type="text/css" />
   </head>
@@ -401,12 +403,44 @@ prop.table(tobacco, margin = 1)
 
 ## Recap
 
-
-|Variable(s) of interest            |Hypothesis Test       |Parameter for CI |Point Estimate          |Reference distribution |R function                   |
-|:----------------------------------|:---------------------|:----------------|:-----------------------|:----------------------|:----------------------------|
-|One 2-level categorical variable   |One proportion z-test |$p$              |$\hat{p}$               |$N(0,1)$               |prop_test()                  |
-|Two 2-level categorical variables  |Two proportion z-test |$p_1 - p_2$      |$\hat{p}_1 - \hat{p}_2$ |$N(0,1)$               |prop_test()                  |
-|Two 2+ level categorical variables |Chi-square test       |NA               |$X^2$                   |$\chi^2_{(I-1)(J-1)}$  |chisq_test() or chisq.test() |
+&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variable(s) of interest &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Hypothesis Test &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Parameter for CI &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Point Estimate &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Reference distribution &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; R function &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; One 2-level categorical variable &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; One proportion z-test &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(p\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(\hat{p}\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(N(0,1)\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; prop_test() &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Two 2-level categorical variables &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Two proportion z-test &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(p_1 - p_2\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(\hat{p}_1 - \hat{p}_2\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(N(0,1)\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; prop_test() &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Two 2+ level categorical variables &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Chi-square test &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(X^2\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; `\(\chi^2_{(I-1)(J-1)}\)` &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; chisq_test() or chisq.test() &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 
 

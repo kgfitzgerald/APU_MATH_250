@@ -17,6 +17,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Tyler McCormick](https://thmccormick.github.io)
 
+## Announcements
+
++ Week 10 lecture videos - weren't attached to a prep quiz, so you may not have watched them -  go back and watch sometime before next week :)
++ EXAM 2 CANCELLED
++ Today / Tuesday: Lab 07 (last one!)
++ Rest of semester prioritizes project
+
 <!-- ### Thursday announcements -->
 
 <!-- -   Today: continue Lab 08, will meet with each project group -->

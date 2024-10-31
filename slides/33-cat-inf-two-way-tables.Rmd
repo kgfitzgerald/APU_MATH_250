@@ -331,9 +331,13 @@ prop.table(tobacco, margin = 1)
 ## Recap
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-tab <- read_excel("./data/recap.xlsx", sheet = "categorical")
+tab <- read_excel("./data/recap.xlsx", sheet = "categorical",
+                  col_types = "text")
 
-kable(tab)
+tab <- tab %>% mutate(across(everything(), ~ gsub("'", "", .)))
+
+kable(tab, escape = FALSE, format = "html") %>%
+  kable_styling("striped", full_width = FALSE)
 
 ```
 

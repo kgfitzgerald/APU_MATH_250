@@ -1,6 +1,6 @@
 ---
 title: "Prepare: Week 13"
-subtitle: "Special Topics: Shiny Apps"
+subtitle: "Communicating Results II"
 output: 
   prettydoc::html_pretty:
     theme: cayman
@@ -11,34 +11,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-**Note:** the Prep Work & annotations are rearranged for this week, so that less is due on the Tuesday after Thanksgiving :) The assigned work is due **<u>by the beginning of class (4:20pm)</u>** on the specified date.
+## Before class Tuesday November 19 (due 4:20pm)
 
-## For Tuesday, November 28
+`r emo::ji("book")` [Read Chapter 8 - 9.2 of Communicating with Data](https://apu.on.worldcat.org/oclc/1261275061). As you read, keep your project in mind, and create a checklist of things you'll check for when writing /editing your rough draft (due Tuesday Nov 19 also). 
 
-### Required
+`r emo::ji("memo")` Respond to the Week 13 prep discussion post on Canvas by providing:
 
-`r emo::ji("movie_camera")` Watch the two YouTube videos on Perusall Annotations 10 / Week 13 Prep about academic posters. **Note: for the first video, you only need to watch the 2nd half, starting at 10:44.** You can comment as you watch or write one longer comment at the end. 
-
-## For Thursday, November 30
-
-### Required
-
-`r emo::ji("movie_camera")` Watch [Interactive web apps](https://youtu.be/clz1QGGu4oY)
-
-- [Slides](https://kgfitzgerald.github.io/APU_MATH_250/slides/36-shiny.html)
-
-`r emo::ji("memo")` Complete Prep Activities #1 - #2 from slides (nothing to turn in). Note, the shiny app code can be found on GitHub (not the "MATH_250_individual workspace" mentioned in the video)
-
-`r emo::ji("memo")` Complete Prep Activity #3 by responding to Prep Quiz 13 on Campuswire, which asks you to browse the [Shiny Gallery](https://shiny.rstudio.com/gallery/) and choose 3 apps to explore
-  
-  - For each app, post on [Campuswire](https://campuswire.com/c/G7C5D99E0/assignments/3):
-    1. Name of app w/ hyperlink
-    2. A 1-2 sentence summary of what the app does
-
-
-## Optional 
-
-`r emo::ji("movie_camera")` Watch [live demo by Dr. Mine Cetinkaya-Rundel](https://youtu.be/gXBEOFWrxsk)
-
+1. A brief checklist of things you'll look for when writing / editing your draft (you can provide a screenshot or link to a Google doc of the notes you took while reading if you want)
+2. 1-2 questions you have about writing / editing the rough draft after reading
 
 
