@@ -17,6 +17,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Larry Hedges](https://www.ipr.northwestern.edu/who-we-are/faculty-experts/hedges.html)
 
+### Tuesday announcements
+
+#### What's due before Thanksgiving:
+
++ Week 11 (this week)
+    + Today: continue Lab 07 (due Thursday 11/7)
+    + Due tonight: Preliminary Data Story
+    + Due Thursday by class-time: Annotations 09 (2 videos on posters, in preparation for Thursday work session)
+    + Meet w/ Dr. Fitz Wed - Th to discuss data story
++ Week 12
+    + Prep Week 12 (reading)
+    + AE-09 
+    + Poster Rough Draft due next Thursday
++ Week 13
+    + Prep Week 13 (reading)
+    + Paper Rough Draft due Tuesday 11/19
+
 
 <!-- ### Thursday announcements -->
 
