@@ -12,9 +12,38 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<!-- ### Statistician of the Week -->
+### Announcements
 
-<!-- [Cassie Kozyrkov](https://en.wikipedia.org/wiki/Cassie_Kozyrkov) -->
+What's left (assignments):
+
+-   Written report rough draft due tonight
+    -   submit pdf on Canvas AND upload to Google Drive for peer review
+    -   make sure it is written in a .qmd (rendered to a pdf) and all tables/figures are reproducible
+-   For next class: read rough draft of group assigned to you
+-   Tuesday, Dec 3: Formal Peer Review due (will start next class)
+-   Tuesday, Dec 3: Week 14 prep (reading)
+-   Thursday, Dec 5 (classtime): Elevator pitch rough draft
+-   Thursday, Dec 5: Any last stats experience points (5 total for semester)
+    -   can submit up to 10 additional ones for extra credit on lowest lab assignment(s)
+-   Friday, Dec 6: Final poster due (I will send to printer)
+-   Saturday, Dec 7: Final report & repository due
+-   Thursday, Dec 12: Poster presentations / Christmas party
+
+|         | Tue in-class             | Thur in-class                               |
+|---------------|------------------|---------------------------------------|
+| Week 13 | Communicating Results II | Peer Review                                 |
+| Week 14 | Project work session     | Elevator pitch / poster peer review         |
+| Week 15 |                          | Poster presentations - invite your friends! |
+
+## Today
+
+-   [Your project questions](https://docs.google.com/document/d/18_9nEQNmi-sd6FHScWyHP_1TKTK8CRQCs_clIwbFlQw/edit?usp=sharing)
+
+-   Data viz crash course
+
+-   Citation Management
+
+-   (If time) work on rough drafts
 
 ### Citation management
 
@@ -42,28 +71,7 @@ Citation tasks:
 
 3.  OPTIONAL: Repeat the citation process in Word (or Google Docs)
 
-### Announcements
-
-<!-- -   Take a vote: `Shiny` or no Shiny? -->
-<!-- -   Any last stats experience points (5 total for semester) due Thursday -->
-<!--     -   can submit up to 10 additional ones for extra credit on lowest lab assignment(s) -->
-<!-- -   THIS SATURDAY: American Statistical Association SoCal event AT APU -->
-<!--     -   10:30 -- 11:30 AM talk by Jacob Rode "Meta-analysis as a tool to address complex problems: An example on climate change perceptions and overview using R" -->
-<!--     -   11:30 -- 11:45 AM break -->
-<!--     -   11:45 AM -- 12:30 PM talk by Chong Ho (Alex) Yu "From traditional statistics to modern data science and machine learning" -->
-<!--     -   12:30 -- 1:30 PM lunch -->
-<!--     -   1:30 -- 1:35 PM book raffle (must be present to win) -->
-<!--     -   1:35 -- 2:30 PM SCASA Business Meeting -->
-
-<!-- |         | Tue in-class        | Thur in-class                               | -->
-<!-- |---------|---------------------|---------------------------------------------| -->
-<!-- | Week 13 | Peer Review         | Zotero + poster work session                | -->
-<!-- | Week 14 | Poster work session | Poster peer review                          | -->
-<!-- | Week 15 |                     | Poster presentations - invite your friends! | -->
-
-### Questions?
-
-### Rough Draft Peer Review
+### Thursday: Rough Draft Peer Review
 
 Why peer review?
 
@@ -88,31 +96,47 @@ Why peer review?
 <!-- -   Remainder of class will be spent on working on your FORMAL review (this is graded and counts towards your final project grade!) -->
 
 <!-- +-----------+--------------------+ -->
+
 <!-- |           | Group pairings     | -->
+
 <!-- +===========+====================+ -->
+
 <!-- | Session 1 | Group 1 & Group 3  | -->
+
 <!-- |           |                    | -->
+
 <!-- |           | Group 2 & Group 4  | -->
+
 <!-- |           |                    | -->
+
 <!-- |           | Group 5 & Dr. Fitz | -->
+
 <!-- +-----------+--------------------+ -->
 
 <!-- For the group you did NOT already exchange feedback with, you will write up a FORMAL peer review -->
 
 <!-- -   Group 1 formally reviews Group 2 -->
+
 <!-- -   Group 2 formally reviews Group 3 -->
+
 <!-- -   Group 3 formally reviews Group 4 -->
+
 <!-- -   Group 4 formally reviews Group 5 -->
+
 <!-- -   Group 5 formally reviews Group 1 -->
 
 <!-- Your formal review will include: -->
 
 <!-- -   FORMAL evaluation rubric filled out (Written report section ONLY) (in the folder of the group you're reviewing) -->
+
 <!-- -   A brief write-up (\~1 page) highlighting the following: -->
+
 <!--     -   A summary of the research questions, data context, and findings, as you understand them -->
+
 <!--     -   Brief comments on strengths of the paper -->
+
 <!--     -   Constructive criticism, raising questions / points of confusion, and outlining what needs to be changed/improved in order for the report to be exemplary -->
 
 <!-- The constructive criticism should make up the bulk of the 1-page review. Remember: the goal is to help them IMPROVE the work. You should NOT simply tell them it's wonderful, and you should NOT simply criticize without offering concrete suggestions for HOW to improve. -->
 
-
+### 
