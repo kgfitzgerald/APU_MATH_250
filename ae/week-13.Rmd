@@ -30,7 +30,7 @@ What's left (assignments):
 -   Thursday, Dec 12: Poster presentations / Christmas party
 
 |         | Tue in-class             | Thur in-class                               |
-|---------------|------------------|---------------------------------------|
+|-----------------|-----------------|-------------------------------------|
 | Week 13 | Communicating Results II | Peer Review                                 |
 | Week 14 | Project work session     | Elevator pitch / poster peer review         |
 | Week 15 |                          | Poster presentations - invite your friends! |
@@ -40,8 +40,6 @@ What's left (assignments):
 -   [Your project questions](https://docs.google.com/document/d/18_9nEQNmi-sd6FHScWyHP_1TKTK8CRQCs_clIwbFlQw/edit?usp=sharing)
 
 -   Data viz crash course
-
--   Citation Management
 
 -   (If time) work on rough drafts
 
@@ -87,56 +85,18 @@ Why peer review?
 
 -   It's part of the scientific process
 
-<!-- Logistics: -->
+## Logistics: 
 
-<!-- -   (15 mins) In your project groups, discuss assigned paper and fill out the "SHORT Rough Draft Peer Feedback - Group X" form in the shared [Google Drive folder](https://drive.google.com/drive/folders/190TgJca5qleOGoQQMJ6IbLj_RbSRKtOE?usp=share_link) (located in the folder of the group you're reviewing) -->
+-   In your project groups, discuss assigned paper and fill out the "FORMAL Rough Draft Peer Feedback - Group X" form in the shared Google Drive folder (located in the folder of the group you're reviewing)
 
-<!-- -   (15 mins) Pair up with the group and exchange feedback (\~7 mins per group) -->
+-   Then, you will write up a 1-2 page formal review, which will include:
 
-<!-- -   Remainder of class will be spent on working on your FORMAL review (this is graded and counts towards your final project grade!) -->
+    -   A summary of the research questions, data context, and findings, as you understand them
 
-<!-- +-----------+--------------------+ -->
+    -   Brief comments on strengths of the paper
 
-<!-- |           | Group pairings     | -->
+    -   Constructive criticism, raising questions / points of confusion, and outlining what needs to be changed/improved in order for the report to be exemplary
 
-<!-- +===========+====================+ -->
-
-<!-- | Session 1 | Group 1 & Group 3  | -->
-
-<!-- |           |                    | -->
-
-<!-- |           | Group 2 & Group 4  | -->
-
-<!-- |           |                    | -->
-
-<!-- |           | Group 5 & Dr. Fitz | -->
-
-<!-- +-----------+--------------------+ -->
-
-<!-- For the group you did NOT already exchange feedback with, you will write up a FORMAL peer review -->
-
-<!-- -   Group 1 formally reviews Group 2 -->
-
-<!-- -   Group 2 formally reviews Group 3 -->
-
-<!-- -   Group 3 formally reviews Group 4 -->
-
-<!-- -   Group 4 formally reviews Group 5 -->
-
-<!-- -   Group 5 formally reviews Group 1 -->
-
-<!-- Your formal review will include: -->
-
-<!-- -   FORMAL evaluation rubric filled out (Written report section ONLY) (in the folder of the group you're reviewing) -->
-
-<!-- -   A brief write-up (\~1 page) highlighting the following: -->
-
-<!--     -   A summary of the research questions, data context, and findings, as you understand them -->
-
-<!--     -   Brief comments on strengths of the paper -->
-
-<!--     -   Constructive criticism, raising questions / points of confusion, and outlining what needs to be changed/improved in order for the report to be exemplary -->
-
-<!-- The constructive criticism should make up the bulk of the 1-page review. Remember: the goal is to help them IMPROVE the work. You should NOT simply tell them it's wonderful, and you should NOT simply criticize without offering concrete suggestions for HOW to improve. -->
+-   The constructive criticism should make up the bulk of the 1-page review. Remember: the goal is to help them IMPROVE the work. You should NOT simply tell them it's wonderful, and you should NOT simply criticize without offering concrete suggestions for HOW to improve.
 
 ### 
